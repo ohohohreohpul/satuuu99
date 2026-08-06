@@ -1,0 +1,179 @@
+@import 'tailwindcss';
+
+/* ============================================================
+   satuuu99 — Premium Spa · Design Tokens
+   Light mode. Warm greige paper, mocha primary, soft-gold stars,
+   soft realistic float shadow. ZEN — after soulhouse.me.
+   Terracotta survives only as a whisper (tertiary accent).
+   ============================================================ */
+@theme {
+  /* Neutral canvas — warm greige, unhurried */
+  --color-porcelain: #ffffff; /* pure card surface */
+  --color-linen: #faf6f0; /* lightest warm surface */
+  --color-canvas: #f2ebe1; /* page background — warm greige paper */
+  --color-sand: #e9dfd1; /* subtle wash / alt sections */
+  --color-taupe: #ddd0be; /* borders / hairline dividers */
+  --color-clay: #b8a48c; /* muted warm taupe-brown */
+  --color-stone: #8c8073; /* secondary text */
+  --color-espresso: #3a2e24; /* strong text / surfaces */
+  --color-ink: #2a221c; /* primary text — warm charcoal */
+
+  /* Primary — warm mocha brown (CTAs, marks) */
+  --color-mocha: #86694a; /* signature mocha — primary buttons */
+  --color-mocha-soft: #a2896c; /* softer mocha on light */
+  --color-mocha-deep: #4f3c2a; /* deep mocha — dark panels */
+
+  /* Soft gold — stars, ratings, tiny accents only */
+  --color-gold: #c69a44;
+  --color-gold-soft: #dcb161;
+
+  /* Terracotta — a whisper. Rare warmth, never dominant. */
+  --color-red: #a6503a;
+
+  /* Typography */
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Hanken Grotesk', system-ui, sans-serif;
+
+  /* Fluid type scale */
+  --text-hero: clamp(2.75rem, 1rem + 7vw, 7rem);
+  --text-statement: clamp(2.25rem, 1rem + 5vw, 5.5rem);
+  --text-section: clamp(2rem, 1rem + 3.6vw, 4rem);
+  --text-eyebrow: 0.72rem;
+
+  /* Motion — long, gentle, cinematic */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Radii — soft, generous, calm */
+  --radius-card: 1.25rem;
+  --radius-lg: 2rem;
+  --radius-xl: 2.75rem;
+  --radius-pill: 999px;
+
+  /* Soft realistic float shadows — depth, never toys */
+  --shadow-soft: 0 18px 44px -28px rgba(58, 46, 36, 0.32);
+  --shadow-lift: 0 32px 64px -38px rgba(58, 46, 36, 0.34);
+  --shadow-hover: 0 44px 88px -44px rgba(58, 46, 36, 0.4);
+  --shadow-hairline: inset 0 0 0 1px rgba(58, 46, 36, 0.07);
+
+  /* Section rhythm */
+  --space-section: clamp(5rem, 3rem + 8vw, 11rem);
+}
+
+@layer base {
+  html:not(.lenis) {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-optical-sizing: auto;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background-color: var(--color-mocha);
+    color: var(--color-linen);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-mocha);
+    outline-offset: 3px;
+    border-radius: 0.5rem;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  /* Editorial italic accent — Fraunces italic, low weight */
+  .font-editorial {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .tracking-eyebrow {
+    letter-spacing: 0.28em;
+  }
+
+  /* Whisper-fine film grain for cinematic surfaces (very low opacity).
+     Aliased as both .grain-overlay and .noise-overlay for ported primitives. */
+  .grain-overlay,
+  .noise-overlay {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+  }
+
+  /* Hairline divider */
+  .hairline {
+    border-color: rgba(58, 46, 36, 0.1);
+  }
+
+  /* Hide scrollbars on horizontal carousels while keeping scroll */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Slow marquee ticker for press / review bands */
+  .marquee-track {
+    display: inline-flex;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 45s linear infinite;
+  }
+  .marquee-slow {
+    animation-duration: 70s;
+  }
+  .marquee-paused:hover .marquee-track {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Respect reduced motion globally */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
