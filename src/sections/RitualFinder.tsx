@@ -4,7 +4,6 @@ import { useLang } from '../lib/i18n';
 import type { Localized } from '../lib/i18n';
 import { FINDER, FOCUS_GROUPS, CONTACT, treatmentsByIds } from '../data/content';
 import { EASE } from '../lib/motion';
-import { MagneticButton } from '../components/ui/Interactive';
 import { ChevronDownIcon, ArrowRightIcon, StarIcon } from '../components/ui/Icons';
 
 /**
@@ -22,8 +21,8 @@ export function RitualFinder() {
   const recommended = group ? treatmentsByIds(group.treatmentIds)[0] : null;
 
   return (
-    <section id="finder" className="relative z-20 -mt-10 px-4 sm:-mt-14 sm:px-8">
-      <div className="mx-auto max-w-5xl rounded-2xl border border-taupe/50 bg-linen/95 p-5 shadow-lift backdrop-blur-md sm:p-6 md:p-7">
+    <section id="finder" className="px-4 pt-12 sm:px-8">
+      <div className="mx-auto max-w-5xl border border-taupe/50 bg-linen p-5 sm:p-6 md:p-7">
         <div className="flex flex-col gap-5 md:flex-row md:items-end">
           <p className="hidden font-editorial text-2xl text-mocha md:block md:pb-2 md:pr-2">{t(FINDER.title)}</p>
           <span className="mx-1 hidden h-12 w-px self-end bg-taupe/50 md:block" aria-hidden />
@@ -31,13 +30,13 @@ export function RitualFinder() {
           <Dropdown label={t(FINDER.focusLabel)} placeholder={t(FINDER.focusPlaceholder)} options={FINDER.focus} value={focus} onChange={setFocus} />
           <Dropdown label={t(FINDER.goalLabel)} placeholder={t(FINDER.goalPlaceholder)} options={FINDER.goals} value={goal} onChange={setGoal} />
 
-          <MagneticButton
+          <a
             href={CONTACT.booking}
-            className="group inline-flex shrink-0 items-center justify-center gap-3 rounded-pill bg-mocha px-6 py-4 text-sm font-medium tracking-wide text-linen shadow-soft transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:bg-mocha-deep hover:shadow-hover"
+            className="group inline-flex shrink-0 items-center justify-center gap-3 rounded-pill bg-mocha px-6 py-4 text-sm font-medium tracking-wide text-linen transition-colors duration-300 hover:bg-mocha-deep"
           >
             {t(FINDER.cta)}
-            <ArrowRightIcon className="h-4 w-4 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-1" />
-          </MagneticButton>
+            <ArrowRightIcon className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+          </a>
         </div>
 
         <AnimatePresence>
@@ -49,7 +48,7 @@ export function RitualFinder() {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.4, ease: EASE }}
-              className="group mt-5 flex items-center justify-between gap-4 overflow-hidden rounded-xl border border-taupe/50 bg-sand/50 px-4 py-3.5 sm:px-5"
+              className="group mt-5 flex items-center justify-between gap-4 overflow-hidden rounded-input border border-taupe/50 bg-sand/50 px-4 py-3.5 sm:px-5"
             >
               <span className="flex items-center gap-3">
                 <span className="text-[0.6rem] font-medium uppercase tracking-[0.18em] text-mocha">
@@ -108,7 +107,7 @@ function Dropdown({ label, placeholder, options, value, onChange }: DropdownProp
         onClick={() => setOpen((o) => !o)}
         aria-haspopup="listbox"
         aria-expanded={open}
-        className="flex w-full items-center justify-between gap-3 rounded-xl border border-taupe/60 bg-porcelain px-4 py-3 text-left text-[0.95rem] text-ink transition-colors hover:border-mocha/60"
+        className="flex w-full items-center justify-between gap-3 rounded-input border border-taupe/60 bg-porcelain px-4 py-3 text-left text-[0.95rem] text-ink transition-colors hover:border-mocha/60"
       >
         <span className={value ? 'text-ink' : 'text-stone'}>{value ? t(value) : placeholder}</span>
         <ChevronDownIcon className={`h-4 w-4 shrink-0 text-mocha transition-transform duration-300 ${open ? 'rotate-180' : ''}`} />
@@ -122,7 +121,7 @@ function Dropdown({ label, placeholder, options, value, onChange }: DropdownProp
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -6 }}
             transition={{ duration: 0.25, ease: EASE }}
-            className="absolute left-0 right-0 top-full z-30 mt-2 overflow-hidden rounded-xl border border-taupe/60 bg-porcelain p-1.5 shadow-lift"
+            className="absolute left-0 right-0 top-full z-30 mt-2 overflow-hidden rounded-input border border-taupe/60 bg-porcelain p-1.5 shadow-overlay"
           >
             {options.map((opt) => {
               const active = value ? t(value) === t(opt) : false;
@@ -136,7 +135,7 @@ function Dropdown({ label, placeholder, options, value, onChange }: DropdownProp
                       onChange(opt);
                       setOpen(false);
                     }}
-                    className={`w-full rounded-lg px-3.5 py-2.5 text-left text-[0.95rem] transition-colors ${active ? 'bg-sand text-ink' : 'text-espresso hover:bg-sand/70'}`}
+                    className={`w-full rounded-input px-3.5 py-2.5 text-left text-[0.95rem] transition-colors ${active ? 'bg-sand text-ink' : 'text-espresso hover:bg-sand/70'}`}
                   >
                     {t(opt)}
                   </button>

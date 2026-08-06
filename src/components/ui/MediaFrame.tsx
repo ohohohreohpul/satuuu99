@@ -105,7 +105,7 @@ function Placeholder({
 
   return (
     <div className="absolute inset-0 flex items-center justify-center p-4" style={{ background }}>
-      <div className={`flex max-w-full flex-col items-center gap-2 rounded-xl border border-dashed ${border} px-5 py-6 text-center`}>
+      <div className={`flex max-w-full flex-col items-center gap-2 rounded-input border border-dashed ${border} px-5 py-6 text-center`}>
         <ImageIcon className={`h-7 w-7 ${soft}`} />
         <span className={`text-[0.6rem] font-medium uppercase tracking-[0.22em] ${soft}`}>
           {t({ de: 'Bild-Platzhalter', en: 'Image placeholder' })}

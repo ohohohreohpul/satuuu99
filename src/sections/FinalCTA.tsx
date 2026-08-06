@@ -10,7 +10,7 @@ export function FinalCTA() {
 
   return (
     <section id="kontakt" className="mx-auto max-w-7xl px-5 py-[var(--space-section)] sm:px-8">
-      <div className="grid gap-12 rounded-xl bg-mocha-deep p-8 text-linen shadow-lift md:grid-cols-2 md:gap-16 md:rounded-[2rem] md:p-16">
+      <div className="grid gap-12 bg-mocha-deep p-8 text-linen md:grid-cols-2 md:gap-16 md:p-16">
         <Reveal>
           <Eyebrow className="!text-linen/60">{t(FINAL_CTA.eyebrow)}</Eyebrow>
           <h2 className="mt-6 text-balance font-display" style={{ fontSize: 'var(--text-section)' }}>

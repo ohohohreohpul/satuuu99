@@ -7,11 +7,11 @@
    Terracotta survives only as a whisper (tertiary accent).
    ============================================================ */
 @theme {
-  /* Neutral canvas — warm greige, unhurried */
+  /* Neutral canvas — warm off-white, clean and flat (after soulhouse.me) */
   --color-porcelain: #ffffff; /* pure card surface */
-  --color-linen: #faf6f0; /* lightest warm surface */
-  --color-canvas: #f2ebe1; /* page background — warm greige paper */
-  --color-sand: #e9dfd1; /* subtle wash / alt sections */
+  --color-linen: #faf7f2; /* lightest warm surface */
+  --color-canvas: #f5f1ea; /* page background — warm off-white paper */
+  --color-sand: #ece4d8; /* subtle wash / alt sections */
   --color-taupe: #ddd0be; /* borders / hairline dividers */
   --color-clay: #b8a48c; /* muted warm taupe-brown */
   --color-stone: #8c8073; /* secondary text */
@@ -44,17 +44,20 @@
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
 
-  /* Radii — soft, generous, calm */
-  --radius-card: 1.25rem;
-  --radius-lg: 2rem;
-  --radius-xl: 2.75rem;
+  /* Radii — flat & squared for content; pills only for controls (after soulhouse.me) */
+  --radius-card: 0px; /* media & content blocks are sharp rectangles */
+  --radius-input: 5px; /* small controls: inputs, dropdowns */
+  --radius-lg: 0px;
+  --radius-xl: 0px;
   --radius-pill: 999px;
 
-  /* Soft realistic float shadows — depth, never toys */
-  --shadow-soft: 0 18px 44px -28px rgba(58, 46, 36, 0.32);
-  --shadow-lift: 0 32px 64px -38px rgba(58, 46, 36, 0.34);
-  --shadow-hover: 0 44px 88px -44px rgba(58, 46, 36, 0.4);
+  /* Flat — no float shadows. Separation comes from borders & whitespace. */
+  --shadow-soft: none;
+  --shadow-lift: none;
+  --shadow-hover: none;
   --shadow-hairline: inset 0 0 0 1px rgba(58, 46, 36, 0.07);
+  /* Reserved for true overlays only (menus/flyouts), still whisper-soft. */
+  --shadow-overlay: 0 20px 50px -34px rgba(58, 46, 36, 0.35);
 
   /* Section rhythm */
   --space-section: clamp(5rem, 3rem + 8vw, 11rem);

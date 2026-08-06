@@ -1,5 +1,3 @@
-import { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
 import { useLang } from '../lib/i18n';
 import { STUDIO, CONTACT } from '../data/content';
 import { Eyebrow } from '../components/ui/Eyebrow';
@@ -8,26 +6,16 @@ import { Button } from '../components/ui/Button';
 import { Reveal } from '../components/ui/Reveal';
 import { PinIcon } from '../components/ui/Icons';
 
-/**
- * The single studio, presented as a place to escape to. Non-pinned framer
- * parallax on the imagery (safe with Lenis since it isn't scroll-event driven).
- */
+/** The single studio, presented as a place to escape to. Flat, well-placed. */
 export function Studio() {
   const { t } = useLang();
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] });
-  const y = useTransform(scrollYProgress, [0, 1], ['-6%', '6%']);
 
   return (
-    <section id="studio" className="bg-sand/60 py-[var(--space-section)]">
+    <section id="studio" className="bg-sand/50 py-[var(--space-section)]">
       <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 sm:px-8 md:grid-cols-12 md:gap-16">
-        {/* Media with quiet parallax */}
-        <div ref={ref} className="md:col-span-7">
-          <div className="overflow-hidden rounded-lg shadow-lift">
-            <motion.div style={{ y }} className="scale-110">
-              <MediaFrame image={STUDIO.image} label={t({ de: 'Studio-Interieur', en: 'Studio interior' })} aspect="aspect-[16/11]" />
-            </motion.div>
-          </div>
+        {/* Media — flat, sharp */}
+        <div className="md:col-span-7">
+          <MediaFrame image={STUDIO.image} label={t({ de: 'Studio-Interieur', en: 'Studio interior' })} aspect="aspect-[16/11]" />
         </div>
 
         {/* Studio card */}

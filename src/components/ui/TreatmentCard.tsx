@@ -2,7 +2,6 @@ import { useLang } from '../../lib/i18n';
 import type { Treatment } from '../../data/content';
 import { MediaFrame } from './MediaFrame';
 import { StarRating } from './StarRating';
-import { TiltCard } from './Interactive';
 import { ArrowRightIcon } from './Icons';
 
 interface TreatmentCardProps {
@@ -11,23 +10,22 @@ interface TreatmentCardProps {
 }
 
 /**
- * Signature treatment card, after soulhouse.me: media with a category tag,
- * a gold rating row, a Fraunces title, and three benefit lines. The whole card
- * is a link; it tilts subtly toward the cursor, media scales, and it lifts on hover.
+ * Flat treatment card (after soulhouse.me): a sharp-cornered image with a
+ * category tag, a gold rating row, a Fraunces title, and three benefit lines.
+ * No shadow, no tilt — just a quiet image scale on hover.
  */
 export function TreatmentCard({ treatment, bookingHref }: TreatmentCardProps) {
   const { t } = useLang();
 
   return (
-    <TiltCard max={9} className="group w-[80vw] shrink-0 snap-start sm:w-[22rem] lg:w-[24rem]">
-      <a href={bookingHref} className="flex flex-col">
-        <div className="relative overflow-hidden rounded-card shadow-soft transition-shadow duration-500 group-hover:shadow-lift">
+    <a href={bookingHref} className="group flex w-[80vw] shrink-0 snap-start flex-col sm:w-[22rem] lg:w-[24rem]">
+      <div className="relative overflow-hidden">
         <MediaFrame
           image={treatment.image}
           video={treatment.video}
           label={t(treatment.name)}
           aspect="aspect-[4/5]"
-          imgClassName="transition-transform duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.05]"
+          imgClassName="transition-transform duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
         />
         <span className="absolute left-3 top-3 rounded-pill bg-linen/90 px-3 py-1 text-[0.62rem] font-medium uppercase tracking-[0.18em] text-espresso backdrop-blur-sm">
           {t(treatment.category)}
@@ -56,7 +54,6 @@ export function TreatmentCard({ treatment, bookingHref }: TreatmentCardProps) {
           ))}
         </ul>
       </div>
-      </a>
-    </TiltCard>
+    </a>
   );
 }
