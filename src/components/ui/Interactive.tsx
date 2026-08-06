@@ -10,7 +10,7 @@ export function MagneticButton({
   href = '#',
   children,
   className = '',
-  strength = 0.35,
+  strength = 0.5,
   ariaLabel,
 }: {
   href?: string;

@@ -19,7 +19,7 @@ export function TreatmentCard({ treatment, bookingHref }: TreatmentCardProps) {
   const { t } = useLang();
 
   return (
-    <TiltCard max={4} className="group w-[80vw] shrink-0 snap-start sm:w-[22rem] lg:w-[24rem]">
+    <TiltCard max={9} className="group w-[80vw] shrink-0 snap-start sm:w-[22rem] lg:w-[24rem]">
       <a href={bookingHref} className="flex flex-col">
         <div className="relative overflow-hidden rounded-card shadow-soft transition-shadow duration-500 group-hover:shadow-lift">
         <MediaFrame

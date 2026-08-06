@@ -19,11 +19,13 @@ export function Hero() {
   // Pointer parallax — normalized -0.5..0.5, spring-smoothed.
   const px = useMotionValue(0);
   const py = useMotionValue(0);
-  const sx = useSpring(px, { stiffness: 60, damping: 20, mass: 0.6 });
-  const sy = useSpring(py, { stiffness: 60, damping: 20, mass: 0.6 });
-  const videoX = useTransform(sx, [-0.5, 0.5], ['-16px', '16px']);
-  const videoY = useTransform(sy, [-0.5, 0.5], ['-12px', '12px']);
-  const contentX = useTransform(sx, [-0.5, 0.5], ['8px', '-8px']);
+  const sx = useSpring(px, { stiffness: 70, damping: 18, mass: 0.5 });
+  const sy = useSpring(py, { stiffness: 70, damping: 18, mass: 0.5 });
+  // Noticeable but graceful drift; the 1.14 zoom hides the travel at the edges.
+  const videoX = useTransform(sx, [-0.5, 0.5], ['-42px', '42px']);
+  const videoY = useTransform(sy, [-0.5, 0.5], ['-30px', '30px']);
+  const contentX = useTransform(sx, [-0.5, 0.5], ['14px', '-14px']);
+  const contentY = useTransform(sy, [-0.5, 0.5], ['8px', '-8px']);
 
   function onPointerMove(e: ReactPointerEvent<HTMLElement>) {
     if (reduce) return;
@@ -44,8 +46,9 @@ export function Hero() {
       className="relative min-h-[100svh] px-3 pb-3 pt-3 md:px-5 md:pb-5"
     >
       <div className="relative min-h-[calc(100svh-1.5rem)] overflow-hidden rounded-xl md:min-h-[calc(100svh-2.5rem)] md:rounded-[2rem]">
-        {/* Background media with cursor parallax (scaled up to hide the travel) */}
-        <motion.div style={{ x: videoX, y: videoY }} className="absolute inset-0 scale-[1.08]">
+        {/* Background media with cursor parallax (scaled up to hide the travel).
+            Scale lives in the motion style so framer doesn't clobber a CSS transform. */}
+        <motion.div style={{ x: videoX, y: videoY, scale: 1.14 }} className="absolute inset-0">
           <VideoLoop
             src="/assets/hero.mp4"
             poster="/assets/hero-poster.png"
@@ -60,7 +63,7 @@ export function Hero() {
 
         {/* Content */}
         <motion.div
-          style={{ x: contentX }}
+          style={{ x: contentX, y: contentY }}
           className="relative flex min-h-[calc(100svh-1.5rem)] flex-col justify-end p-6 md:min-h-[calc(100svh-2.5rem)] md:p-12 lg:p-16"
         >
           <motion.div
