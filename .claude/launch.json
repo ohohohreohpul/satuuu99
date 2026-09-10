@@ -6,7 +6,7 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev"],
       "port": 5173,
-      "cwd": "/Users/jirananpanlanatiyarak/Downloads/satuuu99-spa"
+      "cwd": "/Users/jirananpanlanatiyarak/Downloads/satuuu99-main"
     }
   ]
 }

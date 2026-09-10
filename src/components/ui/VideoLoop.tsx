@@ -1,64 +1,97 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
+import { useLang } from "../../lib/i18n";
+
+// React 18 drops the camelCase `fetchPriority` prop with a warning; the
+// lowercase DOM attribute is passed through and honoured by the browser.
+const HIGH_FETCH_PRIORITY = { fetchpriority: "high" };
 
 interface VideoLoopProps {
   src: string;
   poster: string;
-  /** Alt-equivalent label; the poster image carries it for assistive tech. */
   label: string;
   className?: string;
 }
-
-/**
- * Muted, looping, inline autoplay video with a poster fallback.
- * Plays only while in view (IntersectionObserver) to save CPU and keep
- * autoplay reliable. Honors prefers-reduced-motion: shows the poster only.
- */
-export function VideoLoop({ src, poster, label, className = '' }: VideoLoopProps) {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [reducedMotion, setReducedMotion] = useState(false);
-
+export function VideoLoop({
+  src,
+  poster,
+  label,
+  className = "",
+}: VideoLoopProps) {
+  const { t } = useLang();
+  const video = useRef<HTMLVideoElement>(null);
+  const [reduced, setReduced] = useState(
+    () => window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+  );
+  const [paused, setPaused] = useState(false);
+  const [failed, setFailed] = useState(false);
+  const [playing, setPlaying] = useState(false);
   useEffect(() => {
-    const query = window.matchMedia('(prefers-reduced-motion: reduce)');
-    setReducedMotion(query.matches);
-    const onChange = (e: MediaQueryListEvent) => setReducedMotion(e.matches);
-    query.addEventListener('change', onChange);
-    return () => query.removeEventListener('change', onChange);
+    const query = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const change = () => setReduced(query.matches);
+    query.addEventListener("change", change);
+    return () => query.removeEventListener("change", change);
   }, []);
-
   useEffect(() => {
-    const video = videoRef.current;
-    if (!video || reducedMotion) return;
-
+    const element = video.current;
+    if (!element || reduced || failed) return;
+    let visible = false;
+    const sync = () => {
+      if (visible && !paused && !document.hidden)
+        void element.play().catch(() => setPaused(true));
+      else element.pause();
+    };
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          void video.play().catch(() => {});
-        } else {
-          video.pause();
-        }
+        visible = entry.isIntersecting;
+        sync();
       },
-      { threshold: 0.25 },
+      { threshold: 0.1 },
     );
-    observer.observe(video);
-    return () => observer.disconnect();
-  }, [reducedMotion]);
-
-  if (reducedMotion) {
-    return <img src={poster} alt={label} className={className} loading="lazy" />;
-  }
-
+    observer.observe(element);
+    document.addEventListener("visibilitychange", sync);
+    return () => {
+      observer.disconnect();
+      document.removeEventListener("visibilitychange", sync);
+      element.pause();
+    };
+  }, [reduced, paused, failed]);
   return (
-    <video
-      ref={videoRef}
-      className={className}
-      src={src}
-      poster={poster}
-      autoPlay
-      muted
-      loop
-      playsInline
-      preload="metadata"
-      aria-label={label}
-    />
+    <>
+      <img
+        src={poster}
+        alt={label}
+        className={className}
+        {...HIGH_FETCH_PRIORITY}
+      />
+      {!reduced && !failed && (
+        <video
+          ref={video}
+          src={src}
+          poster={poster}
+          muted
+          loop
+          playsInline
+          preload="none"
+          aria-hidden="true"
+          className={className}
+          onPlaying={() => setPlaying(true)}
+          onPause={() => setPlaying(false)}
+          onError={() => setFailed(true)}
+        />
+      )}
+      {!reduced && !failed && (
+        <button
+          className="film-control"
+          onClick={() => setPaused(playing)}
+          aria-label={t(
+            playing
+              ? { de: "Video pausieren", en: "Pause video" }
+              : { de: "Video abspielen", en: "Play video" },
+          )}
+        >
+          <span aria-hidden>{playing ? "Ⅱ" : "▷"}</span>
+        </button>
+      )}
+    </>
   );
 }

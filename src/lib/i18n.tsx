@@ -1,12 +1,12 @@
-import { createContext, useContext, useEffect, useMemo, useState } from 'react';
-import type { ReactNode } from 'react';
+import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import type { ReactNode } from "react";
 
-export type Lang = 'de' | 'en';
+export type Lang = "de" | "en";
 
 /** A piece of copy in both languages. Use `t(pair)` to resolve it. */
 export type Localized = { de: string; en: string };
 
-const STORAGE_KEY = 'satuuu99-lang';
+const STORAGE_KEY = "satuuu99-lang";
 
 interface LanguageContextValue {
   lang: Lang;
@@ -19,12 +19,16 @@ interface LanguageContextValue {
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 function readInitialLang(): Lang {
-  if (typeof window === 'undefined') return 'de';
-  const stored = window.localStorage.getItem(STORAGE_KEY);
-  if (stored === 'de' || stored === 'en') return stored;
+  if (typeof window === "undefined") return "de";
+  try {
+    const stored = window.localStorage.getItem(STORAGE_KEY);
+    if (stored === "de" || stored === "en") return stored;
+  } catch {
+    /* Storage may be unavailable in private contexts. */
+  }
   // German-first brand (Ahrensburg): default to German for every new visitor.
   // English is available via the toggle.
-  return 'de';
+  return "de";
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
@@ -32,24 +36,32 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     document.documentElement.lang = lang;
-    window.localStorage.setItem(STORAGE_KEY, lang);
+    try {
+      window.localStorage.setItem(STORAGE_KEY, lang);
+    } catch {
+      /* Keep the in-memory preference. */
+    }
   }, [lang]);
 
   const value = useMemo<LanguageContextValue>(
     () => ({
       lang,
       setLang: setLangState,
-      toggle: () => setLangState((prev) => (prev === 'de' ? 'en' : 'de')),
-      t: (v) => (typeof v === 'string' ? v : v[lang]),
+      toggle: () => setLangState((prev) => (prev === "de" ? "en" : "de")),
+      t: (v) => (typeof v === "string" ? v : v[lang]),
     }),
     [lang],
   );
 
-  return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
+  return (
+    <LanguageContext.Provider value={value}>
+      {children}
+    </LanguageContext.Provider>
+  );
 }
 
 export function useLang(): LanguageContextValue {
   const ctx = useContext(LanguageContext);
-  if (!ctx) throw new Error('useLang must be used within a LanguageProvider');
+  if (!ctx) throw new Error("useLang must be used within a LanguageProvider");
   return ctx;
 }

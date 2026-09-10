@@ -1,57 +1,85 @@
-import { useLang } from '../lib/i18n';
-import { STUDIO, CONTACT } from '../data/content';
-import { Eyebrow } from '../components/ui/Eyebrow';
-import { MediaFrame } from '../components/ui/MediaFrame';
-import { Button } from '../components/ui/Button';
-import { Reveal } from '../components/ui/Reveal';
-import { PinIcon } from '../components/ui/Icons';
+import { useLang } from "../lib/i18n";
+import { CONTACT } from "../data/content";
+import { MEDIA } from "../data/media";
+import { ArrowRightIcon } from "../components/ui/Icons";
 
-/** The single studio, presented as a place to escape to. Flat, well-placed. */
 export function Studio() {
   const { t } = useLang();
-
   return (
-    <section id="studio" className="bg-sand/50 py-[var(--space-section)]">
-      <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 sm:px-8 md:grid-cols-12 md:gap-16">
-        {/* Media — flat, sharp */}
-        <div className="md:col-span-7">
-          <MediaFrame image={STUDIO.image} label={t({ de: 'Studio-Interieur', en: 'Studio interior' })} aspect="aspect-[16/11]" />
-        </div>
-
-        {/* Studio card */}
-        <div className="md:col-span-5">
-          <Reveal>
-            <Eyebrow>{t(STUDIO.eyebrow)}</Eyebrow>
-            <h2 className="mt-5" style={{ fontSize: 'var(--text-section)' }}>
-              {t(STUDIO.title)} <span className="font-editorial text-mocha">{t(STUDIO.titleItalic)}</span>
-            </h2>
-            <p className="mt-6 max-w-md leading-relaxed text-stone">{t(STUDIO.body)}</p>
-
-            <div className="mt-8 flex items-start gap-3 text-espresso">
-              <PinIcon className="mt-0.5 h-5 w-5 shrink-0 text-mocha" />
-              <address className="not-italic leading-relaxed">
-                {CONTACT.addressLines.map((line) => (
-                  <span key={line} className="block">{line}</span>
-                ))}
-              </address>
-            </div>
-
-            <div className="mt-6 border-t border-taupe/50 pt-6">
-              <span className="text-[0.62rem] uppercase tracking-[0.2em] text-stone">{t(STUDIO.hoursLabel)}</span>
-              <ul className="mt-3 flex flex-col gap-1.5">
-                {CONTACT.hours.map((h) => (
-                  <li key={t(h.days)} className="flex justify-between gap-6 text-sm text-espresso">
-                    <span>{t(h.days)}</span>
-                    <span className="text-stone">{t(h.time)}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="mt-8">
-              <Button href={CONTACT.booking} variant="line">{t(STUDIO.cta)}</Button>
-            </div>
-          </Reveal>
+    <section
+      id="studio"
+      className="studio-section"
+      aria-labelledby="studio-title"
+    >
+      <div className="studio-intro section-shell">
+        <p className="eyebrow">
+          {t({ de: "02 / Das Studio", en: "02 / The studio" })}
+        </p>
+        <h2 id="studio-title">
+          {t({ de: "Draußen ist Alltag.", en: "Leave the day outside." })}
+          <br />
+          <span className="soft-text">
+            {t({ de: "Hier ist deine Zeit.", en: "This time is yours." })}
+          </span>
+        </h2>
+      </div>
+      <div className="studio-layout">
+        <figure className="studio-image">
+          <img
+            src={MEDIA.studio}
+            alt={t({
+              de: "Atmosphärisches Motiv: Behandlungsraum mit Leinen, Tageslicht und warmen Naturtönen",
+              en: "Atmospheric image: a treatment room with linen, daylight and warm natural tones",
+            })}
+            loading="lazy"
+            width="1800"
+            height="1170"
+          />
+          <figcaption>
+            {t({
+              de: "Ein Gefühl für unsere Welt · Atmosphärenbild",
+              en: "A feeling for our world · Mood image",
+            })}
+          </figcaption>
+        </figure>
+        <div className="studio-copy">
+          <span className="small-sun" aria-hidden>
+            ✳
+          </span>
+          <h3>
+            {t({ de: "Ein kleiner Rückzug.", en: "A small retreat." })}
+            <br />
+            {t({
+              de: "Mitten in Ahrensburg.",
+              en: "Right here in Ahrensburg.",
+            })}
+          </h3>
+          <p>
+            {t({
+              de: "Bei satuuu99 stehen Wellness, Pflege und persönliche Aufmerksamkeit im Mittelpunkt. Wir nehmen uns Zeit, hören zu und finden gemeinsam die passende Anwendung für dich.",
+              en: "At satuuu99, wellness, care and personal attention come first. We take time to listen and find the right treatment together.",
+            })}
+          </p>
+          <p>
+            {t({
+              de: "Komm so, wie du bist. Um den Rest kümmern wir uns.",
+              en: "Come as you are. We’ll take care of the rest.",
+            })}
+          </p>
+          <address>
+            {CONTACT.addressLines.map((line) => (
+              <span key={line}>{line}</span>
+            ))}
+          </address>
+          <a
+            className="text-link"
+            href={CONTACT.maps}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {t({ de: "Deinen Weg zu uns finden", en: "Find your way here" })}
+            <ArrowRightIcon />
+          </a>
         </div>
       </div>
     </section>

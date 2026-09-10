@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 /** Sets document.title and the meta description for a route. */
 export function usePageMeta(title: string, description?: string) {
@@ -7,11 +7,11 @@ export function usePageMeta(title: string, description?: string) {
     if (description) {
       let tag = document.querySelector('meta[name="description"]');
       if (!tag) {
-        tag = document.createElement('meta');
-        tag.setAttribute('name', 'description');
+        tag = document.createElement("meta");
+        tag.setAttribute("name", "description");
         document.head.appendChild(tag);
       }
-      tag.setAttribute('content', description);
+      tag.setAttribute("content", description);
     }
   }, [title, description]);
 }
