@@ -4,6 +4,7 @@ import { useLang } from "../lib/i18n";
 import { CONTACT, FOCUS_GROUPS } from "../data/content";
 import { MEDIA } from "../data/media";
 import { ArrowRightIcon } from "../components/ui/Icons";
+import { Link } from "react-router-dom";
 
 export function FocusExplorer() {
   const { t } = useLang();
@@ -146,16 +147,13 @@ export function FocusExplorer() {
                         ))}
                       </ul>
                     )}
-                    <a
-                      className="text-link"
-                      href={`mailto:${CONTACT.email}?subject=${encodeURIComponent(t(item.name))}`}
-                    >
+                    <Link className="text-link" to={`/behandlungen/${item.id}`}>
                       {t({
-                        de: "Behandlung anfragen",
-                        en: "Ask about this treatment",
+                        de: "Behandlung entdecken",
+                        en: "Explore this treatment",
                       })}
                       <ArrowRightIcon />
-                    </a>
+                    </Link>
                   </div>
                 </article>
               ))}

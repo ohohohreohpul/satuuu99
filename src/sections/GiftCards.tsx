@@ -1,6 +1,7 @@
 import { useLang } from "../lib/i18n";
 import { CONTACT } from "../data/content";
 import { ArrowRightIcon } from "../components/ui/Icons";
+import { Link } from "react-router-dom";
 export function GiftCards() {
   const { t } = useLang();
   return (
@@ -43,6 +44,10 @@ export function GiftCards() {
               en: "Sales of new gift cards are currently paused.",
             })}
           </p>
+          <Link className="text-link" to="/gutscheine">
+            {t({ de: "Mehr zu Gutscheinen", en: "More about gift cards" })}
+            <ArrowRightIcon />
+          </Link>
         </div>
       </div>
     </section>

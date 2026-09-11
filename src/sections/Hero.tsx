@@ -2,7 +2,11 @@ import { useLang } from "../lib/i18n";
 import { CONTACT } from "../data/content";
 import { MEDIA } from "../data/media";
 import { VideoLoop } from "../components/ui/VideoLoop";
-import { ArrowRightIcon } from "../components/ui/Icons";
+import {
+  ArrowDownIcon,
+  ArrowRightIcon,
+  SparkIcon,
+} from "../components/ui/Icons";
 
 export function Hero() {
   const { t } = useLang();
@@ -11,9 +15,7 @@ export function Hero() {
       <section id="top" className="hero" aria-labelledby="hero-title">
         <div className="hero-copy">
           <p className="eyebrow">
-            <span className="small-sun" aria-hidden>
-              ✳
-            </span>
+            <SparkIcon className="small-sun" />
             {t({
               de: "Wellness & Head Spa · Ahrensburg",
               en: "Wellness & head spa · Ahrensburg",
@@ -48,7 +50,7 @@ export function Hero() {
                 en: "Discover treatments",
               })}
             >
-              ↓
+              <ArrowDownIcon />
             </a>
           </div>
         </div>

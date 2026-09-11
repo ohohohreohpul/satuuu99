@@ -13,10 +13,10 @@ export const CONTACT = {
 } as const;
 
 export const NAV = [
-  { label: { de: "Behandlungen", en: "Treatments" }, href: "/#rituale" },
-  { label: { de: "Das Studio", en: "The studio" }, href: "/#studio" },
-  { label: { de: "Gutscheine", en: "Gift cards" }, href: "/#schenken" },
-  { label: { de: "Preise", en: "Prices" }, href: CONTACT.prices },
+  { label: { de: "Behandlungen", en: "Treatments" }, href: "/behandlungen" },
+  { label: { de: "Das Studio", en: "The studio" }, href: "/studio" },
+  { label: { de: "Gutscheine", en: "Gift cards" }, href: "/gutscheine" },
+  { label: { de: "Preise", en: "Prices" }, href: "/preise" },
 ];
 
 export interface Treatment {
@@ -331,3 +331,11 @@ export const FOCUS_GROUPS: FocusGroup[] = [
     ],
   },
 ];
+
+export function findTreatment(id: string) {
+  for (const group of FOCUS_GROUPS) {
+    const treatment = group.treatments.find((item) => item.id === id);
+    if (treatment) return { group, treatment };
+  }
+  return undefined;
+}

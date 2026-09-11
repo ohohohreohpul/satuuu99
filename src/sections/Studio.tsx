@@ -1,7 +1,8 @@
 import { useLang } from "../lib/i18n";
 import { CONTACT } from "../data/content";
 import { MEDIA } from "../data/media";
-import { ArrowRightIcon } from "../components/ui/Icons";
+import { ArrowRightIcon, SparkIcon } from "../components/ui/Icons";
+import { Link } from "react-router-dom";
 
 export function Studio() {
   const { t } = useLang();
@@ -43,9 +44,7 @@ export function Studio() {
           </figcaption>
         </figure>
         <div className="studio-copy">
-          <span className="small-sun" aria-hidden>
-            ✳
-          </span>
+          <SparkIcon className="small-sun" />
           <h3>
             {t({ de: "Ein kleiner Rückzug.", en: "A small retreat." })}
             <br />
@@ -80,6 +79,10 @@ export function Studio() {
             {t({ de: "Deinen Weg zu uns finden", en: "Find your way here" })}
             <ArrowRightIcon />
           </a>
+          <Link className="text-link studio-more" to="/studio">
+            {t({ de: "Das Studio kennenlernen", en: "Meet the studio" })}
+            <ArrowRightIcon />
+          </Link>
         </div>
       </div>
     </section>

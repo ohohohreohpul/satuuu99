@@ -54,6 +54,7 @@ The official site contains overlapping restructuring notices. Final service avai
 - 404 page and return-home link verified.
 - Production browser error log empty, no broken loaded images or unresolved local anchors detected.
 - npm audit reported zero vulnerabilities after the lockfile repair.
+- Mobile interface symbols now use inline SVGs instead of Unicode glyphs, preventing emoji-style rendering on phone fonts. The generated treatment image now appears directly after the section introduction on small screens instead of below the full treatment accordion.
 
 Re-checked after the asset and content work:
 - Production TypeScript/Vite build and Prettier checks pass. Bundle 68.2 kB JS and 5.0 kB CSS gzipped.

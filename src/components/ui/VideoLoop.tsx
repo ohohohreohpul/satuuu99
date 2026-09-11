@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useLang } from "../../lib/i18n";
+import { PauseIcon, PlayIcon } from "./Icons";
 
 // React 18 drops the camelCase `fetchPriority` prop with a warning; the
 // lowercase DOM attribute is passed through and honoured by the browser.
@@ -89,7 +90,7 @@ export function VideoLoop({
               : { de: "Video abspielen", en: "Play video" },
           )}
         >
-          <span aria-hidden>{playing ? "Ⅱ" : "▷"}</span>
+          {playing ? <PauseIcon /> : <PlayIcon />}
         </button>
       )}
     </>
