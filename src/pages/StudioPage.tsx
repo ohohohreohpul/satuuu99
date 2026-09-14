@@ -10,10 +10,13 @@ import { FinalCTA } from "../sections/FinalCTA";
 export function StudioPage() {
   const { t } = useLang();
   usePageMeta(
-    t({ de: "Das Studio — satuuu99", en: "The studio — satuuu99" }),
     t({
-      de: "Lerne das satuuu99 Wellnessstudio in Ahrensburg kennen.",
-      en: "Meet the satuuu99 wellness studio in Ahrensburg.",
+      de: "Wellnessstudio Ahrensburg bei Hamburg | satuuu99",
+      en: "Wellness studio near Hamburg | satuuu99",
+    }),
+    t({
+      de: "Lerne das satuuu99 Wellnessstudio in Ahrensburg bei Hamburg kennen: Head Spa, Gesichtspflege und Wellnessmassagen.",
+      en: "Meet the satuuu99 wellness studio in Ahrensburg near Hamburg for head spa, facial care and wellness massage.",
     }),
   );
   return (
@@ -83,8 +86,8 @@ export function StudioPage() {
             <p className="eyebrow">{t({ de: "Besuch", en: "Visit" })}</p>
             <h2>
               {t({
-                de: "Mitten in Ahrensburg.",
-                en: "Right here in Ahrensburg.",
+                de: "Ahrensburg bei Hamburg.",
+                en: "Ahrensburg near Hamburg.",
               })}
             </h2>
           </div>

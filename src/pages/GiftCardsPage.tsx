@@ -8,10 +8,13 @@ import { usePageMeta } from "../lib/usePageMeta";
 export function GiftCardsPage() {
   const { t } = useLang();
   usePageMeta(
-    t({ de: "Gutscheine — satuuu99", en: "Gift cards — satuuu99" }),
     t({
-      de: "Satuuu99 Gutscheine einlösen und eine persönliche Auszeit verschenken.",
-      en: "Redeem a satuuu99 gift card and give the gift of personal time.",
+      de: "Wellness-Gutscheine bei Hamburg | satuuu99",
+      en: "Wellness gift cards near Hamburg | satuuu99",
+    }),
+    t({
+      de: "satuuu99 Wellness-Gutscheine in Ahrensburg bei Hamburg einlösen und eine persönliche Auszeit verschenken.",
+      en: "Redeem a satuuu99 wellness gift card in Ahrensburg near Hamburg and give the gift of personal time.",
     }),
   );
   const subject = encodeURIComponent(

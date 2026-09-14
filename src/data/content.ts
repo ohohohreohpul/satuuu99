@@ -17,6 +17,7 @@ export const NAV = [
   { label: { de: "Das Studio", en: "The studio" }, href: "/studio" },
   { label: { de: "Gutscheine", en: "Gift cards" }, href: "/gutscheine" },
   { label: { de: "Preise", en: "Prices" }, href: "/preise" },
+  { label: { de: "Journal", en: "Journal" }, href: "/journal" },
 ];
 
 export interface Treatment {

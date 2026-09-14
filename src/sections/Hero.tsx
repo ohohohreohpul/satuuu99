@@ -2,11 +2,7 @@ import { useLang } from "../lib/i18n";
 import { CONTACT } from "../data/content";
 import { MEDIA } from "../data/media";
 import { VideoLoop } from "../components/ui/VideoLoop";
-import {
-  ArrowDownIcon,
-  ArrowRightIcon,
-  SparkIcon,
-} from "../components/ui/Icons";
+import { ArrowDownIcon, ArrowRightIcon } from "../components/ui/Icons";
 
 export function Hero() {
   const { t } = useLang();
@@ -15,16 +11,15 @@ export function Hero() {
       <section id="top" className="hero" aria-labelledby="hero-title">
         <div className="hero-copy">
           <p className="eyebrow">
-            <SparkIcon className="small-sun" />
             {t({
-              de: "Wellness & Head Spa · Ahrensburg",
-              en: "Wellness & head spa · Ahrensburg",
+              de: "Wellness & Head Spa · Ahrensburg bei Hamburg",
+              en: "Wellness & head spa · Ahrensburg near Hamburg",
             })}
           </p>
           <h1 id="hero-title">
-            {t({ de: "Weniger Welt.", en: "A little less world." })}
+            {t({ de: "Langsamer werden.", en: "Slower days." })}
             <br />
-            <span>{t({ de: "Mehr du.", en: "A little more you." })}</span>
+            <span>{t({ de: "Bei dir ankommen.", en: "More of you." })}</span>
           </h1>
           <p className="hero-description">
             {t({
@@ -79,7 +74,7 @@ export function Hero() {
         <span>
           {t({ de: "Berührung, die bleibt.", en: "Care that stays with you." })}
         </span>
-        <a href="/?focus=head#rituale">Japanese Head Spa</a>
+        <a href="/head-spa-hamburg">Japanese Head Spa Hamburg</a>
         <span aria-hidden>·</span>
         <a href="/?focus=face#rituale">
           {t({ de: "Gesichtspflege", en: "Facial care" })}

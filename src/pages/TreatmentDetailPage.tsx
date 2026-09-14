@@ -11,8 +11,12 @@ export function TreatmentDetailPage() {
   const found = findTreatment(treatmentId);
   const { t } = useLang();
   usePageMeta(
-    found ? `${t(found.treatment.name)} — satuuu99` : "Behandlung — satuuu99",
-    found ? t(found.treatment.description) : undefined,
+    found
+      ? `${t(found.treatment.name)} in Ahrensburg bei Hamburg | satuuu99`
+      : "Behandlung — satuuu99",
+    found
+      ? `${t(found.treatment.description)} satuuu99 in Ahrensburg bei Hamburg.`
+      : undefined,
   );
   if (!found) return <Navigate to="/behandlungen" replace />;
   const { group, treatment } = found;

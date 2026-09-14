@@ -5,3 +5,8 @@ dist
 .env
 .env.*
 !.env.example
+
+.brand-build/
+.codex-finalizer/
+test-results/
+playwright-report/

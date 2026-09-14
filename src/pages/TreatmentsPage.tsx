@@ -13,10 +13,13 @@ export function TreatmentsPage() {
   const { t } = useLang();
   const { search } = useLocation();
   usePageMeta(
-    t({ de: "Behandlungen — satuuu99", en: "Treatments — satuuu99" }),
     t({
-      de: "Head Spa, Gesichtspflege, Fußpflege und Wellnessmassagen in Ahrensburg.",
-      en: "Head spa, facial care, foot care and wellness massage in Ahrensburg.",
+      de: "Wellness & Head Spa bei Hamburg | satuuu99",
+      en: "Wellness & Head Spa near Hamburg | satuuu99",
+    }),
+    t({
+      de: "Head Spa, Gesichtspflege, Fußpflege und Wellnessmassagen in Ahrensburg bei Hamburg. Finde die Behandlung, die zu dir passt.",
+      en: "Head spa, facial care, foot care and wellness massage in Ahrensburg near Hamburg. Find the treatment that suits you.",
     }),
   );
 

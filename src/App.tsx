@@ -1,3 +1,5 @@
+import { JournalPage, JournalArticlePage } from "./pages/JournalPage";
+import { usePageMeta } from "./lib/usePageMeta";
 import { Routes, Route, Link } from "react-router-dom";
 import { NavBar } from "./components/nav/NavBar";
 import { ScrollToTop } from "./components/nav/ScrollToTop";
@@ -9,6 +11,7 @@ import { PricesPage } from "./pages/PricesPage";
 import { StudioPage } from "./pages/StudioPage";
 import { TreatmentDetailPage } from "./pages/TreatmentDetailPage";
 import { TreatmentsPage } from "./pages/TreatmentsPage";
+import { HeadSpaHamburgPage } from "./pages/HeadSpaHamburgPage";
 import { useLang } from "./lib/i18n";
 import { ArrowUpRightIcon } from "./components/ui/Icons";
 export default function App() {
@@ -24,10 +27,13 @@ export default function App() {
             path="/behandlungen/:treatmentId"
             element={<TreatmentDetailPage />}
           />
+          <Route path="/journal" element={<JournalPage />} />
+          <Route path="/journal/:slug" element={<JournalArticlePage />} />
           <Route path="/studio" element={<StudioPage />} />
           <Route path="/gutscheine" element={<GiftCardsPage />} />
           <Route path="/preise" element={<PricesPage />} />
           <Route path="/kontakt" element={<ContactPage />} />
+          <Route path="/head-spa-hamburg" element={<HeadSpaHamburgPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
@@ -37,6 +43,17 @@ export default function App() {
 }
 function NotFound() {
   const { t } = useLang();
+  usePageMeta(
+    t({
+      de: "Seite nicht gefunden | satuuu99",
+      en: "Page not found | satuuu99",
+    }),
+    t({
+      de: "Diese Seite ist nicht verfügbar. Entdecke unsere Behandlungen und das Studio.",
+      en: "This page is unavailable. Explore our treatments and studio.",
+    }),
+    true,
+  );
   return (
     <section className="not-found section-shell">
       <p className="eyebrow">404</p>

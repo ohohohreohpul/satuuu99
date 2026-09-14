@@ -1,3 +1,4 @@
+import { BrandMark } from "../components/ui/BrandMark";
 import { Link } from "react-router-dom";
 import { ArrowUpIcon } from "../components/ui/Icons";
 import { CONTACT, FOCUS_GROUPS } from "../data/content";
@@ -12,13 +13,13 @@ export function Footer() {
   return (
     <footer className="site-footer section-shell">
       <div className="footer-brand">
-        <Link to="/" className="wordmark" aria-label="satuuu99 — Home">
-          satuuu<span>99</span>
+        <Link to="/" className="footer-signature" aria-label="satuuu99 — Home">
+          <BrandMark />
         </Link>
         <p>
           {t({
-            de: "Wellness. Head Spa. Ahrensburg.",
-            en: "Wellness. Head Spa. Ahrensburg.",
+            de: "Wellness. Head Spa. Ahrensburg bei Hamburg.",
+            en: "Wellness. Head Spa. Ahrensburg near Hamburg.",
           })}
         </p>
         <a className="back-top" href="#main">
@@ -32,6 +33,8 @@ export function Footer() {
           <Link to="/behandlungen">
             {t({ de: "Behandlungen", en: "Treatments" })}
           </Link>
+          <Link to="/journal">Journal</Link>
+          <Link to="/head-spa-hamburg">Head Spa Hamburg</Link>
           <Link to="/studio">{t({ de: "Das Studio", en: "The studio" })}</Link>
           <Link to="/gutscheine">
             {t({ de: "Gutscheine", en: "Gift cards" })}

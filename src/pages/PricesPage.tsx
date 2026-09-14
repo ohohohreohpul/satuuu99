@@ -6,10 +6,13 @@ import { usePageMeta } from "../lib/usePageMeta";
 export function PricesPage() {
   const { t } = useLang();
   usePageMeta(
-    t({ de: "Preise — satuuu99", en: "Prices — satuuu99" }),
     t({
-      de: "Aktuelle Preise und Behandlungsdauer bei satuuu99.",
-      en: "Current prices and treatment durations at satuuu99.",
+      de: "Wellness & Head Spa Preise | satuuu99 Ahrensburg",
+      en: "Wellness & Head Spa Prices | satuuu99 Ahrensburg",
+    }),
+    t({
+      de: "Aktuelle Preise und Behandlungsdauer für Head Spa, Gesichtspflege und Wellnessmassagen bei satuuu99 nahe Hamburg.",
+      en: "Current prices and treatment durations for head spa, facial care and wellness massage at satuuu99 near Hamburg.",
     }),
   );
   return (

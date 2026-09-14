@@ -6,10 +6,13 @@ import { usePageMeta } from "../lib/usePageMeta";
 export function ContactPage() {
   const { t } = useLang();
   usePageMeta(
-    t({ de: "Kontakt — satuuu99", en: "Contact — satuuu99" }),
     t({
-      de: "Termin, Anfahrt und Kontakt zu satuuu99 in Ahrensburg.",
-      en: "Booking, directions and contact for satuuu99 in Ahrensburg.",
+      de: "Anfahrt & Kontakt | satuuu99 bei Hamburg",
+      en: "Directions & Contact | satuuu99 near Hamburg",
+    }),
+    t({
+      de: "Termin, Anfahrt und Kontakt zu satuuu99 in Ahrensburg bei Hamburg. Du findest uns in der Manhagener Allee 45.",
+      en: "Booking, directions and contact for satuuu99 in Ahrensburg near Hamburg, at Manhagener Allee 45.",
     }),
   );
   const faqs = [

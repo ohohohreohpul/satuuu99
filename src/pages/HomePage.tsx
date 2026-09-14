@@ -1,3 +1,8 @@
+import { StudioUpdates } from "../sections/StudioUpdates";
+import { useHomeMotion } from "../lib/useHomeMotion";
+import { BrandStory } from "../sections/BrandStory";
+import { RitualFinder } from "../sections/RitualFinder";
+import { JournalPreview } from "./JournalPage";
 import { useLang } from "../lib/i18n";
 import { usePageMeta } from "../lib/usePageMeta";
 import { Hero } from "../sections/Hero";
@@ -6,20 +11,28 @@ import { Studio } from "../sections/Studio";
 import { GiftCards } from "../sections/GiftCards";
 import { FinalCTA } from "../sections/FinalCTA";
 export function HomePage() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
+  useHomeMotion(lang);
   usePageMeta(
-    "satuuu99 — Wellness & Head Spa · Ahrensburg",
     t({
-      de: "Deine Pause in Ahrensburg. Japanese Head Spa, Gesichtspflege, Wellness-Fußpflege und Massagen bei satuuu99. Entdecke unsere Behandlungen und buche deine Auszeit.",
-      en: "Your pause in Ahrensburg. Japanese head spa, facials, wellness foot care and massage at satuuu99. Explore our treatments and book a little time for yourself.",
+      de: "Head Spa & Wellness nahe Hamburg | satuuu99 Ahrensburg",
+      en: "Head Spa & Wellness near Hamburg | satuuu99 Ahrensburg",
+    }),
+    t({
+      de: "Japanese Head Spa, Gesichtspflege und Wellnessmassagen in Ahrensburg bei Hamburg. Entdecke satuuu99 und buche deine persönliche Auszeit.",
+      en: "Japanese head spa, facial care and wellness massage in Ahrensburg near Hamburg. Discover satuuu99 and book time for yourself.",
     }),
   );
   return (
     <>
       <Hero />
+      <BrandStory />
       <FocusExplorer />
+      <RitualFinder />
       <Studio />
       <GiftCards />
+      <StudioUpdates />
+      <JournalPreview />
       <FinalCTA />
     </>
   );
