@@ -2494,18 +2494,62 @@ h4 {
     color 0.45s;
 }
 .immersive-nav {
+  --glass-x: 50%;
+  --glass-y: -30px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   max-width: none;
   height: 92px;
   padding: 0 32px;
   gap: 25px;
-  border: 1px solid transparent;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 28px;
+  background:
+    linear-gradient(115deg, rgba(246, 243, 237, 0.22), rgba(246, 243, 237, 0.08));
+  -webkit-backdrop-filter: blur(22px) saturate(1.18);
+  backdrop-filter: blur(22px) saturate(1.18);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.38),
+    inset 0 -1px 0 rgba(58, 51, 43, 0.08),
+    0 18px 48px rgba(27, 22, 19, 0.12);
+  animation: glass-arrival 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
   transition:
     background 0.45s,
     border-color 0.45s,
+    border-radius 0.45s,
     height 0.45s,
-    box-shadow 0.45s;
+    box-shadow 0.45s,
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.immersive-nav::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    circle 240px at var(--glass-x) var(--glass-y),
+    rgba(255, 255, 255, 0.34),
+    rgba(255, 255, 255, 0.08) 42%,
+    transparent 72%
+  );
+  transition: background-position 0.2s ease-out;
+}
+.immersive-nav::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 1px;
+  pointer-events: none;
+  border-radius: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+}
+.immersive-nav > * {
+  position: relative;
+  z-index: 1;
 }
 .immersive-header.over-film {
   color: #f6f3ed;
@@ -2514,16 +2558,23 @@ h4 {
   color: var(--ink);
 }
 .immersive-header.on-paper .immersive-nav {
-  background: #f6f3edf2;
-  backdrop-filter: blur(20px);
-  border-color: #3a332b16;
-  box-shadow: 0 5px 30px #3a332b06;
+  background:
+    linear-gradient(115deg, rgba(246, 243, 237, 0.78), rgba(246, 243, 237, 0.56));
+  -webkit-backdrop-filter: blur(26px) saturate(1.12);
+  backdrop-filter: blur(26px) saturate(1.12);
+  border-color: rgba(255, 255, 255, 0.72);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.78),
+    inset 0 -1px 0 rgba(58, 51, 43, 0.08),
+    0 18px 48px rgba(58, 51, 43, 0.09);
 }
 .immersive-header.is-scrolled {
   padding-top: 12px;
 }
 .immersive-header.is-scrolled .immersive-nav {
   height: 78px;
+  border-radius: 24px;
+  transform: translateY(-2px);
 }
 .header-left,
 .header-right {
@@ -2587,8 +2638,16 @@ h4 {
   gap: 25px;
   padding: 16px 21px;
   border: 1px solid currentColor;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   font-size: 11px;
   letter-spacing: 0.02em;
+  transition:
+    background 0.25s,
+    color 0.25s,
+    transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .header-reserve svg {
   width: 18px;
@@ -2597,6 +2656,7 @@ h4 {
   background: var(--paper);
   border-color: var(--paper);
   color: var(--ink);
+  transform: translateY(-2px);
 }
 .on-paper .header-reserve:hover {
   background: var(--ink);
@@ -2619,7 +2679,9 @@ h4 {
 .immersive-menu {
   position: fixed;
   inset: 0;
-  background: var(--paper);
+  background: rgba(246, 243, 237, 0.9);
+  -webkit-backdrop-filter: blur(28px) saturate(1.08);
+  backdrop-filter: blur(28px) saturate(1.08);
   z-index: 50;
   overflow-y: auto;
   overscroll-behavior: contain;
@@ -2742,6 +2804,19 @@ h4 {
   margin: 22px 22px 22px 0;
   min-height: 560px;
   background: var(--sand, #d9cec2);
+  border-radius: 28px;
+  box-shadow: 0 22px 55px rgba(58, 51, 43, 0.12);
+}
+
+@keyframes glass-arrival {
+  from {
+    opacity: 0;
+    transform: translateY(-18px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 .menu-photo > img {
   position: absolute;
@@ -2973,6 +3048,10 @@ h4 {
     height: 84px;
     padding: 0 16px;
     gap: 12px;
+    border-radius: 22px;
+  }
+  .immersive-nav::after {
+    border-radius: 20px;
   }
   .brand-signature :is(svg, img) {
     width: 66px;
@@ -3087,6 +3166,7 @@ h4 {
   }
   .immersive-header.is-scrolled .immersive-nav {
     height: 72px;
+    border-radius: 19px;
   }
 }
 @media (max-width: 540px) {

@@ -24,7 +24,7 @@ test('dynamic updates validate data and fail without blocking the home page',asy
 test('reduced motion leaves homepage content readable',async({page})=>{await page.emulateMedia({reducedMotion:'reduce'});await page.goto('/');await expect(page.locator('.hero h1')).toHaveCSS('opacity','1');await expect(page.locator('.brand-story')).toHaveCSS('opacity','1');});
 
 test('immersive menu traps focus, restores the trigger and switches its imagery',async({page})=>{
- await page.goto('/');const trigger=page.getByRole('button',{name:'Menü öffnen'});await trigger.click();const close=page.getByRole('button',{name:'Menü schließen'});await expect(close).toBeFocused();
+ await page.goto('/');const glass=page.locator('.immersive-nav');expect(await glass.evaluate(element=>({radius:getComputedStyle(element).borderRadius,blur:getComputedStyle(element).backdropFilter}))).toEqual(expect.objectContaining({radius:'28px'}));expect((await glass.evaluate(element=>getComputedStyle(element).backdropFilter))).toContain('blur');const trigger=page.getByRole('button',{name:'Menü öffnen'});await trigger.click();const close=page.getByRole('button',{name:'Menü schließen'});await expect(close).toBeFocused();
  await page.locator('.menu-ritual-title').filter({hasText:'Gesicht'}).hover();await expect(page.locator('.menu-photo img.is-visible')).toHaveAttribute('src','/assets/treatment-face.jpg');
  await page.locator('.menu-bottomline a').last().focus();await page.keyboard.press('Tab');await expect(page.locator('.menu-topline .header-brand')).toBeFocused();
  await page.keyboard.press('Escape');await expect(page.locator('#site-menu')).toHaveCount(0);await expect(trigger).toBeFocused();await expect(page.locator('main')).not.toHaveAttribute('inert','');

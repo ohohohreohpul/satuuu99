@@ -31,6 +31,21 @@ export function NavBar() {
   const opener = useRef<HTMLElement | null>(null);
   const closing = useRef(false);
   const isHome = location.pathname === "/";
+  const moveGlassLight = (event: React.PointerEvent<HTMLElement>) => {
+    const bounds = event.currentTarget.getBoundingClientRect();
+    event.currentTarget.style.setProperty(
+      "--glass-x",
+      `${event.clientX - bounds.left}px`,
+    );
+    event.currentTarget.style.setProperty(
+      "--glass-y",
+      `${event.clientY - bounds.top}px`,
+    );
+  };
+  const resetGlassLight = (event: React.PointerEvent<HTMLElement>) => {
+    event.currentTarget.style.setProperty("--glass-x", "50%");
+    event.currentTarget.style.setProperty("--glass-y", "-30px");
+  };
   const openMenu = (event: React.MouseEvent<HTMLButtonElement>) => {
     opener.current = event.currentTarget;
     setOpen(true);
@@ -141,6 +156,8 @@ export function NavBar() {
         <nav
           className="nav-shell immersive-nav"
           aria-label={t({ de: "Hauptnavigation", en: "Main navigation" })}
+          onPointerMove={moveGlassLight}
+          onPointerLeave={resetGlassLight}
         >
           <div className="header-left">
             <button
