@@ -20,7 +20,7 @@ export const JOURNAL: JournalArticle[] = [
       de: "Was dich bei einem Japanese Head Spa in Ahrensburg erwartet und wie du deine Auszeit planst.",
       en: "What to expect from a Japanese head spa in Ahrensburg and how to plan your time with us.",
     },
-    image: "/assets/treatment-head.jpg",
+    image: "/assets/generated/head-spa-ritual-v2.jpg",
     related: "head-spa",
     sections: [
       {
@@ -60,7 +60,7 @@ export const JOURNAL: JournalArticle[] = [
       de: "Kopf, Gesicht, Körper oder Füße: Ein kleiner Wegweiser durch unsere Wellnessanwendungen.",
       en: "Head, face, body or feet: a guide to finding your next wellness ritual.",
     },
-    image: "/assets/treatment-body.jpg",
+    image: "/assets/generated/shoulder-ritual-v2.jpg",
     related: "spa-massage",
     sections: [
       {
@@ -100,7 +100,7 @@ export const JOURNAL: JournalArticle[] = [
       de: "Ein ruhiger Gegenpol zum Alltag, in der Manhagener Allee und in der Nähe von Hamburg.",
       en: "A quiet counterpoint to everyday life on Manhagener Allee, near Hamburg.",
     },
-    image: "/assets/studio.jpg",
+    image: "/assets/generated/studio-architecture-v2.jpg",
     related: "head-spa",
     sections: [
       {
@@ -125,6 +125,80 @@ export const JOURNAL: JournalArticle[] = [
         text: {
           de: "Wähle einen Termin, der dir auch davor und danach etwas Freiraum lässt. Bei Fragen zur Anreise oder zu deinem Besuch erreichst du uns per E-Mail. Die aktuellen buchbaren Zeiten findest du im Online-Kalender. Verbindliche Preise und Behandlungsdauer stehen in der offiziellen Preisliste beziehungsweise bei der ausgewählten Buchung.",
           en: "Choose an appointment that gives you a little room before and afterwards. Email us with questions about getting here or your visit. The online calendar shows available appointments. Check the official price list or the selected booking for confirmed prices and treatment durations.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "gua-sha-ritual-gesicht",
+    category: { de: "Gesichtspflege", en: "Facial care" },
+    title: {
+      de: "Gua Sha: Berührung mit Ruhe",
+      en: "Gua sha: care at a slower pace",
+    },
+    intro: {
+      de: "Was hinter dem stillen Gesichtspflege-Ritual steckt und wie wir Druck, Tempo und Ablauf auf dich abstimmen.",
+      en: "What shapes this quiet facial ritual and how we adapt its pressure, pace and flow to you.",
+    },
+    image: "/assets/generated/gua-sha-ritual-v2.jpg",
+    related: "gua-sha",
+    sections: [
+      {
+        title: { de: "Ein glatter Stein, langsame Bewegungen", en: "A smooth stone, unhurried movements" },
+        text: {
+          de: "Gua Sha ist bei satuuu99 ein ruhiges Pflegeritual für Gesicht, Kiefer und Hals. Der glatte Stein wird in langsamen, geführten Bewegungen über die Haut geführt. Es geht nicht darum, möglichst viel Druck auszuhalten. Entscheidend ist, dass sich die Berührung für dich angenehm anfühlt und du loslassen kannst.",
+          en: "At satuuu99, gua sha is a quiet care ritual for the face, jaw and neck. A smooth stone moves slowly and deliberately across the skin. The aim is never to tolerate as much pressure as possible. What matters is that the touch feels comfortable and gives you room to let go.",
+        },
+      },
+      {
+        title: { de: "Vorher kurz ankommen", en: "A moment to arrive first" },
+        text: {
+          de: "Zu Beginn sprechen wir darüber, wie sich deine Haut heute anfühlt und welche Bereiche besondere Aufmerksamkeit bekommen dürfen. Teile uns bitte mit, wenn deine Haut empfindlich ist oder du kürzlich eine kosmetische oder medizinische Behandlung hattest. So können wir gemeinsam klären, was für deinen Termin passend ist.",
+          en: "We begin by asking how your skin feels today and which areas deserve particular attention. Please tell us if your skin is sensitive or if you have recently had a cosmetic or medical procedure. That gives us the context to decide together what suits your appointment.",
+        },
+      },
+      {
+        title: { de: "Dein Tempo zählt", en: "Your pace matters" },
+        text: {
+          de: "Du kannst während des Rituals jederzeit um weniger Druck, eine Pause oder mehr Ruhe bitten. Manche Gäste möchten wissen, was als Nächstes passiert; andere schließen lieber die Augen. Beides ist willkommen. Eine gute Auszeit beginnt dort, wo du dich nicht erklären musst.",
+          en: "You can ask for less pressure, a pause or more quiet at any point. Some guests like to know what comes next; others prefer to close their eyes. Both are welcome. A good pause begins where you do not have to perform.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "wellness-termin-richtig-planen",
+    category: { de: "Vor deinem Besuch", en: "Before your visit" },
+    title: {
+      de: "So wird aus einem Termin eine echte Pause",
+      en: "How an appointment becomes a real pause",
+    },
+    intro: {
+      de: "Ein kleiner Leitfaden für Anreise, Wünsche und die Zeit nach deinem Wellness-Ritual in Ahrensburg.",
+      en: "A simple guide to arrival, preferences and the time after your wellness ritual in Ahrensburg.",
+    },
+    image: "/assets/generated/ritual-still-life-v2.jpg",
+    related: "spa-massage",
+    sections: [
+      {
+        title: { de: "Lass etwas Luft im Kalender", en: "Leave some room in your day" },
+        text: {
+          de: "Plane deine Anreise zur Manhagener Allee 45 so, dass du ohne Eile ankommst. Wenn es möglich ist, halte auch die Zeit direkt nach deinem Termin frei. So endet dein Ritual nicht mit einem Blick auf die Uhr, sondern darf noch ein wenig nachwirken.",
+          en: "Plan your journey to Manhagener Allee 45 so you can arrive without rushing. If possible, leave the time immediately after your appointment open too. Your ritual can then end without a glance at the clock and settle for a little longer.",
+        },
+      },
+      {
+        title: { de: "Sag uns, was du brauchst", en: "Tell us what you need" },
+        text: {
+          de: "Vor jeder Anwendung ist Raum für ein kurzes Gespräch. Nenne uns empfindliche Bereiche, deine bevorzugte Druckstärke und alles, was deinen Komfort beeinflusst. Auch der Wunsch nach einer besonders ruhigen Behandlung gehört dazu. Je klarer wir dich verstehen, desto persönlicher kann sich deine Zeit anfühlen.",
+          en: "Every treatment begins with room for a short conversation. Tell us about sensitive areas, your preferred pressure and anything that affects your comfort. That includes wanting a particularly quiet treatment. The better we understand you, the more personal your time can feel.",
+        },
+      },
+      {
+        title: { de: "Wähle nach Gefühl und Fokus", en: "Choose by feeling and focus" },
+        text: {
+          de: "Kopf, Gesicht, Körper oder Füße: Beginne bei dem Bereich, dem du heute Aufmerksamkeit schenken möchtest. Die Beschreibungen im Behandlungskatalog geben dir Orientierung. Wenn du zwischen zwei Ritualen schwankst, schreib uns vor der Buchung. Aktuelle Verfügbarkeit, Dauer und verbindliche Preise findest du im Buchungskalender und in der Preisliste.",
+          en: "Head, face, body or feet: begin with the area you would like to care for today. The treatment catalogue gives you a clear starting point. If you are choosing between two rituals, email us before booking. The calendar and official price list show current availability, duration and confirmed prices.",
         },
       },
     ],

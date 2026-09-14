@@ -37,10 +37,10 @@ export function GiftCardsPage() {
           de: "Ein Moment zum Ankommen, Durchatmen und Sich-kümmern-lassen.",
           en: "A moment to arrive, breathe and let someone take care of you.",
         })}
-        image={MEDIA.treatments.face}
+        image={MEDIA.editorial.gift}
         imageAlt={t({
-          de: "Ruhiges Gesichtspflege-Ritual",
-          en: "Calm facial care ritual",
+          de: "Leinen, Wasserschale und eine Karte als Symbol für verschenkte Zeit",
+          en: "Linen, a water bowl and a card representing the gift of time",
         })}
       />
       <section className="gift-page-body section-shell">

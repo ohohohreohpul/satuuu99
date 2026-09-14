@@ -1,5 +1,21 @@
 # Magnific asset brief
 
+## September 14 visual-world expansion
+
+The current site now uses a second, brand-led media set generated with the built-in OpenAI image-generation workflow. The two supplied SATUUU99 identity boards were used as visual references for palette, natural light, Thai-inspired architectural curves, tactile materials and restraint. Their layouts and logo were not reproduced in the photographs.
+
+| File | Website role | Composition |
+|---|---|---|
+| `generated/head-spa-ritual-v2.jpg` | Homepage poster, Head Spa pages and journal | Portrait head-spa ritual with negative space |
+| `generated/hero-ritual-loop-v2.mp4` | Homepage hero | 12-second, silent H.264 slow-camera loop derived from the head-spa master frame |
+| `generated/studio-architecture-v2.jpg` | Studio page and studio story | Wide architectural atmosphere image |
+| `generated/gua-sha-ritual-v2.jpg` | Facial-care and Gua Sha pages | Portrait facial ritual |
+| `generated/shoulder-ritual-v2.jpg` | Body-treatment pages | Fully clothed professional shoulder ritual |
+| `generated/foot-ritual-v2.jpg` | Foot-care pages | Portrait foot ritual with warm towel and stone basin |
+| `generated/ritual-still-life-v2.jpg` | Gift-card page and editorial guide | Wide linen, water, stone and blank-card still life |
+
+Shared prompt direction: photorealistic premium wellness editorial photography; warm natural leaf-shadow light; earth, stone, sand and ivory palette; believable adult practitioners and clients; authentic skin, linen, plaster, wood and stone; restrained styling; no text, logos, watermarks, medical equipment, spa clichés or exaggerated luxury. Each image received a separate subject and crop-specific prompt for its website placement. The generated files were reviewed visually before integration. The studio scene remains an aspirational atmosphere image and must be replaced by documentary photography when an approved real-studio shoot is available.
+
 Status: complete, generated 10 September 2026. Stills were produced in Magnific with **Recraft V4.1** (catalog slug `recraft-v4-1`), the slug resolved from Magnific's image model catalog. Two variants were generated per shot at 896x1152 (3:2 shots at 1280x832); the selected variant of each was then enhanced 2x with Magnific's `ultra-photo` upscaler to 1792x2304 (studio: 2560x1664) and downsized locally to the delivery width.
 
 Recraft V4.1 is a still-image model. The hero loop was produced separately with **Kling 3.0** (`kling-30`), image-to-video from the approved hero still; it is not Recraft output.

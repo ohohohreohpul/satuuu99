@@ -5,7 +5,7 @@ test('mega menu, treatment finder and journal form a working discovery flow',asy
  await page.keyboard.press('Escape');await expect(mega).toHaveCount(0);
  await page.getByRole('radio',{name:'Gesicht',exact:true}).check();await page.getByRole('link',{name:'Passende Rituale ansehen'}).click();await expect(page).toHaveURL(/focus=face/);
  await page.goto('/journal');await page.getByRole('searchbox').fill('Head-Spa');await expect(page.locator('.journal-card')).toHaveCount(1);
- await page.getByRole('searchbox').fill('zzzz');await expect(page.getByText('Noch keine passende Geschichte.')).toBeVisible();await page.getByRole('button',{name:'Alle Geschichten anzeigen'}).click();await expect(page.locator('.journal-card')).toHaveCount(3);
+ await page.getByRole('searchbox').fill('zzzz');await expect(page.getByText('Noch keine passende Geschichte.')).toBeVisible();await page.getByRole('button',{name:'Alle Geschichten anzeigen'}).click();await expect(page.locator('.journal-card')).toHaveCount(5);
  await page.locator('.journal-card').first().click();await expect(page.locator('h1')).toHaveText('Dein erster Head-Spa-Besuch');await expect(page).toHaveTitle(/Dein erster Head-Spa-Besuch/);
  await page.getByRole('button',{name:'English'}).click();await expect(page.locator('h1')).toHaveText('Your first head spa visit');
 });
@@ -25,7 +25,7 @@ test('reduced motion leaves homepage content readable',async({page})=>{await pag
 
 test('immersive menu traps focus, restores the trigger and switches its imagery',async({page})=>{
  await page.goto('/');const glass=page.locator('.immersive-nav');expect(await glass.evaluate(element=>({radius:getComputedStyle(element).borderRadius,blur:getComputedStyle(element).backdropFilter}))).toEqual(expect.objectContaining({radius:'28px'}));expect((await glass.evaluate(element=>getComputedStyle(element).backdropFilter))).toContain('blur');const trigger=page.getByRole('button',{name:'Menü öffnen'});await trigger.click();const close=page.getByRole('button',{name:'Menü schließen'});await expect(close).toBeFocused();
- await page.locator('.menu-ritual-title').filter({hasText:'Gesicht'}).hover();await expect(page.locator('.menu-photo img.is-visible')).toHaveAttribute('src','/assets/treatment-face.jpg');
+ await page.locator('.menu-ritual-title').filter({hasText:'Gesicht'}).hover();await expect(page.locator('.menu-photo img.is-visible')).toHaveAttribute('src','/assets/generated/gua-sha-ritual-v2.jpg');
  await page.locator('.menu-bottomline a').last().focus();await page.keyboard.press('Tab');await expect(page.locator('.menu-topline .header-brand')).toBeFocused();
  await page.keyboard.press('Escape');await expect(page.locator('#site-menu')).toHaveCount(0);await expect(trigger).toBeFocused();await expect(page.locator('main')).not.toHaveAttribute('inert','');
  await page.locator('.brand-story').scrollIntoViewIfNeeded();await expect(page.locator('.immersive-header')).toHaveClass(/on-paper/);

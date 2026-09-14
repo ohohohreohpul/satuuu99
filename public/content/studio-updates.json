@@ -1,7 +1,8 @@
 {
-  "updatedAt": "2026-09-12",
+  "updatedAt": "2026-09-14",
   "items": [
     {"id":"new-concept","title":{"de":"Mehr Raum für deine Auszeit","en":"More room for your time out"},"body":{"de":"Unser neues Konzept verbindet Head Spa, Gesichtspflege und ausgewählte Wellnessrituale. Entdecke die Anwendungen für deinen nächsten Besuch.","en":"Our new concept brings together head spa, facial care and selected wellness rituals. Explore the treatments for your next visit."},"href":"/behandlungen","label":{"de":"Rituale entdecken","en":"Explore rituals"}},
-    {"id":"gift-cards","title":{"de":"Du hast einen Satuuu-Gutschein?","en":"Already have a Satuuu gift card?"},"body":{"de":"Wir helfen dir bei der Einlösung. Der Verkauf neuer Gutscheine ist derzeit pausiert.","en":"We can help you redeem it. Sales of new gift cards are currently paused."},"href":"/gutscheine","label":{"de":"Gutschein-Informationen","en":"Gift card information"}}
+    {"id":"gift-cards","title":{"de":"Du hast einen Satuuu-Gutschein?","en":"Already have a Satuuu gift card?"},"body":{"de":"Wir helfen dir bei der Einlösung. Der Verkauf neuer Gutscheine ist derzeit pausiert.","en":"We can help you redeem it. Sales of new gift cards are currently paused."},"href":"/gutscheine","label":{"de":"Gutschein-Informationen","en":"Gift card information"}},
+    {"id":"journal-guide","title":{"de":"Neu im Journal: Deine Auszeit gut planen","en":"New in the journal: plan an unhurried visit"},"body":{"de":"Von der Anreise bis zu deinen persönlichen Wünschen: Unser neuer Guide hilft dir, mit Ruhe in deinen Termin zu starten.","en":"From arrival to your personal preferences, our new guide helps you begin your appointment at an easier pace."},"href":"/journal/wellness-termin-richtig-planen","label":{"de":"Guide lesen","en":"Read the guide"}}
   ]
 }
