@@ -20,7 +20,7 @@ export const JOURNAL: JournalArticle[] = [
       de: "Was dich bei einem Japanese Head Spa in Ahrensburg erwartet und wie du deine Auszeit planst.",
       en: "What to expect from a Japanese head spa in Ahrensburg and how to plan your time with us.",
     },
-    image: "/assets/generated/head-spa-ritual-v2.jpg",
+    image: "/assets/treatment-head.jpg",
     related: "head-spa",
     sections: [
       {
@@ -60,7 +60,7 @@ export const JOURNAL: JournalArticle[] = [
       de: "Kopf, Gesicht, Körper oder Füße: Ein kleiner Wegweiser durch unsere Wellnessanwendungen.",
       en: "Head, face, body or feet: a guide to finding your next wellness ritual.",
     },
-    image: "/assets/generated/shoulder-ritual-v2.jpg",
+    image: "/assets/treatment-body.jpg",
     related: "spa-massage",
     sections: [
       {
@@ -100,7 +100,7 @@ export const JOURNAL: JournalArticle[] = [
       de: "Ein ruhiger Gegenpol zum Alltag, in der Manhagener Allee und in der Nähe von Hamburg.",
       en: "A quiet counterpoint to everyday life on Manhagener Allee, near Hamburg.",
     },
-    image: "/assets/generated/studio-architecture-v2.jpg",
+    image: "/assets/authentic/studio.jpg",
     related: "head-spa",
     sections: [
       {
@@ -140,7 +140,7 @@ export const JOURNAL: JournalArticle[] = [
       de: "Was hinter dem stillen Gesichtspflege-Ritual steckt und wie wir Druck, Tempo und Ablauf auf dich abstimmen.",
       en: "What shapes this quiet facial ritual and how we adapt its pressure, pace and flow to you.",
     },
-    image: "/assets/generated/gua-sha-ritual-v2.jpg",
+    image: "/assets/treatment-face.jpg",
     related: "gua-sha",
     sections: [
       {
@@ -177,7 +177,7 @@ export const JOURNAL: JournalArticle[] = [
       de: "Ein kleiner Leitfaden für Anreise, Wünsche und die Zeit nach deinem Wellness-Ritual in Ahrensburg.",
       en: "A simple guide to arrival, preferences and the time after your wellness ritual in Ahrensburg.",
     },
-    image: "/assets/generated/ritual-still-life-v2.jpg",
+    image: "/assets/authentic/studio.jpg",
     related: "spa-massage",
     sections: [
       {

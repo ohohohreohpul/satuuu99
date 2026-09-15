@@ -29,8 +29,8 @@ export function Studio() {
           <img
             src={MEDIA.studio}
             alt={t({
-              de: "Atmosphärisches Motiv: Behandlungsraum mit Leinen, Tageslicht und warmen Naturtönen",
-              en: "Atmospheric image: a treatment room with linen, daylight and warm natural tones",
+              de: "Kleiner, privater Behandlungsraum mit Leinen und Tageslicht",
+              en: "A small, private treatment room with linen and daylight",
             })}
             loading="lazy"
             width="1800"
@@ -38,8 +38,8 @@ export function Studio() {
           />
           <figcaption>
             {t({
-              de: "Ein Gefühl für unsere Welt · Atmosphärenbild",
-              en: "A feeling for our world · Mood image",
+              de: "Unser privater Behandlungsraum · Ahrensburg",
+              en: "Our private treatment room · Ahrensburg",
             })}
           </figcaption>
         </figure>
@@ -55,8 +55,8 @@ export function Studio() {
           </h3>
           <p>
             {t({
-              de: "Bei satuuu99 stehen Wellness, Pflege und persönliche Aufmerksamkeit im Mittelpunkt. Wir nehmen uns Zeit, hören zu und finden gemeinsam die passende Anwendung für dich.",
-              en: "At satuuu99, wellness, care and personal attention come first. We take time to listen and find the right treatment together.",
+              de: "Wir sind bewusst ein kleines Studio. Du kommst nicht in einen großen Spa-Betrieb, sondern an einen privaten Ort, an dem wir uns Zeit nehmen, zuhören und gemeinsam die passende Anwendung für dich finden.",
+              en: "We are intentionally a small studio. Your visit is personal rather than part of a large spa operation, with time to listen and choose the treatment that feels right for you.",
             })}
           </p>
           <p>

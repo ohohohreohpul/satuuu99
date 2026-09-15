@@ -15,8 +15,8 @@ export function StudioPage() {
       en: "Wellness studio near Hamburg | satuuu99",
     }),
     t({
-      de: "Lerne das satuuu99 Wellnessstudio in Ahrensburg bei Hamburg kennen: Head Spa, Gesichtspflege und Wellnessmassagen.",
-      en: "Meet the satuuu99 wellness studio in Ahrensburg near Hamburg for head spa, facial care and wellness massage.",
+      de: "Lerne das kleine, private satuuu99 Wellnessstudio in Ahrensburg bei Hamburg kennen: Head Spa, Gesichtspflege und Wellnessmassagen.",
+      en: "Meet the small, private satuuu99 wellness studio in Ahrensburg near Hamburg for head spa, facial care and wellness massage.",
     }),
   );
   return (
@@ -33,8 +33,8 @@ export function StudioPage() {
           </>
         }
         copy={t({
-          de: "Ein ruhiger Ort für Pflege, Berührung und die kleinen Momente, in denen du wieder bei dir ankommst.",
-          en: "A calm place for care, touch and the small moments that bring you back to yourself.",
+          de: "Ein kleines, privates Studio für Pflege, Berührung und die Momente, in denen du wieder bei dir ankommst.",
+          en: "A small, private studio for care, touch and the moments that bring you back to yourself.",
         })}
         image={MEDIA.studio}
         imageAlt={t({
@@ -68,8 +68,8 @@ export function StudioPage() {
           </h2>
           <p>
             {t({
-              de: "Bei satuuu99 stehen Wellness, Pflege und persönliche Aufmerksamkeit im Mittelpunkt. Wir nehmen uns Zeit, hören zu und stimmen jede Anwendung auf dein persönliches Empfinden ab.",
-              en: "At satuuu99, wellness, care and personal attention come first. We take time to listen and tailor every treatment to how you feel.",
+              de: "satuuu99 ist kein großes Day Spa, sondern ein persönlicher Rückzugsort in Ahrensburg. Wir nehmen uns Zeit, hören zu und stimmen jede Anwendung auf dein Empfinden ab.",
+              en: "satuuu99 is a personal retreat in Ahrensburg rather than a large day spa. We take time to listen and tailor each treatment to how you feel.",
             })}
           </p>
           <p>

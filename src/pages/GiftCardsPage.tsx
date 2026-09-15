@@ -39,8 +39,8 @@ export function GiftCardsPage() {
         })}
         image={MEDIA.editorial.gift}
         imageAlt={t({
-          de: "Leinen, Wasserschale und eine Karte als Symbol für verschenkte Zeit",
-          en: "Linen, a water bowl and a card representing the gift of time",
+          de: "Kleiner, ruhiger Behandlungsraum mit Leinen und warmem Tageslicht",
+          en: "A small, quiet treatment room with linen and warm daylight",
         })}
       />
       <section className="gift-page-body section-shell">

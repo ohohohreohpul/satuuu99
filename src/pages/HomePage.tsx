@@ -19,8 +19,8 @@ export function HomePage() {
       en: "Head Spa & Wellness near Hamburg | satuuu99 Ahrensburg",
     }),
     t({
-      de: "Japanese Head Spa, Gesichtspflege und Wellnessmassagen in Ahrensburg bei Hamburg. Entdecke satuuu99 und buche deine persönliche Auszeit.",
-      en: "Japanese head spa, facial care and wellness massage in Ahrensburg near Hamburg. Discover satuuu99 and book time for yourself.",
+      de: "Ein privates Wellnessstudio in Ahrensburg bei Hamburg für Japanese Head Spa, Gesichtspflege und Wellnessmassagen. Buche deine persönliche Auszeit.",
+      en: "A private wellness studio in Ahrensburg near Hamburg for Japanese head spa, facial care and wellness massage. Book time for yourself.",
     }),
   );
   return (

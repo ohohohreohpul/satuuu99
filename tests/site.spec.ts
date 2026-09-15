@@ -25,7 +25,7 @@ test('reduced motion leaves homepage content readable',async({page})=>{await pag
 
 test('immersive menu traps focus, restores the trigger and switches its imagery',async({page})=>{
  await page.goto('/');const glass=page.locator('.immersive-nav');expect(await glass.evaluate(element=>({radius:getComputedStyle(element).borderRadius,blur:getComputedStyle(element).backdropFilter}))).toEqual(expect.objectContaining({radius:'28px'}));expect((await glass.evaluate(element=>getComputedStyle(element).backdropFilter))).toContain('blur');const trigger=page.getByRole('button',{name:'Menü öffnen'});await trigger.click();const close=page.getByRole('button',{name:'Menü schließen'});await expect(close).toBeFocused();
- await page.locator('.menu-ritual-title').filter({hasText:'Gesicht'}).hover();await expect(page.locator('.menu-photo img.is-visible')).toHaveAttribute('src','/assets/generated/gua-sha-ritual-v2.jpg');
+ await page.locator('.menu-ritual-title').filter({hasText:'Gesicht'}).hover();await expect(page.locator('.menu-photo img.is-visible')).toHaveAttribute('src','/assets/treatment-face.jpg');
  await page.locator('.menu-bottomline a').last().focus();await page.keyboard.press('Tab');await expect(page.locator('.menu-topline .header-brand')).toBeFocused();
  await page.keyboard.press('Escape');await expect(page.locator('#site-menu')).toHaveCount(0);await expect(trigger).toBeFocused();await expect(page.locator('main')).not.toHaveAttribute('inert','');
  await page.locator('.brand-story').scrollIntoViewIfNeeded();await expect(page.locator('.immersive-header')).toHaveClass(/on-paper/);

@@ -16,8 +16,8 @@ export function BrandStory() {
       </h2>
       <p>
         {t({
-          de: "Inspiriert von thailändischer Architektur und der Ruhe natürlicher Materialien. Bei satuuu99 trifft diese Haltung auf persönliche Pflege, aufmerksame Berührung und Zeit zum Ankommen.",
-          en: "Inspired by Thai architecture and the quiet of natural materials. At satuuu99, this spirit meets personal care, attentive touch and time to settle in.",
+          de: "satuuu99 ist ein kleines, privates Wellnessstudio in Ahrensburg. Inspiriert von thailändischer Ruhe verbinden wir persönliche Pflege, aufmerksame Berührung und Zeit zum Ankommen — nahbar und ohne großes Spa-Ritual drumherum.",
+          en: "satuuu99 is a small, private wellness studio in Ahrensburg. Inspired by a sense of Thai calm, we bring together personal care, attentive touch and time to settle in — intimate, uncomplicated and close to home.",
         })}
       </p>
       <Link className="text-link" to="/studio">
