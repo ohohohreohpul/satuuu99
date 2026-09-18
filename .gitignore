@@ -10,3 +10,7 @@ dist
 .codex-finalizer/
 test-results/
 playwright-report/
+
+# Editor and Office lock files
+*.swp
+~$*

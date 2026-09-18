@@ -1,36 +1,62 @@
 import { Link, Navigate, useParams } from "react-router-dom";
 import { ArrowRightIcon, ArrowUpRightIcon } from "../components/ui/Icons";
 import { CONTACT, FOCUS_GROUPS, findTreatment } from "../data/content";
-import { MEDIA } from "../data/media";
+import { treatmentPhoto } from "../data/media";
+import { Photo } from "../components/media/Photo";
 import { useLang } from "../lib/i18n";
 import { usePageMeta } from "../lib/usePageMeta";
 import { FinalCTA } from "../sections/FinalCTA";
 import { TreatmentEditorial } from "../components/treatments/TreatmentEditorial";
+import { StructuredData } from "../components/seo/StructuredData";
+import { treatmentCopy } from "../data/treatments";
+import { photoUrl } from "../data/media";
+import { breadcrumbSchema, faqSchema, serviceSchema } from "../lib/schema";
 
 export function TreatmentDetailPage() {
   const { treatmentId = "" } = useParams();
   const found = findTreatment(treatmentId);
   const { t } = useLang();
+  const copy = found ? treatmentCopy(found.treatment.id) : undefined;
   usePageMeta(
     found
       ? `${t(found.treatment.name)} in Ahrensburg bei Hamburg | satuuu99`
       : "Behandlung — satuuu99",
-    found
-      ? `${t(found.treatment.description)} satuuu99 in Ahrensburg bei Hamburg.`
-      : undefined,
+    copy ? metaDescription(t(copy.answer)) : undefined,
   );
   if (!found) return <Navigate to="/behandlungen" replace />;
   const { group, treatment } = found;
-  const image =
-    MEDIA.programmes[treatment.id] ||
-    MEDIA.treatments[group.id] ||
-    MEDIA.hero.poster;
-  const related = FOCUS_GROUPS.flatMap((item) => item.treatments)
-    .filter((item) => item.id !== treatment.id)
-    .slice(0, 3);
+  const photo = treatmentPhoto(treatment.id, group.id);
+  // Siblings in the same treatment family first: they are the comparison a
+  // visitor on this page is most likely to be weighing up.
+  const siblings = group.treatments.filter((item) => item.id !== treatment.id);
+  const others = FOCUS_GROUPS.filter((item) => item.id !== group.id).flatMap(
+    (item) => item.treatments.slice(0, 1),
+  );
+  const related = [...siblings, ...others].slice(0, 3);
+  const path = `/behandlungen/${treatment.id}`;
 
   return (
     <>
+      <StructuredData
+        data={serviceSchema({
+          name: t(treatment.name),
+          description: copy ? t(copy.answer) : t(treatment.description),
+          url: path,
+          image: photoUrl(photo),
+          serviceType: t(group.word),
+        })}
+      />
+      {copy && <StructuredData data={faqSchema(copy.questions, t)} />}
+      <StructuredData
+        data={breadcrumbSchema([
+          { name: t({ de: "Startseite", en: "Home" }), path: "/" },
+          {
+            name: t({ de: "Behandlungen", en: "Treatments" }),
+            path: "/behandlungen",
+          },
+          { name: t(treatment.name), path },
+        ])}
+      />
       <article className="treatment-page">
         <div className="treatment-page-copy">
           <Link className="back-link" to={`/behandlungen?focus=${group.id}`}>
@@ -53,7 +79,12 @@ export function TreatmentDetailPage() {
           </div>
         </div>
         <figure className="treatment-page-image">
-          <img src={image} alt={t(treatment.name)} />
+          <Photo
+            id={photo}
+            sizes="(min-width: 900px) 45vw, 100vw"
+            alt={`${t(treatment.name)} bei satuuu99 in Ahrensburg`}
+            priority
+          />
         </figure>
         <div className="treatment-points">
           <p className="eyebrow">
@@ -86,4 +117,13 @@ export function TreatmentDetailPage() {
       <FinalCTA />
     </>
   );
+}
+
+/** Trims an answer paragraph to a length search results will display. */
+function metaDescription(text: string, limit = 158) {
+  if (text.length <= limit) return text;
+  const cut = text.slice(0, limit);
+  const lastSentence = cut.lastIndexOf(". ");
+  if (lastSentence > limit * 0.5) return cut.slice(0, lastSentence + 1);
+  return `${cut.slice(0, cut.lastIndexOf(" "))}…`;
 }

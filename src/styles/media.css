@@ -1,0 +1,43 @@
+/*
+ * Responsive media primitives.
+ *
+ * <picture> is a layout-neutral wrapper: `display: contents` removes it from
+ * the box tree so every existing `figure img` rule keeps applying unchanged.
+ * Components that need the wrapper as a positioned box (the navigation
+ * crossfade, for example) override this with a more specific selector.
+ */
+picture {
+  display: contents;
+}
+
+/* Ambient film sections: poster and video stack in the same box. */
+.ambient-film {
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  background: var(--sand, #d9cec2);
+  aspect-ratio: 16 / 9;
+}
+.ambient-film > img,
+.ambient-film > video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ambient-film > video {
+  z-index: 1;
+}
+.ambient-film > .film-control {
+  z-index: 2;
+}
+
+/* Editorial figure captions used to label atmosphere imagery honestly. */
+figcaption.media-note {
+  margin-top: 10px;
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}

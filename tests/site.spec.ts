@@ -21,17 +21,24 @@ test("mega menu, treatment finder and journal form a working discovery flow", as
   await page.getByRole("link", { name: "Passende Rituale ansehen" }).click();
   await expect(page).toHaveURL(/focus=face/);
   await page.goto("/journal");
-  await page.getByRole("searchbox").fill("Head-Spa");
-  await expect(page.locator(".journal-card")).toHaveCount(1);
+  await expect(page.locator(".journal-card").first()).toBeVisible();
+  const allArticles = await page.locator(".journal-card").count();
+  expect(allArticles).toBeGreaterThanOrEqual(9);
+  await page.getByRole("searchbox").fill("Gua Sha");
+  await expect(page.locator(".journal-card")).toHaveCount(2);
   await page.getByRole("searchbox").fill("zzzz");
   await expect(page.getByText("Noch keine passende Geschichte.")).toBeVisible();
   await page.getByRole("button", { name: "Alle Geschichten anzeigen" }).click();
-  await expect(page.locator(".journal-card")).toHaveCount(5);
+  await expect(page.locator(".journal-card")).toHaveCount(allArticles);
   await page.locator(".journal-card").first().click();
-  await expect(page.locator("h1")).toHaveText("Dein erster Head-Spa-Besuch");
-  await expect(page).toHaveTitle(/Dein erster Head-Spa-Besuch/);
+  await expect(page.locator("h1")).toHaveText(
+    "Head Spa und deine Haare: Vorbereitung, Ablauf und der Tag danach",
+  );
+  await expect(page).toHaveTitle(/Head Spa und deine Haare/);
   await page.getByRole("button", { name: "English" }).click();
-  await expect(page.locator("h1")).toHaveText("Your first head spa visit");
+  await expect(page.locator("h1")).toHaveText(
+    "Head spa and your hair: preparation, ritual and the day after",
+  );
 });
 test("mobile pages have no horizontal overflow and menu closes after navigation", async ({
   page,
@@ -47,6 +54,11 @@ test("mobile pages have no horizontal overflow and menu closes after navigation"
     "/kontakt",
     "/journal",
     "/journal/dein-erster-head-spa-besuch",
+    "/head-spa-hamburg",
+    "/japanese-head-spa-ahrensburg",
+    "/wellnessmassage-ahrensburg",
+    "/gesichtsbehandlung-ahrensburg",
+    "/behandlungen/cupping-massage",
   ]) {
     await page.goto(path);
     await expect(page.locator("h1")).toBeVisible();
@@ -54,6 +66,7 @@ test("mobile pages have no horizontal overflow and menu closes after navigation"
       await page.evaluate(
         () => document.documentElement.scrollWidth <= innerWidth,
       ),
+      `${path} overflows horizontally at 390px`,
     ).toBeTruthy();
   }
   await page.getByRole("button", { name: "Menü öffnen" }).click();
@@ -131,10 +144,9 @@ test("immersive menu traps focus, restores the trigger and switches its imagery"
     .locator(".menu-ritual-title")
     .filter({ hasText: "Gesicht" })
     .hover();
-  await expect(page.locator(".menu-photo img.is-visible")).toHaveAttribute(
-    "src",
-    "/assets/treatment-face.jpg",
-  );
+  await expect(
+    page.locator(".menu-photo picture.is-visible img"),
+  ).toHaveAttribute("src", /facial-massage-warm-light/);
   await page.locator(".menu-bottomline a").last().focus();
   await page.keyboard.press("Tab");
   await expect(page.locator(".menu-topline .header-brand")).toBeFocused();
@@ -154,10 +166,9 @@ test("living menu and visit journey respond to visitor intent", async ({
   await expect(page.locator(".menu-photo-caption")).toContainText(
     "Klein. Ruhig.",
   );
-  await expect(page.locator(".menu-photo img.is-visible")).toHaveAttribute(
-    "src",
-    "/assets/authentic/studio.jpg",
-  );
+  await expect(
+    page.locator(".menu-photo picture.is-visible img"),
+  ).toHaveAttribute("src", /studio-candlelight-mood/);
   await page.keyboard.press("Escape");
   const journey = page.locator(".visit-journey");
   await journey.scrollIntoViewIfNeeded();
@@ -205,16 +216,22 @@ test("local authority pages are substantial, linked and machine readable", async
   await expect(
     page.getByRole("heading", { name: "Japanese Head Spa in Ahrensburg" }),
   ).toBeVisible();
-  await expect(page.locator(".local-content section")).toHaveCount(3);
+  await expect(page.locator(".local-content section")).toHaveCount(6);
   await expect(page.locator(".local-faq details")).toHaveCount(4);
-  const schema = JSON.parse(
-    (await page
-      .locator('script[type="application/ld+json"]')
-      .last()
-      .textContent()) || "{}",
+  await expect(page.locator(".local-hero-image img")).toBeVisible();
+  const graphs = await page
+    .locator('script[type="application/ld+json"]')
+    .allTextContents();
+  const parsed = graphs.map((graph) => JSON.parse(graph));
+  const service = parsed.find((graph) => graph["@type"] === "Service");
+  expect(service).toBeDefined();
+  expect(
+    service.areaServed.map((area: { name: string }) => area.name),
+  ).toContain("Ahrensburg");
+  expect(parsed.some((graph) => graph["@type"] === "FAQPage")).toBe(true);
+  expect(parsed.some((graph) => graph["@type"] === "BreadcrumbList")).toBe(
+    true,
   );
-  expect(schema["@type"]).toBe("Service");
-  expect(schema.areaServed).toContain("Ahrensburg");
   await page.setViewportSize({ width: 390, height: 844 });
   await expect(page.locator("body")).toHaveJSProperty("scrollWidth", 390);
 });
@@ -250,9 +267,26 @@ test("every treatment detail page provides substantial decision content", async 
   ];
   for (const treatment of treatments) {
     await page.goto(`/behandlungen/${treatment}`);
+    await expect(page.locator(".treatment-faq details").first()).toBeVisible();
     const text = await page.locator("main").innerText();
     expect((text.match(/[A-Za-zÀ-ž0-9]+/g) || []).length).toBeGreaterThan(650);
-    await expect(page.locator("main section")).toHaveCount(8);
-    await expect(page.locator(".treatment-faq details")).toHaveCount(4);
+    // Answer, process, sequence, reading, film, boundary, more, FAQ, related,
+    // final call to action.
+    await expect(page.locator("main section")).toHaveCount(10);
+    // Treatment-specific questions vary in number; every page adds the
+    // standard price-and-availability entry on top of at least four.
+    expect(
+      await page.locator(".treatment-faq details").count(),
+    ).toBeGreaterThanOrEqual(5);
+    await expect(
+      page.locator(".treatment-sequence-grid figure").first(),
+    ).toBeVisible();
+    const graphs = await page
+      .locator('script[type="application/ld+json"]')
+      .allTextContents();
+    const types = graphs.map((graph) => JSON.parse(graph)["@type"]);
+    expect(types).toEqual(
+      expect.arrayContaining(["Service", "FAQPage", "BreadcrumbList"]),
+    );
   }
 });

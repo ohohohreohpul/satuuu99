@@ -6,6 +6,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 const HIGH_FETCH_PRIORITY = { fetchpriority: "high" };
 
+/** The supplied scrub film and its poster frame are 1280x720. */
+const POSTER_WIDTH = 1280;
+const POSTER_HEIGHT = 720;
+
 interface ScrollScrubVideoProps {
   src: string;
   poster: string;
@@ -82,6 +86,8 @@ export function ScrollScrubVideo({
         src={poster}
         alt={label}
         className={`${className} hero-poster`}
+        width={POSTER_WIDTH}
+        height={POSTER_HEIGHT}
         {...HIGH_FETCH_PRIORITY}
       />
       {!reduced && !failed && (

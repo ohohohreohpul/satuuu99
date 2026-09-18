@@ -1,6 +1,7 @@
 import { useLang } from "../lib/i18n";
 import { CONTACT } from "../data/content";
 import { MEDIA } from "../data/media";
+import { Photo } from "../components/media/Photo";
 import { ArrowRightIcon, SparkIcon } from "../components/ui/Icons";
 import { Link } from "react-router-dom";
 
@@ -26,20 +27,14 @@ export function Studio() {
       </div>
       <div className="studio-layout">
         <figure className="studio-image">
-          <img
-            src={MEDIA.studio}
-            alt={t({
-              de: "Kleiner, privater Behandlungsraum mit Leinen und Tageslicht",
-              en: "A small, private treatment room with linen and daylight",
-            })}
-            loading="lazy"
-            width="1800"
-            height="1170"
+          <Photo
+            id={MEDIA.studioRoom}
+            sizes="(min-width: 1024px) 52vw, 100vw"
           />
           <figcaption>
             {t({
-              de: "Unser privater Behandlungsraum · Ahrensburg",
-              en: "Our private treatment room · Ahrensburg",
+              de: "Atmosphärenbild · satuuu99, Manhagener Allee 45, Ahrensburg",
+              en: "Atmosphere image · satuuu99, Manhagener Allee 45, Ahrensburg",
             })}
           </figcaption>
         </figure>

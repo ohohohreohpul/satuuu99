@@ -1,11 +1,14 @@
 import type { ReactNode } from "react";
+import { Photo } from "../media/Photo";
+import type { PhotoId } from "../../data/media/photos";
 
 interface PageHeroProps {
   eyebrow: string;
   title: ReactNode;
   copy: string;
-  image?: string;
-  imageAlt?: string;
+  photo?: PhotoId;
+  photoAlt?: string;
+  caption?: string;
   children?: ReactNode;
 }
 
@@ -13,19 +16,20 @@ export function PageHero({
   eyebrow,
   title,
   copy,
-  image,
-  imageAlt = "",
+  photo,
+  photoAlt,
+  caption,
   children,
 }: PageHeroProps) {
   return (
     <section
       className={
-        image ? "page-hero page-hero-split" : "page-hero section-shell"
+        photo ? "page-hero page-hero-split" : "page-hero section-shell"
       }
     >
       <div
         className={
-          image ? "page-hero-copy" : "page-hero-copy page-hero-copy-wide"
+          photo ? "page-hero-copy" : "page-hero-copy page-hero-copy-wide"
         }
       >
         <p className="eyebrow">{eyebrow}</p>
@@ -33,9 +37,15 @@ export function PageHero({
         <p className="page-hero-description">{copy}</p>
         {children && <div className="page-hero-actions">{children}</div>}
       </div>
-      {image && (
+      {photo && (
         <figure className="page-hero-image">
-          <img src={image} alt={imageAlt} />
+          <Photo
+            id={photo}
+            sizes="(min-width: 900px) 48vw, 100vw"
+            alt={photoAlt}
+            priority
+          />
+          {caption && <figcaption>{caption}</figcaption>}
         </figure>
       )}
     </section>

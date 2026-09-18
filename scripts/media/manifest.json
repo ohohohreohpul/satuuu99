@@ -1,0 +1,248 @@
+{
+  "source": "/Users/jirananpanlanatiyarak/Downloads/SATUUU",
+  "outDir": "public/assets/photo",
+  "videoOutDir": "public/assets/film",
+  "defaultWidths": [
+    480,
+    768,
+    1200,
+    1600
+  ],
+  "photos": [
+    {
+      "id": "head-spa-forehead-hold",
+      "file": "close-up-forehead-massage.jpg",
+      "aspect": "4:5",
+      "gravity": "center"
+    },
+    {
+      "id": "head-spa-candlelight",
+      "file": "close-up-relaxed-woman-getting-massage.jpg",
+      "aspect": "4:5",
+      "gravity": "north",
+      "widths": [
+        480,
+        768,
+        1200,
+        1600,
+        2000
+      ]
+    },
+    {
+      "id": "head-spa-cradled-head",
+      "file": "close-up-woman-experiencing-therapy.jpg",
+      "aspect": "3:2",
+      "gravity": "center"
+    },
+    {
+      "id": "head-spa-scalp-touch",
+      "file": "person-conducting-reiki-therapy.jpg",
+      "aspect": "3:2",
+      "gravity": "center"
+    },
+    {
+      "id": "facial-massage-warm-light",
+      "file": "woman-getting-facial-massage-spa-ideal-beauty-relaxation-concepts.jpg",
+      "aspect": "3:2",
+      "gravity": "center",
+      "widths": [
+        480,
+        768,
+        1200,
+        1600,
+        2000
+      ]
+    },
+    {
+      "id": "facial-massage-towel",
+      "file": "young-woman-massaging-her-client-s-face.jpg",
+      "aspect": "3:2",
+      "gravity": "center"
+    },
+    {
+      "id": "facial-gua-sha-pressure",
+      "file": "thai-facial-rejuvenation-massage-treatment-wellness-spa-center.jpg",
+      "aspect": "4:5",
+      "gravity": "center"
+    },
+    {
+      "id": "facial-overhead-view",
+      "file": "top-view-young-woman-getting-spa-massage-treatment-beauty-spa-salon-face-massage-spa-skin-body-care.jpg",
+      "aspect": "3:2",
+      "gravity": "center"
+    },
+    {
+      "id": "aqua-facial-mist",
+      "file": "cosmetologist-sprays-refreshing-spray-girl-s-face-white-background.jpg",
+      "aspect": "3:2",
+      "gravity": "center"
+    },
+    {
+      "id": "facial-care-application",
+      "file": "spa-concept-with-woman-with-creme-face (1).jpg",
+      "aspect": "3:2",
+      "gravity": "center"
+    },
+    {
+      "id": "studio-candlelight-mood",
+      "file": "young-woman-having-face-massage-relaxing-spa-salon.jpg",
+      "aspect": "3:2",
+      "gravity": "center",
+      "widths": [
+        480,
+        768,
+        1200,
+        1600,
+        2000
+      ]
+    },
+    {
+      "id": "skin-texture-freckles",
+      "file": "front-view-woman-with-skin-imperfections.jpg",
+      "aspect": "4:5",
+      "gravity": "north"
+    },
+    {
+      "id": "skin-texture-profile",
+      "file": "side-view-woman-normal-skin-texture.jpg",
+      "aspect": "4:5",
+      "gravity": "north"
+    },
+    {
+      "id": "skin-texture-eye-detail",
+      "file": "young-woman-skin-texture-side-view.jpg",
+      "aspect": "1:1",
+      "gravity": "center"
+    },
+    {
+      "id": "skin-texture-beard",
+      "file": "side-view-young-man-with-beard-skin-texture.jpg",
+      "aspect": "3:2",
+      "gravity": "center"
+    },
+    {
+      "id": "skin-texture-cheek",
+      "file": "close-up-face-pores-texture (1).jpg",
+      "aspect": "3:2",
+      "gravity": "center"
+    },
+    {
+      "id": "resting-hand-cheek",
+      "file": "side-view-woman-with-freckles.jpg",
+      "aspect": "4:5",
+      "gravity": "center"
+    },
+    {
+      "id": "face-eyes-closed",
+      "file": "close-up-face-pores-texture.jpg",
+      "aspect": "4:5",
+      "gravity": "center"
+    },
+    {
+      "id": "face-calm-profile",
+      "file": "close-up-relaxed-young-woman-s-face-spa.jpg",
+      "aspect": "3:2",
+      "gravity": "center"
+    },
+    {
+      "id": "face-warm-light-portrait",
+      "file": "young-attractive-woman-enjoying-massage-spa-salon-beauty-treatment-natural-skin-care-cosmetic-natural-woman-beauty-skincare.jpg",
+      "aspect": "3:2",
+      "gravity": "center"
+    },
+    {
+      "id": "foot-massage-candlelight",
+      "file": "masseur-doing-foot-massage-with-candles-background-high-quality-photo.jpg",
+      "aspect": "4:5",
+      "gravity": "center"
+    },
+    {
+      "id": "foot-care-towel",
+      "file": "pedicure-foot-hands-massage-therapist-spa-acupressure-treatment-wellness-circulation-therapy-closeup-client-feet-beauty-salon-muscle-reflexology-skincare-relax.jpg",
+      "aspect": "3:2",
+      "gravity": "center"
+    },
+    {
+      "id": "hands-light-study",
+      "file": "beautiful-sensitive-hands-concept.jpg",
+      "aspect": "4:5",
+      "gravity": "center"
+    }
+  ],
+  "films": [
+    {
+      "id": "head-massage",
+      "file": "0_Head_Massage_Scalp_Massage_1280x720.mp4",
+      "start": 4,
+      "duration": 7
+    },
+    {
+      "id": "foot-massage",
+      "file": "0_Foot_Massage_Spa_1280x720.mp4",
+      "start": 2,
+      "duration": 7
+    },
+    {
+      "id": "spa-massage",
+      "file": "6001916_Massage_Spa_1280x720.mp4",
+      "start": 2,
+      "duration": 7
+    },
+    {
+      "id": "leg-massage",
+      "file": "0_Massage_Leg_Massage_1280x720.mp4",
+      "start": 2,
+      "duration": 7
+    },
+    {
+      "id": "foot-detail",
+      "file": "0_Massage_Foot_1280x720.mp4",
+      "start": 3,
+      "duration": 7
+    }
+  ],
+  "legacySource": "public/assets",
+  "legacyPhotos": [
+    {
+      "id": "head-spa-water-rinse",
+      "file": "treatment-head.jpg",
+      "aspect": "4:5",
+      "gravity": "center"
+    },
+    {
+      "id": "facial-stone-detail",
+      "file": "treatment-face.jpg",
+      "aspect": "4:5",
+      "gravity": "center"
+    },
+    {
+      "id": "foot-ritual-detail",
+      "file": "treatment-feet.jpg",
+      "aspect": "4:5",
+      "gravity": "center"
+    },
+    {
+      "id": "body-massage-shoulders",
+      "file": "treatment-body.jpg",
+      "aspect": "4:5",
+      "gravity": "center"
+    },
+    {
+      "id": "body-cupping-glasses",
+      "file": "treatment-cupping.jpg",
+      "aspect": "4:5",
+      "gravity": "center"
+    },
+    {
+      "id": "studio-room-atmosphere",
+      "file": "authentic/studio.jpg",
+      "aspect": "3:2",
+      "gravity": "center"
+    }
+  ],
+  "legacyWidths": [
+    480,
+    768,
+    1100
+  ]
+}

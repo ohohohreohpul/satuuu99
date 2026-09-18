@@ -1,0 +1,244 @@
+/*
+ * /behandlungen: answer-first intro, the comparison table, the
+ * "how do you arrive" decision guide, the family gallery and the
+ * boundaries section.
+ */
+
+.overview-intro,
+.overview-boundary {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.4fr);
+  gap: clamp(24px, 4vw, 72px);
+  padding-block: clamp(48px, 6vw, 104px);
+  align-items: start;
+}
+.overview-intro h2,
+.overview-boundary h2 {
+  font-size: clamp(1.5rem, 1.1rem + 1.7vw, 2.3rem);
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+  margin: 0.3em 0 0;
+  max-width: 18ch;
+}
+.overview-intro p,
+.overview-boundary p {
+  font-size: 1rem;
+  line-height: 1.68;
+  color: var(--muted);
+  margin: 0 0 1.1em;
+  max-width: 62ch;
+}
+.overview-intro .answer-lead {
+  font-size: clamp(1.08rem, 0.98rem + 0.45vw, 1.28rem);
+  line-height: 1.58;
+  color: var(--ink);
+}
+.overview-boundary {
+  border-top: 1px solid var(--line);
+}
+
+.comparison-section {
+  padding-block: clamp(32px, 4vw, 72px);
+}
+.comparison-scroll {
+  margin-top: clamp(20px, 2.5vw, 36px);
+  overflow-x: auto;
+  /* Keeps the scroll affordance obvious without a visible scrollbar chrome. */
+  scrollbar-width: thin;
+}
+.comparison-table {
+  width: 100%;
+  min-width: 860px;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+.comparison-table caption {
+  text-align: left;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-bottom: 16px;
+}
+.comparison-table th,
+.comparison-table td {
+  padding: 16px 18px 16px 0;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+.comparison-table thead th {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border-bottom-color: var(--ink);
+  white-space: nowrap;
+}
+.comparison-table tbody th {
+  font-weight: 500;
+  padding-right: 32px;
+}
+.comparison-table tbody th a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 1.02rem;
+  transition: color var(--duration-fast, 150ms) ease;
+}
+.comparison-table tbody th a svg {
+  width: 13px;
+  height: 13px;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+.comparison-table tbody th a:hover,
+.comparison-table tbody th a:focus-visible {
+  color: var(--accent);
+}
+.comparison-table tbody th a:hover svg,
+.comparison-table tbody th a:focus-visible svg {
+  opacity: 1;
+  transform: translateX(0);
+}
+.comparison-table tbody th small {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.comparison-table td {
+  color: var(--muted);
+}
+.comparison-table tbody tr:hover td,
+.comparison-table tbody tr:hover th {
+  background: color-mix(in oklab, var(--line) 26%, transparent);
+}
+.comparison-note {
+  margin: 18px 0 0;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 68ch;
+}
+
+.decision-guide {
+  padding-block: clamp(48px, 6vw, 104px);
+  border-top: 1px solid var(--line);
+}
+.decision-guide .section-heading p:last-child {
+  font-size: 0.95rem;
+  line-height: 1.66;
+  color: var(--muted);
+  max-width: 54ch;
+  margin-top: 1em;
+}
+.decision-list {
+  list-style: none;
+  margin: clamp(28px, 3.5vw, 52px) 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.decision-list li {
+  background: var(--paper);
+  padding: clamp(20px, 2.4vw, 32px);
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  transition: background var(--duration-normal, 300ms) ease;
+}
+.decision-list li:hover {
+  background: color-mix(in oklab, var(--line) 22%, var(--paper));
+}
+.decision-situation {
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.42;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.decision-list a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-decoration: none;
+  width: fit-content;
+}
+.decision-list a svg {
+  width: 12px;
+  height: 12px;
+  transition: transform 0.2s ease;
+}
+.decision-list a:hover svg,
+.decision-list a:focus-visible svg {
+  transform: translateX(3px);
+}
+.decision-why {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.family-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+  gap: clamp(14px, 1.8vw, 26px);
+  padding-block: clamp(32px, 4vw, 64px);
+}
+.family-gallery figure {
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+.family-gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+  border-radius: 18px;
+  background: var(--line);
+}
+.family-gallery figcaption {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+.family-gallery figcaption strong {
+  display: block;
+  font-weight: 500;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 5px;
+}
+
+@media (max-width: 860px) {
+  .overview-intro,
+  .overview-boundary {
+    grid-template-columns: 1fr;
+  }
+  .overview-intro h2,
+  .overview-boundary h2 {
+    max-width: none;
+  }
+}

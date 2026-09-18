@@ -1,9 +1,14 @@
 import { Link } from "react-router-dom";
 import { ArrowRightIcon, ArrowUpRightIcon } from "../components/ui/Icons";
+import { StructuredData } from "../components/seo/StructuredData";
+import { Photo } from "../components/media/Photo";
 import { CONTACT } from "../data/content";
+import type { PhotoId } from "../data/media/photos";
+import { photoUrl } from "../data/media";
 import type { Localized } from "../lib/i18n";
 import { useLang } from "../lib/i18n";
 import { usePageMeta } from "../lib/usePageMeta";
+import { breadcrumbSchema, faqSchema, serviceSchema } from "../lib/schema";
 import { FinalCTA } from "../sections/FinalCTA";
 
 type Page = {
@@ -13,6 +18,10 @@ type Page = {
   eyebrow: Localized;
   intro: Localized;
   answer: Localized;
+  /** Lead photograph beside the heading. */
+  hero: PhotoId;
+  /** Two or three supporting photographs with their own captions. */
+  gallery: { photo: PhotoId; caption: Localized }[];
   sections: { title: Localized; body: Localized[] }[];
   faqs: { q: Localized; a: Localized }[];
   related: { label: Localized; href: string }[];
@@ -21,6 +30,30 @@ type Page = {
 export const LOCAL_PAGES: Page[] = [
   {
     slug: "japanese-head-spa-ahrensburg",
+    hero: "head-spa-candlelight",
+    gallery: [
+      {
+        photo: "head-spa-water-rinse",
+        caption: {
+          de: "Warmes Wasser läuft durch Haar und Kopfhaut",
+          en: "Warm water runs through hair and scalp",
+        },
+      },
+      {
+        photo: "head-spa-cradled-head",
+        caption: {
+          de: "Der Kopf bleibt durchgehend gestützt",
+          en: "The head stays supported throughout",
+        },
+      },
+      {
+        photo: "head-spa-scalp-touch",
+        caption: {
+          de: "Zum Abschluss Nacken und Schultern",
+          en: "Neck and shoulders to finish",
+        },
+      },
+    ],
     title: {
       de: "Japanese Head Spa in Ahrensburg | satuuu99",
       en: "Japanese Head Spa in Ahrensburg | satuuu99",
@@ -90,6 +123,62 @@ export const LOCAL_PAGES: Page[] = [
           },
         ],
       },
+      {
+        title: {
+          de: "Anfahrt aus Hamburg, Stormarn und den Walddörfern",
+          en: "Getting here from Hamburg, Stormarn and the Walddörfer",
+        },
+        body: [
+          {
+            de: "Aus der Hamburger Innenstadt sind es rund 25 Kilometer nach Ahrensburg. Mit dem Auto führt der Weg über die A1 bis zur Anschlussstelle Ahrensburg, von dort sind es wenige Minuten in die Manhagener Allee — je nach Verkehr insgesamt etwa 25 bis 35 Minuten. Parkplätze befinden sich nach aktueller Studioinformation direkt vor dem Eingang, sodass die Suche entfällt.",
+            en: "Ahrensburg is roughly 25 kilometres from central Hamburg. By car the route runs along the A1 to the Ahrensburg junction, and from there it is a few minutes to Manhagener Allee — around 25 to 35 minutes in total depending on traffic. According to current studio information, parking is directly outside the entrance, so there is no hunting for a space.",
+          },
+          {
+            de: "Mit dem HVV erreichst du Ahrensburg über die U1 und die Regionalbahn; von der U-Bahn-Station und vom Bahnhof ist die Manhagener Allee in wenigen Minuten zu Fuß erreichbar. Aus Großhansdorf, Ammersbek, Bargteheide und den Hamburger Walddörfern bist du in gut zehn bis zwanzig Minuten da. Weil sich Fahrpläne ändern, prüfe die konkrete Verbindung bitte am Reisetag.",
+            en: "By HVV you can reach Ahrensburg on the U1 underground and by regional rail; Manhagener Allee is a few minutes on foot from the underground stop and the station. From Großhansdorf, Ammersbek, Bargteheide and Hamburg's Walddörfer it is a little over ten to twenty minutes. Because timetables change, please check your connection on the day you travel.",
+          },
+          {
+            de: "Plane den Termin so, dass du nicht direkt danach weiterhetzen musst. Weil beim Head Spa dein Haar nass wird, ist ein Termin ohne unmittelbar folgende Verpflichtung angenehmer — und der Rückweg nach Hamburg fühlt sich ruhiger an, wenn er nicht in die Rushhour fällt.",
+            en: "Plan the appointment so that you do not have to rush straight on. Because your hair gets wet during a head spa, an appointment with nothing immediately afterwards is more comfortable — and the journey back to Hamburg feels calmer outside rush hour.",
+          },
+        ],
+      },
+      {
+        title: {
+          de: "Was ein Head Spa nicht ist",
+          en: "What a head spa is not",
+        },
+        body: [
+          {
+            de: "Ein Japanese Head Spa ist keine dermatologische Kopfhautbehandlung und keine Therapie gegen Haarausfall. Wir stellen keine Diagnosen und versprechen keine Veränderung deiner Haarstruktur oder Haardichte. Bei Rötung, Entzündung, Juckreiz ohne bekannte Ursache, offenen Stellen oder Haarausfall, der abgeklärt wird, ist eine dermatologische oder ärztliche Praxis die richtige erste Adresse.",
+            en: "A Japanese Head Spa is not a dermatological scalp treatment and not a therapy for hair loss. We do not diagnose and we promise no change to your hair structure or density. With redness, inflammation, unexplained itching, open areas or hair loss under investigation, a dermatology or medical practice is the right first step.",
+          },
+          {
+            de: "Es ist außerdem kein Friseurtermin. Ein Schnitt, eine Färbung oder ein aufwendiges Styling gehören nicht zum Ritual — am Ende wird das Haar ausgespült und sanft getrocknet. Wenn du Extensions, ein Weaving oder frisch gefärbtes Haar trägst, sprich uns vor der Buchung an, damit wir die Eignung gemeinsam klären.",
+            en: "Nor is it a hairdressing appointment. A cut, colour or elaborate styling is not part of the ritual — at the end the hair is rinsed and gently dried. If you wear extensions or a weave, or your hair has been freshly coloured, talk to us before booking so we can establish suitability together.",
+          },
+        ],
+      },
+      {
+        title: {
+          de: "Wann und wie oft buchen?",
+          en: "When and how often to book",
+        },
+        body: [
+          {
+            de: "Es gibt keine empfohlene Frequenz, und wir verkaufen keine Kuren. Manche Gäste kommen einmal im Jahr, wenn ihnen danach ist. Andere buchen alle vier bis acht Wochen, weil ihnen die Stunde im Kalender hilft, sie überhaupt einzuplanen. Beides ist richtig. Was wir dir ehrlich sagen können: Ein Head Spa verändert deine Haarstruktur nicht dauerhaft, und häufiger ist nicht automatisch besser.",
+            en: "There is no recommended frequency, and we do not sell courses of treatment. Some guests come once a year when they feel like it. Others book every four to eight weeks because having the hour in the calendar is what makes them take it at all. Both are fine. What we can tell you honestly: a head spa does not permanently change your hair structure, and more often is not automatically better.",
+          },
+          {
+            de: "Für die Uhrzeit gilt eine praktische Regel: Lege den Termin dorthin, wo danach nichts Wichtiges kommt. Abendtermine bis 20 Uhr und Samstage bis 18 Uhr sind bei uns am beliebtesten, genau deshalb. Wenn du aus Hamburg kommst, ist ein Termin außerhalb der Rushhour zusätzlich angenehmer — du fährst dann nicht mit feuchtem Haar durch eine Stunde Stau zurück.",
+            en: "For timing there is one practical rule: put the appointment where nothing important follows it. Evening slots up to 8pm and Saturdays up to 6pm are the most popular with us, for exactly that reason. If you are coming from Hamburg, a slot outside rush hour is more comfortable still — you then do not drive back through an hour of traffic with damp hair.",
+          },
+          {
+            de: "Beliebte Zeiten sind früher ausgebucht als der Rest der Woche. Wenn du einen bestimmten Abend brauchst, schau ein bis zwei Wochen im Voraus in den Kalender. Wenn du flexibel bist, findet sich fast immer kurzfristig etwas — frag uns einfach an, auch wenn der Kalender gerade wenig zeigt.",
+            en: "Popular slots fill earlier than the rest of the week. If you need a particular evening, look in the calendar one or two weeks ahead. If you are flexible, something almost always turns up at short notice — just ask, even when the calendar looks thin.",
+          },
+        ],
+      },
     ],
     faqs: [
       {
@@ -146,6 +235,30 @@ export const LOCAL_PAGES: Page[] = [
   },
   {
     slug: "wellnessmassage-ahrensburg",
+    hero: "body-massage-shoulders",
+    gallery: [
+      {
+        photo: "studio-candlelight-mood",
+        caption: {
+          de: "Ruhiges Licht gehört zu jedem Termin",
+          en: "Calm light is part of every appointment",
+        },
+      },
+      {
+        photo: "body-cupping-glasses",
+        caption: {
+          de: "Schröpfmassage — bewegte Gläser auf geölter Haut",
+          en: "Cupping massage — moving glasses on oiled skin",
+        },
+      },
+      {
+        photo: "foot-massage-candlelight",
+        caption: {
+          de: "Fußmassage im Relaxsessel",
+          en: "Foot massage in the reclining chair",
+        },
+      },
+    ],
     title: {
       de: "Wellnessmassage in Ahrensburg bei Hamburg | satuuu99",
       en: "Wellness massage in Ahrensburg near Hamburg | satuuu99",
@@ -215,6 +328,66 @@ export const LOCAL_PAGES: Page[] = [
           },
         ],
       },
+      {
+        title: {
+          de: "Wellnessmassage oder medizinische Massage?",
+          en: "Wellness massage or medical massage?",
+        },
+        body: [
+          {
+            de: "Das ist die Frage, die uns am häufigsten erreicht. Eine medizinische Massage wird ärztlich verordnet, behandelt eine Diagnose und findet in einer Physiotherapiepraxis statt; sie wird unter bestimmten Voraussetzungen von der Krankenkasse getragen. Unsere Wellnessmassagen in Ahrensburg dienen Entspannung und Wohlbefinden. Sie werden nicht verordnet, nicht abgerechnet und behandeln keine Beschwerden.",
+            en: "This is the question we are asked most. A medical massage is prescribed by a doctor, treats a diagnosis and takes place in a physiotherapy practice; under certain conditions it is covered by health insurance. Our wellness massages in Ahrensburg support relaxation and wellbeing. They are not prescribed, not billed to insurance and do not treat complaints.",
+          },
+          {
+            de: "Praktisch heißt das: Wenn du seit Wochen Schmerzen hast, nach einem Unfall Beschwerden spürst oder eine Diagnose abklären möchtest, gehört der erste Termin in eine ärztliche oder physiotherapeutische Praxis. Wenn du angespannt bist, schlecht schläfst, viel am Schreibtisch sitzt oder einfach eine Stunde für dich möchtest, bist du bei uns richtig.",
+            en: "In practice: if you have had pain for weeks, have symptoms after an accident or want a diagnosis assessed, the first appointment belongs with a medical or physiotherapy practice. If you are tense, sleeping poorly, spending long hours at a desk, or simply want an hour to yourself, we are the right place.",
+          },
+          {
+            de: "Vor jeder Massage fragen wir nach Vorerkrankungen, Medikamenten, Schwangerschaft, Operationen und empfindlichen Stellen. Das ist keine Formalität: Es entscheidet darüber, ob und wie wir arbeiten. Im Zweifel sagen wir lieber ab oder verschieben, als eine Anwendung durchzuführen, die nicht zu deiner Situation passt.",
+            en: "Before every massage we ask about medical history, medication, pregnancy, surgery and sensitive areas. That is not a formality: it determines whether and how we work. If in doubt we would rather cancel or postpone than carry out a treatment that does not fit your situation.",
+          },
+        ],
+      },
+      {
+        title: {
+          de: "Vier Massagen — und wie du wählst",
+          en: "Four massages — and how to choose",
+        },
+        body: [
+          {
+            de: "Die Spa-Massage ist der vielseitige Einstieg: fließende Streichungen mit warmem Öl, Fokus und Druck legen wir gemeinsam fest. Sie ist die richtige Wahl, wenn du dich zum ersten Mal für eine Körpermassage entscheidest oder ein Geschenk aussuchst, bei dem du die Vorlieben nicht kennst.",
+            en: "Spa massage is the versatile way in: flowing strokes with warm oil, with focus and pressure agreed together. It is the right choice for a first body massage, or for a gift when you do not know the recipient's preferences.",
+          },
+          {
+            de: "Die Kerzenmassage stellt Wärme in den Mittelpunkt — Öl aus einer Massagekerze, gleichmäßig eingearbeitet, ohne kräftige Griffe. Die Dampfmassage arbeitet mit feuchter Wärme und ist besonders in der kalten Jahreshälfte beliebt; frag uns vorher nach der Verfügbarkeit. Die Schröpfmassage erzeugt durch bewegte Schröpfgläser ein ziehendes Gefühl, das viele Gäste als deutlich intensiver beschreiben als eine klassische Massage.",
+            en: "Candle massage puts warmth at the centre — oil from a massage candle, worked in evenly and without firm strokes. Steam massage uses moist heat and is especially popular in the colder half of the year; ask us about availability first. Cupping massage creates a drawing sensation with moving cupping glasses, which many guests describe as considerably more intense than a classic massage.",
+          },
+          {
+            de: "Wenn du zwischen zwei Varianten schwankst, beschreib uns einfach, wie es dir geht — wir empfehlen dir etwas. Eine Tabelle mit Fokus, Berührung, Wärme, Kleidung und Position für alle zehn Anwendungen findest du auf unserer Behandlungsseite.",
+            en: "If you are torn between two options, simply describe how you feel and we will suggest something. A table showing focus, touch, warmth, clothing and position for all ten treatments is on our treatments page.",
+          },
+        ],
+      },
+      {
+        title: {
+          de: "Deine erste Wellnessmassage: was praktisch passiert",
+          en: "Your first wellness massage: what actually happens",
+        },
+        body: [
+          {
+            de: "Du klingelst, wir öffnen — es gibt keine Empfangstheke und keinen Wartebereich mit anderen Gästen. Nach dem Vorgespräch über Fokus, Druck, empfindliche Stellen und Vorerkrankungen gehst du in den Behandlungsraum und ziehst dich in Ruhe und unbeobachtet um. Unterwäsche kannst du anbehalten. Du legst dich unter das Leinen, und wir klopfen, bevor wir hereinkommen.",
+            en: "You ring, we let you in — there is no reception desk and no waiting area with other guests. After the consultation about focus, pressure, sensitive areas and medical history, you go into the treatment room and change privately and unobserved. You may keep your underwear on. You lie down under the linen, and we knock before coming in.",
+          },
+          {
+            de: "Während der Massage ist nur der Bereich frei, an dem gerade gearbeitet wird; alles andere bleibt abgedeckt. Die ersten Minuten dienen dem Ankommen mit warmem Öl und langen Streichungen, danach vertieft sich die Arbeit dort, wo du es benannt hast. Wir fragen zwischendurch nach dem Druck. „Etwas weniger“ ist der hilfreichste Satz, den du sagen kannst — niemand nimmt ihn persönlich.",
+            en: "During the massage only the area being worked is uncovered; everything else stays draped. The first few minutes are for arriving, with warm oil and long strokes, after which the work deepens where you asked for it. We check on the pressure as we go. 'A little less' is the most useful sentence you can say — nobody takes it personally.",
+          },
+          {
+            de: "Am Ende bekommst du Zeit, liegen zu bleiben und langsam aufzustehen. Es folgt kein Verkaufsgespräch, kein Paketangebot und keine Empfehlung, die eigentlich ein Angebot ist. Ein Trinkgeld ist nicht erwartet und nicht eingerechnet. Bezahlt wird nach der Behandlung, nach aktueller Studioinformation mit Karte, PayPal oder bar.",
+            en: "At the end you are given time to stay lying down and get up slowly. No sales conversation follows, no package offer and no recommendation that is really an offer. A tip is neither expected nor included. Payment is taken after the treatment; according to current studio information by card, PayPal or cash.",
+          },
+        ],
+      },
     ],
     faqs: [
       {
@@ -268,6 +441,30 @@ export const LOCAL_PAGES: Page[] = [
   },
   {
     slug: "gesichtsbehandlung-ahrensburg",
+    hero: "facial-massage-warm-light",
+    gallery: [
+      {
+        photo: "aqua-facial-mist",
+        caption: {
+          de: "Aqua Facial — wasserbasierte Reinigung",
+          en: "Aqua Facial — water-based cleansing",
+        },
+      },
+      {
+        photo: "facial-gua-sha-pressure",
+        caption: {
+          de: "Gua Sha — langsame Züge mit glattem Stein",
+          en: "Gua sha — slow strokes with a smooth stone",
+        },
+      },
+      {
+        photo: "skin-texture-freckles",
+        caption: {
+          de: "Natürliche Hauttextur, nicht weggeglättet",
+          en: "Natural skin texture, not smoothed away",
+        },
+      },
+    ],
     title: {
       de: "Gesichtsbehandlung in Ahrensburg | satuuu99",
       en: "Facial treatments in Ahrensburg | satuuu99",
@@ -337,6 +534,62 @@ export const LOCAL_PAGES: Page[] = [
           },
         ],
       },
+      {
+        title: {
+          de: "Aqua Facial, Sleep & Glow oder Gua Sha?",
+          en: "Aqua Facial, Sleep & Glow or gua sha?",
+        },
+        body: [
+          {
+            de: "Die drei Gesichtsbehandlungen unterscheiden sich weniger im versprochenen Ergebnis als im Erlebnis. Das Aqua Facial ist die einzige der drei, die mit einem Gerät arbeitet: Wasser und ein sanfter Unterdruck lösen oberflächliche Verunreinigungen, danach folgen Feuchtigkeit und Pflege. Wähle es, wenn sich deine Haut stumpf oder unrein anfühlt.",
+            en: "The three facial treatments differ less in promised outcome than in experience. Aqua Facial is the only one of the three that uses a device: water and gentle suction loosen surface impurities, followed by hydration and care. Choose it when your skin feels dull or congested.",
+          },
+          {
+            de: "Sleep & Glow ist das ruhigste Ritual: kein Gerät, keine starken Wirkstoffe, gedämpftes Licht und eine lange, langsame Massage über Gesicht, Hals und Nacken. Viele Gäste schlafen dabei ein, und das ist ausdrücklich erlaubt. Wähle es, wenn du erschöpft bist und weniger an Reinigung interessiert.",
+            en: "Sleep & Glow is the calmest ritual: no device, no strong actives, low light and a long, slow massage across face, throat and nape. Many guests fall asleep, and that is expressly allowed. Choose it when you are worn out and less interested in cleansing.",
+          },
+          {
+            de: "Gua Sha arbeitet mit einem glatten Stein, der flach und in langsamen Zügen über Stirn, Wangen, Kiefer und Hals geführt wird. Es ist die Anwendung für Menschen, die ihr Gesicht als angespannt erleben — etwa wenn sie tagsüber die Zähne zusammenbeißen. Bei Rosazea, Couperose oder einer Neigung zu geplatzten Äderchen sprich uns vorher an.",
+            en: "Gua sha uses a smooth stone guided flat and in slow strokes across forehead, cheeks, jaw and throat. It is the treatment for people who experience their face as held — if they clench during the day, for example. With rosacea, couperose or a tendency to broken capillaries, talk to us first.",
+          },
+        ],
+      },
+      {
+        title: {
+          de: "Was wir nicht anbieten",
+          en: "What we do not offer",
+        },
+        body: [
+          {
+            de: "Unsere Gesichtsbehandlungen in Ahrensburg sind kosmetische Wellnessanwendungen. Wir bieten keine Unterspritzungen, kein Microneedling, keine Laserbehandlungen, keine medizinischen Peelings und keine Aknetherapie an. Wir stellen keine Diagnosen und versprechen keine Veränderung deiner Hautstruktur.",
+            en: "Our facial treatments in Ahrensburg are cosmetic wellness treatments. We do not offer injectables, microneedling, laser treatment, medical peels or acne therapy. We do not diagnose and we promise no change to your skin structure.",
+          },
+          {
+            de: "Wenn deine Haut akut entzündet ist, wenn du Isotretinoin oder ein anderes stark wirksames Medikament nimmst, wenn du in den letzten Wochen ein Peeling, Microneedling oder eine Unterspritzung hattest oder wenn eine Hautveränderung ungeklärt ist, melde dich vor der Buchung. Wir verschieben dann lieber oder empfehlen dir zuerst eine dermatologische Abklärung.",
+            en: "If your skin is acutely inflamed, if you take isotretinoin or another strong medication, if you have had a peel, microneedling or injectables in recent weeks, or if a skin change is unexplained, contact us before booking. We would rather postpone or suggest dermatological advice first.",
+          },
+        ],
+      },
+      {
+        title: {
+          de: "Vorher und nachher: was deine Haut wirklich braucht",
+          en: "Before and after: what your skin actually needs",
+        },
+        body: [
+          {
+            de: "Vor dem Termin ist weniger mehr. Verzichte am selben Tag auf ein eigenes Peeling und in den Tagen davor auf intensive Sonne oder Solarium. Wenn du Retinol oder Fruchtsäuren verwendest, setz sie nach Absprache ein paar Tage vorher aus — nicht, weil die Behandlung aggressiv wäre, sondern weil die Haut dann weniger reagiert. Ungeschminkt kommen kannst du, musst du aber nicht: Wir reinigen ohnehin.",
+            en: "Before your appointment, less is more. Skip your own exfoliant on the day and strong sun or sunbeds in the days before. If you use retinol or acids, pause them a few days beforehand once we have discussed it — not because the treatment is aggressive, but because your skin then reacts less. You may arrive without makeup, but you do not have to: we cleanse in any case.",
+          },
+          {
+            de: "Nach dem Termin ist Sonnenschutz die sinnvollste Nachpflege, die es gibt — deutlich wichtiger als jedes zusätzliche Serum. Lass die Haut für einige Stunden in Ruhe: milde Pflege, kein Peeling, keine Säuren, kein Retinol, kein intensives Training direkt danach. Eine leichte Rötung oder ein Spannungsgefühl ist normal und klingt in der Regel schnell ab.",
+            en: "Afterwards, sun protection is the most sensible aftercare there is — considerably more important than any additional serum. Leave the skin alone for a few hours: mild care, no exfoliant, no acids, no retinol, no intense exercise straight afterwards. Mild redness or a feeling of tightness is normal and usually settles quickly.",
+          },
+          {
+            de: "Wenn du einen Anlass hast, plane den Termin lieber ein bis zwei Tage davor als am selben Tag. Und wenn du wissen möchtest, welches Produkt wir verwendet haben, frag uns — wir sagen es dir und verkaufen dir danach nichts. Bei einer Reaktion, die länger als einen Tag deutlich sichtbar bleibt oder sich entzündet anfühlt, melde dich bei uns und bei anhaltenden Beschwerden bei einer dermatologischen Praxis.",
+            en: "If you have an occasion coming up, book one or two days beforehand rather than the same day. And if you want to know which product we used, ask — we will tell you and we will not sell you anything afterwards. If a reaction stays clearly visible for more than a day or feels inflamed, contact us, and for persistent concerns a dermatology practice.",
+          },
+        ],
+      },
     ],
     faqs: [
       {
@@ -397,35 +650,56 @@ export function LocalServicePage({ slug }: { slug: string }) {
   const { t } = useLang();
   const page = LOCAL_PAGES.find((item) => item.slug === slug)!;
   usePageMeta(t(page.title), t(page.meta));
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: t(page.eyebrow),
-    description: t(page.answer),
-    provider: { "@id": "https://satuuu99.de/#business" },
-    areaServed: ["Ahrensburg", "Stormarn", "Hamburg"],
-    url: `https://satuuu99.de/${page.slug}`,
-  };
+  const heading = t(page.title).split("|")[0].trim();
   return (
     <>
-      <script type="application/ld+json">{JSON.stringify(schema)}</script>
+      <StructuredData
+        data={serviceSchema({
+          name: heading,
+          description: t(page.answer),
+          url: `/${page.slug}`,
+          image: photoUrl(page.hero),
+          serviceType: t(page.eyebrow),
+        })}
+      />
+      <StructuredData data={faqSchema(page.faqs, t)} />
+      <StructuredData
+        data={breadcrumbSchema([
+          { name: t({ de: "Startseite", en: "Home" }), path: "/" },
+          { name: heading, path: `/${page.slug}` },
+        ])}
+      />
       <header className="local-text-hero section-shell">
         <div>
           <p className="eyebrow">{t(page.eyebrow)}</p>
-          <h1>{t(page.title).split("|")[0]}</h1>
+          <h1>{heading}</h1>
           <p className="local-lead">{t(page.intro)}</p>
           <a className="button" href={CONTACT.booking}>
             {t({ de: "Freie Termine ansehen", en: "View available times" })}
             <ArrowRightIcon />
           </a>
         </div>
-        <div className="local-image-placeholder" aria-hidden="true" />
+        <figure className="local-hero-image">
+          <Photo
+            id={page.hero}
+            sizes="(min-width: 900px) 44vw, 100vw"
+            priority
+          />
+        </figure>
       </header>
       <section className="answer-first section-shell">
         <p className="eyebrow">
           {t({ de: "Kurz erklärt", en: "The short answer" })}
         </p>
         <h2>{t(page.answer)}</h2>
+      </section>
+      <section className="contact-photos section-shell">
+        {page.gallery.map((item) => (
+          <figure key={item.photo}>
+            <Photo id={item.photo} sizes="(min-width: 900px) 32vw, 100vw" />
+            <figcaption className="media-note">{t(item.caption)}</figcaption>
+          </figure>
+        ))}
       </section>
       <div className="local-content section-shell">
         {page.sections.map((section, index) => (

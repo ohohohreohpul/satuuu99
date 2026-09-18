@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRightIcon } from "../components/ui/Icons";
 import { CONTACT } from "../data/content";
 import { MEDIA } from "../data/media";
+import { Photo } from "../components/media/Photo";
 import { useLang } from "../lib/i18n";
 
 const steps = [
@@ -85,14 +86,7 @@ export function VisitJourney() {
       </div>
       <div className="journey-stage section-shell">
         <figure className="journey-image">
-          <img
-            src={MEDIA.studio}
-            alt={t({
-              de: "Privater Behandlungsraum von satuuu99 in Ahrensburg",
-              en: "Private satuuu99 treatment room in Ahrensburg",
-            })}
-            loading="lazy"
-          />
+          <Photo id={MEDIA.studio} sizes="(min-width: 1024px) 46vw, 100vw" />
           <figcaption>Manhagener Allee 45 · Ahrensburg</figcaption>
         </figure>
         <div className="journey-interface">

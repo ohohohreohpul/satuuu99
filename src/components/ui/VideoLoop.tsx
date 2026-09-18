@@ -11,12 +11,17 @@ interface VideoLoopProps {
   poster: string;
   label: string;
   className?: string;
+  /** Intrinsic poster dimensions, so the frame reserves space before load. */
+  width: number;
+  height: number;
 }
 export function VideoLoop({
   src,
   poster,
   label,
   className = "",
+  width,
+  height,
 }: VideoLoopProps) {
   const { t } = useLang();
   const video = useRef<HTMLVideoElement>(null);
@@ -62,6 +67,8 @@ export function VideoLoop({
         src={poster}
         alt={label}
         className={className}
+        width={width}
+        height={height}
         {...HIGH_FETCH_PRIORITY}
       />
       {!reduced && !failed && (

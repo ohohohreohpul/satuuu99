@@ -1,0 +1,379 @@
+/*
+ * Layout for the sections added to /preise, /kontakt, /studio and
+ * /gutscheine during the content build-out.
+ */
+
+/* --- shared ------------------------------------------------------------ */
+
+.answer-lead {
+  font-size: clamp(1.06rem, 0.96rem + 0.5vw, 1.3rem);
+  line-height: 1.58;
+  color: var(--ink);
+}
+
+.page-section-heading {
+  max-width: 34ch;
+}
+
+/* --- /preise ----------------------------------------------------------- */
+
+/* The price list moved into its own section, so the hero is single column. */
+.prices-page {
+  grid-template-columns: minmax(0, 1fr);
+  min-height: 0;
+  padding-block: clamp(72px, 8vw, 110px) clamp(24px, 3vw, 48px);
+}
+.prices-intro {
+  max-width: 62ch;
+}
+.prices-intro .answer-lead {
+  max-width: none;
+  margin-top: 28px;
+  font-size: clamp(1.06rem, 0.96rem + 0.5vw, 1.3rem);
+  line-height: 1.58;
+  color: var(--ink);
+}
+
+.price-logic {
+  padding-block: clamp(40px, 5vw, 88px);
+  border-top: 1px solid var(--line);
+}
+.price-logic-list {
+  list-style: none;
+  margin: clamp(28px, 3.5vw, 52px) 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: clamp(24px, 3vw, 52px);
+}
+.price-logic-list > li > span {
+  display: block;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+.price-logic-list h3 {
+  margin: 0 0 0.6em;
+  font-size: 1.12rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+.price-logic-list p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.price-duration {
+  display: grid;
+  grid-template-columns: minmax(0, 0.62fr) minmax(0, 1fr);
+  gap: clamp(28px, 4vw, 76px);
+  align-items: start;
+  padding-block: clamp(40px, 5vw, 88px);
+  border-top: 1px solid var(--line);
+}
+.price-duration-image {
+  margin: 0;
+}
+.price-duration-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+  background: var(--line);
+}
+.price-duration h2 {
+  font-size: clamp(1.45rem, 1.1rem + 1.5vw, 2.2rem);
+  line-height: 1.16;
+  letter-spacing: -0.02em;
+  margin: 0.3em 0 1em;
+  max-width: 24ch;
+}
+.price-duration p {
+  margin: 0 0 1.1em;
+  font-size: 0.97rem;
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 62ch;
+}
+
+.prices-overview {
+  padding-block: clamp(40px, 5vw, 88px);
+  border-top: 1px solid var(--line);
+}
+.prices-overview .section-heading p:last-child {
+  margin-top: 1em;
+  font-size: 0.92rem;
+  line-height: 1.66;
+  color: var(--muted);
+  max-width: 54ch;
+}
+.prices-overview .prices-list {
+  margin-top: clamp(24px, 3vw, 44px);
+}
+.price-group ul > li {
+  padding: 6px 0;
+}
+.price-group ul a {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.95rem;
+  border-bottom: 1px solid transparent;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+.price-group ul a:hover,
+.price-group ul a:focus-visible {
+  color: var(--accent);
+  border-bottom-color: var(--line);
+}
+.price-group ul small {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.prices-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: clamp(16px, 2vw, 32px);
+  margin-top: clamp(28px, 3vw, 44px);
+}
+
+/* --- /kontakt ---------------------------------------------------------- */
+
+.arrival-section {
+  padding-block: clamp(40px, 5vw, 88px);
+  border-top: 1px solid var(--line);
+}
+.arrival-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  gap: clamp(24px, 3vw, 52px);
+  margin-top: clamp(28px, 3.5vw, 52px);
+}
+.arrival-grid article > span {
+  display: block;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.arrival-grid h3 {
+  margin: 0 0 0.6em;
+  font-size: 1.08rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+.arrival-grid p {
+  margin: 0 0 0.9em;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.contact-photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+  gap: clamp(14px, 1.8vw, 26px);
+  padding-block: clamp(24px, 3vw, 56px);
+}
+.contact-photos figure {
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+.contact-photos img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+  border-radius: 18px;
+  background: var(--line);
+}
+.contact-map {
+  padding-block: clamp(24px, 3vw, 56px);
+  border-top: 1px solid var(--line);
+}
+.contact-map iframe {
+  width: 100%;
+  height: clamp(280px, 40vh, 440px);
+  border: 0;
+  border-radius: 20px;
+  background: var(--line);
+  display: block;
+  margin-top: clamp(20px, 2.5vw, 36px);
+}
+
+/* --- /studio ----------------------------------------------------------- */
+
+.studio-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr));
+  gap: clamp(14px, 1.8vw, 26px);
+  padding-block: clamp(32px, 4vw, 72px);
+}
+.studio-gallery figure {
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+.studio-gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+  border-radius: 18px;
+  background: var(--line);
+}
+.studio-gallery figcaption {
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.team-section {
+  padding-block: clamp(40px, 5vw, 88px);
+  border-top: 1px solid var(--line);
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: clamp(28px, 3.5vw, 52px);
+}
+.team-grid article {
+  background: var(--paper);
+  padding: clamp(20px, 2.4vw, 32px);
+  display: grid;
+  gap: 8px;
+  align-content: start;
+}
+.team-grid h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+.team-grid .team-role {
+  margin: 0;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.team-grid p:last-child {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.68;
+  color: var(--muted);
+}
+.team-note {
+  margin: clamp(20px, 2.5vw, 32px) 0 0;
+  font-size: 0.82rem;
+  line-height: 1.66;
+  color: var(--muted);
+  max-width: 68ch;
+}
+
+/* --- /gutscheine ------------------------------------------------------- */
+
+.gift-steps {
+  padding-block: clamp(40px, 5vw, 88px);
+  border-top: 1px solid var(--line);
+}
+.gift-steps ol {
+  list-style: none;
+  counter-reset: gift;
+  margin: clamp(28px, 3.5vw, 52px) 0 0;
+  padding: 0;
+  display: grid;
+  gap: clamp(20px, 2.5vw, 36px);
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+}
+.gift-steps li {
+  counter-increment: gift;
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+.gift-steps li::before {
+  content: "0" counter(gift);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+}
+.gift-steps h3 {
+  margin: 0;
+  font-size: 1.06rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+.gift-steps p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+@media (max-width: 860px) {
+  .price-duration {
+    grid-template-columns: 1fr;
+  }
+  .price-duration h2,
+  .price-duration p {
+    max-width: none;
+  }
+}
+
+/* --- route chunk loading ----------------------------------------------- */
+
+/* Reserves roughly a viewport while a lazily loaded route arrives, so the
+   footer does not jump up and then back down. */
+.route-fallback {
+  min-height: 70vh;
+}
+
+/* --- local service pages ----------------------------------------------- */
+
+.local-hero-image {
+  margin: 0;
+}
+/* Keeps the asymmetric corner the page was designed around. */
+.local-hero-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  max-height: 680px;
+  object-fit: cover;
+  display: block;
+  border-radius: 34px 34px 120px 34px;
+  background: var(--line);
+}
+
+@media (max-width: 860px) {
+  .local-hero-image img {
+    min-height: 340px;
+    border-radius: 28px 28px 80px 28px;
+  }
+}
+
+/* --- /journal ---------------------------------------------------------- */
+
+.journal-hub-intro {
+  max-width: 62ch;
+  margin: 1.1em 0 0;
+  font-size: 0.95rem;
+  line-height: 1.72;
+  color: var(--muted);
+}

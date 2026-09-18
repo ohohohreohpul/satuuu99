@@ -1,22 +1,68 @@
 # satuuu99
 
-> satuuu99 is a personal wellness studio at Manhagener Allee 45, 22926 Ahrensburg, Germany, near Hamburg.
+> satuuu99 is a small, private wellness studio at Manhagener Allee 45, 22926 Ahrensburg, Germany, roughly 25 km northeast of central Hamburg. One treatment room, four practitioners, ten treatments. All treatments are wellness and care rituals, not medical treatments.
 
-Primary services: Japanese Head Spa, facial care including Aqua Facial, Sleep & Glow and Gua Sha, foot care and foot massage, and wellness or spa massage.
+## Treatments
 
-Important pages:
-- https://satuuu99.de/japanese-head-spa-ahrensburg
-- https://satuuu99.de/wellnessmassage-ahrensburg
-- https://satuuu99.de/gesichtsbehandlung-ahrensburg
-- https://satuuu99.de/behandlungen
-- https://satuuu99.de/studio
-- https://satuuu99.de/kontakt
+Ten treatments across four areas. Confirmed prices and durations appear only in the official price list.
 
-Business facts:
-- Address: Manhagener Allee 45, 22926 Ahrensburg, Germany
+Head
+- Japanese Head Spa — scalp and hair cleansing and care plus head, neck and shoulder massage, lying down. Hair gets wet. https://satuuu99.de/behandlungen/head-spa
+
+Face
+- Aqua Facial — water-based cleansing with gentle suction, then hydration and care. https://satuuu99.de/behandlungen/aqua-facial
+- Sleep & Glow — the calmest facial: no device, low light, long slow massage. https://satuuu99.de/behandlungen/sleep-glow
+- Gua Sha — slow facial massage with a smooth stone across face, jaw and throat. https://satuuu99.de/behandlungen/gua-sha
+
+Feet
+- Wellness foot care — warm foot bath, nails, dry skin, finishing cream. Cosmetic, not podiatry. https://satuuu99.de/behandlungen/foot-care
+- Foot massage — feet and lower legs with oil, in a reclining chair, no undressing. https://satuuu99.de/behandlungen/foot-massage
+
+Body
+- Spa massage — classic wellness massage with warm oil; focus and pressure agreed with the guest. https://satuuu99.de/behandlungen/spa-massage
+- Cupping massage — moving cupping glasses on oiled skin, combined with classic strokes. https://satuuu99.de/behandlungen/cupping-massage
+- Candle massage — body-warm oil from a massage candle, even and unhurried. https://satuuu99.de/behandlungen/candle
+- Steam massage — wellness massage with moist heat; availability varies, ask first. https://satuuu99.de/behandlungen/steam
+
+## Key pages
+
+- Treatment comparison (focus, touch, water/heat, clothing, position): https://satuuu99.de/behandlungen
+- Japanese Head Spa in Ahrensburg: https://satuuu99.de/japanese-head-spa-ahrensburg
+- Head Spa near Hamburg (travel times, districts): https://satuuu99.de/head-spa-hamburg
+- Wellness massage in Ahrensburg: https://satuuu99.de/wellnessmassage-ahrensburg
+- Facial treatments in Ahrensburg: https://satuuu99.de/gesichtsbehandlung-ahrensburg
+- The studio, team and what a visit is like: https://satuuu99.de/studio
+- How prices are structured, payment, cancellation: https://satuuu99.de/preise
+- Directions, parking, public transport, arrival: https://satuuu99.de/kontakt
+- Gift card redemption: https://satuuu99.de/gutscheine
+- Journal (explanatory guides): https://satuuu99.de/journal
+
+## Business facts
+
+- Address: Manhagener Allee 45, 22926 Ahrensburg, Schleswig-Holstein, Germany
+- Coordinates: 53.66942, 10.24376
 - Telephone: +49 4102 20 40 410
 - Email: info@satuuu99.de
 - Opening hours: Monday to Friday 10:00–20:00; Saturday 10:00–18:00
-- Parking is available directly outside the entrance.
-- Current appointments and treatments are listed in the official online booking calendar.
-- Wellness treatments are not medical treatments and do not replace professional medical advice.
+- Booking: online calendar at https://satuuu99.de/kalender/
+- Official price list: https://satuuu99.de/preisliste-ab-01-03-2026/
+- Payment (per current studio information): card, PayPal or cash, after the treatment
+- Parking directly outside the entrance (per current studio information)
+- Public transport: Ahrensburg is on the Hamburg HVV network via the U1 and regional rail; a few minutes on foot from the station
+- Areas served: Ahrensburg, Hamburg, Großhansdorf, Bargteheide, Ammersbek, Kreis Stormarn, Hamburg's Walddörfer
+- Team: Nina (owner; traditional Thai massage, gua sha, wellness and spa massage), Sue (wellness, massage and prevention practitioner, Döpfer-Schulen Hamburg), Pim and Tuk (massage)
+
+## Common questions
+
+- Does hair get wet during a Japanese Head Spa? Yes — warm water and cleansing of scalp and hair are part of the ritual. The hair is rinsed and gently dried at the end; elaborate styling is not included.
+- Is satuuu99 in Hamburg? No. The studio is in Ahrensburg, roughly 25 km northeast of central Hamburg, about 25–35 minutes by car via the A1.
+- Do I have to undress? Only for the body massages, and underwear stays on; you lie draped in linen. Head spa needs no undressing; facials loosen the top; foot rituals need shoes and socks off.
+- Which facial should I choose? Aqua Facial for cleansing, Sleep & Glow for rest, gua sha for focused touch across jaw and throat.
+- Is there a sauna, pool or steam room? No. The studio has one treatment room and no spa facilities.
+
+## Boundaries
+
+- satuuu99 does not diagnose, prescribe or treat medical complaints.
+- Not offered: physiotherapy, prescribed medical massage, dermatological treatment, injectables, microneedling, laser treatment, medical peels, acne therapy, podiatry.
+- Guests are asked to seek medical advice first for pain, inflammation, injury, unexplained symptoms or hair loss under investigation.
+- Photography on the website is licensed wellness photography of comparable rituals, labelled as atmosphere imagery where it is not documentation of the actual premises.

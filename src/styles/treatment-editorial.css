@@ -1,0 +1,83 @@
+/*
+ * Sections added to the treatment pages: the answer-first lead paragraph,
+ * the visual treatment sequence and the ambient film band.
+ */
+
+.treatment-answer .answer-lead {
+  font-size: clamp(1.12rem, 0.98rem + 0.6vw, 1.38rem);
+  line-height: 1.55;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  border-left: 2px solid var(--line);
+  padding-left: clamp(16px, 2vw, 28px);
+  margin: 0 0 1.5em;
+}
+
+.treatment-sequence {
+  display: grid;
+  gap: clamp(28px, 3.5vw, 56px);
+  padding-block: clamp(48px, 6vw, 96px);
+}
+.treatment-sequence-heading h2 {
+  font-size: clamp(1.6rem, 1.1rem + 2vw, 2.6rem);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin: 0.25em 0 0;
+  max-width: 22ch;
+}
+.treatment-sequence-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+  gap: clamp(16px, 2vw, 32px);
+}
+.treatment-sequence-grid figure {
+  margin: 0;
+  display: grid;
+  gap: 14px;
+}
+/* One aspect across the row so the sequence reads as a set, whatever the
+   source crop of each photograph is. */
+.treatment-sequence-grid img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+  background: var(--line);
+}
+/* Staggered baseline so the row reads as a sequence, not a uniform grid. */
+.treatment-sequence-grid figure:nth-child(even) {
+  transform: translateY(clamp(14px, 2.2vw, 40px));
+}
+.treatment-sequence-grid figcaption {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  font-size: 0.86rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+.treatment-sequence-grid figcaption > span {
+  font-variant-numeric: tabular-nums;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  flex: 0 0 auto;
+}
+
+.treatment-film {
+  padding-block: clamp(24px, 3vw, 56px);
+}
+.treatment-film > .ambient-film {
+  margin: 0;
+}
+
+@media (max-width: 720px) {
+  .treatment-sequence-grid figure:nth-child(even) {
+    transform: none;
+  }
+  .treatment-answer .answer-lead {
+    padding-left: 14px;
+  }
+}

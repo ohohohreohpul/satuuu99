@@ -13,12 +13,13 @@ import { useLang } from "../../lib/i18n";
 import { ArrowRightIcon } from "../ui/Icons";
 import { LanguageToggle } from "../ui/LanguageToggle";
 import { BrandMark } from "../ui/BrandMark";
+import { Photo } from "../media/Photo";
 const pictures = [
-  { id: "head", src: MEDIA.treatments.head! },
-  { id: "face", src: MEDIA.treatments.face! },
-  { id: "body", src: MEDIA.treatments.body! },
-  { id: "feet", src: MEDIA.treatments.feet! },
-  { id: "studio", src: MEDIA.studio },
+  { id: "head", photo: MEDIA.treatments.head },
+  { id: "face", photo: MEDIA.treatments.face },
+  { id: "body", photo: MEDIA.treatments.body },
+  { id: "feet", photo: MEDIA.treatments.feet },
+  { id: "studio", photo: MEDIA.studio },
 ];
 const pagePreview: Record<
   string,
@@ -391,9 +392,10 @@ export function NavBar() {
             </div>
             <div className="menu-photo">
               {pictures.map((pic) => (
-                <img
+                <Photo
                   key={pic.id}
-                  src={pic.src}
+                  id={pic.photo}
+                  sizes="(min-width: 900px) 34vw, 100vw"
                   className={activePreview.image === pic.id ? "is-visible" : ""}
                   alt=""
                 />

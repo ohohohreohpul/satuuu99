@@ -2387,7 +2387,8 @@ h4 {
 .journal-article header > .eyebrow {
   margin-top: 55px;
 }
-.article-image {
+/* The class now sits on the <picture>, which is display:contents. */
+.article-image img {
   width: 100%;
   max-height: 640px;
   object-fit: cover;
@@ -3013,19 +3014,22 @@ h4 {
     transform: translateY(0) scale(1);
   }
 }
-.menu-photo > img {
+.menu-photo > picture {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  display: block;
   opacity: 0;
   transition:
     opacity 0.7s,
     transform 1.2s;
   transform: scale(1.04);
 }
-.menu-photo > img.is-visible {
+.menu-photo > picture > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.menu-photo > picture.is-visible {
   opacity: 1;
   transform: scale(1);
 }
@@ -3778,11 +3782,15 @@ h4 {
   padding-block: 90px 120px;
 }
 .local-text-hero h1 {
-  font-size: clamp(66px, 7vw, 108px);
+  font-size: clamp(40px, 7vw, 108px);
   line-height: 1.02;
   max-width: 900px;
   margin: 28px 0;
   letter-spacing: -0.055em;
+  /* German compounds such as "Gesichtsbehandlung" are wider than a phone
+     viewport at this size, so allow the browser to break them. */
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 .local-lead {
   max-width: 580px;
@@ -3792,27 +3800,6 @@ h4 {
 }
 .local-text-hero .button {
   margin-top: 32px;
-}
-.local-image-placeholder {
-  min-height: 560px;
-  border-radius: 34px 34px 120px 34px;
-  background: linear-gradient(145deg, #e6ded3, #d3c6b7);
-  position: relative;
-  overflow: hidden;
-}
-.local-image-placeholder::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("/brand/pattern.png") center/250px repeat;
-  opacity: 0.08;
-}
-.local-image-placeholder::after {
-  content: "";
-  position: absolute;
-  inset: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.48);
-  border-radius: 22px 22px 92px 22px;
 }
 .answer-first {
   padding-block: clamp(100px, 13vw, 190px);
@@ -4186,10 +4173,9 @@ h4 {
     padding-block: 60px 90px;
   }
   .local-text-hero h1 {
-    font-size: 54px;
+    font-size: clamp(40px, 11vw, 54px);
   }
-  .local-image-placeholder {
-    min-height: 400px;
+  .local-hero-image {
     order: -1;
   }
   .answer-first,

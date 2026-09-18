@@ -80,3 +80,120 @@ The exact prompts used are the shot descriptions above plus the shared art direc
 Each selected still was inspected at full size for hand and face anatomy before acceptance; finger counts and joints are correct in all seven. The upscaled hero was compared against its source at 1:1 to confirm the enhancer preserved content rather than reinterpreting it.
 
 The atmosphere image remains an **atmosphere image**, not documentary photography of the real premises, and is labelled as such in the interface. Replace it with actual studio photography when the owner supplies it.
+
+---
+
+# Relaunch media set — September 2026
+
+## Provenance and honesty
+
+The relaunch set is **licensed professional wellness photography of comparable
+rituals**, supplied by the studio owner. It is **not documentation of the
+Ahrensburg premises, team or guests**. Every placement follows two rules:
+
+1. A photograph that could be read as "this is our room" carries a visible
+   caption saying it is an atmosphere image (`figcaption.media-note`).
+2. No photograph is used in a way that implies a facility the studio does not
+   have — no pool, sauna, steam landscape, reception hall or resort grounds
+   appears anywhere in the set.
+
+The ambient films carry the same caption on treatment pages: *"Stimmungsaufnahme
+einer vergleichbaren Anwendung — keine Aufnahme aus unseren Räumen."*
+
+## Still outstanding
+
+These shots are in the original brief and still require a real shoot in
+Ahrensburg. Until they exist, the pages that would use them either carry an
+atmosphere image with a caption, or carry no image at all.
+
+- Studio exterior, entrance and signage (4–5 selects)
+- The actual reception, treatment room and reclining chair (6–8 selects)
+- Team portraits for Nina, Sue, Pim and Tuk (6–8 selects) — the `/studio`
+  team block and the homepage `TeamProof` section are built and will take
+  portraits as soon as each person approves one
+- Cupping glasses, massage candle and steam equipment in use (3–4 selects)
+- Parking and the arrival detail for `/kontakt`
+
+Once those exist, replace the corresponding entries in
+`src/data/media/photos.ts` and drop the `media-note` captions from the
+placements that become documentary.
+
+## Build pipeline
+
+Derived renditions are produced by `node scripts/media/build-media.mjs`, driven
+by `scripts/media/manifest.json`. Originals stay outside the repository (the
+supplied `SATUUU` folder); only the derived files under `public/assets/photo`
+and `public/assets/film` are committed.
+
+Each still is rendered at 480, 768, 1200 and 1600 px (2000 px for lead images;
+the 2026 generated set stops at its 1100 px master and is never upscaled) in
+three formats:
+
+| Format | Encoder | Settings | Avg. at 1200 px |
+|---|---|---|---:|
+| AVIF | ffmpeg `libaom-av1` | CRF 32, still-picture, yuv420p | 48 KB |
+| WebP | `cwebp` | q 74, method 6, metadata stripped | 76 KB |
+| JPEG | ImageMagick | q 80, progressive, 4:2:0, unsharp 0x0.6+0.5 | 136 KB |
+
+Films are trimmed to 7 seconds, scaled to 1280 px wide at 25 fps, encoded with
+H.264 CRF 30 `-preset slow`, stripped of audio and given `+faststart`, with a
+JPEG and WebP poster frame each.
+
+Delivery happens through `src/components/media/Photo.tsx`, which emits a
+`<picture>` with AVIF, WebP and JPEG sources, explicit `width`/`height` and
+`sizes`, lazy loading by default and `fetchpriority="high"` only on the one
+above-the-fold image per page.
+
+## Delivered stills
+
+| Asset id | Aspect | Source file |
+|---|---|---|
+| `head-spa-forehead-hold` | 4:5 | `close-up-forehead-massage.jpg` |
+| `head-spa-candlelight` | 4:5 | `close-up-relaxed-woman-getting-massage.jpg` |
+| `head-spa-cradled-head` | 3:2 | `close-up-woman-experiencing-therapy.jpg` |
+| `head-spa-scalp-touch` | 3:2 | `person-conducting-reiki-therapy.jpg` |
+| `facial-massage-warm-light` | 3:2 | `woman-getting-facial-massage-spa-ideal-beauty-relaxation-concepts.jpg` |
+| `facial-massage-towel` | 3:2 | `young-woman-massaging-her-client-s-face.jpg` |
+| `facial-gua-sha-pressure` | 4:5 | `thai-facial-rejuvenation-massage-treatment-wellness-spa-center.jpg` |
+| `facial-overhead-view` | 3:2 | `top-view-young-woman-getting-spa-massage-treatment-beauty-spa-salon-face-massage-spa-skin-body-care.jpg` |
+| `aqua-facial-mist` | 3:2 | `cosmetologist-sprays-refreshing-spray-girl-s-face-white-background.jpg` |
+| `facial-care-application` | 3:2 | `spa-concept-with-woman-with-creme-face (1).jpg` |
+| `studio-candlelight-mood` | 3:2 | `young-woman-having-face-massage-relaxing-spa-salon.jpg` |
+| `skin-texture-freckles` | 4:5 | `front-view-woman-with-skin-imperfections.jpg` |
+| `skin-texture-profile` | 4:5 | `side-view-woman-normal-skin-texture.jpg` |
+| `skin-texture-eye-detail` | 1:1 | `young-woman-skin-texture-side-view.jpg` |
+| `skin-texture-beard` | 3:2 | `side-view-young-man-with-beard-skin-texture.jpg` |
+| `skin-texture-cheek` | 3:2 | `close-up-face-pores-texture (1).jpg` |
+| `resting-hand-cheek` | 4:5 | `side-view-woman-with-freckles.jpg` |
+| `face-eyes-closed` | 4:5 | `close-up-face-pores-texture.jpg` |
+| `face-calm-profile` | 3:2 | `close-up-relaxed-young-woman-s-face-spa.jpg` |
+| `face-warm-light-portrait` | 3:2 | `young-attractive-woman-enjoying-massage-spa-salon-beauty-treatment-natural-skin-care-cosmetic-natural-woman-beauty-skincare.jpg` |
+| `foot-massage-candlelight` | 4:5 | `masseur-doing-foot-massage-with-candles-background-high-quality-photo.jpg` |
+| `foot-care-towel` | 3:2 | `pedicure-foot-hands-massage-therapist-spa-acupressure-treatment-wellness-circulation-therapy-closeup-client-feet-beauty-salon-muscle-reflexology-skincare-relax.jpg` |
+| `hands-light-study` | 4:5 | `beautiful-sensitive-hands-concept.jpg` |
+
+### Carried over from the 2026 generated set
+
+| Asset id | Aspect | Source |
+|---|---|---|
+| `head-spa-water-rinse` | 4:5 | `public/assets/treatment-head.jpg` (2026 generated set) |
+| `facial-stone-detail` | 4:5 | `public/assets/treatment-face.jpg` (2026 generated set) |
+| `foot-ritual-detail` | 4:5 | `public/assets/treatment-feet.jpg` (2026 generated set) |
+| `body-massage-shoulders` | 4:5 | `public/assets/treatment-body.jpg` (2026 generated set) |
+| `body-cupping-glasses` | 4:5 | `public/assets/treatment-cupping.jpg` (2026 generated set) |
+| `studio-room-atmosphere` | 3:2 | `public/assets/authentic/studio.jpg` (2026 generated set) |
+
+## Delivered films
+
+| Asset id | Trim | Source file |
+|---|---|---|
+| `head-massage` | 7s from 4s | `0_Head_Massage_Scalp_Massage_1280x720.mp4` |
+| `foot-massage` | 7s from 2s | `0_Foot_Massage_Spa_1280x720.mp4` |
+| `spa-massage` | 7s from 2s | `6001916_Massage_Spa_1280x720.mp4` |
+| `leg-massage` | 7s from 2s | `0_Massage_Leg_Massage_1280x720.mp4` |
+| `foot-detail` | 7s from 3s | `0_Massage_Foot_1280x720.mp4` |
+
+Ambient loops are mapped to treatment families in `src/data/media.ts` and shown
+through `AmbientFilm`, which reuses `VideoLoop`: reduced-motion visitors and
+browsers that fail to play the file see the poster frame, and every loop has a
+visible pause control.

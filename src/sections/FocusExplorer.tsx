@@ -2,7 +2,8 @@ import { useState } from "react";
 import type { KeyboardEvent } from "react";
 import { useLang } from "../lib/i18n";
 import { CONTACT, FOCUS_GROUPS } from "../data/content";
-import { MEDIA } from "../data/media";
+import { groupPhoto, treatmentPhoto } from "../data/media";
+import { Photo } from "../components/media/Photo";
 import { ArrowRightIcon } from "../components/ui/Icons";
 import { Link } from "react-router-dom";
 
@@ -36,10 +37,9 @@ export function FocusExplorer() {
     document.getElementById(`tab-${FOCUS_GROUPS[next].id}`)?.focus();
   };
   const openedTreatment = group.treatments.find((item) => item.id === opened);
-  const programmeImage = opened ? MEDIA.programmes[opened] : undefined;
-  const image = programmeImage || MEDIA.treatments[group.id];
-  const imageAlt =
-    programmeImage && openedTreatment ? t(openedTreatment.name) : t(group.word);
+  const photo = opened
+    ? treatmentPhoto(opened, group.id)
+    : groupPhoto(group.id);
   return (
     <section
       id="rituale"
@@ -64,18 +64,15 @@ export function FocusExplorer() {
       </div>
       <div className="treatment-layout">
         <figure className="treatment-art">
-          <img
-            key={image || "existing-treatment"}
-            src={image || MEDIA.hero.poster}
+          <Photo
+            key={photo}
+            id={photo}
+            sizes="(min-width: 1024px) 42vw, 100vw"
             alt={
-              image
-                ? imageAlt
-                : t({
-                    de: "Detail einer behutsamen Kopf- und Nackenmassage",
-                    en: "Close detail of a gentle head and neck massage",
-                  })
+              openedTreatment
+                ? `${t(openedTreatment.name)} — ${t(group.title)}`
+                : undefined
             }
-            loading="lazy"
           />
         </figure>
         <div className="treatment-content">
