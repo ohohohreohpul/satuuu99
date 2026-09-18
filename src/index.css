@@ -117,12 +117,6 @@ body.is-preloading {
 .preloader-word span {
   display: block;
 }
-.preloader-note {
-  margin-top: 38px;
-  font-size: 8px;
-  letter-spacing: 0.34em;
-  color: #8c8073;
-}
 .brand-preloader > button {
   position: absolute;
   z-index: 2;
@@ -148,10 +142,6 @@ body.is-preloading {
     gap: 9px;
     margin-top: 18px;
     font-size: 15px;
-  }
-  .preloader-note {
-    margin-top: 30px;
-    font-size: 7px;
   }
   .brand-preloader > button {
     right: 22px;

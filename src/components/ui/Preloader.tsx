@@ -52,13 +52,7 @@ export function Preloader() {
           { yPercent: 0, opacity: 1, duration: 0.52, stagger: 0.055 },
           "-=0.55",
         )
-        .fromTo(
-          ".preloader-note",
-          { opacity: 0, y: 8 },
-          { opacity: 1, y: 0, duration: 0.4 },
-          "-=0.2",
-        )
-        .to({}, { duration: 0.35 })
+        .to({}, { duration: 0.42 })
         .to(".preloader-inner", {
           opacity: 0,
           y: -14,
@@ -98,7 +92,6 @@ export function Preloader() {
             <span key={`${letter}-${index}`}>{letter}</span>
           ))}
         </div>
-        <p className="preloader-note">A MORE MEANINGFUL TOMORROW</p>
       </div>
       <button type="button" onClick={finish}>
         Überspringen
