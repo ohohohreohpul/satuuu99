@@ -4,7 +4,7 @@ export function BrandStory() {
   const { t } = useLang();
   return (
     <section className="brand-story section-shell">
-      <img src="/brand/symbol.png" alt="" />
+      <img src="/brand/mark.svg" alt="" />
       <p className="eyebrow">
         {t({ de: "Unsere Haltung", en: "Our philosophy" })}
       </p>
