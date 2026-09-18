@@ -31,11 +31,6 @@ export function Preloader() {
       });
       timeline
         .fromTo(
-          ".preloader-rule",
-          { scaleY: 0 },
-          { scaleY: 1, duration: 0.55, ease: "power2.inOut" },
-        )
-        .fromTo(
           ".preloader-symbol",
           { clipPath: "inset(0 49.8% 0 49.8%)", scale: 0.92 },
           {
@@ -44,7 +39,6 @@ export function Preloader() {
             duration: 1.05,
             ease: "power4.out",
           },
-          "-=0.2",
         )
         .fromTo(
           ".preloader-word span",
@@ -85,7 +79,6 @@ export function Preloader() {
       aria-label="satuuu99 lädt"
     >
       <div className="preloader-inner">
-        <i className="preloader-rule" aria-hidden="true" />
         <img className="preloader-symbol" src="/brand/mark.svg" alt="" />
         <div className="preloader-word" aria-hidden="true">
           {"SATUUU99".split("").map((letter, index) => (

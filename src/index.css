@@ -92,13 +92,6 @@ body.is-preloading {
   flex-direction: column;
   align-items: center;
 }
-.preloader-rule {
-  width: 1px;
-  height: 54px;
-  background: #a69a8c;
-  transform-origin: top;
-  margin-bottom: -3px;
-}
 .preloader-symbol {
   width: clamp(180px, 23vw, 330px);
   height: auto;
@@ -132,9 +125,6 @@ body.is-preloading {
   text-transform: uppercase;
 }
 @media (max-width: 600px) {
-  .preloader-rule {
-    height: 42px;
-  }
   .preloader-symbol {
     width: 220px;
   }
