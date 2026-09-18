@@ -2507,8 +2507,11 @@ h4 {
   gap: 25px;
   border: 1px solid rgba(255, 255, 255, 0.32);
   border-radius: 28px;
-  background:
-    linear-gradient(115deg, rgba(246, 243, 237, 0.22), rgba(246, 243, 237, 0.08));
+  background: linear-gradient(
+    115deg,
+    rgba(246, 243, 237, 0.22),
+    rgba(246, 243, 237, 0.08)
+  );
   -webkit-backdrop-filter: blur(22px) saturate(1.18);
   backdrop-filter: blur(22px) saturate(1.18);
   box-shadow:
@@ -2558,8 +2561,11 @@ h4 {
   color: var(--ink);
 }
 .immersive-header.on-paper .immersive-nav {
-  background:
-    linear-gradient(115deg, rgba(246, 243, 237, 0.78), rgba(246, 243, 237, 0.56));
+  background: linear-gradient(
+    115deg,
+    rgba(246, 243, 237, 0.78),
+    rgba(246, 243, 237, 0.56)
+  );
   -webkit-backdrop-filter: blur(26px) saturate(1.12);
   backdrop-filter: blur(26px) saturate(1.12);
   border-color: rgba(255, 255, 255, 0.72);
@@ -2858,6 +2864,254 @@ h4 {
   line-height: 1.13;
   white-space: pre-line;
   margin-top: 23px;
+}
+.menu-photo-caption small {
+  display: block;
+  max-width: 300px;
+  margin-top: 20px;
+  font-size: 11px;
+  line-height: 1.75;
+  color: rgba(246, 243, 237, 0.8);
+}
+.menu-photo-caption[aria-live] {
+  animation: menu-caption-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes menu-caption-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* An interactive, honest walkthrough of the private studio visit. */
+.visit-journey {
+  padding: clamp(105px, 12vw, 185px) 0;
+  background: #29231e;
+  color: var(--paper);
+  overflow: hidden;
+}
+.journey-heading {
+  display: grid;
+  grid-template-columns: 0.72fr 1.65fr 0.8fr;
+  gap: clamp(28px, 5vw, 80px);
+  align-items: end;
+  margin-bottom: clamp(55px, 7vw, 100px);
+}
+.journey-heading .eyebrow {
+  color: #d9cec2;
+  align-self: start;
+}
+.journey-heading h2 {
+  color: var(--paper);
+  font-size: clamp(48px, 5.5vw, 82px);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+  max-width: 850px;
+}
+.journey-heading > p:last-child {
+  color: rgba(246, 243, 237, 0.66);
+  font-size: 12px;
+  line-height: 1.85;
+  max-width: 290px;
+}
+.journey-stage {
+  display: grid;
+  grid-template-columns: minmax(340px, 0.92fr) minmax(500px, 1.08fr);
+  gap: clamp(50px, 7vw, 110px);
+  align-items: stretch;
+}
+.journey-image {
+  position: relative;
+  min-height: 630px;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 34px 34px 120px 34px;
+}
+.journey-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(20, 16, 13, 0.48), transparent 45%);
+}
+.journey-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.journey-image:hover img {
+  transform: scale(1.025);
+}
+.journey-image figcaption {
+  position: absolute;
+  z-index: 1;
+  left: 30px;
+  bottom: 28px;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.journey-interface {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.journey-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(246, 243, 237, 0.24);
+}
+.journey-tabs button {
+  position: relative;
+  border: 0;
+  border-bottom: 1px solid rgba(246, 243, 237, 0.24);
+  background: transparent;
+  color: rgba(246, 243, 237, 0.5);
+  text-align: left;
+  padding: 24px 8px 22px 0;
+  font-size: 11px;
+  transition: color 0.3s;
+}
+.journey-tabs button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: -1px;
+  height: 2px;
+  background: var(--paper);
+  transition: right 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.journey-tabs button[aria-selected="true"] {
+  color: var(--paper);
+}
+.journey-tabs button[aria-selected="true"]::after {
+  right: 14px;
+}
+.journey-tabs button span {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 8px;
+  color: #a69a8c;
+}
+.journey-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 55px 0 45px;
+  animation: journey-in 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.journey-count {
+  color: #a69a8c;
+  font-size: 9px;
+  letter-spacing: 0.16em;
+}
+.journey-panel h3 {
+  color: var(--paper);
+  font-size: clamp(41px, 4.4vw, 66px);
+  line-height: 1.1;
+  max-width: 680px;
+  margin: 27px 0 26px;
+}
+.journey-panel > p {
+  color: rgba(246, 243, 237, 0.68);
+  max-width: 570px;
+  line-height: 1.9;
+  font-size: 13px;
+}
+.journey-actions {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-top: 40px;
+}
+.journey-actions .button {
+  background: var(--paper);
+  color: var(--ink);
+  border-color: var(--paper);
+}
+.journey-actions .text-link {
+  color: var(--paper);
+}
+.journey-progress {
+  height: 1px;
+  background: rgba(246, 243, 237, 0.2);
+  overflow: hidden;
+}
+.journey-progress i {
+  display: block;
+  height: 100%;
+  background: var(--paper);
+  transition: width 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+@keyframes journey-in {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (max-width: 900px) {
+  .journey-heading {
+    grid-template-columns: 1fr 2fr;
+  }
+  .journey-heading > p:last-child {
+    grid-column: 2;
+  }
+  .journey-stage {
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 40px;
+  }
+  .journey-image {
+    min-height: 560px;
+    border-bottom-right-radius: 80px;
+  }
+}
+@media (max-width: 700px) {
+  .visit-journey {
+    padding-block: 95px;
+  }
+  .journey-heading {
+    display: block;
+  }
+  .journey-heading h2 {
+    margin: 25px 0;
+    font-size: 47px;
+  }
+  .journey-stage {
+    display: block;
+  }
+  .journey-image {
+    min-height: 440px;
+    margin-bottom: 50px;
+    border-radius: 26px 26px 75px 26px;
+  }
+  .journey-tabs button {
+    font-size: 9px;
+  }
+  .journey-tabs button span {
+    font-size: 7px;
+  }
+  .journey-panel {
+    min-height: 460px;
+    padding-block: 45px;
+  }
+  .journey-panel h3 {
+    font-size: 43px;
+  }
+  .journey-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 24px;
+  }
 }
 .menu-bottomline {
   display: flex;

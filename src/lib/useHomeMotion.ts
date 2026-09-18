@@ -17,7 +17,7 @@ export function useHomeMotion(language: string) {
       gsap.from(".hero-media", { opacity: 0, duration: 1.3 });
       gsap.utils
         .toArray<HTMLElement>(
-          ".brand-story, .studio-intro, .ritual-finder, .editorial-heading, .journal-card",
+          ".brand-story, .studio-intro, .ritual-finder, .journey-heading, .journey-stage, .editorial-heading, .journal-card",
         )
         .forEach((el) => {
           gsap.from(el, {

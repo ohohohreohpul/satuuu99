@@ -10,6 +10,7 @@ import { FocusExplorer } from "../sections/FocusExplorer";
 import { Studio } from "../sections/Studio";
 import { GiftCards } from "../sections/GiftCards";
 import { FinalCTA } from "../sections/FinalCTA";
+import { VisitJourney } from "../sections/VisitJourney";
 export function HomePage() {
   const { t, lang } = useLang();
   useHomeMotion(lang);
@@ -29,6 +30,7 @@ export function HomePage() {
       <BrandStory />
       <FocusExplorer />
       <RitualFinder />
+      <VisitJourney />
       <Studio />
       <GiftCards />
       <StudioUpdates />

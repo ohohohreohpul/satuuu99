@@ -20,12 +20,103 @@ const pictures = [
   { id: "feet", src: MEDIA.treatments.feet! },
   { id: "studio", src: MEDIA.studio },
 ];
+const pagePreview: Record<
+  string,
+  {
+    image: string;
+    eyebrow: { de: string; en: string };
+    title: { de: string; en: string };
+    copy: { de: string; en: string };
+  }
+> = {
+  "/behandlungen": {
+    image: "head",
+    eyebrow: { de: "Rituale", en: "Rituals" },
+    title: {
+      de: "Was braucht heute\ndeine Aufmerksamkeit?",
+      en: "What needs your\nattention today?",
+    },
+    copy: {
+      de: "Head Spa, Gesicht, Füße und Körper – persönlich für dich gewählt.",
+      en: "Head spa, face, feet and body – chosen personally with you.",
+    },
+  },
+  "/studio": {
+    image: "studio",
+    eyebrow: { de: "Ein privater Ort", en: "A private place" },
+    title: {
+      de: "Klein. Ruhig.\nGanz bei dir.",
+      en: "Small. Quiet.\nEntirely yours.",
+    },
+    copy: {
+      de: "Lerne unser persönliches Studio mitten in Ahrensburg kennen.",
+      en: "Meet our personal studio in the heart of Ahrensburg.",
+    },
+  },
+  "/gutscheine": {
+    image: "face",
+    eyebrow: { de: "Zeit verschenken", en: "Give time" },
+    title: { de: "Etwas, das\nbleibt.", en: "Something that\nstays with you." },
+    copy: {
+      de: "Eine Einladung zum Ankommen, Abschalten und Sich-kümmern-lassen.",
+      en: "An invitation to arrive, switch off and be cared for.",
+    },
+  },
+  "/preise": {
+    image: "body",
+    eyebrow: { de: "Planen", en: "Plan" },
+    title: {
+      de: "Klarheit vor\ndeinem Besuch.",
+      en: "Clarity before\nyour visit.",
+    },
+    copy: {
+      de: "Alle aktuellen Behandlungen, Zeiten und Preise auf einen Blick.",
+      en: "Current treatments, durations and prices at a glance.",
+    },
+  },
+  "/journal": {
+    image: "feet",
+    eyebrow: { de: "Gedanken aus dem Studio", en: "Notes from the studio" },
+    title: {
+      de: "Rituale für\nruhigere Tage.",
+      en: "Rituals for\nquieter days.",
+    },
+    copy: {
+      de: "Wissen, Inspiration und kleine Pausen für deinen Alltag.",
+      en: "Knowledge, inspiration and small pauses for everyday life.",
+    },
+  },
+  "/kontakt": {
+    image: "studio",
+    eyebrow: { de: "Sprich mit uns", en: "Talk to us" },
+    title: {
+      de: "Deine Auszeit\nbeginnt hier.",
+      en: "Your time out\nstarts here.",
+    },
+    copy: {
+      de: "Fragen, Wünsche oder noch unsicher? Wir helfen dir persönlich weiter.",
+      en: "Questions, wishes or still unsure? We are happy to help personally.",
+    },
+  },
+};
 export function NavBar() {
   const { t } = useLang();
   const location = useLocation();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [preview, setPreview] = useState("head");
+  const [preview, setPreview] = useState("/behandlungen");
+  const activePreview =
+    pagePreview[preview] ||
+    (() => {
+      const group =
+        FOCUS_GROUPS.find((item) => item.id === preview) || FOCUS_GROUPS[0];
+      return {
+        image: group.id,
+        eyebrow: { de: "Dein Ritual", en: "Your ritual" },
+        title: group.title,
+        copy: group.blurb,
+      };
+    })();
   const panel = useRef<HTMLDivElement>(null);
   const closeButton = useRef<HTMLButtonElement>(null);
   const opener = useRef<HTMLElement | null>(null);
@@ -254,18 +345,8 @@ export function NavBar() {
                   <NavLink
                     key={item.href}
                     to={item.href}
-                    onMouseEnter={() =>
-                      setPreview(
-                        item.href === "/studio"
-                          ? "studio"
-                          : item.href === "/journal"
-                            ? "body"
-                            : "head",
-                      )
-                    }
-                    onFocus={() =>
-                      setPreview(item.href === "/studio" ? "studio" : "head")
-                    }
+                    onMouseEnter={() => setPreview(item.href)}
+                    onFocus={() => setPreview(item.href)}
                   >
                     <span className="menu-link-number">0{index + 1}</span>
                     <span>{t(item.label)}</span>
@@ -313,18 +394,20 @@ export function NavBar() {
                 <img
                   key={pic.id}
                   src={pic.src}
-                  className={preview === pic.id ? "is-visible" : ""}
+                  className={activePreview.image === pic.id ? "is-visible" : ""}
                   alt=""
                 />
               ))}
-              <div className="menu-photo-caption">
-                <span className="eyebrow">SATUUU99 · AHRENSBURG</span>
-                <p>
-                  {t({
-                    de: "Ein bisschen\nmehr bei dir.",
-                    en: "A little closer\nto yourself.",
-                  })}
-                </p>
+              <div
+                className="menu-photo-caption"
+                aria-live="polite"
+                key={preview}
+              >
+                <span className="eyebrow">
+                  {t(activePreview.eyebrow)} · AHRENSBURG
+                </span>
+                <p>{t(activePreview.title)}</p>
+                <small>{t(activePreview.copy)}</small>
               </div>
             </div>
           </div>
