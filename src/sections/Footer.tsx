@@ -35,6 +35,13 @@ export function Footer() {
           </Link>
           <Link to="/journal">Journal</Link>
           <Link to="/head-spa-hamburg">Head Spa Hamburg</Link>
+          <Link to="/japanese-head-spa-ahrensburg">Head Spa Ahrensburg</Link>
+          <Link to="/wellnessmassage-ahrensburg">
+            Wellnessmassage Ahrensburg
+          </Link>
+          <Link to="/gesichtsbehandlung-ahrensburg">
+            Gesichtspflege Ahrensburg
+          </Link>
           <Link to="/studio">{t({ de: "Das Studio", en: "The studio" })}</Link>
           <Link to="/gutscheine">
             {t({ de: "Gutscheine", en: "Gift cards" })}

@@ -80,6 +80,54 @@ export function StudioPage() {
           </p>
         </div>
       </section>
+      <section className="local-content section-shell studio-depth">
+        <section>
+          <span>01</span>
+          <div>
+            <h2>
+              {t({
+                de: "Menschen, die ihr Handwerk mit Ruhe verbinden.",
+                en: "People who pair their craft with calm.",
+              })}
+            </h2>
+            <p>
+              {t({
+                de: "Inhaberin Nina bringt laut offizieller Studiovorstellung mehr als 20 Jahre Erfahrung sowie Qualifikationen in traditioneller Thai-Massage, Gua Sha und Wellness- und Spa-Massagen mit. Sue ist Fachpraktikerin für Wellness, Massage und Prävention mit Abschluss an den Döpfer-Schulen Hamburg. Pim und Tuk ergänzen das Team mit langjähriger Massageerfahrung und unterschiedlichen Schwerpunkten.",
+                en: "According to the official studio profile, owner Nina brings more than 20 years of experience and qualifications in traditional Thai massage, gua sha, wellness and spa massage. Sue trained as a wellness, massage and prevention practitioner at Döpfer-Schulen Hamburg. Pim and Tuk add long-standing massage experience and complementary specialisms.",
+              })}
+            </p>
+            <p>
+              {t({
+                de: "Was alle Anwendungen verbindet: Wir stimmen Berührung und Ablauf mit dir ab. Du darfst jederzeit sagen, was sich gut anfühlt und was du anders möchtest.",
+                en: "Every treatment shares one principle: touch and pace are agreed with you. You can always tell us what feels right and what you would like changed.",
+              })}
+            </p>
+          </div>
+        </section>
+        <section>
+          <span>02</span>
+          <div>
+            <h2>
+              {t({
+                de: "Ein Studio für Ahrensburg, Stormarn und Hamburgs Nordosten.",
+                en: "A studio for Ahrensburg, Stormarn and northeast Hamburg.",
+              })}
+            </h2>
+            <p>
+              {t({
+                de: "Du findest uns zentral in der Manhagener Allee 45. Parkplätze befinden sich direkt vor dem Eingang. Unser Standort ist eine persönliche Alternative für Menschen aus Ahrensburg, Bargteheide, Großhansdorf, Ammersbek und den Hamburger Walddörfern, die eine Wellnessauszeit in der Nähe suchen.",
+                en: "Find us centrally on Manhagener Allee 45, with parking directly outside. Our location is a personal option for guests from Ahrensburg, Bargteheide, Großhansdorf, Ammersbek and Hamburg's Walddörfer looking for nearby wellness time.",
+              })}
+            </p>
+            <p>
+              {t({
+                de: "Montags bis freitags ist das Studio von 10:00 bis 20:00 Uhr geöffnet, samstags von 10:00 bis 18:00 Uhr. Die im Kalender angezeigten Zeiten sind für deine Buchung maßgeblich.",
+                en: "The studio is open Monday to Friday from 10am to 8pm and Saturday from 10am to 6pm. The times shown in the booking calendar determine current availability.",
+              })}
+            </p>
+          </div>
+        </section>
+      </section>
       <section className="visit-section">
         <div className="section-shell visit-grid">
           <div>

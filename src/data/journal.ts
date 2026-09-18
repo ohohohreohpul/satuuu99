@@ -144,7 +144,10 @@ export const JOURNAL: JournalArticle[] = [
     related: "gua-sha",
     sections: [
       {
-        title: { de: "Ein glatter Stein, langsame Bewegungen", en: "A smooth stone, unhurried movements" },
+        title: {
+          de: "Ein glatter Stein, langsame Bewegungen",
+          en: "A smooth stone, unhurried movements",
+        },
         text: {
           de: "Gua Sha ist bei satuuu99 ein ruhiges Pflegeritual für Gesicht, Kiefer und Hals. Der glatte Stein wird in langsamen, geführten Bewegungen über die Haut geführt. Es geht nicht darum, möglichst viel Druck auszuhalten. Entscheidend ist, dass sich die Berührung für dich angenehm anfühlt und du loslassen kannst.",
           en: "At satuuu99, gua sha is a quiet care ritual for the face, jaw and neck. A smooth stone moves slowly and deliberately across the skin. The aim is never to tolerate as much pressure as possible. What matters is that the touch feels comfortable and gives you room to let go.",
@@ -181,7 +184,10 @@ export const JOURNAL: JournalArticle[] = [
     related: "spa-massage",
     sections: [
       {
-        title: { de: "Lass etwas Luft im Kalender", en: "Leave some room in your day" },
+        title: {
+          de: "Lass etwas Luft im Kalender",
+          en: "Leave some room in your day",
+        },
         text: {
           de: "Plane deine Anreise zur Manhagener Allee 45 so, dass du ohne Eile ankommst. Wenn es möglich ist, halte auch die Zeit direkt nach deinem Termin frei. So endet dein Ritual nicht mit einem Blick auf die Uhr, sondern darf noch ein wenig nachwirken.",
           en: "Plan your journey to Manhagener Allee 45 so you can arrive without rushing. If possible, leave the time immediately after your appointment open too. Your ritual can then end without a glance at the clock and settle for a little longer.",
@@ -195,7 +201,10 @@ export const JOURNAL: JournalArticle[] = [
         },
       },
       {
-        title: { de: "Wähle nach Gefühl und Fokus", en: "Choose by feeling and focus" },
+        title: {
+          de: "Wähle nach Gefühl und Fokus",
+          en: "Choose by feeling and focus",
+        },
         text: {
           de: "Kopf, Gesicht, Körper oder Füße: Beginne bei dem Bereich, dem du heute Aufmerksamkeit schenken möchtest. Die Beschreibungen im Behandlungskatalog geben dir Orientierung. Wenn du zwischen zwei Ritualen schwankst, schreib uns vor der Buchung. Aktuelle Verfügbarkeit, Dauer und verbindliche Preise findest du im Buchungskalender und in der Preisliste.",
           en: "Head, face, body or feet: begin with the area you would like to care for today. The treatment catalogue gives you a clear starting point. If you are choosing between two rituals, email us before booking. The calendar and official price list show current availability, duration and confirmed prices.",

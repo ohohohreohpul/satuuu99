@@ -5,6 +5,15 @@ export const CONTACT = {
   brand: "satuuu99",
   addressLines: ["Manhagener Allee 45", "22926 Ahrensburg"],
   email: "info@satuuu99.de",
+  phone: "+49 4102 20 40 410",
+  phoneHref: "tel:+4941022040410",
+  hours: {
+    weekdays: {
+      de: "Montag–Freitag · 10:00–20:00 Uhr",
+      en: "Monday–Friday · 10am–8pm",
+    },
+    saturday: { de: "Samstag · 10:00–18:00 Uhr", en: "Saturday · 10am–6pm" },
+  },
   booking: "https://satuuu99.de/kalender/",
   prices: "https://satuuu99.de/preisliste-ab-01-03-2026/",
   imprint: "https://satuuu99.de/impressum/",

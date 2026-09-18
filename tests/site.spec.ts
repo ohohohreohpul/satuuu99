@@ -182,3 +182,24 @@ test("the immersive film remains pausable", async ({ page }) => {
   await control.click();
   await expect(control).toHaveAttribute("aria-label", "Video abspielen");
 });
+
+test("local authority pages are substantial, linked and machine readable", async ({
+  page,
+}) => {
+  await page.goto("/japanese-head-spa-ahrensburg");
+  await expect(
+    page.getByRole("heading", { name: "Japanese Head Spa in Ahrensburg" }),
+  ).toBeVisible();
+  await expect(page.locator(".local-content section")).toHaveCount(3);
+  await expect(page.locator(".local-faq details")).toHaveCount(4);
+  const schema = JSON.parse(
+    (await page
+      .locator('script[type="application/ld+json"]')
+      .last()
+      .textContent()) || "{}",
+  );
+  expect(schema["@type"]).toBe("Service");
+  expect(schema.areaServed).toContain("Ahrensburg");
+  await page.setViewportSize({ width: 390, height: 844 });
+  await expect(page.locator("body")).toHaveJSProperty("scrollWidth", 390);
+});

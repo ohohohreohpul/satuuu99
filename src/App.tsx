@@ -12,6 +12,7 @@ import { StudioPage } from "./pages/StudioPage";
 import { TreatmentDetailPage } from "./pages/TreatmentDetailPage";
 import { TreatmentsPage } from "./pages/TreatmentsPage";
 import { HeadSpaHamburgPage } from "./pages/HeadSpaHamburgPage";
+import { LocalServicePage } from "./pages/LocalServicePage";
 import { useLang } from "./lib/i18n";
 import { ArrowUpRightIcon } from "./components/ui/Icons";
 export default function App() {
@@ -34,6 +35,18 @@ export default function App() {
           <Route path="/preise" element={<PricesPage />} />
           <Route path="/kontakt" element={<ContactPage />} />
           <Route path="/head-spa-hamburg" element={<HeadSpaHamburgPage />} />
+          <Route
+            path="/japanese-head-spa-ahrensburg"
+            element={<LocalServicePage slug="japanese-head-spa-ahrensburg" />}
+          />
+          <Route
+            path="/wellnessmassage-ahrensburg"
+            element={<LocalServicePage slug="wellnessmassage-ahrensburg" />}
+          />
+          <Route
+            path="/gesichtsbehandlung-ahrensburg"
+            element={<LocalServicePage slug="gesichtsbehandlung-ahrensburg" />}
+          />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

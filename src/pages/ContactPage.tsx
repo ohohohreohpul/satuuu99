@@ -27,6 +27,46 @@ export function ContactPage() {
       },
     },
     {
+      q: {
+        de: "Wann ist das Studio geöffnet?",
+        en: "When is the studio open?",
+      },
+      a: {
+        de: "Montags bis freitags sind wir von 10:00 bis 20:00 Uhr geöffnet, samstags von 10:00 bis 18:00 Uhr. Maßgeblich für deinen Besuch ist dein gebuchter Termin.",
+        en: "We are open Monday to Friday from 10am to 8pm and Saturday from 10am to 6pm. Your booked appointment is the relevant time for your visit.",
+      },
+    },
+    {
+      q: {
+        de: "Kann ich direkt am Studio parken?",
+        en: "Can I park at the studio?",
+      },
+      a: {
+        de: "Ja. Nach aktueller Studioinformation befinden sich Parkplätze direkt vor unserem Eingang in der Manhagener Allee 45.",
+        en: "Yes. According to current studio information, parking is available directly outside our entrance on Manhagener Allee 45.",
+      },
+    },
+    {
+      q: {
+        de: "Welche Zahlungsarten werden akzeptiert?",
+        en: "Which payment methods are accepted?",
+      },
+      a: {
+        de: "Du kannst laut aktueller Studioinformation mit Karte, PayPal oder bar bezahlen.",
+        en: "According to current studio information, you can pay by card, PayPal or cash.",
+      },
+    },
+    {
+      q: {
+        de: "Wie erreiche ich satuuu99 telefonisch?",
+        en: "How can I call satuuu99?",
+      },
+      a: {
+        de: `Du erreichst uns unter ${CONTACT.phone}. Wenn wir gerade in einer Behandlung sind, schreib uns alternativ eine E-Mail.`,
+        en: `Call us on ${CONTACT.phone}. If we are with a guest, you can also send an email.`,
+      },
+    },
+    {
       q: { de: "Wie buche ich meinen Termin?", en: "How do I book?" },
       a: {
         de: "Über den Online-Kalender siehst du die aktuell verfügbaren Termine und kannst direkt buchen.",
@@ -85,6 +125,14 @@ export function ContactPage() {
               </h2>
             </div>
             <ArrowUpRightIcon />
+          </a>
+          <a href={CONTACT.phoneHref}>
+            <span>04</span>
+            <div>
+              <small>{t({ de: "Telefon", en: "Phone" })}</small>
+              <h2>{CONTACT.phone}</h2>
+            </div>
+            <ArrowRightIcon />
           </a>
         </div>
       </section>
