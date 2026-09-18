@@ -1,4 +1,10 @@
 import { test, expect } from "@playwright/test";
+test.beforeEach(async ({ page }, testInfo) => {
+  if (!testInfo.title.includes("brand preloader"))
+    await page.addInitScript(() =>
+      sessionStorage.setItem("satuuu99-intro-seen", "true"),
+    );
+});
 test("mega menu, treatment finder and journal form a working discovery flow", async ({
   page,
 }) => {
@@ -202,4 +208,18 @@ test("local authority pages are substantial, linked and machine readable", async
   expect(schema.areaServed).toContain("Ahrensburg");
   await page.setViewportSize({ width: 390, height: 844 });
   await expect(page.locator("body")).toHaveJSProperty("scrollWidth", 390);
+});
+
+test("brand preloader plays once and yields to the homepage", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await expect(page.locator(".brand-preloader")).toBeVisible();
+  await expect(page.locator(".preloader-word")).toContainText("SATUUU99");
+  await expect(page.locator(".brand-preloader")).toHaveCount(0, {
+    timeout: 5000,
+  });
+  await expect(page.locator(".hero h1")).toBeVisible();
+  await page.reload();
+  await expect(page.locator(".brand-preloader")).toHaveCount(0);
 });

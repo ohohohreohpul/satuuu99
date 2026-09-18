@@ -15,9 +15,11 @@ import { HeadSpaHamburgPage } from "./pages/HeadSpaHamburgPage";
 import { LocalServicePage } from "./pages/LocalServicePage";
 import { useLang } from "./lib/i18n";
 import { ArrowUpRightIcon } from "./components/ui/Icons";
+import { Preloader } from "./components/ui/Preloader";
 export default function App() {
   return (
     <>
+      <Preloader />
       <ScrollToTop />
       <NavBar />
       <main id="main" tabIndex={-1}>

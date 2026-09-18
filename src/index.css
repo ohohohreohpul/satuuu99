@@ -51,6 +51,118 @@ body {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
 }
+body.is-preloading {
+  overflow: hidden;
+}
+.brand-preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #f2ede5;
+  color: #3a332b;
+}
+.brand-preloader::before,
+.brand-preloader::after {
+  content: "";
+  position: absolute;
+  width: 42vw;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.2;
+  pointer-events: none;
+}
+.brand-preloader::before {
+  left: -18vw;
+  top: -25vw;
+  background: #a69a8c;
+}
+.brand-preloader::after {
+  right: -20vw;
+  bottom: -28vw;
+  background: #d9cec2;
+}
+.preloader-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.preloader-rule {
+  width: 1px;
+  height: 54px;
+  background: #a69a8c;
+  transform-origin: top;
+  margin-bottom: -3px;
+}
+.preloader-symbol {
+  width: clamp(180px, 23vw, 330px);
+  height: auto;
+  display: block;
+}
+.preloader-word {
+  display: flex;
+  gap: clamp(9px, 1.2vw, 17px);
+  overflow: hidden;
+  margin-top: 24px;
+  padding: 3px 4px;
+  font-size: clamp(16px, 1.55vw, 23px);
+  letter-spacing: 0.14em;
+  font-weight: 400;
+}
+.preloader-word span {
+  display: block;
+}
+.preloader-note {
+  margin-top: 38px;
+  font-size: 8px;
+  letter-spacing: 0.34em;
+  color: #8c8073;
+}
+.brand-preloader > button {
+  position: absolute;
+  z-index: 2;
+  right: 34px;
+  bottom: 28px;
+  border: 0;
+  border-bottom: 1px solid #a69a8c;
+  background: transparent;
+  padding: 8px 0;
+  color: #746a60;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+@media (max-width: 600px) {
+  .preloader-rule {
+    height: 42px;
+  }
+  .preloader-symbol {
+    width: 220px;
+  }
+  .preloader-word {
+    gap: 9px;
+    margin-top: 18px;
+    font-size: 15px;
+  }
+  .preloader-note {
+    margin-top: 30px;
+    font-size: 7px;
+  }
+  .brand-preloader > button {
+    right: 22px;
+    bottom: 20px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand-preloader {
+    display: none;
+  }
+}
 a {
   color: inherit;
   text-decoration: none;
