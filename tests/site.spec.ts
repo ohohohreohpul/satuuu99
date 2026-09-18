@@ -177,16 +177,22 @@ test("living menu and visit journey respond to visitor intent", async ({
     /75%/,
   );
 });
-test("the immersive film remains pausable", async ({ page }) => {
+test("the hero film follows the visitor's scroll", async ({ page }) => {
   await page.goto("/");
-  const control = page.locator(".film-control");
-  await expect(control).toBeVisible();
+  const film = page.locator(".hero-scrub-film");
+  await expect(film).toBeVisible();
+  await expect(page.locator(".film-control")).toHaveCount(0);
   await page.waitForFunction(() => {
-    const v = document.querySelector("video");
-    return v && !v.paused;
+    const video = document.querySelector<HTMLVideoElement>(".hero-scrub-film");
+    return video && Number.isFinite(video.duration) && video.duration > 0;
   });
-  await control.click();
-  await expect(control).toHaveAttribute("aria-label", "Video abspielen");
+  expect(await film.evaluate((video: HTMLVideoElement) => video.paused)).toBe(
+    true,
+  );
+  await page.evaluate(() => window.scrollTo(0, window.innerHeight * 0.55));
+  await expect
+    .poll(() => film.evaluate((video: HTMLVideoElement) => video.currentTime))
+    .toBeGreaterThan(2);
 });
 
 test("local authority pages are substantial, linked and machine readable", async ({

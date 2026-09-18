@@ -1,7 +1,7 @@
 import { useLang } from "../lib/i18n";
 import { CONTACT } from "../data/content";
 import { MEDIA } from "../data/media";
-import { VideoLoop } from "../components/ui/VideoLoop";
+import { ScrollScrubVideo } from "../components/ui/ScrollScrubVideo";
 import { ArrowRightIcon } from "../components/ui/Icons";
 
 export function Hero() {
@@ -33,7 +33,7 @@ export function Hero() {
           </a>
         </div>
         <div className="hero-media">
-          <VideoLoop
+          <ScrollScrubVideo
             src={MEDIA.hero.video}
             poster={MEDIA.hero.poster}
             label={t({

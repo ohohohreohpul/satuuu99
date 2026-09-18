@@ -6,7 +6,7 @@ The live site prioritizes the supplied original source media for the homepage he
 
 | File | Website role |
 |---|---|
-| `authentic/hero-poster.jpg` and `authentic/hero.mp4` | Homepage hero |
+| `authentic/hero-scrub-poster.jpg` and `authentic/hero-scrub.mp4` | Homepage scroll-scrub hero, supplied by the studio owner |
 | `authentic/studio.jpg` | Studio, gift and local editorial pages |
 | `treatment-head.jpg`, `treatment-face.jpg`, `treatment-feet.jpg`, `treatment-body.jpg` | Close treatment details |
 
@@ -29,7 +29,7 @@ Contemporary wellness editorial photography. Quiet natural daylight, cream linen
 
 ## Hero film
 
-A 5–6 second muted loop, based on the approved hero still. Locked camera, slow continuous massage movement, subtle breathing, no cuts, no exaggerated camera drift, no sound required. Preserve face, hands, linen and daylight from the still. Select and validate an image-to-video model through Magnific's video planning/catalog tools. Do not claim that a still-image model produced the video. Export web-optimized H.264 MP4 plus the still as fallback. Retain the current pause control, offscreen pause and reduced-motion poster mode.
+The live hero uses the owner-supplied `4929348_Headache_Therapy_1280x720.mp4`. Its timeline is controlled by page scroll and remains paused, with no autoplay audio or playback controls. Reduced-motion visitors receive the matching poster frame.
 
 ## Delivered files
 
@@ -39,6 +39,8 @@ All files are local under `public/assets/` and wired through `src/data/media.ts`
 |---|---|---|---|
 | `hero-poster.jpg` | Hero | 1200x1543 | 242 KB |
 | `hero.mp4` | Hero loop | 900x1158, 5.0s, H.264, silent | 346 KB |
+| `hero-scrub-poster.jpg` | Scroll-scrub hero poster | 1280x720 | 64 KB |
+| `hero-scrub.mp4` | Scroll-scrub hero | 1280x720, 21.1s, H.264, silent | 4.8 MB |
 | `treatment-head.jpg` | Head | 1100x1414 | 219 KB |
 | `treatment-face.jpg` | Face | 1100x1414 | 214 KB |
 | `treatment-feet.jpg` | Feet | 1100x1414 | 209 KB |
@@ -71,6 +73,7 @@ The exact prompts used are the shot descriptions above plus the shared art direc
 - Stills resized with Lanczos and encoded as progressive JPEG, quality 82 (hero 80), 4:2:0.
 - The atmosphere still was generated with a green cast; corrected locally toward the site's warm palette (red +12%, green -4%, blue -12%, saturation -12%). No content was altered.
 - Hero loop re-encoded to H.264, CRF 28, `-preset slow`, audio stripped, `faststart`.
+- Owner-supplied scrub film re-encoded to H.264, CRF 24, six-frame GOP, audio stripped and `faststart` for responsive bidirectional seeking.
 
 ## Review notes
 

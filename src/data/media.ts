@@ -4,8 +4,8 @@
 // invented rooms as the premises. Provenance is recorded in docs/ASSET-BRIEF.md.
 export const MEDIA = {
   hero: {
-    poster: "/assets/authentic/hero-poster.jpg",
-    video: "/assets/authentic/hero.mp4",
+    poster: "/assets/authentic/hero-scrub-poster.jpg",
+    video: "/assets/authentic/hero-scrub.mp4",
   },
   studio: "/assets/authentic/studio.jpg",
   // Keyed by FocusGroup id.

@@ -29,16 +29,6 @@ export function useHomeMotion(language: string) {
             scrollTrigger: { trigger: el, start: "top 90%", once: true },
           });
         });
-      gsap.to(".hero-film", {
-        yPercent: 8,
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".hero",
-          start: "top top",
-          end: "bottom top",
-          scrub: 1,
-        },
-      });
     });
     return () => media.revert();
   }, [language]);
