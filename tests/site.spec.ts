@@ -193,6 +193,9 @@ test("the hero film follows the visitor's scroll", async ({ page }) => {
   await expect
     .poll(() => film.evaluate((video: HTMLVideoElement) => video.currentTime))
     .toBeGreaterThan(2);
+  await expect(page.locator(".hero")).toHaveCSS("position", "fixed");
+  await page.evaluate(() => window.scrollTo(0, window.innerHeight * 2.4));
+  await expect(page.locator(".brand-story")).toBeInViewport();
 });
 
 test("local authority pages are substantial, linked and machine readable", async ({

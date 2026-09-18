@@ -34,25 +34,45 @@ export function ScrollScrubVideo({
     element.pause();
     element.currentTime = 0;
     const playhead = { time: 0 };
-    const tween = gsap.to(playhead, {
-      time: Math.max(0, element.duration - 0.05),
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: hero,
+        start: "top top",
+        end: "+=130%",
+        scrub: 0.45,
+        pin: true,
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
+      },
+    });
+    timeline.to(playhead, {
+      time: Math.min(8.5, Math.max(0, element.duration - 0.05)),
+      duration: 0.76,
       ease: "none",
       onUpdate: () => {
         if (Math.abs(element.currentTime - playhead.time) > 0.025) {
           element.currentTime = playhead.time;
         }
       },
-      scrollTrigger: {
-        trigger: hero,
-        start: "top top",
-        end: "bottom top",
-        scrub: 0.35,
-        invalidateOnRefresh: true,
-      },
     });
+    timeline.to(
+      hero.querySelector(".hero-copy"),
+      { opacity: 0, y: -34, duration: 0.24, ease: "power2.in" },
+      0.76,
+    );
+    timeline.to(
+      hero.querySelector(".hero-media"),
+      { scale: 1.035, duration: 0.24, ease: "power1.inOut" },
+      0.76,
+    );
+    timeline.to(
+      hero.querySelector(".hero-transition-veil"),
+      { opacity: 0.42, duration: 0.24, ease: "none" },
+      0.76,
+    );
 
     return () => {
-      tween.kill();
+      timeline.kill();
     };
   }, [failed, ready, reduced]);
 
@@ -78,6 +98,7 @@ export function ScrollScrubVideo({
           onError={() => setFailed(true)}
         />
       )}
+      <span className="hero-transition-veil" aria-hidden="true" />
     </>
   );
 }

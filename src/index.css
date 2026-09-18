@@ -571,6 +571,14 @@ p {
 .hero-scrub-film.is-ready {
   opacity: 1;
 }
+.hero-transition-veil {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  background: var(--ink);
+}
 .image-note {
   position: absolute;
   left: 26px;
