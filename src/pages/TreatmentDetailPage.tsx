@@ -5,6 +5,7 @@ import { MEDIA } from "../data/media";
 import { useLang } from "../lib/i18n";
 import { usePageMeta } from "../lib/usePageMeta";
 import { FinalCTA } from "../sections/FinalCTA";
+import { TreatmentEditorial } from "../components/treatments/TreatmentEditorial";
 
 export function TreatmentDetailPage() {
   const { treatmentId = "" } = useParams();
@@ -68,6 +69,7 @@ export function TreatmentDetailPage() {
           </ol>
         </div>
       </article>
+      <TreatmentEditorial group={group} treatment={treatment} />
       <section className="related section-shell">
         <p className="eyebrow">
           {t({ de: "Auch für dich", en: "You may also like" })}

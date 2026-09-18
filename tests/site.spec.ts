@@ -223,3 +223,27 @@ test("brand preloader plays once and yields to the homepage", async ({
   await page.reload();
   await expect(page.locator(".brand-preloader")).toHaveCount(0);
 });
+
+test("every treatment detail page provides substantial decision content", async ({
+  page,
+}) => {
+  const treatments = [
+    "head-spa",
+    "aqua-facial",
+    "sleep-glow",
+    "gua-sha",
+    "foot-care",
+    "foot-massage",
+    "cupping-massage",
+    "spa-massage",
+    "candle",
+    "steam",
+  ];
+  for (const treatment of treatments) {
+    await page.goto(`/behandlungen/${treatment}`);
+    const text = await page.locator("main").innerText();
+    expect((text.match(/[A-Za-zÀ-ž0-9]+/g) || []).length).toBeGreaterThan(650);
+    await expect(page.locator("main section")).toHaveCount(8);
+    await expect(page.locator(".treatment-faq details")).toHaveCount(4);
+  }
+});
