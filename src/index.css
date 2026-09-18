@@ -2539,7 +2539,9 @@ h4 {
     rgba(255, 255, 255, 0.08) 42%,
     transparent 72%
   );
-  transition: background-position 0.2s ease-out;
+  transition:
+    background-position 0.2s ease-out,
+    opacity 0.45s ease;
 }
 .immersive-nav::after {
   content: "";
@@ -2549,6 +2551,7 @@ h4 {
   pointer-events: none;
   border-radius: 26px;
   border: 1px solid rgba(255, 255, 255, 0.13);
+  transition: opacity 0.45s ease;
 }
 .immersive-nav > * {
   position: relative;
@@ -2556,6 +2559,19 @@ h4 {
 }
 .immersive-header.over-film {
   color: #f6f3ed;
+}
+.immersive-header.over-film .immersive-nav {
+  background: transparent;
+  border-color: transparent;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  box-shadow: none;
+}
+.immersive-header.over-film .immersive-nav::after {
+  opacity: 0;
+}
+.immersive-header.over-film .immersive-nav::before {
+  opacity: 0.24;
 }
 .immersive-header.on-paper {
   color: var(--ink);
@@ -2585,22 +2601,6 @@ h4 {
 .immersive-header.is-scrolled .header-brand {
   width: 178px;
 }
-.immersive-header.is-scrolled .header-brand .brand-signature {
-  flex-direction: row;
-  justify-content: center;
-  gap: 14px;
-}
-.immersive-header.is-scrolled .header-brand .brand-signature :is(svg, img) {
-  width: 58px;
-  height: 34px;
-  flex: none;
-}
-.immersive-header.is-scrolled .header-brand .brand-signature > span {
-  font-size: 9px;
-  letter-spacing: 0.36em;
-  padding-left: 0.36em;
-  white-space: nowrap;
-}
 .header-left,
 .header-right {
   display: flex;
@@ -2615,6 +2615,69 @@ h4 {
   width: 150px;
   justify-self: center;
   color: inherit;
+  transition: width 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.immersive-header > .immersive-nav > .header-brand .brand-signature {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 76px;
+}
+.immersive-header > .immersive-nav > .header-brand .brand-signature > img {
+  position: absolute;
+  width: 83px;
+  height: 48px;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  transition:
+    left 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    top 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    width 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    height 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.immersive-header > .immersive-nav > .header-brand .brand-signature > span {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  transition:
+    left 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    bottom 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    font-size 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    letter-spacing 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.immersive-header.is-scrolled
+  > .immersive-nav
+  > .header-brand
+  .brand-signature {
+  height: 40px;
+}
+.immersive-header.is-scrolled
+  > .immersive-nav
+  > .header-brand
+  .brand-signature
+  > img {
+  left: 0;
+  top: 50%;
+  width: 58px;
+  height: 34px;
+  transform: translateY(-50%);
+}
+.immersive-header.is-scrolled
+  > .immersive-nav
+  > .header-brand
+  .brand-signature
+  > span {
+  left: 72px;
+  bottom: 50%;
+  transform: translateY(50%);
+  font-size: 9px;
+  letter-spacing: 0.36em;
+  padding-left: 0.36em;
 }
 .experience-menu-toggle {
   display: flex;
