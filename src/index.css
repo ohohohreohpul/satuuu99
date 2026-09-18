@@ -3716,11 +3716,29 @@ h4 {
 }
 .hero .film-control {
   z-index: 4;
-  right: var(--gutter);
-  bottom: 105px;
+  right: auto;
+  left: var(--gutter);
+  bottom: 31px;
+  width: auto;
+  height: auto;
+  display: flex;
+  gap: 9px;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid rgba(246, 243, 237, 0.5);
+  padding: 7px 0;
+  background: transparent;
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
-.hero .image-note {
-  pointer-events: none;
+.hero .film-control:hover {
+  background: transparent;
+  border-color: var(--paper);
+}
+.hero .film-control svg {
+  width: 13px;
+  height: 13px;
 }
 .reserve-label-mobile {
   display: none;

@@ -2,7 +2,7 @@ import { useLang } from "../lib/i18n";
 import { CONTACT } from "../data/content";
 import { MEDIA } from "../data/media";
 import { VideoLoop } from "../components/ui/VideoLoop";
-import { ArrowDownIcon, ArrowRightIcon } from "../components/ui/Icons";
+import { ArrowRightIcon } from "../components/ui/Icons";
 
 export function Hero() {
   const { t } = useLang();
@@ -31,23 +31,6 @@ export function Hero() {
             {t({ de: "Zeit für mich buchen", en: "Make time for yourself" })}
             <ArrowRightIcon />
           </a>
-          <div className="hero-footnote">
-            <span>
-              {t({
-                de: "Deine Pause beginnt hier.",
-                en: "Your pause starts here.",
-              })}
-            </span>
-            <a
-              href="#rituale"
-              aria-label={t({
-                de: "Behandlungen entdecken",
-                en: "Discover treatments",
-              })}
-            >
-              <ArrowDownIcon />
-            </a>
-          </div>
         </div>
         <div className="hero-media">
           <VideoLoop
@@ -59,12 +42,6 @@ export function Hero() {
             })}
             className="hero-film"
           />
-          <span className="image-note">
-            {t({
-              de: "Die Kunst, sich Zeit zu nehmen.",
-              en: "The art of taking your time.",
-            })}
-          </span>
         </div>
       </section>
       <div

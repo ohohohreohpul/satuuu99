@@ -91,6 +91,13 @@ export function VideoLoop({
           )}
         >
           {playing ? <PauseIcon /> : <PlayIcon />}
+          <span>
+            {t(
+              playing
+                ? { de: "Film anhalten", en: "Pause film" }
+                : { de: "Film abspielen", en: "Play film" },
+            )}
+          </span>
         </button>
       )}
     </>
