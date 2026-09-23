@@ -66,8 +66,8 @@ const GIFT_FAQS = [
       en: "Which treatment should I give as a gift?",
     },
     a: {
-      de: "Wenn du die Vorlieben nicht kennst, ist die Spa-Massage die verlässlichste Wahl, weil Fokus und Druck vor Ort angepasst werden. Das Japanese Head Spa ist ein besonderes Geschenk für Menschen, die schwer abschalten — aber bedenke, dass dabei die Haare nass werden.",
-      en: "If you do not know their preferences, spa massage is the most reliable choice because focus and pressure are adapted on the day. Japanese Head Spa makes a memorable gift for people who struggle to switch off — but bear in mind that it leaves the hair wet.",
+      de: "Wenn du die Vorlieben nicht kennst, ist die Kerzenmassage eine verlässliche Wahl, weil sie leicht zu mögen und wenig fordernd ist. Das Japanese Head Spa ist ein besonderes Geschenk für Menschen, die schwer abschalten — aber bedenke, dass dabei die Haare nass werden.",
+      en: "If you do not know their preferences, candle massage is a reliable choice because it is easy to enjoy and undemanding. Japanese Head Spa makes a memorable gift for people who struggle to switch off — but bear in mind that it leaves the hair wet.",
     },
   },
 ];
@@ -131,8 +131,8 @@ export function GiftCardsPage() {
           </h2>
           <p className="answer-lead">
             {t({
-              de: "Du hast einen Satuuu-Gutschein? Schreib uns eine E-Mail mit dem Code oder ruf an. Wir prüfen die Gültigkeit, besprechen mit dir, welche der zehn Anwendungen passt, und legen gemeinsam einen Termin fest. Den Gutschein bringst du zum Termin mit — als Karte oder als Foto.",
-              en: "Have a Satuuu gift card? Send us an email with the code, or call. We check its validity, discuss which of the ten treatments suits, and agree a time together. Bring the card to your appointment — as a card or a photo.",
+              de: "Du hast einen Satuuu-Gutschein? Schreib uns eine E-Mail mit dem Code oder ruf an. Wir prüfen die Gültigkeit, besprechen mit dir, welche der elf Anwendungen passt, und legen gemeinsam einen Termin fest. Den Gutschein bringst du zum Termin mit — als Karte oder als Foto.",
+              en: "Have a Satuuu gift card? Send us an email with the code, or call. We check its validity, discuss which of the eleven treatments suits, and agree a time together. Bring the card to your appointment — as a card or a photo.",
             })}
           </p>
           <a
@@ -177,8 +177,8 @@ export function GiftCardsPage() {
             <h3>{t({ de: "Behandlung wählen", en: "Choose a treatment" })}</h3>
             <p>
               {t({
-                de: "Wenn du nicht sicher bist, welche der zehn Anwendungen passt, beschreib einfach, wie es dir geht — wir empfehlen dir etwas. Der Vergleich aller Behandlungen hilft dir bei der Vorauswahl.",
-                en: "If you are unsure which of the ten treatments fits, simply describe how you feel and we will suggest something. The comparison of all treatments helps you shortlist.",
+                de: "Wenn du nicht sicher bist, welche der elf Anwendungen passt, beschreib einfach, wie es dir geht — wir empfehlen dir etwas. Der Vergleich aller Behandlungen hilft dir bei der Vorauswahl.",
+                en: "If you are unsure which of the eleven treatments fits, simply describe how you feel and we will suggest something. The comparison of all treatments helps you shortlist.",
               })}
             </p>
           </li>
@@ -227,8 +227,8 @@ export function GiftCardsPage() {
           />
           <figcaption className="media-note">
             {t({
-              de: "Spa-Massage — die verlässlichste Wahl, wenn du die Vorlieben nicht kennst",
-              en: "Spa massage — the most reliable choice when you do not know their preferences",
+              de: "Kerzenmassage — eine verlässliche Wahl, wenn du die Vorlieben nicht kennst",
+              en: "Candle massage — a reliable choice when you do not know their preferences",
             })}
           </figcaption>
         </figure>

@@ -264,8 +264,8 @@ export const LOCAL_PAGES: Page[] = [
       en: "Wellness massage in Ahrensburg near Hamburg | satuuu99",
     },
     meta: {
-      de: "Wellnessmassage in Ahrensburg: ruhige Spa-Massagen, persönliche Abstimmung und ein erfahrenes Team bei satuuu99 nahe Hamburg.",
-      en: "Wellness massage in Ahrensburg: calm spa massage, personal consultation and an experienced team at satuuu99 near Hamburg.",
+      de: "Wellnessmassage in Ahrensburg: Anti-Stress Gua Sha Massage, Bellabambi, persönliche Abstimmung und ein erfahrenes Team bei satuuu99 nahe Hamburg.",
+      en: "Wellness massage in Ahrensburg: anti-stress gua sha massage, Bellabambi, personal consultation and an experienced team at satuuu99 near Hamburg.",
     },
     eyebrow: {
       de: "Wellnessmassage · Ahrensburg",
@@ -276,8 +276,8 @@ export const LOCAL_PAGES: Page[] = [
       en: "Personal time for your body, calm, attentive and tailored to how you feel.",
     },
     answer: {
-      de: "satuuu99 bietet Wellness- und Spa-Massagen im Zentrum von Ahrensburg an. Vor der Anwendung besprechen wir Druck, Schwerpunkt und dein persönliches Wohlbefinden. Die Massagen dienen der Entspannung und ersetzen keine medizinische Behandlung oder Physiotherapie.",
-      en: "satuuu99 offers wellness and spa massage in central Ahrensburg. Before the treatment, we discuss pressure, focus and your comfort. These massages are for relaxation and do not replace medical treatment or physiotherapy.",
+      de: "satuuu99 bietet Wellnessmassagen im Zentrum von Ahrensburg an. Vor der Anwendung besprechen wir Druck, Schwerpunkt und dein persönliches Wohlbefinden. Die Massagen dienen der Entspannung und ersetzen keine medizinische Behandlung oder Physiotherapie.",
+      en: "satuuu99 offers wellness massage in central Ahrensburg. Before the treatment, we discuss pressure, focus and your comfort. These massages are for relaxation and do not replace medical treatment or physiotherapy.",
     },
     sections: [
       {
@@ -287,8 +287,8 @@ export const LOCAL_PAGES: Page[] = [
         },
         body: [
           {
-            de: "Manchmal möchtest du vor allem Rücken und Schultern loslassen, manchmal den ganzen Körper zur Ruhe kommen lassen. In unserem Angebot findest du Spa-Massagen sowie Anwendungen mit Wärme, Dampf oder Cupping-Elementen. Die aktuell buchbaren Varianten siehst du im Kalender und in der Preisliste.",
-            en: "Sometimes you want to release your back and shoulders; sometimes you want your whole body to settle. Our menu includes spa massage and rituals using warmth, steam or cupping elements. Current options appear in the booking calendar and price list.",
+            de: "Manchmal möchtest du vor allem Rücken und Schultern loslassen, manchmal den ganzen Körper zur Ruhe kommen lassen. In unserem Angebot findest du die Anti-Stress Gua Sha Massage, Bellabambi sowie Anwendungen mit Wärme, Dampf oder Cupping-Elementen. Die aktuell buchbaren Varianten siehst du im Kalender und in der Preisliste.",
+            en: "Sometimes you want to release your back and shoulders; sometimes you want your whole body to settle. Our menu includes the anti-stress gua sha massage, Bellabambi and rituals using warmth, steam or cupping elements. Current options appear in the booking calendar and price list.",
           },
           {
             de: "Du musst die perfekte Wahl nicht allein treffen. Schreib uns, wenn du unsicher bist. Wir erklären dir die Unterschiede und helfen dir, eine Wellnessanwendung auszuwählen, die zu deinem gewünschten Schwerpunkt passt.",
@@ -350,21 +350,21 @@ export const LOCAL_PAGES: Page[] = [
       },
       {
         title: {
-          de: "Vier Massagen — und wie du wählst",
-          en: "Four massages — and how to choose",
+          de: "Fünf Massagen — und wie du wählst",
+          en: "Five massages — and how to choose",
         },
         body: [
           {
-            de: "Die Spa-Massage ist der vielseitige Einstieg: fließende Streichungen mit warmem Öl, Fokus und Druck legen wir gemeinsam fest. Sie ist die richtige Wahl, wenn du dich zum ersten Mal für eine Körpermassage entscheidest oder ein Geschenk aussuchst, bei dem du die Vorlieben nicht kennst.",
-            en: "Spa massage is the versatile way in: flowing strokes with warm oil, with focus and pressure agreed together. It is the right choice for a first body massage, or for a gift when you do not know the recipient's preferences.",
+            de: "Die Anti-Stress Gua Sha Massage konzentriert sich auf Kopf, Nacken, Schultern und Rücken: sanfter Druck, rhythmische Thai-Massagebewegungen, achtsame Dehnungen und Gua Sha mit einem glatten Stein — buchbar ab 30 Minuten. Bellabambi ist die intensivere Wahl, wenn sich Rücken, Faszien oder Beine fest und verspannt anfühlen; mit einem Handstück wird gezielt an einzelnen Körperbereichen gearbeitet.",
+            en: "The anti-stress gua sha massage concentrates on head, neck, shoulders and back: gentle pressure, rhythmic Thai massage movements, mindful stretches and gua sha with a smooth stone — bookable from 30 minutes. Bellabambi is the more intense choice when back, fascia or legs feel stiff and tense; a handpiece is used to work on individual areas of the body.",
           },
           {
             de: "Die Kerzenmassage stellt Wärme in den Mittelpunkt — Öl aus einer Massagekerze, gleichmäßig eingearbeitet, ohne kräftige Griffe. Die Dampfmassage arbeitet mit feuchter Wärme und ist besonders in der kalten Jahreshälfte beliebt; frag uns vorher nach der Verfügbarkeit. Die Schröpfmassage erzeugt durch bewegte Schröpfgläser ein ziehendes Gefühl, das viele Gäste als deutlich intensiver beschreiben als eine klassische Massage.",
             en: "Candle massage puts warmth at the centre — oil from a massage candle, worked in evenly and without firm strokes. Steam massage uses moist heat and is especially popular in the colder half of the year; ask us about availability first. Cupping massage creates a drawing sensation with moving cupping glasses, which many guests describe as considerably more intense than a classic massage.",
           },
           {
-            de: "Wenn du zwischen zwei Varianten schwankst, beschreib uns einfach, wie es dir geht — wir empfehlen dir etwas. Eine Tabelle mit Fokus, Berührung, Wärme, Kleidung und Position für alle zehn Anwendungen findest du auf unserer Behandlungsseite.",
-            en: "If you are torn between two options, simply describe how you feel and we will suggest something. A table showing focus, touch, warmth, clothing and position for all ten treatments is on our treatments page.",
+            de: "Wenn du zwischen zwei Varianten schwankst, beschreib uns einfach, wie es dir geht — wir empfehlen dir etwas. Eine Tabelle mit Fokus, Berührung, Wärme, Kleidung und Position für alle elf Anwendungen findest du auf unserer Behandlungsseite.",
+            en: "If you are torn between two options, simply describe how you feel and we will suggest something. A table showing focus, touch, warmth, clothing and position for all eleven treatments is on our treatments page.",
           },
         ],
       },

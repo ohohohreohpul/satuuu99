@@ -72,10 +72,10 @@ export const DECISION_ROUTES: DecisionRoute[] = [
       de: "Mein Rücken und meine Schultern sind hart.",
       en: "My back and shoulders feel hard.",
     },
-    treatmentId: "spa-massage",
+    treatmentId: "anti-stress-gua-sha",
     why: {
-      de: "Fokus und Druck legen wir gemeinsam fest — die anpassbarste Anwendung.",
-      en: "We agree focus and pressure together — our most adaptable treatment.",
+      de: "Thai-Massagebewegungen, Dehnungen und Gua Sha — ganz auf Rücken, Nacken, Schultern und Kopf konzentriert.",
+      en: "Thai massage movements, stretches and gua sha — focused entirely on back, neck, shoulders and head.",
     },
   },
   {
@@ -87,6 +87,17 @@ export const DECISION_ROUTES: DecisionRoute[] = [
     why: {
       de: "Unterdruck statt Druck: ein deutlich anderes, oft intensiveres Gefühl.",
       en: "Suction instead of pressure: a markedly different, often more intense feeling.",
+    },
+  },
+  {
+    situation: {
+      de: "Mein Körper fühlt sich schwer und fest an.",
+      en: "My body feels heavy and stiff.",
+    },
+    treatmentId: "bellabambi",
+    why: {
+      de: "Gezielte, intensive Arbeit an Rücken, Faszien und Beinen — für mehr Leichtigkeit.",
+      en: "Focused, intense work on back, fascia and legs — for more lightness.",
     },
   },
   {
@@ -116,10 +127,10 @@ export const DECISION_ROUTES: DecisionRoute[] = [
       de: "Ich verschenke etwas und kenne die Vorlieben nicht.",
       en: "I am giving a gift and do not know their preferences.",
     },
-    treatmentId: "spa-massage",
+    treatmentId: "candle",
     why: {
-      de: "Die Spa-Massage ist die sicherste Wahl, weil sie sich vor Ort anpassen lässt.",
-      en: "Spa massage is the safest choice, because it can be adapted on the day.",
+      de: "Die Kerzenmassage ist leicht zu mögen: warm, ruhig und ohne kräftige Griffe.",
+      en: "Candle massage is easy to enjoy: warm, calm and without firm strokes.",
     },
   },
 ];

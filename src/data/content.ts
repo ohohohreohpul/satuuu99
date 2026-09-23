@@ -29,6 +29,12 @@ export const NAV = [
   { label: { de: "Journal", en: "Journal" }, href: "/journal" },
 ];
 
+/** One bookable duration and its price, as confirmed by the studio. */
+export interface PriceOption {
+  minutes: number;
+  euros: number;
+}
+
 export interface Treatment {
   id: string;
   name: Localized;
@@ -37,6 +43,8 @@ export interface Treatment {
   highlights?: Localized[];
   /** Marks a recently added programme so it can be flagged in the interface. */
   isNew?: boolean;
+  /** Confirmed durations and prices, shown only where the studio supplied them. */
+  prices?: PriceOption[];
 }
 export interface FocusGroup {
   id: string;
@@ -238,6 +246,80 @@ export const FOCUS_GROUPS: FocusGroup[] = [
     },
     treatments: [
       {
+        id: "anti-stress-gua-sha",
+        name: {
+          de: "Anti-Stress Gua Sha Massage",
+          en: "Anti-stress gua sha massage",
+        },
+        isNew: true,
+        prices: [
+          { minutes: 30, euros: 45 },
+          { minutes: 45, euros: 60 },
+          { minutes: 60, euros: 70 },
+        ],
+        description: {
+          de: "Wohltuende Entspannung für Kopf, Nacken, Schultern und Rücken — die ideale Auszeit, wenn du viel sitzt, mental gefordert bist oder Verspannungen im oberen Körper mit dir trägst. Sanfter Druck, rhythmische Thai-Massagebewegungen und achtsame Dehnungen lockern die Muskulatur. Das Highlight ist die Gua Sha Massage: Ein spezieller Stein wird mit gleichmäßigen Strichen über die Haut geführt und sorgt für ein leichtes, durchwärmtes Körpergefühl.",
+          en: "Soothing relaxation for head, neck, shoulders and back — the ideal break if you sit a lot, are mentally stretched or carry tension in your upper body. Gentle pressure, rhythmic Thai massage movements and mindful stretches loosen the muscles. The highlight is gua sha: a special stone is drawn across the skin in even strokes, leaving a light, warm feeling throughout the body.",
+        },
+        highlights: [
+          {
+            de: "Fokus auf Kopf, Nacken, Schultern und Rücken",
+            en: "Focused on head, neck, shoulders and back",
+          },
+          {
+            de: "Sanfter Druck und rhythmische Thai-Massagebewegungen",
+            en: "Gentle pressure and rhythmic Thai massage movements",
+          },
+          {
+            de: "Achtsame Dehnungen für die obere Körperpartie",
+            en: "Mindful stretches for the upper body",
+          },
+          {
+            de: "Gua Sha mit gleichmäßigen Strichen als besonderes Highlight",
+            en: "Gua sha in even strokes as the special highlight",
+          },
+          {
+            de: "Ideal nach einem langen Tag am Schreibtisch",
+            en: "Ideal after a long day at the desk",
+          },
+        ],
+      },
+      {
+        id: "bellabambi",
+        name: { de: "Bellabambi", en: "Bellabambi" },
+        isNew: true,
+        prices: [
+          { minutes: 45, euros: 60 },
+          { minutes: 60, euros: 70 },
+        ],
+        description: {
+          de: "Wenn dein Körper nach Entspannung ruft: Die Bellabambi-Behandlung ist eine wohltuende und intensive Methode, um verspannte Körperbereiche gezielt zu behandeln und das Gewebe zu stimulieren. Viele Gäste empfinden sie als besonders angenehm, wenn sich der Körper schwer, fest oder verspannt anfühlt — sanft, effektiv und ganzheitlich, von Kopf bis Fuß.",
+          en: "When your body is asking for rest: the Bellabambi treatment is a soothing, intense method for working on tense areas of the body and stimulating the tissue. Many guests find it especially pleasant when the body feels heavy, stiff or tense — gentle, effective and holistic, from head to toe.",
+        },
+        highlights: [
+          {
+            de: "Bei Verspannungen in Rücken, Nacken und Schultern",
+            en: "For tension in back, neck and shoulders",
+          },
+          {
+            de: "Für festes, unbewegliches Gewebe und beanspruchte Faszien",
+            en: "For stiff, immobile tissue and strained fascia",
+          },
+          {
+            de: "Anwendbar an Rücken, Beinen, Füßen und Gesicht",
+            en: "Can be used on back, legs, feet and face",
+          },
+          {
+            de: "Ein intensives Massagegefühl mit tiefer Entspannung",
+            en: "An intense massage sensation with deep relaxation",
+          },
+          {
+            de: "Für mehr Leichtigkeit und Wohlbefinden",
+            en: "For more lightness and wellbeing",
+          },
+        ],
+      },
+      {
         id: "cupping-massage",
         name: { de: "Schröpfmassage", en: "Cupping massage" },
         isNew: true,
@@ -269,28 +351,6 @@ export const FOCUS_GROUPS: FocusGroup[] = [
           {
             de: "Kann als besonders lockernd und wohltuend empfunden werden",
             en: "Can feel especially releasing and soothing",
-          },
-        ],
-      },
-      {
-        id: "spa-massage",
-        name: { de: "Spa-Massage", en: "Spa massage" },
-        description: {
-          de: "Eine Wellnessmassage mit fließenden Streichungen und pflegendem Öl. Deinen gewünschten Fokus besprechen wir gemeinsam.",
-          en: "A wellness massage with flowing strokes and nourishing oil. We discuss your preferred focus together.",
-        },
-        highlights: [
-          {
-            de: "Fließende, ruhige Massagegriffe",
-            en: "Flowing, unhurried massage strokes",
-          },
-          {
-            de: "Warmes, pflegendes Massageöl",
-            en: "Warm, nourishing massage oil",
-          },
-          {
-            de: "Fokus und Druck gemeinsam abgestimmt",
-            en: "Focus and pressure agreed together",
           },
         ],
       },

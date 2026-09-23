@@ -104,15 +104,33 @@ export const TREATMENT_FACTS: TreatmentFacts[] = [
     },
   },
   {
-    id: "spa-massage",
-    focus: { de: "Rücken, Schultern, Körper", en: "Back, shoulders, body" },
-    touch: { de: "Fließend, anpassbar", en: "Flowing, adaptable" },
+    id: "anti-stress-gua-sha",
+    focus: {
+      de: "Kopf, Nacken, Schultern, Rücken",
+      en: "Head, neck, shoulders, back",
+    },
+    touch: { de: "Rhythmisch, mit Stein", en: "Rhythmic, with a stone" },
     waterHeat: "warmth",
+    clothing: { de: "Oberkörper frei", en: "Upper body uncovered" },
+    position: { de: "Massageliege", en: "Massage table" },
+    bestFor: {
+      de: "Nach langen Tagen am Schreibtisch",
+      en: "After long days at the desk",
+    },
+  },
+  {
+    id: "bellabambi",
+    focus: {
+      de: "Rücken, Faszien, Beine, Gesicht",
+      en: "Back, fascia, legs, face",
+    },
+    touch: { de: "Mit Gerät, intensiv", en: "Device-led, intense" },
+    waterHeat: "none",
     clothing: { de: "Unterwäsche bleibt an", en: "Underwear stays on" },
     position: { de: "Massageliege", en: "Massage table" },
     bestFor: {
-      de: "Der vielseitige Einstieg",
-      en: "The versatile way in",
+      de: "Wenn sich der Körper fest anfühlt",
+      en: "When your body feels stiff",
     },
   },
   {

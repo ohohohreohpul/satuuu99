@@ -21,8 +21,8 @@ const OVERVIEW_FAQS = [
       en: "Which treatment suits me on a first visit?",
     },
     a: {
-      de: "Für einen ruhigen Einstieg ohne Ausziehen ist das Japanese Head Spa oder die Fußmassage gut geeignet. Wenn du eine klassische Körpermassage möchtest, ist die Spa-Massage die anpassbarste Wahl. Schreib uns vorher, wenn du unsicher bist — wir beraten dich ohne Buchungsdruck.",
-      en: "For a calm start with no undressing, Japanese Head Spa or the foot massage work well. If you want a classic body massage, spa massage is the most adaptable choice. Write to us beforehand if you are unsure — we advise with no pressure to book.",
+      de: "Für einen ruhigen Einstieg ohne Ausziehen ist das Japanese Head Spa oder die Fußmassage gut geeignet. Wenn du Verspannungen in Nacken, Schultern und Rücken lösen möchtest, ist die Anti-Stress Gua Sha Massage ein guter Einstieg — schon ab 30 Minuten. Schreib uns vorher, wenn du unsicher bist — wir beraten dich ohne Buchungsdruck.",
+      en: "For a calm start with no undressing, Japanese Head Spa or the foot massage work well. If you want to release tension in neck, shoulders and back, the anti-stress gua sha massage is a good way in — from just 30 minutes. Write to us beforehand if you are unsure — we advise with no pressure to book.",
     },
   },
   {
@@ -31,8 +31,8 @@ const OVERVIEW_FAQS = [
       en: "How many treatments does satuuu99 offer?",
     },
     a: {
-      de: "Zehn Anwendungen in vier Bereichen: Kopf mit dem Japanese Head Spa, Gesicht mit Aqua Facial, Sleep & Glow und Gua Sha, Füße mit Wellness-Fußpflege und Fußmassage, und Körper mit Spa-Massage, Schröpfmassage, Kerzenmassage und Dampfmassage.",
-      en: "Ten treatments across four areas: head with Japanese Head Spa; face with Aqua Facial, Sleep & Glow and gua sha; feet with wellness foot care and foot massage; and body with spa, cupping, candle and steam massage.",
+      de: "Elf Anwendungen in vier Bereichen: Kopf mit dem Japanese Head Spa, Gesicht mit Aqua Facial, Sleep & Glow und Gua Sha, Füße mit Wellness-Fußpflege und Fußmassage, und Körper mit Anti-Stress Gua Sha Massage, Bellabambi, Schröpfmassage, Kerzenmassage und Dampfmassage.",
+      en: "Eleven treatments across four areas: head with Japanese Head Spa; face with Aqua Facial, Sleep & Glow and gua sha; feet with wellness foot care and foot massage; and body with anti-stress gua sha massage, Bellabambi, cupping, candle and steam massage.",
     },
   },
   {
@@ -76,8 +76,8 @@ export function TreatmentsPage() {
       en: "Treatments compared: head spa, face, feet, massage | satuuu99 Ahrensburg",
     }),
     t({
-      de: "Zehn Wellnessbehandlungen in Ahrensburg bei Hamburg im direkten Vergleich: Fokus, Berührung, Wasser oder Wärme, Kleidung und Position. Finde die Anwendung, die zu dir passt.",
-      en: "Ten wellness treatments in Ahrensburg near Hamburg compared directly: focus, touch, water or heat, clothing and position. Find the treatment that suits you.",
+      de: "Elf Wellnessbehandlungen in Ahrensburg bei Hamburg im direkten Vergleich: Fokus, Berührung, Wasser oder Wärme, Kleidung und Position. Finde die Anwendung, die zu dir passt.",
+      en: "Eleven wellness treatments in Ahrensburg near Hamburg compared directly: focus, touch, water or heat, clothing and position. Find the treatment that suits you.",
     }),
   );
 
@@ -113,8 +113,8 @@ export function TreatmentsPage() {
           </>
         }
         copy={t({
-          de: "Zehn Rituale von Kopf bis Fuß, in einem kleinen privaten Studio in Ahrensburg bei Hamburg. Unten findest du alle Anwendungen im direkten Vergleich — damit du nicht nach Namen, sondern nach Gefühl entscheiden kannst.",
-          en: "Ten rituals from head to toe, in a small private studio in Ahrensburg near Hamburg. Below you will find every treatment compared directly — so you can choose by how you want to feel rather than by name.",
+          de: "Elf Rituale von Kopf bis Fuß, in einem kleinen privaten Studio in Ahrensburg bei Hamburg. Unten findest du alle Anwendungen im direkten Vergleich — damit du nicht nach Namen, sondern nach Gefühl entscheiden kannst.",
+          en: "Eleven rituals from head to toe, in a small private studio in Ahrensburg near Hamburg. Below you will find every treatment compared directly — so you can choose by how you want to feel rather than by name.",
         })}
         photo={MEDIA.treatments.head}
       >
@@ -131,16 +131,16 @@ export function TreatmentsPage() {
           </p>
           <h2>
             {t({
-              de: "Vier Bereiche, zehn Anwendungen.",
-              en: "Four areas, ten treatments.",
+              de: "Vier Bereiche, elf Anwendungen.",
+              en: "Four areas, eleven treatments.",
             })}
           </h2>
         </div>
         <div>
           <p className="answer-lead">
             {t({
-              de: "satuuu99 bietet zehn Wellnessbehandlungen in vier Bereichen an: Kopf, Gesicht, Füße und Körper. Alle Anwendungen sind Pflege- und Entspannungsrituale, keine medizinischen Behandlungen. Du wirst vor jedem Termin beraten, und Druck, Tempo und Wärme stimmen wir während der Anwendung mit dir ab.",
-              en: "satuuu99 offers ten wellness treatments across four areas: head, face, feet and body. All of them are care and relaxation rituals rather than medical treatments. Every appointment begins with a consultation, and pressure, pace and warmth are agreed with you as we go.",
+              de: "satuuu99 bietet elf Wellnessbehandlungen in vier Bereichen an: Kopf, Gesicht, Füße und Körper. Alle Anwendungen sind Pflege- und Entspannungsrituale, keine medizinischen Behandlungen. Du wirst vor jedem Termin beraten, und Druck, Tempo und Wärme stimmen wir während der Anwendung mit dir ab.",
+              en: "satuuu99 offers eleven wellness treatments across four areas: head, face, feet and body. All of them are care and relaxation rituals rather than medical treatments. Every appointment begins with a consultation, and pressure, pace and warmth are agreed with you as we go.",
             })}
           </p>
           <p>
@@ -159,8 +159,8 @@ export function TreatmentsPage() {
           </p>
           <h2>
             {t({
-              de: "Alle zehn Rituale auf einen Blick.",
-              en: "All ten rituals at a glance.",
+              de: "Alle elf Rituale auf einen Blick.",
+              en: "All eleven rituals at a glance.",
             })}
           </h2>
         </div>

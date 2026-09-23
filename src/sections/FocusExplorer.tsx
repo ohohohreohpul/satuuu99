@@ -6,6 +6,7 @@ import { groupPhoto, treatmentPhoto } from "../data/media";
 import { Photo } from "../components/media/Photo";
 import { ArrowRightIcon } from "../components/ui/Icons";
 import { Link } from "react-router-dom";
+import { TreatmentPrices } from "../components/treatments/TreatmentPrices";
 
 export function FocusExplorer() {
   const { t } = useLang();
@@ -144,6 +145,7 @@ export function FocusExplorer() {
                         ))}
                       </ul>
                     )}
+                    <TreatmentPrices prices={item.prices} />
                     <Link className="text-link" to={`/behandlungen/${item.id}`}>
                       {t({
                         de: "Behandlung entdecken",

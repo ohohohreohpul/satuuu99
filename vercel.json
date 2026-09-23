@@ -1,5 +1,12 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/behandlungen/spa-massage",
+      "destination": "/behandlungen/anti-stress-gua-sha",
+      "permanent": true
+    }
+  ]
 }

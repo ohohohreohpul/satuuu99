@@ -1,4 +1,5 @@
 import { CONTACT } from "../data/content";
+import type { PriceOption } from "../data/content";
 import type { Localized } from "./i18n";
 
 export const SITE_URL = "https://satuuu99.de";
@@ -23,12 +24,14 @@ export function serviceSchema({
   url,
   image,
   serviceType,
+  prices,
 }: {
   name: string;
   description: string;
   url: string;
   image: string;
   serviceType: string;
+  prices?: PriceOption[];
 }) {
   return {
     "@context": "https://schema.org",
@@ -39,6 +42,14 @@ export function serviceSchema({
     serviceType,
     url: absolute(url),
     image: absolute(image),
+    ...(prices?.length && {
+      offers: prices.map((option) => ({
+        "@type": "Offer",
+        name: `${name} · ${option.minutes} min`,
+        price: option.euros.toFixed(2),
+        priceCurrency: "EUR",
+      })),
+    }),
     provider: {
       "@type": "HealthAndBeautyBusiness",
       "@id": BUSINESS_ID,

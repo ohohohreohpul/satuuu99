@@ -792,6 +792,35 @@ p {
   height: 1px;
   background: var(--accent);
 }
+.treatment-prices {
+  margin-top: 16px;
+  max-width: 440px;
+  display: grid;
+  border-top: 1px solid var(--line);
+}
+.treatment-prices div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 12px;
+  line-height: 1.5;
+}
+.treatment-prices dt {
+  color: var(--muted);
+}
+.treatment-prices dd {
+  font-variant-numeric: tabular-nums;
+}
+.treatment-prices--page {
+  margin-top: 24px;
+  max-width: 360px;
+}
+.treatment-prices--page div {
+  font-size: 14px;
+  padding: 10px 0;
+}
 .treatment-bottom {
   margin-top: 22px;
   display: flex;

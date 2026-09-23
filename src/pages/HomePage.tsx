@@ -33,8 +33,8 @@ const HOME_FAQS = [
       en: "Which treatments does satuuu99 offer?",
     },
     a: {
-      de: "Zehn Wellnessanwendungen in vier Bereichen: Japanese Head Spa für den Kopf; Aqua Facial, Sleep & Glow und Gua Sha für das Gesicht; Wellness-Fußpflege und Fußmassage für die Füße; sowie Spa-Massage, Schröpfmassage, Kerzenmassage und Dampfmassage für den Körper.",
-      en: "Ten wellness treatments across four areas: Japanese Head Spa for the head; Aqua Facial, Sleep & Glow and gua sha for the face; wellness foot care and foot massage for the feet; and spa, cupping, candle and steam massage for the body.",
+      de: "Elf Wellnessanwendungen in vier Bereichen: Japanese Head Spa für den Kopf; Aqua Facial, Sleep & Glow und Gua Sha für das Gesicht; Wellness-Fußpflege und Fußmassage für die Füße; sowie Anti-Stress Gua Sha Massage, Bellabambi, Schröpfmassage, Kerzenmassage und Dampfmassage für den Körper.",
+      en: "Eleven wellness treatments across four areas: Japanese Head Spa for the head; Aqua Facial, Sleep & Glow and gua sha for the face; wellness foot care and foot massage for the feet; and anti-stress gua sha massage, Bellabambi, cupping, candle and steam massage for the body.",
     },
   },
   {

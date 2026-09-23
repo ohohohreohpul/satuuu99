@@ -279,8 +279,9 @@ test("every treatment detail page provides substantial decision content", async 
     "gua-sha",
     "foot-care",
     "foot-massage",
+    "anti-stress-gua-sha",
+    "bellabambi",
     "cupping-massage",
-    "spa-massage",
     "candle",
     "steam",
   ];

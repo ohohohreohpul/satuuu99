@@ -33,7 +33,7 @@ export const JOURNAL_SUMMARIES: JournalSummary[] = [
       en: "When a wellness massage is the right choice — and when the first appointment belongs with a doctor or physiotherapist.",
     },
     photo: "body-massage-shoulders",
-    related: "spa-massage",
+    related: "anti-stress-gua-sha",
   },
   {
     slug: "welche-gesichtsbehandlung-passt",
@@ -61,7 +61,7 @@ export const JOURNAL_SUMMARIES: JournalSummary[] = [
       en: "Changing, draping, tipping, talking or staying quiet — the unspoken questions, honestly answered.",
     },
     photo: "studio-candlelight-mood",
-    related: "spa-massage",
+    related: "anti-stress-gua-sha",
   },
   {
     slug: "dein-erster-head-spa-besuch",
@@ -89,7 +89,7 @@ export const JOURNAL_SUMMARIES: JournalSummary[] = [
       en: "Head, face, body or feet: a guide to finding your next wellness ritual.",
     },
     photo: "skin-texture-profile",
-    related: "spa-massage",
+    related: "anti-stress-gua-sha",
   },
   {
     slug: "auszeit-in-ahrensburg",
@@ -131,7 +131,7 @@ export const JOURNAL_SUMMARIES: JournalSummary[] = [
       en: "A simple guide to arrival, preferences and the time after your wellness ritual in Ahrensburg.",
     },
     photo: "resting-hand-cheek",
-    related: "spa-massage",
+    related: "anti-stress-gua-sha",
   },
 ];
 

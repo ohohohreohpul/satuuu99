@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRightIcon, ArrowUpRightIcon } from "../components/ui/Icons";
 import { StructuredData } from "../components/seo/StructuredData";
 import { Photo } from "../components/media/Photo";
+import { TreatmentPrices } from "../components/treatments/TreatmentPrices";
 import { CONTACT, FOCUS_GROUPS } from "../data/content";
 import { treatmentFacts } from "../data/treatments/comparison";
 import { useLang } from "../lib/i18n";
@@ -214,8 +215,8 @@ export function PricesPage() {
           </p>
           <h2>
             {t({
-              de: "Zehn Anwendungen, nach Bereich sortiert.",
-              en: "Ten treatments, sorted by area.",
+              de: "Elf Anwendungen, nach Bereich sortiert.",
+              en: "Eleven treatments, sorted by area.",
             })}
           </h2>
           <p>
@@ -245,6 +246,7 @@ export function PricesPage() {
                           {t(facts.position)} · {t(facts.clothing)}
                         </small>
                       )}
+                      <TreatmentPrices prices={item.prices} />
                     </li>
                   );
                 })}

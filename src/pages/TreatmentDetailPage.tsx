@@ -7,6 +7,7 @@ import { useLang } from "../lib/i18n";
 import { usePageMeta } from "../lib/usePageMeta";
 import { FinalCTA } from "../sections/FinalCTA";
 import { TreatmentEditorial } from "../components/treatments/TreatmentEditorial";
+import { TreatmentPrices } from "../components/treatments/TreatmentPrices";
 import { StructuredData } from "../components/seo/StructuredData";
 import { treatmentCopy } from "../data/treatments";
 import { photoUrl } from "../data/media";
@@ -44,6 +45,7 @@ export function TreatmentDetailPage() {
           url: path,
           image: photoUrl(photo),
           serviceType: t(group.word),
+          prices: treatment.prices,
         })}
       />
       {copy && <StructuredData data={faqSchema(copy.questions, t)} />}
@@ -67,6 +69,10 @@ export function TreatmentDetailPage() {
           </p>
           <h1>{t(treatment.name)}</h1>
           <p className="treatment-lead">{t(treatment.description)}</p>
+          <TreatmentPrices
+            prices={treatment.prices}
+            className="treatment-prices--page"
+          />
           <div className="treatment-page-actions">
             <a className="button" href={CONTACT.booking}>
               {t({ de: "Termin buchen", en: "Book a visit" })}

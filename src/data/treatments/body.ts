@@ -1,122 +1,242 @@
 import type { TreatmentCopyMap } from "./types";
 
 export const BODY_COPY: TreatmentCopyMap = {
-  "spa-massage": {
+  "anti-stress-gua-sha": {
     answer: {
-      de: "Die Spa-Massage bei satuuu99 in Ahrensburg ist eine klassische Wellnessmassage mit warmem Öl und fließenden, ruhigen Streichungen. Rücken, Schultern, Nacken, Arme und Beine werden je nach vereinbartem Fokus einbezogen. Du liegst professionell mit Leinen abgedeckt; nur der Bereich, an dem gearbeitet wird, ist frei. Es ist keine Physiotherapie.",
-      en: "The spa massage at satuuu99 in Ahrensburg is a classic wellness massage with warm oil and flowing, unhurried strokes. Back, shoulders, neck, arms and legs are included according to the focus you agree. You lie professionally draped in linen; only the area being worked is uncovered. It is not physiotherapy.",
+      de: "Die Anti-Stress Gua Sha Massage bei satuuu99 in Ahrensburg konzentriert sich vollständig auf Kopf, Nacken, Schultern und Rücken — die Bereiche, in denen sich Stress am häufigsten zeigt. Sanfter Druck, rhythmische Thai-Massagebewegungen und achtsame Dehnungen werden mit einer Gua Sha Massage kombiniert. Buchbar sind 30, 45 oder 60 Minuten. Es ist eine Wellnessanwendung, keine Physiotherapie.",
+      en: "The anti-stress gua sha massage at satuuu99 in Ahrensburg concentrates entirely on head, neck, shoulders and back — the areas where stress shows most often. Gentle pressure, rhythmic Thai massage movements and mindful stretches are combined with a gua sha massage. You can book 30, 45 or 60 minutes. It is a wellness treatment, not physiotherapy.",
     },
     definition: {
-      de: "Die Spa-Massage ist unsere vielseitigste Körperanwendung und für viele Gäste der Einstieg. Grundlage sind fließende Streichungen, kreisende Bewegungen und ruhiges Knetgriff-Arbeiten mit warmem, pflegendem Öl. Weil die Technik anpassbar ist, entscheidet das Vorgespräch über den Charakter des Termins: Ein Fokus auf Rücken und Schultern fühlt sich anders an als eine Ganzkörperbehandlung, bei der überall gleich viel Zeit bleibt. Inhaberin Nina bringt nach offizieller Studioangabe über 20 Jahre Erfahrung in Wellness- und Spa-Massagen sowie in traditioneller Thai-Massage mit; das Team ergänzt unterschiedliche Schwerpunkte. Wir arbeiten ohne Behandlungsziel im medizinischen Sinn — es geht um Entspannung.",
-      en: "Spa massage is our most versatile body treatment and, for many guests, the way in. It is built on flowing strokes, circling movements and calm kneading with warm, nourishing oil. Because the technique is adaptable, the initial conversation shapes the character of the appointment: a focus on back and shoulders feels quite different from a full-body treatment where every area gets equal time. According to the official studio profile, owner Nina brings more than 20 years of experience in wellness and spa massage as well as traditional Thai massage; the team adds complementary specialisms. We work without a medical treatment goal — this is about relaxation.",
+      de: "Unsere Anti-Stress-Massage ist die Auszeit für alle, die viel sitzen, mental gefordert sind oder spürbare Verspannungen im oberen Körperbereich mit sich tragen. Statt den ganzen Körper gleichmäßig zu behandeln, liegt der Fokus ausschließlich auf Rücken, Nacken, Schultern und Kopf. Gezielte Griffe lockern die Muskulatur und entlasten die gesamte obere Körperpartie. Die Grundlage bilden sanfter Druck, rhythmische Bewegungen aus der traditionellen Thai-Massage und achtsame Dehnungen. Das besondere Highlight ist die Gua Sha Massage: eine traditionelle chinesische Technik, bei der ein spezieller, glatter Stein mit sanften, gleichmäßigen Strichen über die Haut geführt wird. Inhaberin Nina bringt nach offizieller Studioangabe über 20 Jahre Erfahrung in traditioneller Thai-Massage und Gua Sha mit. Wir arbeiten ohne Behandlungsziel im medizinischen Sinn — es geht um Entspannung und Wohlbefinden.",
+      en: "Our anti-stress massage is the break for anyone who sits a lot, is mentally stretched or carries noticeable tension in the upper body. Rather than treating the whole body evenly, the focus lies solely on back, neck, shoulders and head. Targeted techniques loosen the muscles and relieve the entire upper body. The foundation is gentle pressure, rhythmic movements from traditional Thai massage and mindful stretches. The special highlight is gua sha: a traditional Chinese technique in which a special, smooth stone is drawn across the skin in gentle, even strokes. According to the official studio profile, owner Nina brings more than 20 years of experience in traditional Thai massage and gua sha. We work without a medical treatment goal — this is about relaxation and wellbeing.",
     },
     experience: {
-      de: "Die ersten Minuten dienen dem Ankommen: Wärme, Öl, langsame Streichungen über den Rücken. Danach vertieft sich die Arbeit an den Stellen, die du benannt hast. Am Nacken, an den Schulterblättern und im unteren Rücken ist der Druck meist deutlicher spürbar. Viele Gäste atmen irgendwann ohne Absicht tiefer — das ist für uns das Zeichen, dass das Tempo stimmt. Nach dem Termin fühlen sich Schultern und Rücken bei den meisten Gästen wärmer und beweglicher an. Ein leichtes Muskelgefühl am Folgetag ist möglich, wenn kräftiger gearbeitet wurde.",
-      en: "The first few minutes are for arriving: warmth, oil, slow strokes across the back. The work then deepens where you have asked for it. At the neck, shoulder blades and lower back the pressure is usually more noticeable. Many guests find themselves breathing more deeply without meaning to — for us that is the sign the pace is right. Afterwards most guests find shoulders and back warmer and freer. A mild muscular feeling the next day is possible after firmer work.",
+      de: "Die Massage beginnt ruhig am Rücken und arbeitet sich über Schultern und Nacken bis zum Kopf vor. Die rhythmischen Thai-Bewegungen fühlen sich anders an als klassische Streichungen: gleichmäßig, wiegend, mit wechselndem Druck. Die Dehnungen sind achtsam und nie ruckartig. Beim Gua Sha gleitet der Stein in gleichmäßigen Strichen über die geölte Haut; viele Gäste beschreiben ein angenehm leichtes, durchwärmtes Körpergefühl. Der Atem wird oft tiefer, der Kopf klarer. Eine vorübergehende Rötung der Haut nach dem Gua Sha ist normal und klingt in der Regel schnell ab.",
+      en: "The massage begins calmly on the back and works its way over shoulders and neck up to the head. The rhythmic Thai movements feel different from classic strokes: even, rocking, with changing pressure. The stretches are mindful and never jerky. During gua sha the stone glides across oiled skin in even strokes; many guests describe a pleasantly light, warm feeling in the body. Breathing often deepens and the head feels clearer. A temporary redness of the skin after gua sha is normal and usually fades quickly.",
     },
     suited: {
-      de: "Wähle die Spa-Massage, wenn du eine klassische, gut planbare Wellnessmassage möchtest und noch nicht weißt, welche Variante zu dir passt. Sie ist die flexibelste Anwendung: Fokus und Druck legen wir gemeinsam fest. Wenn du zusätzlich Wärme möchtest, ist die Kerzenmassage oder die Dampfmassage die nächste Stufe. Wenn dir eine klassische Massage zu bekannt ist und du ein anderes Gefühl suchst, probiere die Schröpfmassage. Und wenn dein Alltag vor allem im Kopf stattfindet, nimm das Japanese Head Spa.",
-      en: "Choose spa massage if you want a classic, predictable wellness massage and do not yet know which variant suits you. It is the most flexible treatment: we set focus and pressure together. If you also want warmth, candle massage or steam massage is the next step. If a classic massage feels too familiar and you are after a different sensation, try the cupping massage. And if your day happens mostly in your head, take the Japanese Head Spa.",
+      de: "Wähle die Anti-Stress Gua Sha Massage nach einem langen Tag am Schreibtisch, bei innerer Unruhe oder als bewusste Pause zwischendurch — vor allem, wenn sich deine Anspannung in Nacken, Schultern und Rücken festsetzt. Die 30 Minuten passen in eine Mittagspause, 60 Minuten geben dem Ritual mehr Ruhe. Wenn du eine intensivere Anwendung für den ganzen Körper suchst, probiere Bellabambi oder die Schröpfmassage. Wenn Wärme für dich im Vordergrund steht, ist die Kerzenmassage die sanftere Wahl.",
+      en: "Choose the anti-stress gua sha massage after a long day at the desk, when you feel restless inside or as a deliberate pause in between — especially when your tension settles in neck, shoulders and back. The 30 minutes fit into a lunch break; 60 minutes give the ritual more calm. If you are after a more intense treatment for the whole body, try Bellabambi or the cupping massage. If warmth matters most to you, the candle massage is the gentler choice.",
     },
     beforeBooking: {
-      de: "Informiere uns vor der Buchung über Schwangerschaft, akute Schmerzen, frische Verletzungen, Operationen in den letzten Monaten, Bandscheibenbeschwerden in Behandlung, Osteoporose, Thrombose oder ein Thromboserisiko, Krebserkrankungen in Behandlung, Herz-Kreislauf-Erkrankungen, Fieber, Infektionen, blutverdünnende Medikamente und Hauterkrankungen oder offene Stellen im Massagebereich. Im Zweifel kläre ärztlich, ob eine Wellnessmassage für dich geeignet ist — wir dürfen das nicht beurteilen.",
-      en: "Tell us before booking about pregnancy, acute pain, recent injuries, surgery in the past months, disc problems under treatment, osteoporosis, thrombosis or a thrombosis risk, cancer under treatment, cardiovascular conditions, fever, infections, blood-thinning medication and skin conditions or open areas in the massage area. If in doubt, ask a doctor whether a wellness massage is suitable for you — that is not ours to assess.",
+      de: "Informiere uns vor der Buchung über Schwangerschaft, akute Schmerzen, frische Verletzungen, Operationen in den letzten Monaten, Beschwerden an der Halswirbelsäule in Behandlung, Osteoporose, Thrombose oder ein Thromboserisiko, Herz-Kreislauf-Erkrankungen, Fieber, Infektionen, blutverdünnende Medikamente sowie Hauterkrankungen, Sonnenbrand oder offene Stellen im Massagebereich. Gerade beim Gua Sha und bei den Dehnungen ist das wichtig. Im Zweifel kläre ärztlich, ob eine Wellnessmassage für dich geeignet ist — wir dürfen das nicht beurteilen.",
+      en: "Tell us before booking about pregnancy, acute pain, recent injuries, surgery in the past months, cervical spine problems under treatment, osteoporosis, thrombosis or a thrombosis risk, cardiovascular conditions, fever, infections, blood-thinning medication and skin conditions, sunburn or open areas in the massage area. This matters especially for gua sha and the stretches. If in doubt, ask a doctor whether a wellness massage is suitable for you — that is not ours to assess.",
     },
     prepare: {
-      de: "Iss vorher nichts Schweres und komm ein paar Minuten früher, damit du nicht aus dem Verkehr direkt auf die Liege wechselst. Du ziehst dich in Ruhe und unbeobachtet um; Unterwäsche kannst du anbehalten. Überlege vorher, welche Bereiche du einbeziehen und welche du aussparen möchtest — das ist keine Unhöflichkeit, sondern hilfreich. Wenn du ein bestimmtes Öl nicht verträgst oder empfindlich auf Duft reagierst, sag es beim Vorgespräch.",
-      en: "Avoid a heavy meal beforehand and arrive a few minutes early so you are not stepping straight from traffic onto the table. You change privately and unobserved; you may keep your underwear on. Think beforehand about which areas you want included and which left out — that is not impolite, it is helpful. If a particular oil disagrees with you or you are sensitive to fragrance, say so during the consultation.",
+      de: "Komm ein paar Minuten früher, damit du nicht direkt aus dem Alltag auf die Liege wechselst. Da nur der obere Körper behandelt wird, legst du Oberteil und BH ab; Hose und Unterwäsche bleiben an. Trag möglichst keine Halskette und binde lange Haare locker zusammen. Sag uns im Vorgespräch, wo du die Anspannung am stärksten spürst und ob du bei Nacken oder Kopf empfindlich bist.",
+      en: "Arrive a few minutes early so you are not stepping straight from your day onto the table. As only the upper body is treated, you take off your top and bra; trousers and underwear stay on. Ideally leave necklaces at home and tie long hair loosely back. Tell us in the consultation where you feel the tension most and whether your neck or head is sensitive.",
     },
     after: {
-      de: "Bleib nach der Massage noch einen Moment liegen und steh dann langsam auf; ein leichter Schwindel beim Aufstehen kommt vor. Trink über den Tag verteilt etwas mehr Wasser als üblich. Verzichte direkt danach auf intensiven Sport, Sauna oder ein sehr heißes Bad. Wenn du am nächsten Tag ein Muskelgefühl hast, ist das bei festerer Arbeit normal; anhaltende oder starke Schmerzen gehören ärztlich abgeklärt.",
-      en: "Stay lying down for a moment after the massage and then get up slowly; mild light-headedness on standing does happen. Drink a little more water than usual across the day. Avoid intense exercise, a sauna or a very hot bath straight afterwards. A muscular feeling the next day is normal after firmer work; persistent or strong pain should be medically assessed.",
+      de: "Bleib nach der Massage einen Moment liegen und steh langsam auf. Trink über den Tag verteilt etwas mehr Wasser als üblich. Eine leichte Rötung nach dem Gua Sha ist normal; verzichte an diesem Tag auf intensive Sonne, Sauna und sehr heißes Duschen. Ein leichtes Muskelgefühl am Folgetag kann nach fester Arbeit vorkommen; anhaltende oder starke Schmerzen gehören ärztlich abgeklärt.",
+      en: "Stay lying down for a moment after the massage and get up slowly. Drink a little more water than usual across the day. Slight redness after gua sha is normal; avoid strong sun, sauna and very hot showers that day. A mild muscular feeling the next day can occur after firmer work; persistent or strong pain should be medically assessed.",
     },
     steps: [
       {
-        de: "Im Vorgespräch klären wir Fokus, Druck, empfindliche Bereiche und was du aussparen möchtest.",
-        en: "In the consultation we agree focus, pressure, sensitive areas and anything you want left out.",
+        de: "Im Vorgespräch klären wir, wo du Anspannung spürst, welchen Druck du magst und was wir aussparen.",
+        en: "In the consultation we clarify where you feel tension, what pressure you like and what we leave out.",
       },
       {
-        de: "Du ziehst dich in Ruhe um und richtest dich auf der Liege ein; wir klopfen, bevor wir hereinkommen.",
-        en: "You change privately and settle on the table; we knock before coming in.",
+        de: "Du legst dich bequem auf die Liege; der Rücken ist frei, der übrige Körper abgedeckt.",
+        en: "You settle comfortably on the table; your back is uncovered and the rest of you draped.",
       },
       {
-        de: "Warmes Öl und lange Streichungen über den Rücken bilden den Anfang.",
-        en: "Warm oil and long strokes across the back begin the treatment.",
+        de: "Sanfter Druck und rhythmische Thai-Massagebewegungen lockern Rücken und Schultern.",
+        en: "Gentle pressure and rhythmic Thai massage movements loosen back and shoulders.",
       },
       {
-        de: "Die Arbeit vertieft sich an den vereinbarten Bereichen, mit regelmäßiger Rückfrage zum Druck.",
-        en: "The work deepens in the agreed areas, with regular checks on the pressure.",
+        de: "Achtsame Dehnungen entlasten Nacken und obere Körperpartie.",
+        en: "Mindful stretches relieve the neck and upper body.",
       },
       {
-        de: "Die Massage klingt mit ruhigen, ausstreichenden Bewegungen aus.",
-        en: "The massage closes with calm, sweeping strokes.",
+        de: "Der Gua-Sha-Stein wird mit gleichmäßigen Strichen über Rücken, Schultern und Nacken geführt.",
+        en: "The gua sha stone is drawn in even strokes across back, shoulders and neck.",
       },
       {
-        de: "Du bekommst Zeit, allein liegen zu bleiben und langsam wieder aufzustehen.",
-        en: "You are given time to lie alone and get up slowly.",
+        de: "Eine ruhige Kopfmassage schließt das Ritual ab, danach hast du Zeit zum Nachspüren.",
+        en: "A calm head massage closes the ritual, followed by time to simply rest.",
       },
     ],
     questions: [
       {
         q: {
-          de: "Was ist der Unterschied zwischen Wellnessmassage und medizinischer Massage?",
-          en: "What is the difference between wellness massage and medical massage?",
+          de: "Was kostet die Anti-Stress Gua Sha Massage?",
+          en: "How much is the anti-stress gua sha massage?",
         },
         a: {
-          de: "Eine medizinische Massage wird verordnet, dient der Behandlung einer Diagnose und findet in einer Physiotherapiepraxis statt. Unsere Wellnessmassage dient Entspannung und Wohlbefinden, wird nicht verordnet und behandelt keine Beschwerden.",
-          en: "A medical massage is prescribed, treats a diagnosis and takes place in a physiotherapy practice. Our wellness massage supports relaxation and wellbeing, is not prescribed and does not treat complaints.",
+          de: "30 Minuten kosten 45,00 €, 45 Minuten 60,00 € und 60 Minuten 70,00 €.",
+          en: "30 minutes cost €45.00, 45 minutes €60.00 and 60 minutes €70.00.",
         },
       },
       {
         q: {
-          de: "Muss ich mich vollständig ausziehen?",
-          en: "Do I have to undress completely?",
+          de: "Was ist Gua Sha?",
+          en: "What is gua sha?",
         },
         a: {
-          de: "Nein. Unterwäsche kannst du anbehalten. Du liegst mit Leinen abgedeckt, und nur der Bereich, an dem gerade gearbeitet wird, ist frei.",
-          en: "No. You may keep your underwear on. You lie draped in linen, and only the area currently being worked is uncovered.",
+          de: "Gua Sha ist eine traditionelle chinesische Technik, bei der ein glatter Stein mit sanften, gleichmäßigen Strichen über die geölte Haut geführt wird. In dieser Massage setzen wir es an Rücken, Schultern und Nacken ein.",
+          en: "Gua sha is a traditional Chinese technique in which a smooth stone is drawn across oiled skin in gentle, even strokes. In this massage we use it on back, shoulders and neck.",
         },
       },
       {
         q: {
-          de: "Was sollte ich vor einer Massage sagen?",
-          en: "What should I mention before a massage?",
+          de: "Worin unterscheidet sie sich vom Gesichts-Gua-Sha?",
+          en: "How does it differ from the facial gua sha?",
         },
         a: {
-          de: "Erkrankungen und Medikamente, Schwangerschaft, Operationen und Verletzungen, empfindliche oder schmerzende Stellen, Bereiche, die du aussparen möchtest, Unverträglichkeiten gegen Öle oder Duft — und wie kräftig du es magst.",
-          en: "Conditions and medication, pregnancy, surgery and injuries, sensitive or painful areas, areas you want left out, intolerances to oils or fragrance — and how firm you like it.",
+          de: "Unser Gua Sha im Bereich Gesicht arbeitet an Gesicht, Kiefer und Hals. Die Anti-Stress-Massage nutzt den Stein am oberen Rücken, an Schultern und Nacken und verbindet ihn mit Thai-Massagebewegungen und Dehnungen.",
+          en: "Our facial gua sha works on face, jaw and throat. The anti-stress massage uses the stone on the upper back, shoulders and neck and combines it with Thai massage movements and stretches.",
         },
       },
       {
         q: {
-          de: "Kann ich während der Massage reden oder soll ich still sein?",
-          en: "Can I talk during the massage, or should I stay quiet?",
+          de: "Bleiben nach dem Gua Sha Spuren auf der Haut?",
+          en: "Does gua sha leave marks on the skin?",
         },
         a: {
-          de: "Beides ist willkommen. Manche Gäste unterhalten sich, andere schließen die Augen. Sag einfach am Anfang, was dir lieber ist.",
-          en: "Both are welcome. Some guests chat, others close their eyes. Just tell us at the start which you prefer.",
+          de: "Eine vorübergehende Rötung ist möglich und normal. Den Druck stimmen wir mit dir ab; wenn du am selben Tag einen Anlass hast, sag es uns vorher.",
+          en: "Temporary redness is possible and normal. We agree the pressure with you; if you have an occasion the same day, tell us beforehand.",
         },
       },
       {
         q: {
-          de: "Welche Massage soll ich wählen?",
-          en: "Which massage should I choose?",
+          de: "Welche Dauer soll ich wählen?",
+          en: "Which duration should I choose?",
         },
         a: {
-          de: "Spa-Massage für fließende klassische Griffe, Kerzenmassage für warmes Öl, Dampfmassage für zusätzliche Wärme und Schröpfmassage für ein intensiveres Soggefühl. Bei Unsicherheit schreib uns vor der Buchung.",
-          en: "Spa massage for flowing classic strokes, candle massage for warm oil, steam massage for added warmth and cupping massage for a more intense suction sensation. If unsure, write to us before booking.",
+          de: "30 Minuten reichen für eine kurze, konzentrierte Pause. Mit 45 oder 60 Minuten bleibt mehr Zeit für Dehnungen, Gua Sha und die abschließende Kopfmassage.",
+          en: "30 minutes are enough for a short, focused pause. With 45 or 60 minutes there is more time for stretches, gua sha and the closing head massage.",
         },
       },
     ],
-    sequence: ["body-massage-shoulders", "studio-candlelight-mood"],
+    sequence: ["body-massage-shoulders", "facial-stone-detail"],
     sequenceCaptions: [
       {
-        de: "Leinenabdeckung: nur der Arbeitsbereich ist frei",
-        en: "Linen draping: only the working area is uncovered",
+        de: "Fokus auf Schultern, Nacken und oberen Rücken",
+        en: "Focused on shoulders, neck and upper back",
       },
       {
-        de: "Ruhiges Licht, ruhiges Tempo",
-        en: "Calm light, calm pace",
+        de: "Der glatte Gua-Sha-Stein in gleichmäßigen Strichen",
+        en: "The smooth gua sha stone in even strokes",
+      },
+    ],
+  },
+
+  bellabambi: {
+    answer: {
+      de: "Bellabambi bei satuuu99 in Ahrensburg ist eine wohltuende und intensive Behandlung für verspannte Körperbereiche. Mit einem Handstück wird gezielt an Rücken, Nacken, Schultern, Beinen, Füßen oder Gesicht gearbeitet, um das Gewebe zu stimulieren. Viele Gäste empfinden sie als besonders angenehm, wenn sich der Körper schwer, fest oder verspannt anfühlt. Buchbar sind 45 oder 60 Minuten.",
+      en: "Bellabambi at satuuu99 in Ahrensburg is a soothing, intense treatment for tense areas of the body. A handpiece is used to work specifically on back, neck, shoulders, legs, feet or face to stimulate the tissue. Many guests find it especially pleasant when the body feels heavy, stiff or tense. You can book 45 or 60 minutes.",
+    },
+    definition: {
+      de: "Verspannungen, ein harter Rücken, feste Faszien oder einfach das Gefühl, ständig unter Spannung zu stehen? Genau dafür haben wir Bellabambi ins Programm genommen. Die Behandlung wird mit einem Bellabambi-Gerät durchgeführt, dessen Handstück über die Haut geführt wird. So lassen sich einzelne Körperbereiche gezielt behandeln: Rücken und Schultern, Faszien und Gewebe, Beine und Füße, Nacken und — mit einem kleineren Aufsatz — auch das Gesicht. Bellabambi kann wunderbar mit dem Gefühl einer intensiven Massage verbunden werden. Im Mittelpunkt steht dabei nicht nur die Technik, sondern du und dein Körper: Wir gehen auf deine individuellen Bedürfnisse ein und entscheiden gemeinsam, welche Bereiche wir behandeln. Bellabambi ist bei uns eine Wellnessanwendung für Entspannung und Wohlbefinden, keine medizinische Therapie.",
+      en: "Tension, a stiff back, tight fascia or simply the feeling of constantly being under strain? That is exactly why we added Bellabambi. The treatment is carried out with a Bellabambi device whose handpiece is guided across the skin. This lets us work specifically on individual areas: back and shoulders, fascia and tissue, legs and feet, neck and — with a smaller attachment — the face. Bellabambi pairs wonderfully with the feeling of an intense massage. The focus is not only on the technique but on you and your body: we respond to your individual needs and decide together which areas to treat. At our studio Bellabambi is a wellness treatment for relaxation and wellbeing, not a medical therapy.",
+    },
+    experience: {
+      de: "Das Handstück gleitet in ruhigen Bahnen über die Haut und erzeugt ein deutliches, oft als intensiv beschriebenes Massagegefühl — anders als klassische Handgriffe, aber gut dosierbar. An Stellen, die sich fest anfühlen, bleiben wir etwas länger. Viele Gäste merken schon während der Behandlung, wie der Körper schwerer wird und zur Ruhe kommt. Danach fühlen sich Rücken, Schultern oder Beine häufig lockerer und leichter an. Eine vorübergehende Rötung der Haut ist möglich und klingt in der Regel schnell ab.",
+      en: "The handpiece glides across the skin in calm passes and creates a distinct massage sensation that guests often describe as intense — different from classic hand techniques, but easy to adjust. Where things feel tight, we stay a little longer. Many guests notice during the treatment how the body grows heavier and settles. Afterwards back, shoulders or legs often feel looser and lighter. Temporary redness of the skin is possible and usually fades quickly.",
+    },
+    suited: {
+      de: "Wähle Bellabambi bei Verspannungen im Rücken, Nacken und Schulterbereich, bei festem und unbeweglichem Gewebe, bei beanspruchten Muskeln und Faszien — oder wenn du nach Stress einfach tiefe Entspannung und mehr Leichtigkeit suchst. Wenn du lieber reine Handarbeit mit Thai-Griffen möchtest, ist die Anti-Stress Gua Sha Massage die Alternative. Wenn dich ein Gefühl von Unterdruck mit Gläsern interessiert, probiere die Schröpfmassage; für viel Wärme und ruhige Bewegungen die Kerzenmassage.",
+      en: "Choose Bellabambi for tension in the back, neck and shoulders, for stiff, immobile tissue, for strained muscles and fascia — or when, after stress, you simply want deep relaxation and more lightness. If you prefer purely hands-on work with Thai techniques, the anti-stress gua sha massage is the alternative. If a suction sensation with glasses interests you, try the cupping massage; for plenty of warmth and calm movements, the candle massage.",
+    },
+    beforeBooking: {
+      de: "Informiere uns vor der Buchung über Schwangerschaft, einen Herzschrittmacher oder andere Implantate, akute Schmerzen, frische Verletzungen, Operationen in den letzten Monaten, Krampfadern, Thrombose oder ein Thromboserisiko, Herz-Kreislauf-Erkrankungen, Krebserkrankungen in Behandlung, Fieber, Infektionen, blutverdünnende Medikamente sowie Hauterkrankungen, Sonnenbrand oder offene Stellen im Behandlungsbereich. Im Zweifel kläre ärztlich, ob die Anwendung für dich geeignet ist — wir dürfen das nicht beurteilen.",
+      en: "Tell us before booking about pregnancy, a pacemaker or other implants, acute pain, recent injuries, surgery in the past months, varicose veins, thrombosis or a thrombosis risk, cardiovascular conditions, cancer under treatment, fever, infections, blood-thinning medication and skin conditions, sunburn or open areas in the treatment area. If in doubt, ask a doctor whether the treatment is suitable for you — that is not ours to assess.",
+    },
+    prepare: {
+      de: "Iss vorher nichts Schweres und komm ein paar Minuten früher. Du ziehst dich in Ruhe und unbeobachtet um; Unterwäsche bleibt an, und du liegst mit Leinen abgedeckt. Überlege vorher, welche Bereiche sich am festesten anfühlen — Rücken, Nacken, Beine oder Gesicht — damit wir die Zeit gezielt einteilen können. Wenn das Gesicht einbezogen werden soll, komm am besten ungeschminkt.",
+      en: "Avoid a heavy meal beforehand and arrive a few minutes early. You change privately and unobserved; underwear stays on and you lie draped in linen. Think beforehand about which areas feel tightest — back, neck, legs or face — so we can divide the time purposefully. If the face is to be included, it is best to come without make-up.",
+    },
+    after: {
+      de: "Steh nach der Behandlung langsam auf und gönn dir einen ruhigen Moment. Trink über den Tag verteilt ausreichend Wasser. Verzichte direkt danach auf intensiven Sport, Sauna und sehr heißes Baden. Eine leichte Rötung ist normal; anhaltende Beschwerden, starke Schmerzen oder Blutergüsse gehören ärztlich abgeklärt.",
+      en: "Get up slowly after the treatment and allow yourself a calm moment. Drink enough water across the day. Avoid intense exercise, sauna and very hot baths straight afterwards. Slight redness is normal; persistent discomfort, strong pain or bruising should be medically assessed.",
+    },
+    steps: [
+      {
+        de: "Im Vorgespräch klären wir, welche Bereiche sich fest oder verspannt anfühlen und was wir aussparen.",
+        en: "In the consultation we clarify which areas feel stiff or tense and what we leave out.",
+      },
+      {
+        de: "Du ziehst dich in Ruhe um und legst dich abgedeckt auf die Liege.",
+        en: "You change privately and lie down draped on the table.",
+      },
+      {
+        de: "Wir beginnen ruhig mit wenig Intensität, damit du das Gefühl kennenlernst.",
+        en: "We begin calmly at low intensity so you can get to know the sensation.",
+      },
+      {
+        de: "Das Handstück wird gezielt über Rücken, Schultern, Nacken und die gewünschten Bereiche geführt.",
+        en: "The handpiece is guided purposefully over back, shoulders, neck and the areas you chose.",
+      },
+      {
+        de: "Die Intensität passen wir während der Behandlung laufend an dein Empfinden an.",
+        en: "We adjust the intensity to how it feels for you throughout.",
+      },
+      {
+        de: "Zum Abschluss bekommst du Zeit, liegen zu bleiben und nachzuspüren.",
+        en: "At the end you are given time to lie still and let it settle.",
+      },
+    ],
+    questions: [
+      {
+        q: {
+          de: "Was kostet Bellabambi?",
+          en: "How much is Bellabambi?",
+        },
+        a: {
+          de: "45 Minuten kosten 60,00 €, 60 Minuten 70,00 €.",
+          en: "45 minutes cost €60.00, 60 minutes €70.00.",
+        },
+      },
+      {
+        q: {
+          de: "Tut Bellabambi weh?",
+          en: "Does Bellabambi hurt?",
+        },
+        a: {
+          de: "Die Behandlung wird oft als intensiv, aber angenehm beschrieben. Wir beginnen mit wenig Intensität und passen sie laufend an. Wenn etwas unangenehm ist, sag es sofort.",
+          en: "The treatment is often described as intense but pleasant. We start at low intensity and adjust it continuously. If anything feels uncomfortable, say so straight away.",
+        },
+      },
+      {
+        q: {
+          de: "Welche Körperbereiche können behandelt werden?",
+          en: "Which areas of the body can be treated?",
+        },
+        a: {
+          de: "Rücken und Schultern, Nacken, Faszien und Gewebe an Beinen und Füßen sowie das Gesicht. Welche Bereiche es in deinem Termin sind, entscheiden wir gemeinsam.",
+          en: "Back and shoulders, neck, fascia and tissue on legs and feet, and the face. Which areas your appointment covers we decide together.",
+        },
+      },
+      {
+        q: {
+          de: "Worin unterscheidet sich Bellabambi von der Schröpfmassage?",
+          en: "How does Bellabambi differ from the cupping massage?",
+        },
+        a: {
+          de: "Bei der Schröpfmassage arbeiten wir mit Schröpfgläsern und klassischen Massagegriffen. Bei Bellabambi wird ein Handstück des Geräts eingesetzt, mit dem sich einzelne Bereiche — auch Gesicht oder Füße — gezielt und fein dosiert behandeln lassen.",
+          en: "In the cupping massage we work with cupping glasses and classic massage techniques. Bellabambi uses the device's handpiece, which lets us treat individual areas — including face or feet — purposefully and with fine control.",
+        },
+      },
+      {
+        q: {
+          de: "Wie oft kann ich Bellabambi buchen?",
+          en: "How often can I book Bellabambi?",
+        },
+        a: {
+          de: "Das entscheidest du. Manche Gäste kommen einmalig, andere in regelmäßigen Abständen. Wir beraten dich beim Termin, was zu deinem Körpergefühl passt.",
+          en: "That is up to you. Some guests come once, others at regular intervals. We will advise you at your appointment on what suits how your body feels.",
+        },
+      },
+    ],
+    sequence: ["hands-light-study", "studio-room-atmosphere"],
+    sequenceCaptions: [
+      {
+        de: "Gezielte Arbeit an einzelnen Körperbereichen",
+        en: "Focused work on individual areas of the body",
+      },
+      {
+        de: "Ruhiger Raum, Zeit zum Loslassen",
+        en: "A calm room, time to let go",
       },
     ],
   },
@@ -135,8 +255,8 @@ export const BODY_COPY: TreatmentCopyMap = {
       en: "The sensation is unfamiliar: a drawing suction that travels with the glass, rather than pressure acting on the skin. Many guests find it pleasant and noticeably more intense than a stroking massage; some need a few minutes to get used to it. Over areas with less tissue it is more noticeable. Mild redness during and after the treatment is normal and usually fades within hours. With sensitive skin or stronger suction, temporary marks can appear — we tell you beforehand where that is likely.",
     },
     suited: {
-      de: "Die Schröpfmassage passt zu dir, wenn klassische Massagen für dich zur Routine geworden sind und du ein anderes, deutlicheres Gefühl suchst. Sie ist auch interessant, wenn du gern kräftiger massiert wirst: Der Sog erreicht das Gewebe auf eine Weise, die sich von Druck unterscheidet. Wenn du sehr empfindliche oder dünne Haut hast, zu blauen Flecken neigst oder eine ruhige, gleichmäßige Anwendung möchtest, ist die Spa-Massage oder die Kerzenmassage die bessere Wahl.",
-      en: "Cupping massage suits you if classic massage has become routine and you want a different, more pronounced sensation. It is also worth considering if you like firmer work: the suction reaches tissue in a way that differs from pressure. If your skin is very sensitive or thin, if you bruise easily, or if you want a calm and even treatment, spa massage or candle massage is the better choice.",
+      de: "Die Schröpfmassage passt zu dir, wenn klassische Massagen für dich zur Routine geworden sind und du ein anderes, deutlicheres Gefühl suchst. Sie ist auch interessant, wenn du gern kräftiger massiert wirst: Der Sog erreicht das Gewebe auf eine Weise, die sich von Druck unterscheidet. Wenn du sehr empfindliche oder dünne Haut hast, zu blauen Flecken neigst oder eine ruhige, gleichmäßige Anwendung möchtest, ist die Kerzenmassage die bessere Wahl.",
+      en: "Cupping massage suits you if classic massage has become routine and you want a different, more pronounced sensation. It is also worth considering if you like firmer work: the suction reaches tissue in a way that differs from pressure. If your skin is very sensitive or thin, if you bruise easily, or if you want a calm and even treatment, candle massage is the better choice.",
     },
     beforeBooking: {
       de: "Bitte kontaktiere uns vor der Buchung, wenn du blutverdünnende Medikamente nimmst, an einer Gerinnungsstörung leidest, zu blauen Flecken neigst, Krampfadern, eine Thrombose oder ein Thromboserisiko hast, schwanger bist, unter einer Hauterkrankung, einem Sonnenbrand oder offenen Stellen im geplanten Bereich leidest, an Osteoporose erkrankt bist oder eine Krebserkrankung in Behandlung hast. Auch bei sehr dünner oder stark reagierender Haut sprechen wir vorher über Alternativen.",
@@ -255,8 +375,8 @@ export const BODY_COPY: TreatmentCopyMap = {
       en: "The first moment when warm oil runs across the back is, for most guests, the reason they book this treatment. The temperature is comfortable and is tested on a small area beforehand. After that the pace stays slow throughout; there is no firm kneading and no change in rhythm. Many guests drift off. A nourishing film remains on the skin and feels soft — which makes candle massage a good choice when your skin is dry in winter.",
     },
     suited: {
-      de: "Wähle die Kerzenmassage, wenn Wärme für dich der wichtigste Teil einer Massage ist, wenn du eine ruhige Anwendung ohne kräftige Griffe möchtest oder wenn deine Haut Pflege braucht. Sie ist auch eine gute Wahl als Geschenk, weil sie leicht zu mögen und wenig fordernd ist. Wenn du dagegen konkret an Verspannungen im Nacken oder Rücken arbeiten möchtest, nimm die Spa-Massage mit klarem Fokus. Wenn du ein intensiveres Gefühl suchst, ist die Schröpfmassage die Alternative.",
-      en: "Choose candle massage if warmth is the part of a massage that matters most to you, if you want a calm treatment without firm strokes, or if your skin needs care. It also makes a good gift, being easy to enjoy and undemanding. If instead you want to work specifically on tension in neck or back, take the spa massage with a clear focus. If you are after a more intense sensation, cupping massage is the alternative.",
+      de: "Wähle die Kerzenmassage, wenn Wärme für dich der wichtigste Teil einer Massage ist, wenn du eine ruhige Anwendung ohne kräftige Griffe möchtest oder wenn deine Haut Pflege braucht. Sie ist auch eine gute Wahl als Geschenk, weil sie leicht zu mögen und wenig fordernd ist. Wenn du dagegen konkret an Verspannungen im Nacken oder Rücken arbeiten möchtest, nimm die Anti-Stress Gua Sha Massage. Wenn du ein intensiveres Gefühl suchst, ist die Schröpfmassage die Alternative.",
+      en: "Choose candle massage if warmth is the part of a massage that matters most to you, if you want a calm treatment without firm strokes, or if your skin needs care. It also makes a good gift, being easy to enjoy and undemanding. If instead you want to work specifically on tension in neck or back, take the anti-stress gua sha massage. If you are after a more intense sensation, cupping massage is the alternative.",
     },
     beforeBooking: {
       de: "Sag uns vorher, wenn du auf Duftstoffe, Kokos, Soja, Shea oder Nussöle reagierst — Massagekerzen enthalten häufig pflanzliche Butter und Duft. Kläre mit uns ab, wenn du eine Hauterkrankung, einen Sonnenbrand, offene Stellen, eine gestörte Wärme- oder Schmerzempfindung, Diabetes mit Nervenbeteiligung oder eine Neigung zu Kreislaufproblemen bei Wärme hast. Bei Schwangerschaft, akuten Beschwerden oder Operationen in den letzten Monaten gilt das Gleiche wie für alle unsere Massagen: vorher sprechen.",
@@ -309,12 +429,12 @@ export const BODY_COPY: TreatmentCopyMap = {
       },
       {
         q: {
-          de: "Wie unterscheidet sich die Kerzenmassage von der Spa-Massage?",
-          en: "How does candle massage differ from spa massage?",
+          de: "Wie unterscheidet sich die Kerzenmassage von der Anti-Stress Gua Sha Massage?",
+          en: "How does candle massage differ from the anti-stress gua sha massage?",
         },
         a: {
-          de: "Die Spa-Massage ist vielseitiger und lässt sich in Fokus und Druck stärker steuern. Die Kerzenmassage ist bewusst gleichmäßig und stellt die Wärme und die Pflege des Öls in den Mittelpunkt.",
-          en: "Spa massage is more versatile and can be steered more in focus and pressure. Candle massage is deliberately even and puts the warmth and the nourishing oil at the centre.",
+          de: "Die Anti-Stress Gua Sha Massage konzentriert sich auf Kopf, Nacken, Schultern und Rücken und arbeitet mit Thai-Bewegungen, Dehnungen und dem Gua-Sha-Stein. Die Kerzenmassage ist bewusst gleichmäßig und stellt die Wärme und die Pflege des Öls in den Mittelpunkt.",
+          en: "The anti-stress gua sha massage concentrates on head, neck, shoulders and back, working with Thai movements, stretches and the gua sha stone. Candle massage is deliberately even and puts the warmth and the nourishing oil at the centre.",
         },
       },
       {
@@ -333,8 +453,8 @@ export const BODY_COPY: TreatmentCopyMap = {
           en: "Can I have an unscented candle?",
         },
         a: {
-          de: "Frag uns vor dem Termin nach den aktuell verfügbaren Kerzen. Wenn du auf Duft reagierst, finden wir gemeinsam eine Lösung oder empfehlen dir die Spa-Massage mit einem neutralen Öl.",
-          en: "Ask us before your appointment about the candles currently available. If you react to fragrance, we will find a solution together or suggest a spa massage with a neutral oil.",
+          de: "Frag uns vor dem Termin nach den aktuell verfügbaren Kerzen. Wenn du auf Duft reagierst, finden wir gemeinsam eine Lösung oder empfehlen dir eine andere Massage mit neutralem Öl.",
+          en: "Ask us before your appointment about the candles currently available. If you react to fragrance, we will find a solution together or suggest another massage with a neutral oil.",
         },
       },
     ],
@@ -365,8 +485,8 @@ export const BODY_COPY: TreatmentCopyMap = {
       en: "Moist warmth feels more intense than dry warmth at the same temperature — which surprises many guests. The steam is therefore introduced in stages, and we check during the treatment that it stays comfortable. The massage itself often feels softer after the warmth, because the tissue yields. Afterwards, skin and muscles are usually warm; some guests feel pleasantly spent, a little like after a sauna. If you know you have circulatory issues in warmth, that matters — talk to us beforehand.",
     },
     suited: {
-      de: "Die Dampfmassage passt zu dir, wenn du Wärme liebst, gern in die Sauna gehst und eine Massage suchst, die mehr mit Temperatur arbeitet als eine klassische Anwendung. Sie ist besonders in der kalten Jahreshälfte beliebt. Wenn du Wärme schlecht verträgst, schnell Kreislaufprobleme bekommst oder schwanger bist, ist die Spa-Massage die sicherere Wahl. Wenn du Wärme möchtest, aber ohne Feuchtigkeit, nimm die Kerzenmassage.",
-      en: "Steam massage suits you if you love warmth, enjoy the sauna and want a massage that works more with temperature than a classic treatment does. It is especially popular in the colder half of the year. If you tolerate heat poorly, become light-headed easily or are pregnant, spa massage is the safer choice. If you want warmth without moisture, take the candle massage.",
+      de: "Die Dampfmassage passt zu dir, wenn du Wärme liebst, gern in die Sauna gehst und eine Massage suchst, die mehr mit Temperatur arbeitet als eine klassische Anwendung. Sie ist besonders in der kalten Jahreshälfte beliebt. Wenn du Wärme schlecht verträgst, schnell Kreislaufprobleme bekommst oder schwanger bist, sprich vorher mit uns — eine Massage ohne Dampf wie die Anti-Stress Gua Sha Massage ist dann meist die sicherere Wahl. Wenn du Wärme möchtest, aber ohne Feuchtigkeit, nimm die Kerzenmassage.",
+      en: "Steam massage suits you if you love warmth, enjoy the sauna and want a massage that works more with temperature than a classic treatment does. It is especially popular in the colder half of the year. If you tolerate heat poorly, become light-headed easily or are pregnant, talk to us first — a massage without steam, such as the anti-stress gua sha massage, is then usually the safer choice. If you want warmth without moisture, take the candle massage.",
     },
     beforeBooking: {
       de: "Wärme ist nicht für alle geeignet. Melde dich unbedingt vorher, wenn du schwanger bist, unter niedrigem oder schlecht eingestelltem Blutdruck, einer Herz-Kreislauf-Erkrankung, Krampfadern mit Beschwerden, einer Thrombose oder einem Thromboserisiko leidest, wenn du Diabetes mit veränderter Empfindung hast, an einer Hauterkrankung, Rosazea oder einem Sonnenbrand leidest, oder wenn du Medikamente nimmst, die die Wärmeregulierung beeinflussen. Frag uns außerdem vor der Buchung nach der aktuellen Verfügbarkeit.",
