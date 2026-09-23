@@ -2,14 +2,16 @@ import { useLang } from "../lib/i18n";
 import { CONTACT } from "../data/content";
 import { ArrowRightIcon } from "../components/ui/Icons";
 import { Link } from "react-router-dom";
+import { PatternField } from "../components/brand/PatternField";
 export function GiftCards() {
   const { t } = useLang();
   return (
     <section
       id="schenken"
-      className="gift-section section-shell"
+      className="gift-section section-shell has-supergraphic"
       aria-labelledby="gift-title"
     >
+      <PatternField quiet="start" className="gift-pattern" />
       <p className="eyebrow">
         {t({ de: "03 / Zeit verschenken", en: "03 / Give a little time" })}
       </p>

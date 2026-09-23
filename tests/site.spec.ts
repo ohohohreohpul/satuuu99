@@ -228,6 +228,26 @@ test("leaving the pinned homepage hero renders the next page without a reload", 
   expect(errors).toEqual([]);
 });
 
+test("brand supergraphics carry the symbol across pages as decoration", async ({
+  page,
+}) => {
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.goto("/");
+  await expect(page.locator(".brand-story-field .pattern-field")).toHaveCount(
+    1,
+  );
+  await expect(page.locator(".gift-section .pattern-field")).toHaveCount(1);
+  await expect(page.locator(".visit-journey .gesture")).toHaveCount(1);
+  for (const graphic of await page.locator(".gesture, .pattern-field").all())
+    await expect(graphic).toHaveAttribute("aria-hidden", "true");
+  // Without motion the gesture is shown at rest, fully open.
+  await expect(
+    page.locator(".visit-journey .gesture-blade-left"),
+  ).not.toHaveAttribute("transform", /.+/);
+  await page.goto("/behandlungen/bellabambi");
+  await expect(page.locator(".contact-section .gesture")).toHaveCount(1);
+});
+
 test("local authority pages are substantial, linked and machine readable", async ({
   page,
 }) => {

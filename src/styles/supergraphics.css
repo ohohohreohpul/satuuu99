@@ -1,0 +1,147 @@
+/*
+ * Brand supergraphics: the oversized gesture and the tonal pattern.
+ * Both stay tonal — a quiet step away from the surface they sit on — and
+ * never compete with words or photography.
+ */
+:root {
+  --gesture-dark-light: rgb(214 198 180 / 0.2);
+  --gesture-dark-shade: rgb(214 198 180 / 0.05);
+  --gesture-taupe-light: rgb(255 255 255 / 0.42);
+  --gesture-taupe-shade: rgb(255 255 255 / 0.12);
+  --gesture-paper-light: #e4dbcf;
+  --gesture-paper-shade: #eee8df;
+  --pattern-ink: #e6ded3;
+  /* One pattern mark renders at roughly 310px wide. */
+  --pattern-scale: 0.8;
+}
+
+/* Sections that host a supergraphic keep their content above it. */
+.has-supergraphic {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.has-supergraphic > :not(.gesture, .pattern-field) {
+  position: relative;
+  z-index: 1;
+}
+
+.gesture,
+.pattern-field {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+}
+.gesture svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.gesture--dark .gesture-light {
+  stop-color: var(--gesture-dark-light);
+}
+.gesture--dark .gesture-shade {
+  stop-color: var(--gesture-dark-shade);
+}
+.gesture--taupe .gesture-light {
+  stop-color: var(--gesture-taupe-light);
+}
+.gesture--taupe .gesture-shade {
+  stop-color: var(--gesture-taupe-shade);
+}
+.gesture--paper .gesture-light {
+  stop-color: var(--gesture-paper-light);
+}
+.gesture--paper .gesture-shade {
+  stop-color: var(--gesture-paper-shade);
+}
+
+.pattern-field {
+  inset: 0;
+  overflow: hidden;
+}
+.pattern-field svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* The individual translate property composes with GSAP's transform. */
+  translate: -50% -50%;
+  height: auto;
+  fill: var(--pattern-ink);
+}
+/* "Leave areas of quiet around words and images." */
+.pattern-field--quiet-center {
+  mask-image: radial-gradient(
+    ellipse 46% 58% at 50% 52%,
+    transparent 42%,
+    #000 96%
+  );
+}
+.pattern-field--quiet-start {
+  mask-image: linear-gradient(90deg, transparent 45%, #000 100%);
+}
+
+/* Placements --------------------------------------------------------- */
+
+/* Visit journey: the gesture rises behind the dark chapter, cut by the edge. */
+.gesture--journey {
+  top: clamp(40px, 5vw, 90px);
+  right: -22vw;
+  width: max(1100px, 88vw);
+}
+
+/* Closing invitation: one large gesture running off the bottom and right. */
+.gesture--invitation {
+  top: 9%;
+  right: 5vw;
+  width: max(720px, 58vw);
+}
+
+/*
+ * Gift cards: "Give the graphic its own space." The pattern is a panel of
+ * its own beside the words, never a layer behind them.
+ */
+.gift-section {
+  --gift-pattern-width: 30%;
+  --gift-pattern-band: clamp(150px, 30vw, 240px);
+}
+.pattern-field.gift-pattern {
+  inset: 0 0 0 auto;
+  width: var(--gift-pattern-width);
+  mask-image: linear-gradient(90deg, transparent, #000 45%);
+}
+@media (min-width: 1101px) {
+  .gift-section.has-supergraphic {
+    padding-right: calc(var(--gift-pattern-width) + var(--gutter));
+  }
+}
+@media (max-width: 1100px) {
+  .gift-section.has-supergraphic {
+    padding-bottom: calc(var(--gift-pattern-band) + 48px);
+  }
+  .pattern-field.gift-pattern {
+    inset: auto 0 0 0;
+    width: auto;
+    height: var(--gift-pattern-band);
+    mask-image: linear-gradient(180deg, transparent, #000 55%);
+  }
+}
+
+@media (max-width: 760px) {
+  :root {
+    --pattern-scale: 0.55;
+  }
+  .gesture--journey {
+    top: 30px;
+    right: -60vw;
+    width: 190vw;
+  }
+  .gesture--invitation {
+    top: 32%;
+    right: -70vw;
+    width: 170vw;
+  }
+}

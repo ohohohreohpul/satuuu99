@@ -5,6 +5,7 @@ import { CONTACT } from "../data/content";
 import { MEDIA } from "../data/media";
 import { Photo } from "../components/media/Photo";
 import { useLang } from "../lib/i18n";
+import { GestureGraphic } from "../components/brand/GestureGraphic";
 
 const steps = [
   {
@@ -66,7 +67,11 @@ export function VisitJourney() {
   const [active, setActive] = useState(0);
   const step = steps[active];
   return (
-    <section className="visit-journey" aria-labelledby="journey-title">
+    <section
+      className="visit-journey has-supergraphic"
+      aria-labelledby="journey-title"
+    >
+      <GestureGraphic tone="dark" className="gesture--journey" />
       <div className="journey-heading section-shell">
         <p className="eyebrow">
           {t({ de: "So fühlt sich ein Besuch an", en: "How a visit feels" })}

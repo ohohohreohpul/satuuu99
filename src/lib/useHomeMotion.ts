@@ -30,7 +30,7 @@ export function useHomeMotion(language: string) {
           });
         });
       gsap.fromTo(
-        ".brand-story",
+        ".brand-story-field",
         {
           y: 110,
           clipPath: "inset(10% 2% 0 2% round 50% 50% 0 0)",
@@ -40,7 +40,7 @@ export function useHomeMotion(language: string) {
           clipPath: "inset(0% 0% 0% 0% round 0% 0% 0 0)",
           ease: "none",
           scrollTrigger: {
-            trigger: ".brand-story",
+            trigger: ".brand-story-field",
             start: "top bottom",
             end: "top 38%",
             scrub: 0.65,

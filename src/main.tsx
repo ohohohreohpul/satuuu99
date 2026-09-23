@@ -7,6 +7,7 @@ import "./styles/treatment-editorial.css";
 import "./styles/overview.css";
 import "./styles/pages.css";
 import "./styles/home-sections.css";
+import "./styles/supergraphics.css";
 import App from "./App";
 import { LanguageProvider } from "./lib/i18n";
 

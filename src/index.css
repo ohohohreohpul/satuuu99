@@ -3463,20 +3463,6 @@ h4 {
   background: var(--paper);
   padding-block: 27px;
 }
-.brand-story {
-  position: relative;
-  overflow: hidden;
-}
-.brand-story:before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("/brand/pattern.png");
-  background-size: 250px;
-  background-repeat: repeat;
-  opacity: 0.035;
-  z-index: -1;
-}
 @media (min-width: 1600px) {
   .hero-copy {
     padding-left: max(80px, calc((100vw - 1500px) / 2));

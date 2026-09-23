@@ -1,14 +1,16 @@
 import { useLang } from "../lib/i18n";
 import { CONTACT } from "../data/content";
 import { ArrowRightIcon } from "../components/ui/Icons";
+import { GestureGraphic } from "../components/brand/GestureGraphic";
 export function FinalCTA() {
   const { t } = useLang();
   return (
     <section
       id="kontakt"
-      className="contact-section section-shell"
+      className="contact-section section-shell has-supergraphic"
       aria-labelledby="contact-title"
     >
+      <GestureGraphic tone="taupe" className="gesture--invitation" />
       <p className="eyebrow">
         {t({ de: "Dein nächster guter Moment", en: "Your next good moment" })}
       </p>
