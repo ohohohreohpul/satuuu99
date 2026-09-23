@@ -209,6 +209,25 @@ test("the hero film follows the visitor's scroll", async ({ page }) => {
   await expect(page.locator(".brand-story")).toBeInViewport();
 });
 
+test("leaving the pinned homepage hero renders the next page without a reload", async ({
+  page,
+}) => {
+  const errors: string[] = [];
+  page.on("pageerror", (error) => errors.push(error.message));
+  await page.goto("/");
+  await page.waitForFunction(() => {
+    const video = document.querySelector<HTMLVideoElement>(".hero-scrub-film");
+    return video && Number.isFinite(video.duration) && video.duration > 0;
+  });
+  await page.evaluate(() => window.scrollTo(0, window.innerHeight * 0.55));
+  await expect(page.locator(".hero")).toHaveCSS("position", "fixed");
+  await page.locator('a[href="/behandlungen?focus=head"]').first().click();
+  await expect(page).toHaveURL(/\/behandlungen\?focus=head$/);
+  await expect(page.locator("h1")).toBeVisible();
+  await expect(page.locator(".pin-spacer")).toHaveCount(0);
+  expect(errors).toEqual([]);
+});
+
 test("local authority pages are substantial, linked and machine readable", async ({
   page,
 }) => {
