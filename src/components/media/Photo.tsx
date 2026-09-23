@@ -21,7 +21,9 @@ function srcSet(id: PhotoId, widths: number[], extension: string) {
 }
 
 function fallbackWidth(widths: number[]) {
-  return widths.includes(FALLBACK_WIDTH) ? FALLBACK_WIDTH : widths.at(-1)!;
+  return widths.includes(FALLBACK_WIDTH)
+    ? FALLBACK_WIDTH
+    : widths[widths.length - 1];
 }
 
 export interface PhotoProps {

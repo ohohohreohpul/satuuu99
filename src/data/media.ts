@@ -67,7 +67,9 @@ export const MEDIA = {
 export function photoUrl(id: PhotoId, width?: number) {
   const asset = PHOTOS[id];
   const chosen =
-    width && asset.widths.includes(width) ? width : asset.widths.at(-1)!;
+    width && asset.widths.includes(width)
+      ? width
+      : asset.widths[asset.widths.length - 1];
   return `${PHOTO_DIR}/${id}-${chosen}.jpg`;
 }
 
