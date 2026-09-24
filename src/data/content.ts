@@ -14,7 +14,7 @@ export const CONTACT = {
     },
     saturday: { de: "Samstag · 10:00–18:00 Uhr", en: "Saturday · 10am–6pm" },
   },
-  booking: "https://satuuu99.de/kalender/",
+  booking: "https://booking.satuuu99.de/",
   prices: "https://satuuu99.de/preisliste-ab-01-03-2026/",
   imprint: "https://satuuu99.de/impressum/",
   privacy: "https://satuuu99.de/datenschutz/",

@@ -248,6 +248,17 @@ test("brand supergraphics carry the symbol across pages as decoration", async ({
   await expect(page.locator(".contact-section .gesture")).toHaveCount(1);
 });
 
+test("every booking link opens the booking site", async ({ page }) => {
+  for (const path of ["/", "/behandlungen/bellabambi", "/kontakt"]) {
+    await page.goto(path);
+    const hrefs = await page
+      .locator('a[href*="booking"], a[href*="kalender"]')
+      .evaluateAll((links) => links.map((link) => link.getAttribute("href")));
+    expect(hrefs.length, `${path} has booking links`).toBeGreaterThan(0);
+    for (const href of hrefs) expect(href).toBe("https://booking.satuuu99.de/");
+  }
+});
+
 test("local authority pages are substantial, linked and machine readable", async ({
   page,
 }) => {
