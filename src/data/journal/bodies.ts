@@ -318,8 +318,8 @@ export const JOURNAL_BODIES: Record<string, JournalSection[]> = {
         en: "Planning the day around it",
       },
       text: {
-        de: "Der häufigste Rückblick, den wir hören, ist nicht „hätte ich anders gebucht“, sondern „hätte ich mir danach mehr Zeit genommen“. Dein Haar ist nach der Anwendung feucht, und ein aufwendiges Styling gehört nicht zum Ritual. Lege den Termin also möglichst dorthin, wo danach nichts Wichtiges kommt: später Nachmittag, Abend bis 20 Uhr oder Samstag. Trink hinterher etwas Wasser, steh langsam auf und lass das Haar an der Luft trocknen, wenn du magst.",
-        en: "The most common thing we hear afterwards is not 'I should have booked differently' but 'I should have given myself more time afterwards'. Your hair is damp after the treatment, and elaborate styling is not part of the ritual. So put the appointment where nothing important follows it: late afternoon, an evening slot up to 8pm, or a Saturday. Drink some water afterwards, get up slowly and let your hair air-dry if you like.",
+        de: "Der häufigste Rückblick, den wir hören, ist nicht „hätte ich anders gebucht“, sondern „hätte ich mir danach mehr Zeit genommen“. Dein Haar ist nach der Anwendung feucht, und ein aufwendiges Styling gehört nicht zum Ritual. Lege den Termin also möglichst dorthin, wo danach nichts Wichtiges kommt: später Nachmittag, Abend bis 19 Uhr oder Samstag. Trink hinterher etwas Wasser, steh langsam auf und lass das Haar an der Luft trocknen, wenn du magst.",
+        en: "The most common thing we hear afterwards is not 'I should have booked differently' but 'I should have given myself more time afterwards'. Your hair is damp after the treatment, and elaborate styling is not part of the ritual. So put the appointment where nothing important follows it: late afternoon, an evening slot up to 7pm, or a Saturday. Drink some water afterwards, get up slowly and let your hair air-dry if you like.",
       },
     },
   ],
@@ -454,8 +454,8 @@ export const JOURNAL_BODIES: Record<string, JournalSection[]> = {
     {
       title: { de: "Die beste Uhrzeit", en: "The best time of day" },
       text: {
-        de: "Abendtermine bis 20 Uhr und Samstage bis 18 Uhr sind bei uns am beliebtesten — und zwar zu Recht, weil danach selten noch etwas ansteht. Wenn du aus Hamburg kommst, hat ein Termin außerhalb der Rushhour einen zweiten Vorteil: Du fährst nicht durch eine Stunde Stau zurück. Beliebte Zeiten sind früher ausgebucht als der Rest der Woche; wenn du einen bestimmten Abend brauchst, schau ein bis zwei Wochen im Voraus in den Kalender.",
-        en: "Evening slots up to 8pm and Saturdays up to 6pm are the most popular with us — rightly so, because little tends to follow them. If you come from Hamburg, a slot outside rush hour has a second advantage: you do not drive back through an hour of traffic. Popular times fill earlier than the rest of the week; if you need a particular evening, look in the calendar one or two weeks ahead.",
+        de: "Abendtermine bis 19 Uhr und Samstage bis 18 Uhr sind bei uns am beliebtesten — und zwar zu Recht, weil danach selten noch etwas ansteht. Wenn du aus Hamburg kommst, hat ein Termin außerhalb der Rushhour einen zweiten Vorteil: Du fährst nicht durch eine Stunde Stau zurück. Beliebte Zeiten sind früher ausgebucht als der Rest der Woche; wenn du einen bestimmten Abend brauchst, schau ein bis zwei Wochen im Voraus in den Kalender.",
+        en: "Evening slots up to 7pm and Saturdays up to 6pm are the most popular with us — rightly so, because little tends to follow them. If you come from Hamburg, a slot outside rush hour has a second advantage: you do not drive back through an hour of traffic. Popular times fill earlier than the rest of the week; if you need a particular evening, look in the calendar one or two weeks ahead.",
       },
     },
     {

@@ -170,8 +170,8 @@ export const LOCAL_PAGES: Page[] = [
             en: "There is no recommended frequency, and we do not sell courses of treatment. Some guests come once a year when they feel like it. Others book every four to eight weeks because having the hour in the calendar is what makes them take it at all. Both are fine. What we can tell you honestly: a head spa does not permanently change your hair structure, and more often is not automatically better.",
           },
           {
-            de: "Für die Uhrzeit gilt eine praktische Regel: Lege den Termin dorthin, wo danach nichts Wichtiges kommt. Abendtermine bis 20 Uhr und Samstage bis 18 Uhr sind bei uns am beliebtesten, genau deshalb. Wenn du aus Hamburg kommst, ist ein Termin außerhalb der Rushhour zusätzlich angenehmer — du fährst dann nicht mit feuchtem Haar durch eine Stunde Stau zurück.",
-            en: "For timing there is one practical rule: put the appointment where nothing important follows it. Evening slots up to 8pm and Saturdays up to 6pm are the most popular with us, for exactly that reason. If you are coming from Hamburg, a slot outside rush hour is more comfortable still — you then do not drive back through an hour of traffic with damp hair.",
+            de: "Für die Uhrzeit gilt eine praktische Regel: Lege den Termin dorthin, wo danach nichts Wichtiges kommt. Abendtermine bis 19 Uhr und Samstage bis 18 Uhr sind bei uns am beliebtesten, genau deshalb. Wenn du aus Hamburg kommst, ist ein Termin außerhalb der Rushhour zusätzlich angenehmer — du fährst dann nicht mit feuchtem Haar durch eine Stunde Stau zurück.",
+            en: "For timing there is one practical rule: put the appointment where nothing important follows it. Evening slots up to 7pm and Saturdays up to 6pm are the most popular with us, for exactly that reason. If you are coming from Hamburg, a slot outside rush hour is more comfortable still — you then do not drive back through an hour of traffic with damp hair.",
           },
           {
             de: "Beliebte Zeiten sind früher ausgebucht als der Rest der Woche. Wenn du einen bestimmten Abend brauchst, schau ein bis zwei Wochen im Voraus in den Kalender. Wenn du flexibel bist, findet sich fast immer kurzfristig etwas — frag uns einfach an, auch wenn der Kalender gerade wenig zeigt.",
@@ -319,8 +319,8 @@ export const LOCAL_PAGES: Page[] = [
         },
         body: [
           {
-            de: "Das Studio liegt in der Manhagener Allee 45 in Ahrensburg. Gäste erreichen uns aus dem Stadtgebiet, aus Stormarn und aus dem Nordosten Hamburgs. Parkmöglichkeiten befinden sich direkt vor dem Eingang. Geöffnet ist montags bis freitags von 10 bis 20 Uhr und samstags von 10 bis 18 Uhr.",
-            en: "The studio is at Manhagener Allee 45 in Ahrensburg, welcoming guests from the town, Stormarn and northeast Hamburg. Parking is available directly outside. Opening hours are Monday to Friday, 10am to 8pm, and Saturday, 10am to 6pm.",
+            de: "Das Studio liegt in der Manhagener Allee 45 in Ahrensburg. Gäste erreichen uns aus dem Stadtgebiet, aus Stormarn und aus dem Nordosten Hamburgs. Parkmöglichkeiten befinden sich direkt vor dem Eingang. Geöffnet ist mittwochs bis freitags von 10 bis 19 Uhr und samstags von 10 bis 18 Uhr.",
+            en: "The studio is at Manhagener Allee 45 in Ahrensburg, welcoming guests from the town, Stormarn and northeast Hamburg. Parking is available directly outside. Opening hours are Wednesday to Friday, 10am to 7pm, and Saturday, 10am to 6pm.",
           },
           {
             de: "Du kannst deinen Termin online auswählen. Kartenzahlung, PayPal und Barzahlung werden laut aktueller Studioinformation akzeptiert.",

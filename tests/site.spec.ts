@@ -259,6 +259,38 @@ test("every booking link opens the booking site", async ({ page }) => {
   }
 });
 
+test("contact details offer WhatsApp, Instagram and the current hours", async ({
+  page,
+}) => {
+  await page.goto("/kontakt");
+  const whatsapp = 'a[href="https://wa.me/4941022040410"]';
+  const instagram = 'a[href="https://www.instagram.com/satuuu99_spa/"]';
+  await expect(page.locator(`.contact-options ${whatsapp}`)).toBeVisible();
+  await expect(page.locator(`.contact-options ${instagram}`)).toBeVisible();
+  await expect(page.locator(`.site-footer ${whatsapp}`)).toHaveCount(1);
+  await expect(page.locator(`.site-footer ${instagram}`)).toHaveCount(1);
+  const business = await page
+    .locator('script[type="application/ld+json"]')
+    .evaluateAll((scripts) =>
+      scripts
+        .map((script) => JSON.parse(script.textContent || "{}"))
+        .find((graph) => graph["@type"] === "HealthAndBeautyBusiness"),
+    );
+  expect(business.openingHoursSpecification).toEqual([
+    expect.objectContaining({
+      dayOfWeek: ["Wednesday", "Thursday", "Friday"],
+      opens: "10:00",
+      closes: "19:00",
+    }),
+    expect.objectContaining({
+      dayOfWeek: "Saturday",
+      opens: "10:00",
+      closes: "18:00",
+    }),
+  ]);
+  expect(business.sameAs).toContain("https://www.instagram.com/satuuu99_spa/");
+});
+
 test("local authority pages are substantial, linked and machine readable", async ({
   page,
 }) => {

@@ -71,8 +71,8 @@ export function ContactPage() {
         en: "When is the studio open?",
       },
       a: {
-        de: "Montags bis freitags von 10:00 bis 20:00 Uhr, samstags von 10:00 bis 18:00 Uhr. Maßgeblich für deinen Besuch ist immer der konkret gebuchte Termin im Online-Kalender.",
-        en: "Monday to Friday from 10am to 8pm and Saturday from 10am to 6pm. What matters for your visit is always the specific appointment booked in the online calendar.",
+        de: "Mittwochs bis freitags von 10:00 bis 19:00 Uhr, samstags von 10:00 bis 18:00 Uhr. Maßgeblich für deinen Besuch ist immer der konkret gebuchte Termin im Online-Kalender.",
+        en: "Wednesday to Friday from 10am to 7pm and Saturday from 10am to 6pm. What matters for your visit is always the specific appointment booked in the online calendar.",
       },
     },
     {
@@ -91,8 +91,8 @@ export function ContactPage() {
         en: "How can I call satuuu99?",
       },
       a: {
-        de: `Du erreichst uns unter ${CONTACT.phone}. Wenn wir gerade in einer Behandlung sind, geht niemand ans Telefon — schreib in diesem Fall eine E-Mail an ${CONTACT.email}, wir antworten zwischen den Terminen.`,
-        en: `Call us on ${CONTACT.phone}. If we are with a guest nobody will pick up — in that case send an email to ${CONTACT.email} and we will reply between appointments.`,
+        de: `Du erreichst uns unter ${CONTACT.phone}, telefonisch oder per WhatsApp. Wenn wir gerade in einer Behandlung sind, geht niemand ans Telefon — schreib uns dann per WhatsApp oder eine E-Mail an ${CONTACT.email}, wir antworten zwischen den Terminen.`,
+        en: `Call or WhatsApp us on ${CONTACT.phone}. If we are with a guest nobody will pick up — in that case send a WhatsApp message or an email to ${CONTACT.email} and we will reply between appointments.`,
       },
     },
     {
@@ -101,8 +101,8 @@ export function ContactPage() {
         en: "Which treatment is right for me?",
       },
       a: {
-        de: "Schreib uns kurz, wie es dir geht und was du dir wünschst — nicht, welche Anwendung du meinst. Daraus empfehlen wir dir etwas Passendes, ohne Buchungsdruck. Eine Übersicht aller zehn Anwendungen mit Fokus, Berührung und Kleidung findest du auf der Behandlungsseite.",
-        en: "Write to us about how you feel and what you are looking for — not which treatment you have in mind. We will suggest something suitable, with no pressure to book. An overview of all ten treatments with focus, touch and clothing is on the treatments page.",
+        de: "Schreib uns kurz, wie es dir geht und was du dir wünschst — nicht, welche Anwendung du meinst. Daraus empfehlen wir dir etwas Passendes, ohne Buchungsdruck. Eine Übersicht aller elf Anwendungen mit Fokus, Berührung und Kleidung findest du auf der Behandlungsseite.",
+        en: "Write to us about how you feel and what you are looking for — not which treatment you have in mind. We will suggest something suitable, with no pressure to book. An overview of all eleven treatments with focus, touch and clothing is on the treatments page.",
       },
     },
     {
@@ -189,6 +189,22 @@ export function ContactPage() {
               <h2>{CONTACT.phone}</h2>
             </div>
             <ArrowRightIcon />
+          </a>
+          <a href={CONTACT.whatsappHref} target="_blank" rel="noreferrer">
+            <span>05</span>
+            <div>
+              <small>WhatsApp</small>
+              <h2>{CONTACT.phone}</h2>
+            </div>
+            <ArrowUpRightIcon />
+          </a>
+          <a href={CONTACT.instagramHref} target="_blank" rel="noreferrer">
+            <span>06</span>
+            <div>
+              <small>Instagram</small>
+              <h2>{CONTACT.instagram}</h2>
+            </div>
+            <ArrowUpRightIcon />
           </a>
         </div>
       </section>

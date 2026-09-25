@@ -37,8 +37,8 @@ const HAMBURG_FAQS = [
       en: "Can I fit a head spa into a lunch break?",
     },
     a: {
-      de: "Wenn du in Hamburg arbeitest, eher nicht: Hin- und Rückweg zusammen brauchen schon rund eine Stunde, und dein Haar ist danach feucht. Sinnvoller ist ein Termin am späten Nachmittag, am Abend bis 20 Uhr oder am Samstag — dann fällt auch die Rushhour weg.",
-      en: "If you work in Hamburg, probably not: the round trip alone takes about an hour, and your hair is damp afterwards. A late afternoon, an evening slot up to 8pm, or a Saturday makes more sense — and avoids rush hour too.",
+      de: "Wenn du in Hamburg arbeitest, eher nicht: Hin- und Rückweg zusammen brauchen schon rund eine Stunde, und dein Haar ist danach feucht. Sinnvoller ist ein Termin am späten Nachmittag, am Abend bis 19 Uhr oder am Samstag — dann fällt auch die Rushhour weg.",
+      en: "If you work in Hamburg, probably not: the round trip alone takes about an hour, and your hair is damp afterwards. A late afternoon, an evening slot up to 7pm, or a Saturday makes more sense — and avoids rush hour too.",
     },
   },
   {
@@ -289,8 +289,8 @@ export function HeadSpaHamburgPage() {
             </p>
             <p>
               {t({
-                de: "Was es bei uns nicht gibt: Sauna, Pool, Dampfkabine, Ruhebereich mit Liegen oder eine Spa-Landschaft. Wenn du eine Anlage suchst, in der du einen halben Tag verbringst, sind die großen Hamburger Häuser die bessere Adresse. Wenn du einen ruhigen, persönlichen Termin möchtest, sind wir es.",
-                en: "What we do not have: a sauna, pool, steam cabin, relaxation lounge or spa landscape. If you are looking for a facility to spend half a day in, the larger Hamburg venues are the better address. If you want a quiet, personal appointment, we are.",
+                de: "Wir haben einen einzigen Behandlungsraum und keinen Ruhebereich mit Liegen. Wenn du eine Anlage suchst, in der du einen halben Tag verbringst, sind die großen Hamburger Häuser die bessere Adresse. Wenn du einen ruhigen, persönlichen Termin möchtest, sind wir es.",
+                en: "We have a single treatment room and no relaxation lounge. If you are looking for a facility to spend half a day in, the larger Hamburg venues are the better address. If you want a quiet, personal appointment, we are.",
               })}
             </p>
           </div>
@@ -306,8 +306,8 @@ export function HeadSpaHamburgPage() {
             </h2>
             <p>
               {t({
-                de: "Weil dein Haar nass wird, ist ein Termin ohne unmittelbar folgende Verpflichtung angenehmer. Für Gäste aus Hamburg heißt das in der Praxis: später Nachmittag, Abend bis 20 Uhr oder Samstag bis 18 Uhr. Dann fällt die Rushhour auf der A1 weg, und du kannst nach der Behandlung noch zwanzig Minuten sitzen bleiben, statt sofort loszufahren.",
-                en: "Because your hair gets wet, an appointment with nothing immediately afterwards is more comfortable. For guests from Hamburg that usually means a late afternoon, an evening slot up to 8pm, or a Saturday up to 6pm. That avoids rush hour on the A1, and you can sit for twenty minutes afterwards rather than setting off straight away.",
+                de: "Weil dein Haar nass wird, ist ein Termin ohne unmittelbar folgende Verpflichtung angenehmer. Für Gäste aus Hamburg heißt das in der Praxis: später Nachmittag, Abend bis 19 Uhr oder Samstag bis 18 Uhr. Dann fällt die Rushhour auf der A1 weg, und du kannst nach der Behandlung noch zwanzig Minuten sitzen bleiben, statt sofort loszufahren.",
+                en: "Because your hair gets wet, an appointment with nothing immediately afterwards is more comfortable. For guests from Hamburg that usually means a late afternoon, an evening slot up to 7pm, or a Saturday up to 6pm. That avoids rush hour on the A1, and you can sit for twenty minutes afterwards rather than setting off straight away.",
               })}
             </p>
             <p>

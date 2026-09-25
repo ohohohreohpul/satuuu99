@@ -77,8 +77,8 @@ export function LocalOrientation() {
         </dl>
         <p className="local-orientation-note">
           {t({
-            de: "Was es bei uns nicht gibt: Sauna, Pool, Dampfkabine oder eine Spa-Landschaft. satuuu99 hat einen Behandlungsraum, und genau das ist der Punkt — du teilst ihn mit niemandem. Wir sind außerdem keine medizinische Einrichtung: Alle zehn Anwendungen sind Wellness- und Pflegerituale und ersetzen weder Physiotherapie noch eine dermatologische Behandlung oder podologische Fußpflege.",
-            en: "What we do not have: a sauna, pool, steam cabin or spa landscape. satuuu99 has one treatment room, and that is exactly the point — you share it with nobody. We are also not a medical facility: all ten treatments are wellness and care rituals, and none replaces physiotherapy, dermatological care or podiatry.",
+            de: "satuuu99 hat einen Behandlungsraum, und genau das ist der Punkt — du teilst ihn mit niemandem. Wir sind außerdem keine medizinische Einrichtung: Alle elf Anwendungen sind Wellness- und Pflegerituale und ersetzen weder Physiotherapie noch eine dermatologische Behandlung oder podologische Fußpflege.",
+            en: "satuuu99 has one treatment room, and that is exactly the point — you share it with nobody. We are also not a medical facility: all eleven treatments are wellness and care rituals, and none replaces physiotherapy, dermatological care or podiatry.",
           })}
         </p>
         <div className="local-orientation-links">

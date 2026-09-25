@@ -1,6 +1,6 @@
 # satuuu99
 
-> satuuu99 is a small, private wellness studio at Manhagener Allee 45, 22926 Ahrensburg, Germany, roughly 25 km northeast of central Hamburg. One treatment room, four practitioners, ten treatments. All treatments are wellness and care rituals, not medical treatments.
+> satuuu99 is a small, private wellness studio at Manhagener Allee 45, 22926 Ahrensburg, Germany, roughly 25 km northeast of central Hamburg. One treatment room, four practitioners, eleven treatments. All treatments are wellness and care rituals, not medical treatments.
 
 ## Treatments
 
@@ -44,8 +44,10 @@ Body
 - Coordinates: 53.66942, 10.24376
 - Telephone: +49 4102 20 40 410
 - Email: info@satuuu99.de
-- Opening hours: Monday to Friday 10:00–20:00; Saturday 10:00–18:00
+- Opening hours: Wednesday to Friday 10:00–19:00; Saturday 10:00–18:00; closed Sunday to Tuesday
 - Booking: online calendar at https://booking.satuuu99.de/
+- WhatsApp: +49 4102 20 40 410 (https://wa.me/4941022040410)
+- Instagram: @satuuu99_spa (https://www.instagram.com/satuuu99_spa/)
 - Official price list: https://satuuu99.de/preisliste-ab-01-03-2026/
 - Payment (per current studio information): card, PayPal or cash, after the treatment
 - Parking directly outside the entrance (per current studio information)
@@ -59,7 +61,6 @@ Body
 - Is satuuu99 in Hamburg? No. The studio is in Ahrensburg, roughly 25 km northeast of central Hamburg, about 25–35 minutes by car via the A1.
 - Do I have to undress? Only for the body massages, and underwear stays on; you lie draped in linen. Head spa needs no undressing; facials loosen the top; foot rituals need shoes and socks off.
 - Which facial should I choose? Aqua Facial for cleansing, Sleep & Glow for rest, gua sha for focused touch across jaw and throat.
-- Is there a sauna, pool or steam room? No. The studio has one treatment room and no spa facilities.
 
 ## Boundaries
 

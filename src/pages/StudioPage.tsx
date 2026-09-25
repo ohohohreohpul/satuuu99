@@ -18,8 +18,8 @@ const STUDIO_FAQS = [
       en: "How big is the satuuu99 studio?",
     },
     a: {
-      de: "satuuu99 ist ein kleines, privates Studio in der Manhagener Allee 45 in Ahrensburg — kein Day Spa und keine Wellnessanlage. Es gibt keinen offenen Wartebereich, keine Sauna, keinen Pool und keine Dampfkabine. Während deines Termins bist du in der Regel der einzige Gast im Raum.",
-      en: "satuuu99 is a small, private studio at Manhagener Allee 45 in Ahrensburg — not a day spa or a wellness complex. There is no open waiting area, no sauna, no pool and no steam cabin. During your appointment you are usually the only guest in the room.",
+      de: "satuuu99 ist ein kleines, privates Studio in der Manhagener Allee 45 in Ahrensburg — kein Day Spa und keine Wellnessanlage, sondern ein einziger, ruhiger Behandlungsraum ohne offenen Wartebereich. Während deines Termins bist du in der Regel der einzige Gast im Raum.",
+      en: "satuuu99 is a small, private studio at Manhagener Allee 45 in Ahrensburg — not a day spa or a wellness complex, but a single, quiet treatment room with no open waiting area. During your appointment you are usually the only guest in the room.",
     },
   },
   {
@@ -144,8 +144,8 @@ export function StudioPage() {
           </h2>
           <p className="answer-lead">
             {t({
-              de: "satuuu99 ist ein kleines, privates Wellnessstudio in Ahrensburg bei Hamburg mit einem Behandlungsraum und einem Team von vier Behandlerinnen. Angeboten werden zehn Anwendungen für Kopf, Gesicht, Füße und Körper. Jeder Termin beginnt mit einem Gespräch, und Druck, Tempo und Wärme stimmen wir während der Behandlung mit dir ab.",
-              en: "satuuu99 is a small, private wellness studio in Ahrensburg near Hamburg with one treatment room and a team of four practitioners. Ten treatments are offered for head, face, feet and body. Every appointment begins with a conversation, and pressure, pace and warmth are agreed with you as we go.",
+              de: "satuuu99 ist ein kleines, privates Wellnessstudio in Ahrensburg bei Hamburg mit einem Behandlungsraum und einem Team von vier Behandlerinnen. Angeboten werden elf Anwendungen für Kopf, Gesicht, Füße und Körper. Jeder Termin beginnt mit einem Gespräch, und Druck, Tempo und Wärme stimmen wir während der Behandlung mit dir ab.",
+              en: "satuuu99 is a small, private wellness studio in Ahrensburg near Hamburg with one treatment room and a team of four practitioners. Eleven treatments are offered for head, face, feet and body. Every appointment begins with a conversation, and pressure, pace and warmth are agreed with you as we go.",
             })}
           </p>
           <p>
@@ -282,8 +282,8 @@ export function StudioPage() {
             </p>
             <p>
               {t({
-                de: "Montags bis freitags ist das Studio von 10:00 bis 20:00 Uhr geöffnet, samstags von 10:00 bis 18:00 Uhr. Die im Online-Kalender angezeigten Zeiten sind für deine Buchung maßgeblich.",
-                en: "The studio is open Monday to Friday from 10am to 8pm and Saturday from 10am to 6pm. The times shown in the online calendar determine current availability.",
+                de: "Mittwochs bis freitags ist das Studio von 10:00 bis 19:00 Uhr geöffnet, samstags von 10:00 bis 18:00 Uhr. Die im Online-Kalender angezeigten Zeiten sind für deine Buchung maßgeblich.",
+                en: "The studio is open Wednesday to Friday from 10am to 7pm and Saturday from 10am to 6pm. The times shown in the online calendar determine current availability.",
               })}
             </p>
           </div>
@@ -299,8 +299,8 @@ export function StudioPage() {
             </h2>
             <p>
               {t({
-                de: "Keine Sauna, keinen Pool, keine Dampfkabine, keine Spa-Landschaft und keinen Ruhebereich mit Liegen. Wir haben einen Behandlungsraum. Wer eine Hotel- oder Resort-Anlage erwartet, wird bei uns enttäuscht — und das sagen wir lieber vorher als hinterher.",
-                en: "No sauna, no pool, no steam cabin, no spa landscape and no relaxation lounge with loungers. We have one treatment room. If you are expecting a hotel or resort facility you will be disappointed — and we would rather say so in advance than afterwards.",
+                de: "Wir haben einen Behandlungsraum und keinen Ruhebereich mit Liegen. Wer eine Hotel- oder Resort-Anlage erwartet, wird bei uns enttäuscht — und das sagen wir lieber vorher als hinterher.",
+                en: "We have one treatment room and no relaxation lounge with loungers. If you are expecting a hotel or resort facility you will be disappointed — and we would rather say so in advance than afterwards.",
               })}
             </p>
             <p>

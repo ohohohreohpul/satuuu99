@@ -62,6 +62,12 @@ export function Footer() {
           <a href={CONTACT.booking}>
             {t({ de: "Termin buchen", en: "Book a visit" })}
           </a>
+          <a href={CONTACT.whatsappHref} target="_blank" rel="noreferrer">
+            WhatsApp
+          </a>
+          <a href={CONTACT.instagramHref} target="_blank" rel="noreferrer">
+            Instagram {CONTACT.instagram}
+          </a>
           <a href={CONTACT.maps} target="_blank" rel="noreferrer">
             {CONTACT.addressLines[0]}
             <br />

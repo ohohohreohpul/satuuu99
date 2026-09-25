@@ -7,10 +7,14 @@ export const CONTACT = {
   email: "info@satuuu99.de",
   phone: "+49 4102 20 40 410",
   phoneHref: "tel:+4941022040410",
+  // WhatsApp uses the studio phone number, per the studio's own contact card.
+  whatsappHref: "https://wa.me/4941022040410",
+  instagram: "@satuuu99_spa",
+  instagramHref: "https://www.instagram.com/satuuu99_spa/",
   hours: {
     weekdays: {
-      de: "Montag–Freitag · 10:00–20:00 Uhr",
-      en: "Monday–Friday · 10am–8pm",
+      de: "Mittwoch–Freitag · 10:00–19:00 Uhr",
+      en: "Wednesday–Friday · 10am–7pm",
     },
     saturday: { de: "Samstag · 10:00–18:00 Uhr", en: "Saturday · 10am–6pm" },
   },

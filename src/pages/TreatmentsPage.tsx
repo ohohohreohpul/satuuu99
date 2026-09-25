@@ -258,8 +258,8 @@ export function TreatmentsPage() {
           </p>
           <p>
             {t({
-              de: "Ebenso wenig gibt es bei uns eine Sauna, einen Pool, eine Dampfkabine oder eine Spa-Landschaft. satuuu99 ist ein kleines, privates Studio in der Manhagener Allee in Ahrensburg mit einem Behandlungsraum. Wer eine Resort-Anlage erwartet, ist bei uns an der falschen Adresse; wer einen persönlichen Termin ohne Publikum sucht, genau richtig.",
-              en: "Nor do we have a sauna, a pool, a steam cabin or a spa landscape. satuuu99 is a small, private studio on Manhagener Allee in Ahrensburg with one treatment room. If you are expecting a resort, we are the wrong address; if you want a personal appointment with no audience, you are in the right place.",
+              de: "satuuu99 ist ein kleines, privates Studio in der Manhagener Allee in Ahrensburg mit einem Behandlungsraum. Wer eine Resort-Anlage erwartet, ist bei uns an der falschen Adresse; wer einen persönlichen Termin ohne Publikum sucht, genau richtig.",
+              en: "satuuu99 is a small, private studio on Manhagener Allee in Ahrensburg with one treatment room. If you are expecting a resort, we are the wrong address; if you want a personal appointment with no audience, you are in the right place.",
             })}
           </p>
         </div>
