@@ -36,12 +36,8 @@ export function Footer() {
           <Link to="/journal">Journal</Link>
           <Link to="/head-spa-hamburg">Head Spa Hamburg</Link>
           <Link to="/japanese-head-spa-ahrensburg">Head Spa Ahrensburg</Link>
-          <Link to="/wellnessmassage-ahrensburg">
-            Wellnessmassage Ahrensburg
-          </Link>
-          <Link to="/gesichtsbehandlung-ahrensburg">
-            Gesichtspflege Ahrensburg
-          </Link>
+          <Link to="/wellnessmassage-ahrensburg">Massage Ahrensburg</Link>
+          <Link to="/gesichtsbehandlung-ahrensburg">Kosmetik Ahrensburg</Link>
           <Link to="/studio">{t({ de: "Das Studio", en: "The studio" })}</Link>
           <Link to="/gutscheine">
             {t({ de: "Gutscheine", en: "Gift cards" })}
@@ -83,10 +79,13 @@ export function Footer() {
             en: "Legal information",
           })}
         >
-          <a href={CONTACT.imprint}>{t({ de: "Impressum", en: "Imprint" })}</a>
-          <a href={CONTACT.privacy}>
+          <Link to={CONTACT.imprint}>
+            {t({ de: "Impressum", en: "Imprint" })}
+          </Link>
+          <Link to={CONTACT.privacy}>
             {t({ de: "Datenschutz", en: "Privacy" })}
-          </a>
+          </Link>
+          <Link to={CONTACT.terms}>{t({ de: "AGB", en: "Terms" })}</Link>
         </nav>
       </div>
     </footer>

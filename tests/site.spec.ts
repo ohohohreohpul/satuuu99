@@ -274,8 +274,10 @@ test("contact details offer WhatsApp, Instagram and the current hours", async ({
     .evaluateAll((scripts) =>
       scripts
         .map((script) => JSON.parse(script.textContent || "{}"))
-        .find((graph) => graph["@type"] === "HealthAndBeautyBusiness"),
+        .flatMap((data) => data["@graph"] ?? [data])
+        .find((node) => node["@type"] === "DaySpa"),
     );
+  expect(business["@id"]).toBe("https://www.satuuu99.de/#business");
   expect(business.openingHoursSpecification).toEqual([
     expect.objectContaining({
       dayOfWeek: ["Wednesday", "Thursday", "Friday"],
@@ -372,4 +374,42 @@ test("every treatment detail page provides substantial decision content", async 
       expect.arrayContaining(["Service", "FAQPage", "BreadcrumbList"]),
     );
   }
+});
+
+test("canonical and preview URLs use the live www host", async ({ page }) => {
+  await page.goto("/wellnessmassage-ahrensburg");
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
+    "href",
+    "https://www.satuuu99.de/wellnessmassage-ahrensburg",
+  );
+  await expect(page.locator('meta[property="og:image"]')).toHaveAttribute(
+    "content",
+    /^https:\/\/www\.satuuu99\.de\/assets\/photo\//,
+  );
+  const apexLinks = await page
+    .locator('a[href^="https://satuuu99.de"]')
+    .count();
+  expect(apexLinks).toBe(0);
+});
+
+test("legal pages are reachable from the footer with the real studio contact", async ({
+  page,
+}) => {
+  await page.goto("/");
+  for (const [href, heading] of [
+    ["/impressum", "Impressum"],
+    ["/datenschutz", "Datenschutzerklärung"],
+    ["/agbs", "Allgemeine Geschäftsbedingungen"],
+  ]) {
+    await page.locator(`.footer-bottom a[href="${href}"]`).click();
+    await expect(page.locator("h1")).toHaveText(heading);
+    const body = page.locator(".legal-body");
+    await expect(body).not.toContainText("hostingersite");
+    await expect(body).not.toContainText("nusumassage");
+  }
+  await page.goto("/impressum");
+  await expect(
+    page.locator('.legal-body a[href="mailto:info@satuuu99.de"]'),
+  ).toBeVisible();
+  await expect(page.locator(".legal-body")).toContainText("Kochakorn Todee");
 });

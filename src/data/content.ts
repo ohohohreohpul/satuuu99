@@ -19,9 +19,14 @@ export const CONTACT = {
     saturday: { de: "Samstag · 10:00–18:00 Uhr", en: "Saturday · 10am–6pm" },
   },
   booking: "https://booking.satuuu99.de/",
-  prices: "https://satuuu99.de/preisliste-ab-01-03-2026/",
-  imprint: "https://satuuu99.de/impressum/",
-  privacy: "https://satuuu99.de/datenschutz/",
+  // The old /preisliste-ab-01-03-2026/ page no longer exists. The booking
+  // calendar lists every bookable treatment with its current price and
+  // duration, so it is the single authoritative price list.
+  prices: "https://booking.satuuu99.de/",
+  // Legal pages, imported 1:1 from the studio's WordPress site.
+  imprint: "/impressum",
+  privacy: "/datenschutz",
+  terms: "/agbs",
   maps: "https://www.google.com/maps/search/?api=1&query=Manhagener+Allee+45+22926+Ahrensburg",
 } as const;
 

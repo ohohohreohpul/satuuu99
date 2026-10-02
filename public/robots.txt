@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://satuuu99.de/sitemap.xml
+Sitemap: https://www.satuuu99.de/sitemap.xml

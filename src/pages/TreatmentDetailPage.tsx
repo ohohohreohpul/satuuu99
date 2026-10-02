@@ -1,7 +1,7 @@
 import { Link, Navigate, useParams } from "react-router-dom";
 import { ArrowRightIcon, ArrowUpRightIcon } from "../components/ui/Icons";
 import { CONTACT, FOCUS_GROUPS, findTreatment } from "../data/content";
-import { treatmentPhoto } from "../data/media";
+import { photoUrl, treatmentPhoto } from "../data/media";
 import { Photo } from "../components/media/Photo";
 import { useLang } from "../lib/i18n";
 import { usePageMeta } from "../lib/usePageMeta";
@@ -10,7 +10,6 @@ import { TreatmentEditorial } from "../components/treatments/TreatmentEditorial"
 import { TreatmentPrices } from "../components/treatments/TreatmentPrices";
 import { StructuredData } from "../components/seo/StructuredData";
 import { treatmentCopy } from "../data/treatments";
-import { photoUrl } from "../data/media";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "../lib/schema";
 
 export function TreatmentDetailPage() {
@@ -23,6 +22,10 @@ export function TreatmentDetailPage() {
       ? `${t(found.treatment.name)} in Ahrensburg bei Hamburg | satuuu99`
       : "Behandlung — satuuu99",
     copy ? metaDescription(t(copy.answer)) : undefined,
+    false,
+    found
+      ? photoUrl(treatmentPhoto(found.treatment.id, found.group.id))
+      : undefined,
   );
   if (!found) return <Navigate to="/behandlungen" replace />;
   const { group, treatment } = found;

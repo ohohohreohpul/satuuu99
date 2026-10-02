@@ -49,6 +49,9 @@ const LocalServicePage = lazy(() =>
     default: m.LocalServicePage,
   })),
 );
+const LegalPage = lazy(() =>
+  import("./pages/LegalPage").then((m) => ({ default: m.LegalPage })),
+);
 export default function App() {
   return (
     <>
@@ -85,6 +88,12 @@ export default function App() {
                 <LocalServicePage slug="gesichtsbehandlung-ahrensburg" />
               }
             />
+            <Route path="/impressum" element={<LegalPage slug="impressum" />} />
+            <Route
+              path="/datenschutz"
+              element={<LegalPage slug="datenschutz" />}
+            />
+            <Route path="/agbs" element={<LegalPage slug="agbs" />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

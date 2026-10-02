@@ -17,8 +17,8 @@ const PRICE_FAQS = [
       en: "Where do I find current satuuu99 prices?",
     },
     a: {
-      de: "Die verbindlichen Preise und Behandlungszeiten stehen ausschließlich in der offiziellen Preisliste auf satuuu99.de. Dort ist auch vermerkt, ab welchem Datum sie gelten. Im Online-Kalender siehst du zusätzlich, welche Varianten gerade buchbar sind.",
-      en: "Confirmed prices and durations appear only in the official price list on satuuu99.de, together with the date they apply from. The online calendar also shows which options are currently bookable.",
+      de: "Die verbindlichen Preise und Behandlungszeiten stehen in der offiziellen Preisliste in unserem Online-Kalender. Dort siehst du jede buchbare Anwendung mit aktuellem Preis, Dauer und freien Terminen.",
+      en: "Confirmed prices and durations appear in the official price list in our online booking calendar, which shows every bookable treatment with its current price, duration and available times.",
     },
   },
   {

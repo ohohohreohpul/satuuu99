@@ -1,6 +1,7 @@
 import { useEffect } from "react";
+import { SITE_URL, absolute } from "./schema";
 
-const SITE_URL = "https://satuuu99.de";
+const DEFAULT_IMAGE = "/assets/hero-poster.jpg";
 
 function setMeta(
   selector: string,
@@ -17,11 +18,17 @@ function setMeta(
   tag.content = content;
 }
 
-/** Sets route-specific search and social metadata. */
+/**
+ * Sets route-specific search and social metadata.
+ *
+ * `image` is a site-relative or absolute URL used for link previews; pages
+ * without their own photograph fall back to the hero poster.
+ */
 export function usePageMeta(
   title: string,
   description?: string,
   noIndex = false,
+  image: string = DEFAULT_IMAGE,
 ) {
   useEffect(() => {
     document.title = title;
@@ -42,9 +49,12 @@ export function usePageMeta(
     }
     canonical.href = canonicalUrl;
 
+    const imageUrl = absolute(image);
     setMeta('meta[property="og:title"]', "property", "og:title", title);
     setMeta('meta[property="og:url"]', "property", "og:url", canonicalUrl);
+    setMeta('meta[property="og:image"]', "property", "og:image", imageUrl);
     setMeta('meta[name="twitter:title"]', "name", "twitter:title", title);
+    setMeta('meta[name="twitter:image"]', "name", "twitter:image", imageUrl);
     if (description) {
       setMeta('meta[name="description"]', "name", "description", description);
       setMeta(
@@ -60,5 +70,5 @@ export function usePageMeta(
         description,
       );
     }
-  }, [title, description, noIndex]);
+  }, [title, description, noIndex, image]);
 }

@@ -16,9 +16,13 @@ try {
  const context=await browser.newContext({reducedMotion:'reduce'});
  const page=await context.newPage();
  const routes=new Set(['/']);
+ const indexable=[];
  for(const route of routes){
   await page.goto(`http://127.0.0.1:${port}${route}`,{waitUntil:'networkidle'});
   await page.locator('h1').waitFor();
+  // noindex pages are still prerendered, but kept out of the sitemap.
+  const robots=await page.locator('meta[name="robots"]').getAttribute('content');
+  if(!robots?.includes('noindex')) indexable.push(route);
   const links=await page.locator('a[href^="/"]').evaluateAll(els=>els.map(el=>new URL(el.href).pathname));
   links.forEach(link=>{if(!link.includes('.')&&!link.startsWith('/assets/')) routes.add(link)});
   const markup=await page.content();
@@ -26,7 +30,7 @@ try {
   await mkdir(dir,{recursive:true});await writeFile(`${dir}/index.html`,markup);
   console.log('Prerendered',route);
  }
- const sitemap=`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${[...routes].map(r=>`<url><loc>https://satuuu99.de${r}</loc></url>`).join('')}</urlset>`;
+ const sitemap=`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${indexable.map(r=>`<url><loc>https://www.satuuu99.de${r}</loc></url>`).join('')}</urlset>`;
  await writeFile('dist/sitemap.xml',sitemap);
  await writeFile('public/sitemap.xml',sitemap);
  await writeFile('dist/404.html',await (async()=>{await page.goto(`http://127.0.0.1:${port}/404`,{waitUntil:'networkidle'});return page.content()})());

@@ -260,11 +260,11 @@ export const LOCAL_PAGES: Page[] = [
       },
     ],
     title: {
-      de: "Wellnessmassage in Ahrensburg bei Hamburg | satuuu99",
-      en: "Wellness massage in Ahrensburg near Hamburg | satuuu99",
+      de: "Massage in Ahrensburg: Wellness- & Entspannungsmassage | satuuu99",
+      en: "Massage in Ahrensburg: wellness & relaxation massage | satuuu99",
     },
     meta: {
-      de: "Wellnessmassage in Ahrensburg: Anti-Stress Gua Sha Massage, Bellabambi, persönliche Abstimmung und ein erfahrenes Team bei satuuu99 nahe Hamburg.",
+      de: "Massage in Ahrensburg bei Hamburg: Anti-Stress Gua Sha, Schröpf-, Kerzen- und Fußmassage bei satuuu99. Persönlich abgestimmt, Parkplätze vor der Tür, online buchbar.",
       en: "Wellness massage in Ahrensburg: anti-stress gua sha massage, Bellabambi, personal consultation and an experienced team at satuuu99 near Hamburg.",
     },
     eyebrow: {
@@ -466,11 +466,11 @@ export const LOCAL_PAGES: Page[] = [
       },
     ],
     title: {
-      de: "Gesichtsbehandlung in Ahrensburg | satuuu99",
-      en: "Facial treatments in Ahrensburg | satuuu99",
+      de: "Gesichtsbehandlung & Kosmetik in Ahrensburg | satuuu99",
+      en: "Facials & skin care in Ahrensburg | satuuu99",
     },
     meta: {
-      de: "Gesichtspflege in Ahrensburg: Aqua Facial, Sleep & Glow und Gua Sha bei satuuu99. Persönlich abgestimmte Pflege nahe Hamburg.",
+      de: "Kosmetik und Gesichtspflege in Ahrensburg: Aqua Facial, Sleep & Glow und Gua Sha Facial bei satuuu99. Persönlich abgestimmt, nahe Hamburg, online buchbar.",
       en: "Facial care in Ahrensburg: Aqua Facial, Sleep & Glow and Gua Sha at satuuu99. Personally tailored care near Hamburg.",
     },
     eyebrow: {
@@ -649,7 +649,7 @@ export const LOCAL_PAGES: Page[] = [
 export function LocalServicePage({ slug }: { slug: string }) {
   const { t } = useLang();
   const page = LOCAL_PAGES.find((item) => item.slug === slug)!;
-  usePageMeta(t(page.title), t(page.meta));
+  usePageMeta(t(page.title), t(page.meta), false, photoUrl(page.hero));
   const heading = t(page.title).split("|")[0].trim();
   return (
     <>

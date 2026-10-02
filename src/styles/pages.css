@@ -381,3 +381,71 @@
   margin-top: 8px;
   max-width: 260px;
 }
+
+/* Legal pages: Impressum, Datenschutz, AGB. Long-form imported text, so the
+   type stays quiet and the headings carry the structure. */
+.legal-page header {
+  padding-block: 120px 0;
+}
+.legal-page h1 {
+  font-size: clamp(40px, 5vw, 72px);
+  max-width: 1050px;
+  margin: 24px 0 0;
+  /* German compounds ("Geschäftsbedingungen") outgrow a phone line. */
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+.legal-body {
+  padding-top: 40px;
+  overflow-wrap: anywhere;
+}
+.legal-body h2,
+.legal-body h3 {
+  /* Table-of-contents jumps land below the fixed header. */
+  scroll-margin-top: 110px;
+}
+.legal-body h2 {
+  font-size: 30px;
+  margin: 56px 0 18px;
+}
+.legal-body h3 {
+  font-size: 20px;
+  margin: 40px 0 12px;
+}
+.legal-body p,
+.legal-body li {
+  font-size: 15px;
+  line-height: 1.85;
+}
+.legal-body p + p {
+  margin-top: 14px;
+}
+.legal-body ul,
+.legal-body ol {
+  margin: 14px 0;
+  padding-left: 1.2em;
+}
+.legal-body li {
+  list-style: disc;
+  margin-bottom: 8px;
+}
+.legal-body a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.legal-body a:hover,
+.legal-body a:focus-visible {
+  color: var(--ink);
+}
+@media (max-width: 720px) {
+  .legal-page header {
+    padding-top: 90px;
+  }
+  .legal-page h1 {
+    font-size: 38px;
+  }
+  .legal-body h2 {
+    font-size: 25px;
+  }
+}

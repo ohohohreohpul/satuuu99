@@ -2,7 +2,10 @@ import { CONTACT } from "../data/content";
 import type { PriceOption } from "../data/content";
 import type { Localized } from "./i18n";
 
-export const SITE_URL = "https://satuuu99.de";
+// The live site serves from www; the apex domain 308-redirects there. Every
+// canonical, sitemap entry and schema id must use this host, or search engines
+// see canonicals that point at a redirect.
+export const SITE_URL = "https://www.satuuu99.de";
 export const BUSINESS_ID = `${SITE_URL}/#business`;
 
 export interface SchemaQuestion {
@@ -51,7 +54,7 @@ export function serviceSchema({
       })),
     }),
     provider: {
-      "@type": "HealthAndBeautyBusiness",
+      "@type": "DaySpa",
       "@id": BUSINESS_ID,
       name: CONTACT.brand,
       telephone: CONTACT.phone,
@@ -72,7 +75,7 @@ export function serviceSchema({
       { "@type": "City", name: "Ammersbek" },
       { "@type": "AdministrativeArea", name: "Kreis Stormarn" },
     ],
-    isRelatedTo: { "@type": "WebPage", url: CONTACT.prices },
+    isRelatedTo: { "@type": "WebPage", url: `${SITE_URL}/preise` },
     potentialAction: {
       "@type": "ReserveAction",
       target: {
