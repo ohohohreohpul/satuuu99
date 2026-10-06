@@ -44,7 +44,7 @@ const HOME_FAQS = [
       en: "When is satuuu99 open?",
     },
     a: {
-      de: "Mittwochs bis freitags von 10:00 bis 19:00 Uhr und samstags von 10:00 bis 18:00 Uhr. Maßgeblich für deinen Besuch ist der konkret gebuchte Termin im Online-Kalender.",
+      de: "Mittwochs bis freitags von 10:00 bis 19:00 Uhr und samstags von 10:00 bis 18:00 Uhr. Maßgeblich für Ihren Besuch ist der konkret gebuchte Termin im Online-Kalender.",
       en: "Wednesday to Friday from 10am to 7pm and Saturday from 10am to 6pm. What matters for your visit is the specific appointment booked in the online calendar.",
     },
   },

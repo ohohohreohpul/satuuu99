@@ -17,7 +17,7 @@ const steps = [
       en: "The door closes. The day stays outside.",
     },
     copy: {
-      de: "Du kommst in unser kleines Studio in Ahrensburg. Ohne Spa-Trubel, ohne Eile – erst einmal in Ruhe ankommen.",
+      de: "Sie kommen in unser kleines Studio in Ahrensburg. Ohne Spa-Trubel, ohne Eile – erst einmal in Ruhe ankommen.",
       en: "You arrive at our small Ahrensburg studio. No busy spa atmosphere, no rush – just time to settle in.",
     },
   },
@@ -26,11 +26,11 @@ const steps = [
     number: "02",
     label: { de: "Zuhören", en: "Listen" },
     title: {
-      de: "Bevor etwas beginnt, hören wir dir zu.",
+      de: "Bevor etwas beginnt, hören wir Ihnen zu.",
       en: "Before anything begins, we listen.",
     },
     copy: {
-      de: "Wir sprechen kurz darüber, wie es dir geht und was du dir wünschst. Pflege, Berührung und Ablauf stimmen wir mit dir ab.",
+      de: "Wir sprechen kurz darüber, wie es Ihnen geht und was Sie sich wünschen. Pflege, Berührung und Ablauf stimmen wir mit Ihnen ab.",
       en: "We talk briefly about how you feel and what you need. Care, touch and the flow of your treatment are agreed with you.",
     },
   },
@@ -39,11 +39,11 @@ const steps = [
     number: "03",
     label: { de: "Loslassen", en: "Let go" },
     title: {
-      de: "Dein Ritual. Dein Tempo. Deine Zeit.",
+      de: "Ihr Ritual. Ihr Tempo. Ihre Zeit.",
       en: "Your ritual. Your pace. Your time.",
     },
     copy: {
-      de: "Du darfst still sein, die Augen schließen und dich kümmern lassen. Wir bleiben aufmerksam und passen Druck oder Ablauf jederzeit an.",
+      de: "Sie dürfen still sein, die Augen schließen und sich umsorgen lassen. Wir bleiben aufmerksam und passen Druck oder Ablauf jederzeit an.",
       en: "You can be quiet, close your eyes and let yourself be cared for. We stay attentive and adjust pressure or pace at any time.",
     },
   },
@@ -56,7 +56,7 @@ const steps = [
       en: "No need to rush. Stay a moment longer.",
     },
     copy: {
-      de: "Nach der Behandlung hast du Zeit, wieder anzukommen. Dann gehst du zurück in deinen Tag – vielleicht ein wenig leichter.",
+      de: "Nach der Behandlung haben Sie Zeit, wieder anzukommen. Dann gehen Sie zurück in Ihren Tag – vielleicht ein wenig leichter.",
       en: "After your treatment, there is time to return gently. Then you step back into your day – perhaps feeling a little lighter.",
     },
   },
@@ -78,7 +78,7 @@ export function VisitJourney() {
         </p>
         <h2 id="journey-title">
           {t({
-            de: "Eine Stunde, die nicht viel von dir verlangt.",
+            de: "Eine Stunde, die nicht viel von Ihnen verlangt.",
             en: "An hour that asks very little of you.",
           })}
         </h2>
@@ -99,7 +99,7 @@ export function VisitJourney() {
             className="journey-tabs"
             role="tablist"
             aria-label={t({
-              de: "Ablauf deines Besuchs",
+              de: "Ablauf Ihres Besuchs",
               en: "Your visit journey",
             })}
           >

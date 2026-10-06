@@ -47,7 +47,7 @@ export function TreatmentEditorial({
         <div className="section-shell">
           <div>
             <p className="eyebrow">
-              {t({ de: "Dein Termin", en: "Your appointment" })}
+              {t({ de: "Ihr Termin", en: "Your appointment" })}
             </p>
             <h2>
               {t({
@@ -100,7 +100,7 @@ export function TreatmentEditorial({
           </p>
           <h2>
             {t({
-              de: "Was du während der Anwendung bemerken kannst.",
+              de: "Was Sie während der Anwendung bemerken können.",
               en: "What you may notice during the treatment.",
             })}
           </h2>
@@ -112,7 +112,7 @@ export function TreatmentEditorial({
           </p>
           <h2>
             {t({
-              de: "Wähle nach dem Gefühl, das du dir wünschst.",
+              de: "Wählen Sie nach dem Gefühl, das Sie sich wünschen.",
               en: "Choose by how you want to feel.",
             })}
           </h2>
@@ -141,7 +141,7 @@ export function TreatmentEditorial({
           </p>
           <h2>
             {t({
-              de: "Wann du uns zuerst schreiben solltest.",
+              de: "Wann Sie uns zuerst schreiben sollten.",
               en: "When to write to us first.",
             })}
           </h2>
@@ -150,7 +150,7 @@ export function TreatmentEditorial({
           <p>{t(copy.beforeBooking)}</p>
           <p>
             {t({
-              de: "Sprich uns außerdem während der Anwendung jederzeit an. Weniger Druck, eine andere Temperatur, eine Pause oder mehr Ruhe sind keine Umstände, sondern Teil einer persönlichen Behandlung.",
+              de: "Sprechen Sie uns außerdem während der Anwendung jederzeit an. Weniger Druck, eine andere Temperatur, eine Pause oder mehr Ruhe sind keine Umstände, sondern Teil einer persönlichen Behandlung.",
               en: "You can also talk to us at any point during the treatment. Less pressure, a different temperature, a pause or more quiet are not an inconvenience; they are part of personal care.",
             })}
           </p>
@@ -160,12 +160,12 @@ export function TreatmentEditorial({
       <section className="treatment-more section-shell">
         <article>
           <span>01</span>
-          <h2>{t({ de: "Vor deinem Besuch", en: "Before your visit" })}</h2>
+          <h2>{t({ de: "Vor Ihrem Besuch", en: "Before your visit" })}</h2>
           <p>{t(copy.prepare)}</p>
         </article>
         <article>
           <span>02</span>
-          <h2>{t({ de: "Nach deinem Ritual", en: "After your ritual" })}</h2>
+          <h2>{t({ de: "Nach Ihrem Ritual", en: "After your ritual" })}</h2>
           <p>{t(copy.after)}</p>
         </article>
         <article>
@@ -178,13 +178,13 @@ export function TreatmentEditorial({
           </h2>
           <p>
             {t({
-              de: "Im Online-Kalender siehst du freie Termine und die aktuell angebotenen Varianten. Die offizielle Preisliste nennt die verbindlichen Preise und Behandlungszeiten. Wenn du zwischen zwei Ritualen schwankst oder nicht sicher bist, ob eine Anwendung zu deiner Situation passt, kontaktiere uns vor der Buchung per E-Mail oder Telefon.",
+              de: "Im Online-Kalender sehen Sie freie Termine und die aktuell angebotenen Varianten. Die offizielle Preisliste nennt die verbindlichen Preise und Behandlungszeiten. Wenn Sie zwischen zwei Ritualen schwanken oder nicht sicher sind, ob eine Anwendung zu Ihrer Situation passt, kontaktieren Sie uns vor der Buchung per E-Mail oder Telefon.",
               en: "The online calendar shows available appointments and current options. The official price list provides confirmed prices and durations. If you are choosing between two rituals or are unsure whether a treatment suits your situation, contact us by email or phone before booking.",
             })}
           </p>
           <p>
             {t({
-              de: `Du findest uns in der ${CONTACT.addressLines[0]}, ${CONTACT.addressLines[1]} — wenige Minuten von der Ahrensburger Innenstadt und rund 25 Kilometer nordöstlich der Hamburger Innenstadt. Parkplätze befinden sich nach aktueller Studioinformation direkt vor dem Eingang.`,
+              de: `Sie finden uns in der ${CONTACT.addressLines[0]}, ${CONTACT.addressLines[1]} — wenige Minuten von der Ahrensburger Innenstadt und rund 25 Kilometer nordöstlich der Hamburger Innenstadt. Parkplätze befinden sich nach aktueller Studioinformation direkt vor dem Eingang.`,
               en: `Find us at ${CONTACT.addressLines.join(", ")} — minutes from central Ahrensburg and roughly 25 kilometres northeast of central Hamburg. According to current studio information, parking is directly outside.`,
             })}
           </p>
@@ -221,7 +221,7 @@ export function TreatmentEditorial({
             </summary>
             <p>
               {t({
-                de: "Die verbindlichen Angaben stehen in der offiziellen Preisliste und im Online-Kalender. Dort siehst du auch, welche Varianten aktuell buchbar sind.",
+                de: "Die verbindlichen Angaben stehen in der offiziellen Preisliste und im Online-Kalender. Dort sehen Sie auch, welche Varianten aktuell buchbar sind.",
                 en: "Confirmed details appear in the official price list and booking calendar, including the options currently available.",
               })}
             </p>

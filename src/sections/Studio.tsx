@@ -21,7 +21,7 @@ export function Studio() {
           {t({ de: "Draußen ist Alltag.", en: "Leave the day outside." })}
           <br />
           <span className="soft-text">
-            {t({ de: "Hier ist deine Zeit.", en: "This time is yours." })}
+            {t({ de: "Hier ist Ihre Zeit.", en: "This time is yours." })}
           </span>
         </h2>
       </div>
@@ -50,13 +50,13 @@ export function Studio() {
           </h3>
           <p>
             {t({
-              de: "Wir sind bewusst ein kleines Studio. Du kommst nicht in einen großen Spa-Betrieb, sondern an einen privaten Ort, an dem wir uns Zeit nehmen, zuhören und gemeinsam die passende Anwendung für dich finden.",
+              de: "Wir sind bewusst ein kleines Studio. Sie kommen nicht in einen großen Spa-Betrieb, sondern an einen privaten Ort, an dem wir uns Zeit nehmen, zuhören und gemeinsam die passende Anwendung für Sie finden.",
               en: "We are intentionally a small studio. Your visit is personal rather than part of a large spa operation, with time to listen and choose the treatment that feels right for you.",
             })}
           </p>
           <p>
             {t({
-              de: "Komm so, wie du bist. Um den Rest kümmern wir uns.",
+              de: "Kommen Sie so, wie Sie sind. Um den Rest kümmern wir uns.",
               en: "Come as you are. We’ll take care of the rest.",
             })}
           </p>
@@ -71,7 +71,7 @@ export function Studio() {
             target="_blank"
             rel="noreferrer"
           >
-            {t({ de: "Deinen Weg zu uns finden", en: "Find your way here" })}
+            {t({ de: "Ihren Weg zu uns finden", en: "Find your way here" })}
             <ArrowRightIcon />
           </a>
           <Link className="text-link studio-more" to="/studio">

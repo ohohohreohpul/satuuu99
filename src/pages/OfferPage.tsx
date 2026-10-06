@@ -39,7 +39,7 @@ const STATUS_LINE: Record<OfferStatus, Localized> = {
     en: "Offer period 7 Oct – 23 Dec 2026 · only while stocks last",
   },
   ended: {
-    de: "Die Weihnachtsaktion ist beendet. Gutscheine bekommst du weiterhin bei uns.",
+    de: "Die Weihnachtsaktion ist beendet. Gutscheine erhalten Sie weiterhin bei uns.",
     en: "The Christmas offer has ended. Gift cards are still available from us.",
   },
 };
@@ -54,11 +54,11 @@ const CONDITIONS: Localized[] = [
     en: "The small surprise comes with every gift-card purchase of €70 or more, or 60 minutes or more.",
   },
   {
-    de: "Im Paket für 700 € wählst du für jeden der elf Gutscheine eine von vier Anwendungen — erst vor dem Termin. Andere Anwendungen sind gegen Aufpreis möglich.",
+    de: "Im Paket für 700 € wählen Sie für jeden der elf Gutscheine eine von vier Anwendungen — erst vor dem Termin. Andere Anwendungen sind gegen Aufpreis möglich.",
     en: "In the €700 pack you choose one of four treatments for each of the eleven cards — only before the appointment. Other treatments are possible for a surcharge.",
   },
   {
-    de: "Die Handtasche suchst du dir aus unserem aktuellen Sortiment aus.",
+    de: "Die Handtasche suchen Sie sich aus unserem aktuellen Sortiment aus.",
     en: "You choose the handbag from our current range.",
   },
   {
@@ -130,7 +130,7 @@ export function OfferPage() {
           </h1>
           <p className="offer-hero-lead">
             {t({
-              de: "satuuu99 hat ein neues Gesicht — und das feiern wir mit dir. Zur Weihnachtszeit gibt es exklusive Gutscheinpakete und Gutscheinsets: mit Handtasche aus unserem Sortiment, Geschenkset oder einer Überraschung obendrauf.",
+              de: "satuuu99 hat ein neues Gesicht — und das feiern wir mit Ihnen. Zur Weihnachtszeit gibt es exklusive Gutscheinpakete und Gutscheinsets: mit Handtasche aus unserem Sortiment, Geschenkset oder einer Überraschung obendrauf.",
               en: "satuuu99 has a new look — and we are celebrating with you. For the Christmas season there are exclusive gift-card packs and sets: with a handbag from our range, a gift set or a surprise on top.",
             })}
           </p>
@@ -240,11 +240,11 @@ export function OfferPage() {
           >
             <div className="section-heading">
               <p className="eyebrow">
-                {t({ de: "03 / So bekommst du es", en: "03 / How to buy" })}
+                {t({ de: "03 / So erhalten Sie es", en: "03 / How to buy" })}
               </p>
               <h2 id="offer-channels-title">
                 {t({
-                  de: "Drei Wege zu deinem Paket.",
+                  de: "Drei Wege zu Ihrem Paket.",
                   en: "Three ways to your pack.",
                 })}
               </h2>
@@ -255,7 +255,7 @@ export function OfferPage() {
                 <h3>{t({ de: "Online", en: "Online" })}</h3>
                 <p>
                   {t({
-                    de: "In unserem Buchungsportal kannst du Gutscheine direkt online kaufen.",
+                    de: "In unserem Buchungsportal können Sie Gutscheine direkt online kaufen.",
                     en: "You can buy gift cards directly online in our booking portal.",
                   })}
                 </p>
@@ -271,7 +271,7 @@ export function OfferPage() {
                 </h3>
                 <p>
                   {t({
-                    de: `Ruf uns an oder schreib uns per WhatsApp unter ${CONTACT.phone}.`,
+                    de: `Rufen Sie uns an oder schreiben Sie uns per WhatsApp unter ${CONTACT.phone}.`,
                     en: `Call us or message us on WhatsApp at ${CONTACT.phone}.`,
                   })}
                 </p>
@@ -279,7 +279,7 @@ export function OfferPage() {
                   className="text-link"
                   href={whatsappEnquiry(
                     t({
-                      de: "Hallo, ich interessiere mich für euer Weihnachtsangebot.",
+                      de: "Hallo, ich interessiere mich für Ihr Weihnachtsangebot.",
                       en: "Hello, I am interested in your Christmas offer.",
                     }),
                   )}
@@ -295,7 +295,7 @@ export function OfferPage() {
                 <h3>E-Mail</h3>
                 <p>
                   {t({
-                    de: `Schreib an ${CONTACT.email} und nenne das Paket, das du verschenken möchtest.`,
+                    de: `Schreiben Sie an ${CONTACT.email} und nennen Sie das Paket, das Sie verschenken möchten.`,
                     en: `Write to ${CONTACT.email} and name the pack you would like to give.`,
                   })}
                 </p>
@@ -331,7 +331,7 @@ export function OfferPage() {
               </ul>
               <Link className="text-link" to="/gutscheine">
                 {t({
-                  de: "So löst du einen Gutschein ein",
+                  de: "So lösen Sie einen Gutschein ein",
                   en: "How to redeem a gift card",
                 })}
                 <ArrowRightIcon />

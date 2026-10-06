@@ -52,13 +52,13 @@ export function FocusExplorer() {
           {t({ de: "01 / Unsere Behandlungen", en: "01 / Our treatments" })}
         </p>
         <h2 id="ritual-title">
-          {t({ de: "Was brauchst du", en: "What feels right" })}
+          {t({ de: "Was brauchen Sie", en: "What feels right" })}
           <br />
           <span className="soft-text">{t({ de: "heute?", en: "today?" })}</span>
         </h2>
         <p>
           {t({
-            de: "Ein klarer Kopf. Gepflegte Haut. Oder einfach eine gute Pause. Finde die Behandlung, die zu dir passt.",
+            de: "Ein klarer Kopf. Gepflegte Haut. Oder einfach eine gute Pause. Finden Sie die Behandlung, die zu Ihnen passt.",
             en: "A clearer head. Cared-for skin. Or simply a good pause. Find the treatment that suits you.",
           })}
         </p>
@@ -167,7 +167,7 @@ export function FocusExplorer() {
               </a>
               <span>
                 {t({
-                  de: "Wir beraten dich gern.",
+                  de: "Wir beraten Sie gern.",
                   en: "We’re here to help you choose.",
                 })}
               </span>

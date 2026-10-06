@@ -17,7 +17,7 @@ const HAMBURG_FAQS = [
       en: "How far is satuuu99 from Hamburg?",
     },
     a: {
-      de: "Rund 25 Kilometer nordöstlich der Hamburger Innenstadt. Mit dem Auto über die A1 bis zur Anschlussstelle Ahrensburg sind es je nach Verkehr etwa 25 bis 35 Minuten. Mit der U1 erreichst du Ahrensburg direkt aus Hamburg; von der Station sind es wenige Minuten zu Fuß in die Manhagener Allee.",
+      de: "Rund 25 Kilometer nordöstlich der Hamburger Innenstadt. Mit dem Auto über die A1 bis zur Anschlussstelle Ahrensburg sind es je nach Verkehr etwa 25 bis 35 Minuten. Mit der U1 erreichen Sie Ahrensburg direkt aus Hamburg; von der Station sind es wenige Minuten zu Fuß in die Manhagener Allee.",
       en: "Roughly 25 kilometres northeast of central Hamburg. By car via the A1 to the Ahrensburg junction it is about 25 to 35 minutes depending on traffic. The U1 underground connects Ahrensburg directly with Hamburg; from the stop it is a few minutes on foot to Manhagener Allee.",
     },
   },
@@ -27,7 +27,7 @@ const HAMBURG_FAQS = [
       en: "Why travel out of Hamburg for a head spa?",
     },
     a: {
-      de: "Weil du hier in einem Studio mit einem einzigen Behandlungsraum bist und nicht in einem Betrieb mit Wartebereich und getakteten Terminen. Kein Publikum, keine Durchgangsgeräusche, kein Verkaufsgespräch am Ende. Ob dir das den Weg wert ist, entscheidest du — wir behaupten nicht, dass wir für jeden die richtige Wahl sind.",
+      de: "Weil Sie hier in einem Studio mit einem einzigen Behandlungsraum sind und nicht in einem Betrieb mit Wartebereich und getakteten Terminen. Kein Publikum, keine Durchgangsgeräusche, kein Verkaufsgespräch am Ende. Ob Ihnen das den Weg wert ist, entscheiden Sie — wir behaupten nicht, dass wir für jeden die richtige Wahl sind.",
       en: "Because here you are in a studio with a single treatment room rather than an operation with a waiting area and tightly scheduled slots. No audience, no passing noise, no sales conversation at the end. Whether that is worth the journey is your call — we do not claim to be the right choice for everyone.",
     },
   },
@@ -37,7 +37,7 @@ const HAMBURG_FAQS = [
       en: "Can I fit a head spa into a lunch break?",
     },
     a: {
-      de: "Wenn du in Hamburg arbeitest, eher nicht: Hin- und Rückweg zusammen brauchen schon rund eine Stunde, und dein Haar ist danach feucht. Sinnvoller ist ein Termin am späten Nachmittag, am Abend bis 19 Uhr oder am Samstag — dann fällt auch die Rushhour weg.",
+      de: "Wenn Sie in Hamburg arbeiten, eher nicht: Hin- und Rückweg zusammen brauchen schon rund eine Stunde, und Ihr Haar ist danach feucht. Sinnvoller ist ein Termin am späten Nachmittag, am Abend bis 19 Uhr oder am Samstag — dann fällt auch die Rushhour weg.",
       en: "If you work in Hamburg, probably not: the round trip alone takes about an hour, and your hair is damp afterwards. A late afternoon, an evening slot up to 7pm, or a Saturday makes more sense — and avoids rush hour too.",
     },
   },
@@ -47,7 +47,7 @@ const HAMBURG_FAQS = [
       en: "Does hair get wet during a head spa?",
     },
     a: {
-      de: "Ja. Warmes Wasser und die Reinigung von Kopfhaut und Haar gehören dazu. Am Ende wird das Haar ausgespült und sanft getrocknet, aber ein aufwendiges Styling ist nicht Teil des Rituals. Plane deinen Rückweg und den restlichen Tag entsprechend.",
+      de: "Ja. Warmes Wasser und die Reinigung von Kopfhaut und Haar gehören dazu. Am Ende wird das Haar ausgespült und sanft getrocknet, aber ein aufwendiges Styling ist nicht Teil des Rituals. Planen Sie Ihren Rückweg und den restlichen Tag entsprechend.",
       en: "Yes. Warm water and cleansing of scalp and hair are part of it. At the end the hair is rinsed and gently dried, but elaborate styling is not part of the ritual. Plan your journey home and the rest of your day accordingly.",
     },
   },
@@ -57,7 +57,7 @@ const HAMBURG_FAQS = [
       en: "Is there parking if I come by car?",
     },
     a: {
-      de: "Nach aktueller Studioinformation befinden sich Parkplätze direkt vor dem Eingang in der Manhagener Allee 45. Anders als in vielen Hamburger Stadtteilen musst du also keinen Parkplatz suchen und keine Parkuhr im Blick behalten.",
+      de: "Nach aktueller Studioinformation befinden sich Parkplätze direkt vor dem Eingang in der Manhagener Allee 45. Anders als in vielen Hamburger Stadtteilen müssen Sie also keinen Parkplatz suchen und keine Parkuhr im Blick behalten.",
       en: "According to current studio information, parking is available directly outside the entrance at Manhagener Allee 45. Unlike in many Hamburg districts, there is no hunting for a space and no parking meter to watch.",
     },
   },
@@ -67,7 +67,7 @@ const HAMBURG_FAQS = [
       en: "Which Hamburg districts are closest?",
     },
     a: {
-      de: "Aus den Walddörfern — Volksdorf, Bergstedt, Wohldorf-Ohlstedt — sowie aus Rahlstedt, Farmsen-Berne und Bramfeld bist du in gut 15 bis 25 Minuten da. Aus Eimsbüttel, Altona oder den Elbvororten dauert es entsprechend länger; dann lohnt sich ein Termin außerhalb der Hauptverkehrszeit.",
+      de: "Aus den Walddörfern — Volksdorf, Bergstedt, Wohldorf-Ohlstedt — sowie aus Rahlstedt, Farmsen-Berne und Bramfeld sind Sie in gut 15 bis 25 Minuten da. Aus Eimsbüttel, Altona oder den Elbvororten dauert es entsprechend länger; dann lohnt sich ein Termin außerhalb der Hauptverkehrszeit.",
       en: "From the Walddörfer — Volksdorf, Bergstedt, Wohldorf-Ohlstedt — and from Rahlstedt, Farmsen-Berne and Bramfeld it is around 15 to 25 minutes. From Eimsbüttel, Altona or the Elbe suburbs it takes correspondingly longer, so a slot outside peak traffic is worth it.",
     },
   },
@@ -156,7 +156,7 @@ export function HeadSpaHamburgPage() {
         </p>
         <h2>
           {t({
-            de: "satuuu99 bietet Japanese Head Spa in Ahrensburg an, rund 25 Kilometer nordöstlich der Hamburger Innenstadt und mit der U1 direkt erreichbar. Das Ritual verbindet Reinigung und Pflege von Kopfhaut und Haar mit einer Kopf-, Nacken- und Schultermassage im Liegen. Dein Haar wird dabei nass.",
+            de: "satuuu99 bietet Japanese Head Spa in Ahrensburg an, rund 25 Kilometer nordöstlich der Hamburger Innenstadt und mit der U1 direkt erreichbar. Das Ritual verbindet Reinigung und Pflege von Kopfhaut und Haar mit einer Kopf-, Nacken- und Schultermassage im Liegen. Ihr Haar wird dabei nass.",
             en: "satuuu99 offers Japanese Head Spa in Ahrensburg, roughly 25 kilometres northeast of central Hamburg and directly reachable on the U1. The ritual combines cleansing and care of scalp and hair with a head, neck and shoulder massage, lying down. Your hair does get wet.",
           })}
         </h2>
@@ -166,7 +166,7 @@ export function HeadSpaHamburgPage() {
         <div>
           <p className="eyebrow">
             {t({
-              de: "Deine Auszeit bei Hamburg",
+              de: "Ihre Auszeit bei Hamburg",
               en: "Your pause near Hamburg",
             })}
           </p>
@@ -180,13 +180,13 @@ export function HeadSpaHamburgPage() {
         <div>
           <p>
             {t({
-              de: "Beim Japanese Head Spa verbindest du Pflege für Kopfhaut und Haar mit einer entspannenden Kopf-, Nacken- und Schultermassage. Du liegst bequem auf dem Rücken, der Kopf ruht gestützt, warmes Wasser läuft durch dein Haar — und du musst selbst nichts tun. Der Ablauf ist bewusst langsam: Zuerst ein kurzes Gespräch, dann eine Trockenmassage der Kopfhaut, dann Wasser, Reinigung und Pflege, zum Schluss die Massage von Nacken und Schultern.",
+              de: "Beim Japanese Head Spa verbinden Sie Pflege für Kopfhaut und Haar mit einer entspannenden Kopf-, Nacken- und Schultermassage. Sie liegen bequem auf dem Rücken, der Kopf ruht gestützt, warmes Wasser läuft durch Ihr Haar — und Sie müssen selbst nichts tun. Der Ablauf ist bewusst langsam: Zuerst ein kurzes Gespräch, dann eine Trockenmassage der Kopfhaut, dann Wasser, Reinigung und Pflege, zum Schluss die Massage von Nacken und Schultern.",
               en: "Japanese Head Spa combines care for scalp and hair with a relaxing head, neck and shoulder massage. You lie comfortably on your back with your head supported, warm water runs through your hair — and there is nothing for you to do. The sequence is deliberately slow: first a short conversation, then a dry scalp massage, then water, cleansing and care, and finally the massage of neck and shoulders.",
             })}
           </p>
           <p>
             {t({
-              de: "Es ist eine Wellness- und Pflegeanwendung, keine dermatologische Behandlung und keine Therapie gegen Haarausfall. Wir versprechen keine Veränderung deiner Haarstruktur. Was wir zusagen können, ist ein sorgfältiger Ablauf in einem Raum, in dem außer dir niemand ist.",
+              de: "Es ist eine Wellness- und Pflegeanwendung, keine dermatologische Behandlung und keine Therapie gegen Haarausfall. Wir versprechen keine Veränderung Ihrer Haarstruktur. Was wir zusagen können, ist ein sorgfältiger Ablauf in einem Raum, in dem außer Ihnen niemand ist.",
               en: "It is a wellness and care treatment, not dermatological care and not a therapy for hair loss. We promise no change to your hair structure. What we can promise is an attentive ritual in a room where nobody else is present.",
             })}
           </p>
@@ -248,19 +248,19 @@ export function HeadSpaHamburgPage() {
             </h2>
             <p>
               {t({
-                de: "Mit dem Auto führt der Weg aus Hamburg über die A1 bis zur Anschlussstelle Ahrensburg; von dort sind es wenige Minuten in die Manhagener Allee. Aus der Innenstadt rechne mit 25 bis 35 Minuten, außerhalb der Rushhour eher mit 25. Aus den Walddörfern, Rahlstedt, Farmsen-Berne oder Bramfeld bist du in gut 15 bis 25 Minuten da; aus Altona, Eimsbüttel oder den Elbvororten dauert es deutlich länger.",
+                de: "Mit dem Auto führt der Weg aus Hamburg über die A1 bis zur Anschlussstelle Ahrensburg; von dort sind es wenige Minuten in die Manhagener Allee. Aus der Innenstadt rechnen Sie mit 25 bis 35 Minuten, außerhalb der Rushhour eher mit 25. Aus den Walddörfern, Rahlstedt, Farmsen-Berne oder Bramfeld sind Sie in gut 15 bis 25 Minuten da; aus Altona, Eimsbüttel oder den Elbvororten dauert es deutlich länger.",
                 en: "By car the route from Hamburg runs along the A1 to the Ahrensburg junction; from there it is a few minutes to Manhagener Allee. From the city centre allow 25 to 35 minutes, or closer to 25 outside rush hour. From the Walddörfer, Rahlstedt, Farmsen-Berne or Bramfeld it is around 15 to 25 minutes; from Altona, Eimsbüttel or the Elbe suburbs it takes considerably longer.",
               })}
             </p>
             <p>
               {t({
-                de: "Mit dem HVV erreichst du Ahrensburg über die U1 sowie über die Regionalbahn. Von der U-Bahn-Station Ahrensburg und vom Bahnhof ist die Manhagener Allee in wenigen Minuten zu Fuß erreichbar. Weil sich Fahrpläne ändern, prüfe die konkrete Verbindung am Reisetag bitte beim HVV und plane einen kleinen Puffer ein.",
+                de: "Mit dem HVV erreichen Sie Ahrensburg über die U1 sowie über die Regionalbahn. Von der U-Bahn-Station Ahrensburg und vom Bahnhof ist die Manhagener Allee in wenigen Minuten zu Fuß erreichbar. Weil sich Fahrpläne ändern, prüfen Sie die konkrete Verbindung am Reisetag bitte beim HVV und planen Sie einen kleinen Puffer ein.",
                 en: "By HVV you can reach Ahrensburg on the U1 and by regional rail. Manhagener Allee is a few minutes on foot from the Ahrensburg underground stop and the station. Because timetables change, please check your connection with HVV on the day and allow a small buffer.",
               })}
             </p>
             <p>
               {t({
-                de: "Der praktische Unterschied zu einem Termin in der Hamburger Innenstadt: Parkplätze befinden sich nach aktueller Studioinformation direkt vor dem Eingang. Du suchst keinen Platz, zahlst keine Parkuhr und musst nach der Behandlung nicht durch die Innenstadt zurück.",
+                de: "Der praktische Unterschied zu einem Termin in der Hamburger Innenstadt: Parkplätze befinden sich nach aktueller Studioinformation direkt vor dem Eingang. Sie suchen keinen Platz, zahlen keine Parkuhr und müssen nach der Behandlung nicht durch die Innenstadt zurück.",
                 en: "The practical difference from an appointment in central Hamburg: according to current studio information, parking is directly outside the entrance. You do not hunt for a space, do not feed a meter, and do not have to cross the city centre on the way back.",
               })}
             </p>
@@ -277,19 +277,19 @@ export function HeadSpaHamburgPage() {
             </h2>
             <p>
               {t({
-                de: "In Hamburg gibt es inzwischen mehrere Anbieter für Head Spa, darunter größere Salons mit mehreren Plätzen und dicht getakteten Terminen. Das kann praktisch sein, wenn du spontan und zentral einen Platz brauchst. satuuu99 funktioniert anders: Wir haben einen Behandlungsraum, vier Behandlerinnen und keinen offenen Wartebereich. Während deines Termins bist du in der Regel der einzige Gast im Raum.",
+                de: "In Hamburg gibt es inzwischen mehrere Anbieter für Head Spa, darunter größere Salons mit mehreren Plätzen und dicht getakteten Terminen. Das kann praktisch sein, wenn Sie spontan und zentral einen Platz brauchen. satuuu99 funktioniert anders: Wir haben einen Behandlungsraum, vier Behandlerinnen und keinen offenen Wartebereich. Während Ihres Termins sind Sie in der Regel der einzige Gast im Raum.",
                 en: "Hamburg now has several head spa providers, including larger salons with multiple stations and tightly scheduled slots. That can be practical if you need a central, spontaneous appointment. satuuu99 works differently: we have one treatment room, four practitioners and no open waiting area. During your appointment you are usually the only guest in the room.",
               })}
             </p>
             <p>
               {t({
-                de: "Konkret heißt das: Das Vorgespräch ist kein Formular, sondern ein Gespräch. Du kannst während der Anwendung jederzeit um weniger Druck, eine andere Temperatur oder eine Pause bitten. Am Ende gibt es kein Verkaufsgespräch — wenn du wissen möchtest, welches Produkt verwendet wurde, sagen wir es dir, und damit ist das Thema erledigt.",
+                de: "Konkret heißt das: Das Vorgespräch ist kein Formular, sondern ein Gespräch. Sie können während der Anwendung jederzeit um weniger Druck, eine andere Temperatur oder eine Pause bitten. Am Ende gibt es kein Verkaufsgespräch — wenn Sie wissen möchten, welches Produkt verwendet wurde, sagen wir es Ihnen, und damit ist das Thema erledigt.",
                 en: "In practice: the consultation is a conversation, not a form. You can ask for less pressure, a different temperature or a pause at any point. At the end there is no sales pitch — if you want to know which product was used we will tell you, and that is the end of it.",
               })}
             </p>
             <p>
               {t({
-                de: "Wir haben einen einzigen Behandlungsraum und keinen Ruhebereich mit Liegen. Wenn du eine Anlage suchst, in der du einen halben Tag verbringst, sind die großen Hamburger Häuser die bessere Adresse. Wenn du einen ruhigen, persönlichen Termin möchtest, sind wir es.",
+                de: "Wir haben einen einzigen Behandlungsraum und keinen Ruhebereich mit Liegen. Wenn Sie eine Anlage suchen, in der Sie einen halben Tag verbringen, sind die großen Hamburger Häuser die bessere Adresse. Wenn Sie einen ruhigen, persönlichen Termin möchten, sind wir es.",
                 en: "We have a single treatment room and no relaxation lounge. If you are looking for a facility to spend half a day in, the larger Hamburg venues are the better address. If you want a quiet, personal appointment, we are.",
               })}
             </p>
@@ -300,25 +300,25 @@ export function HeadSpaHamburgPage() {
           <div>
             <h2>
               {t({
-                de: "Wann du den Termin am besten legst",
+                de: "Wann Sie den Termin am besten legen",
                 en: "When to schedule your appointment",
               })}
             </h2>
             <p>
               {t({
-                de: "Weil dein Haar nass wird, ist ein Termin ohne unmittelbar folgende Verpflichtung angenehmer. Für Gäste aus Hamburg heißt das in der Praxis: später Nachmittag, Abend bis 19 Uhr oder Samstag bis 18 Uhr. Dann fällt die Rushhour auf der A1 weg, und du kannst nach der Behandlung noch zwanzig Minuten sitzen bleiben, statt sofort loszufahren.",
+                de: "Weil Ihr Haar nass wird, ist ein Termin ohne unmittelbar folgende Verpflichtung angenehmer. Für Gäste aus Hamburg heißt das in der Praxis: später Nachmittag, Abend bis 19 Uhr oder Samstag bis 18 Uhr. Dann fällt die Rushhour auf der A1 weg, und Sie können nach der Behandlung noch zwanzig Minuten sitzen bleiben, statt sofort loszufahren.",
                 en: "Because your hair gets wet, an appointment with nothing immediately afterwards is more comfortable. For guests from Hamburg that usually means a late afternoon, an evening slot up to 7pm, or a Saturday up to 6pm. That avoids rush hour on the A1, and you can sit for twenty minutes afterwards rather than setting off straight away.",
               })}
             </p>
             <p>
               {t({
-                de: "Wenn du Haarverlängerungen, ein Weaving oder frisch gefärbtes Haar trägst, schreib uns vor der Buchung. Das Gleiche gilt bei empfindlicher, gereizter oder entzündeter Kopfhaut und bei Haarausfall, der medizinisch abgeklärt wird — dann klären wir gemeinsam, ob das Ritual sinnvoll ist, statt dich umsonst herausfahren zu lassen.",
+                de: "Wenn Sie Haarverlängerungen, ein Weaving oder frisch gefärbtes Haar tragen, schreiben Sie uns vor der Buchung. Das Gleiche gilt bei empfindlicher, gereizter oder entzündeter Kopfhaut und bei Haarausfall, der medizinisch abgeklärt wird — dann klären wir gemeinsam, ob das Ritual sinnvoll ist, statt Sie umsonst herausfahren zu lassen.",
                 en: "If you wear extensions or a weave, or your hair has been freshly coloured, write to us before booking. The same applies to a sensitive, irritated or inflamed scalp and to hair loss under medical investigation — we will then work out together whether the ritual makes sense, rather than letting you travel out here for nothing.",
               })}
             </p>
             <p>
               {t({
-                de: "Freie Termine und die aktuell angebotenen Varianten findest du im Online-Kalender. Die verbindlichen Preise und Behandlungszeiten stehen in der offiziellen Preisliste.",
+                de: "Freie Termine und die aktuell angebotenen Varianten finden Sie im Online-Kalender. Die verbindlichen Preise und Behandlungszeiten stehen in der offiziellen Preisliste.",
                 en: "Available appointments and the options currently offered are in the online calendar. Confirmed prices and durations are in the official price list.",
               })}
             </p>
@@ -361,7 +361,7 @@ export function HeadSpaHamburgPage() {
             <h2>{t({ de: "Online buchbar", en: "Book online" })}</h2>
             <p>
               {t({
-                de: "Im Kalender siehst du freie Termine und kannst deine Auszeit direkt reservieren.",
+                de: "Im Kalender sehen Sie freie Termine und können Ihre Auszeit direkt reservieren.",
                 en: "See available appointments in the calendar and reserve your time directly.",
               })}
             </p>

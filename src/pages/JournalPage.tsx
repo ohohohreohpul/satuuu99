@@ -20,7 +20,7 @@ export function JournalPage() {
       en: "Journal: Head Spa & Wellness in Ahrensburg | satuuu99",
     }),
     t({
-      de: "Tipps für deinen ersten Head-Spa-Besuch, Orientierung zu Wellnessritualen und Zeit für dich in Ahrensburg bei Hamburg.",
+      de: "Tipps für Ihren ersten Head-Spa-Besuch, Orientierung zu Wellnessritualen und Zeit für Sie in Ahrensburg bei Hamburg.",
       en: "Plan your first head spa visit, explore wellness rituals and make time for yourself in Ahrensburg near Hamburg.",
     }),
   );
@@ -37,7 +37,7 @@ export function JournalPage() {
       <h1>{t({ de: "Zeit zum Innehalten.", en: "Time to pause." })}</h1>
       <p className="journal-lead">
         {t({
-          de: "Rituale, kleine Gedanken und alles, was du vor deinem Besuch wissen möchtest.",
+          de: "Rituale, kleine Gedanken und alles, was Sie vor Ihrem Besuch wissen möchten.",
           en: "Rituals, reflections and the things you would like to know before your visit.",
         })}
       </p>
@@ -49,7 +49,7 @@ export function JournalPage() {
       </p>
       <p className="journal-hub-intro">
         {t({
-          de: "Wir schreiben ohne Wirkversprechen. Wo wir etwas nicht wissen oder nicht beurteilen dürfen, steht das so da — satuuu99 ist ein Wellnessstudio in Ahrensburg und keine medizinische Einrichtung. Verbindliche Preise und Behandlungszeiten findest du ausschließlich in der offiziellen Preisliste.",
+          de: "Wir schreiben ohne Wirkversprechen. Wo wir etwas nicht wissen oder nicht beurteilen dürfen, steht das so da — satuuu99 ist ein Wellnessstudio in Ahrensburg und keine medizinische Einrichtung. Verbindliche Preise und Behandlungszeiten finden Sie ausschließlich in der offiziellen Preisliste.",
           en: "We write without promising outcomes. Where we do not know something, or are not qualified to judge it, we say so — satuuu99 is a wellness studio in Ahrensburg, not a medical facility. Confirmed prices and durations appear only in the official price list.",
         })}
       </p>
@@ -140,7 +140,7 @@ export function JournalArticlePage() {
     article
       ? t(article.intro)
       : t({
-          de: "Entdecke das satuuu99 Journal.",
+          de: "Entdecken Sie das satuuu99 Journal.",
           en: "Explore the satuuu99 journal.",
         }),
     !article,

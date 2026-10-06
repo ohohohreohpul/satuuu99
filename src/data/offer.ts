@@ -91,7 +91,7 @@ const SURPRISE_GIFT: PackageExtra = {
 const HANDBAG: PackageExtra = {
   kind: "handbag",
   text: {
-    de: "Dazu suchst du dir eine Handtasche aus unserem Sortiment aus.",
+    de: "Dazu suchen Sie sich eine Handtasche aus unserem Sortiment aus.",
     en: "You also choose a handbag from our range.",
   },
 };
@@ -175,7 +175,7 @@ export const VOUCHER_PACKAGES: VoucherPackage[] = [
         },
       ],
       note: {
-        de: "Für jeden Gutschein wählst du eine dieser vier Anwendungen — entscheiden musst du dich nicht beim Kauf, sondern erst vor dem Termin. Andere Anwendungen sind gegen Aufpreis ebenfalls möglich.",
+        de: "Für jeden Gutschein wählen Sie eine dieser vier Anwendungen — entscheiden müssen Sie sich nicht beim Kauf, sondern erst vor dem Termin. Andere Anwendungen sind gegen Aufpreis ebenfalls möglich.",
         en: "Each card is for one of these four treatments — you do not decide when you buy, only before the appointment. Other treatments are also possible for a surcharge.",
       },
     },
@@ -244,6 +244,6 @@ export function packageName(item: VoucherPackage, lang: "de" | "en"): string {
 
 /** Bonus that comes with every gift-card purchase during the offer. */
 export const PURCHASE_BONUS: Localized = {
-  de: "Zu jedem Gutscheinkauf ab 70 € oder ab 60 Minuten bekommst du eine kleine Überraschung von uns dazu.",
+  de: "Zu jedem Gutscheinkauf ab 70 € oder ab 60 Minuten erhalten Sie eine kleine Überraschung von uns dazu.",
   en: "Every gift-card purchase of €70 or more, or 60 minutes or more, comes with a small surprise from us.",
 };

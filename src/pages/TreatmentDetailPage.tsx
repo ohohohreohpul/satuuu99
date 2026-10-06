@@ -68,7 +68,7 @@ export function TreatmentDetailPage() {
             {t({ de: "Behandlungen", en: "Treatments" })} / {t(group.word)}
           </Link>
           <p className="eyebrow">
-            {t({ de: "Dein Ritual", en: "Your ritual" })}
+            {t({ de: "Ihr Ritual", en: "Your ritual" })}
           </p>
           <h1>{t(treatment.name)}</h1>
           <p className="treatment-lead">{t(treatment.description)}</p>
@@ -97,7 +97,7 @@ export function TreatmentDetailPage() {
         </figure>
         <div className="treatment-points">
           <p className="eyebrow">
-            {t({ de: "Was dich erwartet", en: "What to expect" })}
+            {t({ de: "Was Sie erwartet", en: "What to expect" })}
           </p>
           <ol>
             {(treatment.highlights || []).map((highlight, index) => (
@@ -112,7 +112,7 @@ export function TreatmentDetailPage() {
       <TreatmentEditorial group={group} treatment={treatment} />
       <section className="related section-shell">
         <p className="eyebrow">
-          {t({ de: "Auch für dich", en: "You may also like" })}
+          {t({ de: "Auch für Sie", en: "You may also like" })}
         </p>
         <div className="related-grid">
           {related.map((item) => (

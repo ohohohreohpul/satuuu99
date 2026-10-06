@@ -27,7 +27,7 @@ export function LocalOrientation() {
       </figure>
       <div className="local-orientation-copy">
         <p className="eyebrow">
-          {t({ de: "Wo du uns findest", en: "Where to find us" })}
+          {t({ de: "Wo Sie uns finden", en: "Where to find us" })}
         </p>
         <h2>
           {t({
@@ -77,7 +77,7 @@ export function LocalOrientation() {
         </dl>
         <p className="local-orientation-note">
           {t({
-            de: "satuuu99 hat einen Behandlungsraum, und genau das ist der Punkt — du teilst ihn mit niemandem. Wir sind außerdem keine medizinische Einrichtung: Alle elf Anwendungen sind Wellness- und Pflegerituale und ersetzen weder Physiotherapie noch eine dermatologische Behandlung oder podologische Fußpflege.",
+            de: "satuuu99 hat einen Behandlungsraum, und genau das ist der Punkt — Sie teilen ihn mit niemandem. Wir sind außerdem keine medizinische Einrichtung: Alle elf Anwendungen sind Wellness- und Pflegerituale und ersetzen weder Physiotherapie noch eine dermatologische Behandlung oder podologische Fußpflege.",
             en: "satuuu99 has one treatment room, and that is exactly the point — you share it with nobody. We are also not a medical facility: all eleven treatments are wellness and care rituals, and none replaces physiotherapy, dermatological care or podiatry.",
           })}
         </p>

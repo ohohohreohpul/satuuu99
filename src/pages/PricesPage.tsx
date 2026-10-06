@@ -17,7 +17,7 @@ const PRICE_FAQS = [
       en: "Where do I find current satuuu99 prices?",
     },
     a: {
-      de: "Die verbindlichen Preise und Behandlungszeiten stehen in der offiziellen Preisliste in unserem Online-Kalender. Dort siehst du jede buchbare Anwendung mit aktuellem Preis, Dauer und freien Terminen.",
+      de: "Die verbindlichen Preise und Behandlungszeiten stehen in der offiziellen Preisliste in unserem Online-Kalender. Dort sehen Sie jede buchbare Anwendung mit aktuellem Preis, Dauer und freien Terminen.",
       en: "Confirmed prices and durations appear in the official price list in our online booking calendar, which shows every bookable treatment with its current price, duration and available times.",
     },
   },
@@ -27,7 +27,7 @@ const PRICE_FAQS = [
       en: "Why are the prices not listed on this page?",
     },
     a: {
-      de: "Damit du nie einen veralteten Preis liest. Preise und Behandlungszeiten ändern sich, und wir führen sie an genau einer Stelle: in der offiziellen Preisliste. Diese Seite erklärt stattdessen, wie die Preise zustande kommen und wie du die passende Variante wählst.",
+      de: "Damit Sie nie einen veralteten Preis lesen. Preise und Behandlungszeiten ändern sich, und wir führen sie an genau einer Stelle: in der offiziellen Preisliste. Diese Seite erklärt stattdessen, wie die Preise zustande kommen und wie Sie die passende Variante wählen.",
       en: "So that you never read an outdated figure. Prices and durations change, and we maintain them in exactly one place: the official price list. This page instead explains how the prices are structured and how to choose the right option.",
     },
   },
@@ -47,7 +47,7 @@ const PRICE_FAQS = [
       en: "Which payment methods does satuuu99 accept?",
     },
     a: {
-      de: "Nach aktueller Studioinformation kannst du mit Karte, PayPal oder bar bezahlen. Bezahlt wird nach der Behandlung im Studio; für die Online-Buchung ist keine Vorauszahlung nötig.",
+      de: "Nach aktueller Studioinformation können Sie mit Karte, PayPal oder bar bezahlen. Bezahlt wird nach der Behandlung im Studio; für die Online-Buchung ist keine Vorauszahlung nötig.",
       en: "According to current studio information you can pay by card, PayPal or cash. Payment is taken after the treatment in the studio; no prepayment is required to book online.",
     },
   },
@@ -57,7 +57,7 @@ const PRICE_FAQS = [
       en: "Is a tip expected?",
     },
     a: {
-      de: "Nein. Ein Trinkgeld ist bei uns nicht erwartet und nicht eingerechnet. Wenn du es trotzdem gern gibst, freuen wir uns — aber der genannte Preis ist der vollständige Preis.",
+      de: "Nein. Ein Trinkgeld ist bei uns nicht erwartet und nicht eingerechnet. Wenn Sie es trotzdem gern geben, freuen wir uns — aber der genannte Preis ist der vollständige Preis.",
       en: "No. A tip is neither expected nor included. If you would like to leave one we are glad of it — but the stated price is the full price.",
     },
   },
@@ -67,7 +67,7 @@ const PRICE_FAQS = [
       en: "What happens if I cannot keep my appointment?",
     },
     a: {
-      de: "Sag uns möglichst früh per Telefon oder E-Mail ab, damit wir den Termin weitergeben können. Die jeweils gültigen Bedingungen zu Absagen und Terminänderungen erfährst du direkt bei uns oder im Buchungssystem.",
+      de: "Sagen Sie uns möglichst früh per Telefon oder E-Mail ab, damit wir den Termin weitergeben können. Die jeweils gültigen Bedingungen zu Absagen und Terminänderungen erfahren Sie direkt bei uns oder im Buchungssystem.",
       en: "Let us know by phone or email as early as you can so we can pass the slot on. The applicable conditions for cancellations and changes are available directly from us or in the booking system.",
     },
   },
@@ -109,7 +109,7 @@ export function PricesPage() {
           </h1>
           <p className="answer-lead">
             {t({
-              de: "Die verbindlichen Preise und Behandlungszeiten von satuuu99 stehen in der offiziellen Preisliste — dort und nur dort, damit du nie eine veraltete Zahl liest. Diese Seite erklärt, wie die Preise aufgebaut sind, welche Dauer zu welchem Anlass passt und wie du bei uns bezahlst.",
+              de: "Die verbindlichen Preise und Behandlungszeiten von satuuu99 stehen in der offiziellen Preisliste — dort und nur dort, damit Sie nie eine veraltete Zahl lesen. Diese Seite erklärt, wie die Preise aufgebaut sind, welche Dauer zu welchem Anlass passt und wie Sie bei uns bezahlen.",
               en: "The confirmed prices and durations for satuuu99 are in the official price list — there and only there, so you never read an outdated figure. This page explains how the prices are structured, which duration suits which occasion, and how payment works.",
             })}
           </p>
@@ -127,7 +127,7 @@ export function PricesPage() {
           </p>
           <h2>
             {t({
-              de: "Drei Dinge bestimmen, was dein Termin kostet.",
+              de: "Drei Dinge bestimmen, was Ihr Termin kostet.",
               en: "Three things decide what your appointment costs.",
             })}
           </h2>
@@ -140,7 +140,7 @@ export function PricesPage() {
             </h3>
             <p>
               {t({
-                de: "Der größte Faktor. Reserviert wird Behandlungszeit — und die längere Variante derselben Anwendung kostet entsprechend mehr. Rechne zusätzlich einige Minuten für das Vorgespräch, das Umkleiden und das ruhige Ankommen danach ein; diese Zeit ist im Termin enthalten, aber nicht Teil der reinen Behandlungszeit.",
+                de: "Der größte Faktor. Reserviert wird Behandlungszeit — und die längere Variante derselben Anwendung kostet entsprechend mehr. Rechnen Sie zusätzlich einige Minuten für das Vorgespräch, das Umkleiden und das ruhige Ankommen danach ein; diese Zeit ist im Termin enthalten, aber nicht Teil der reinen Behandlungszeit.",
                 en: "The biggest factor. What is reserved is treatment time, so the longer option of the same treatment costs proportionally more. Allow a few extra minutes for the consultation, changing and settling afterwards; that time is part of the appointment but not of the treatment time itself.",
               })}
             </p>
@@ -162,7 +162,7 @@ export function PricesPage() {
             <h3>{t({ de: "Nichts danach", en: "Nothing afterwards" })}</h3>
             <p>
               {t({
-                de: "Es gibt bei uns keine Pflichtpakete, keine Abos und keinen Verkaufsteil am Ende des Termins. Wenn du wissen möchtest, welches Produkt wir verwendet haben, sagen wir es dir gern — ein Verkaufsgespräch gehört nicht dazu. Ein Trinkgeld ist nicht erwartet und nicht eingerechnet.",
+                de: "Es gibt bei uns keine Pflichtpakete, keine Abos und keinen Verkaufsteil am Ende des Termins. Wenn Sie wissen möchten, welches Produkt wir verwendet haben, sagen wir es Ihnen gern — ein Verkaufsgespräch gehört nicht dazu. Ein Trinkgeld ist nicht erwartet und nicht eingerechnet.",
                 en: "There are no mandatory packages, no subscriptions and no sales pitch at the end of your appointment. If you want to know which product we used we will happily tell you — a sales conversation is not part of it. A tip is neither expected nor included.",
               })}
             </p>
@@ -189,19 +189,19 @@ export function PricesPage() {
           </h2>
           <p>
             {t({
-              de: "Eine kürzere Variante ist sinnvoll, wenn du eine Anwendung zum ersten Mal ausprobierst, wenn du in der Mittagspause kommst oder wenn du einen klaren Fokus hast — etwa nur Nacken und Schultern. Sie reicht für ein vollständiges Ritual, lässt aber weniger Raum für Wiederholungen.",
+              de: "Eine kürzere Variante ist sinnvoll, wenn Sie eine Anwendung zum ersten Mal ausprobieren, wenn Sie in der Mittagspause kommen oder wenn Sie einen klaren Fokus haben — etwa nur Nacken und Schultern. Sie reicht für ein vollständiges Ritual, lässt aber weniger Raum für Wiederholungen.",
               en: "A shorter option makes sense when you are trying a treatment for the first time, when you come in a lunch break, or when you have one clear focus — neck and shoulders only, for example. It is enough for a complete ritual but leaves less room for repetition.",
             })}
           </p>
           <p>
             {t({
-              de: "Die längere Variante lohnt sich, wenn du wirklich abschalten möchtest, wenn mehrere Körperbereiche einbezogen werden sollen oder wenn du dazu neigst, in den ersten zwanzig Minuten noch gedanklich bei der Arbeit zu sein. Bei Geschenken ist die längere Dauer die verlässlichere Wahl, weil sie mehr Spielraum lässt.",
+              de: "Die längere Variante lohnt sich, wenn Sie wirklich abschalten möchten, wenn mehrere Körperbereiche einbezogen werden sollen oder wenn Sie dazu neigen, in den ersten zwanzig Minuten noch gedanklich bei der Arbeit zu sein. Bei Geschenken ist die längere Dauer die verlässlichere Wahl, weil sie mehr Spielraum lässt.",
               en: "The longer option is worth it if you genuinely want to switch off, if several areas of the body should be included, or if you tend to spend the first twenty minutes still thinking about work. For gifts the longer duration is the more reliable choice, because it leaves more room.",
             })}
           </p>
           <p>
             {t({
-              de: "Welche Dauern für welche Anwendung angeboten werden, steht in der Preisliste und im Kalender. Wenn du zwischen zwei Varianten schwankst, schreib uns kurz — wir sagen dir ehrlich, ob die längere in deinem Fall einen Unterschied macht.",
+              de: "Welche Dauern für welche Anwendung angeboten werden, steht in der Preisliste und im Kalender. Wenn Sie zwischen zwei Varianten schwanken, schreiben Sie uns kurz — wir sagen Ihnen ehrlich, ob die längere in Ihrem Fall einen Unterschied macht.",
               en: "Which durations are offered for which treatment is set out in the price list and the calendar. If you are torn between two options, write to us — we will tell you honestly whether the longer one makes a difference in your case.",
             })}
           </p>

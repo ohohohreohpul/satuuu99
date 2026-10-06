@@ -32,9 +32,9 @@ test("mega menu, treatment finder and journal form a working discovery flow", as
   await expect(page.locator(".journal-card")).toHaveCount(allArticles);
   await page.locator(".journal-card").first().click();
   await expect(page.locator("h1")).toHaveText(
-    "Head Spa und deine Haare: Vorbereitung, Ablauf und der Tag danach",
+    "Head Spa und Ihre Haare: Vorbereitung, Ablauf und der Tag danach",
   );
-  await expect(page).toHaveTitle(/Head Spa und deine Haare/);
+  await expect(page).toHaveTitle(/Head Spa und Ihre Haare/);
   await page.getByRole("button", { name: "English" }).click();
   await expect(page.locator("h1")).toHaveText(
     "Head spa and your hair: preparation, ritual and the day after",
@@ -180,7 +180,7 @@ test("living menu and visit journey respond to visitor intent", async ({
   await journey.getByRole("tab", { name: /03 Loslassen/ }).click();
   await expect(
     journey.getByRole("heading", {
-      name: "Dein Ritual. Dein Tempo. Deine Zeit.",
+      name: "Ihr Ritual. Ihr Tempo. Ihre Zeit.",
     }),
   ).toBeVisible();
   await expect(journey.locator(".journey-progress i")).toHaveAttribute(

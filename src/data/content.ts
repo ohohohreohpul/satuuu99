@@ -32,7 +32,7 @@ export const CONTACT = {
 
 /** Where new gift cards can be bought, shown wherever gift cards come up. */
 export const GIFT_CARD_PURCHASE = {
-  de: "Gutscheine bekommst du online in unserem Buchungsportal, telefonisch, per WhatsApp oder per E-Mail.",
+  de: "Gutscheine erhalten Sie online in unserem Buchungsportal, telefonisch, per WhatsApp oder per E-Mail.",
   en: "Gift cards are available online in our booking portal, by phone, on WhatsApp or by email.",
 } as const satisfies Localized;
 
@@ -78,7 +78,7 @@ export const FOCUS_GROUPS: FocusGroup[] = [
       en: "Let your mind go quiet.",
     },
     blurb: {
-      de: "Warmes Wasser, behutsame Berührung und Zeit für dich. Entdecke unser Japanese Head Spa.",
+      de: "Warmes Wasser, behutsame Berührung und Zeit für sich. Entdecken Sie unser Japanese Head Spa.",
       en: "Warm water, gentle touch and time to yourself. Discover our Japanese head spa.",
     },
     treatments: [
@@ -86,7 +86,7 @@ export const FOCUS_GROUPS: FocusGroup[] = [
         id: "head-spa",
         name: { de: "Japanese Head Spa", en: "Japanese Head Spa" },
         description: {
-          de: "Ein Pflegeritual für Kopfhaut und Haar, begleitet von einer entspannenden Kopf- und Nackenmassage. Du liegst bequem, warmes Wasser läuft durch dein Haar, und wir nehmen uns Zeit. Frag uns nach den aktuell verfügbaren Anwendungen.",
+          de: "Ein Pflegeritual für Kopfhaut und Haar, begleitet von einer entspannenden Kopf- und Nackenmassage. Sie liegen bequem, warmes Wasser läuft durch Ihr Haar, und wir nehmen uns Zeit. Fragen Sie uns nach den aktuell verfügbaren Anwendungen.",
           en: "A scalp and hair care ritual with a relaxing head and neck massage. You lie back comfortably, warm water runs through your hair, and we take our time. Ask us about the treatments currently available.",
         },
         highlights: [
@@ -118,7 +118,7 @@ export const FOCUS_GROUPS: FocusGroup[] = [
       en: "Care that feels as good as it looks.",
     },
     blurb: {
-      de: "Sanfte Reinigung und wohltuende Massage für Gesicht und Dekolleté. Dein Moment zum Zurücklehnen.",
+      de: "Sanfte Reinigung und wohltuende Massage für Gesicht und Dekolleté. Ihr Moment zum Zurücklehnen.",
       en: "Gentle cleansing and soothing massage for your face and décolletage. Your moment to lean back.",
     },
     treatments: [
@@ -126,7 +126,7 @@ export const FOCUS_GROUPS: FocusGroup[] = [
         id: "aqua-facial",
         name: { de: "Aqua Facial", en: "Aqua Facial" },
         description: {
-          de: "Gesichtspflege mit wasserbasierter Reinigung und Feuchtigkeit. Wir besprechen vorab, welche Pflege zu deiner Haut passt.",
+          de: "Gesichtspflege mit wasserbasierter Reinigung und Feuchtigkeit. Wir besprechen vorab, welche Pflege zu Ihrer Haut passt.",
           en: "Facial care with water-based cleansing and hydration. We discuss the right care for your skin before your treatment.",
         },
         highlights: [
@@ -139,7 +139,7 @@ export const FOCUS_GROUPS: FocusGroup[] = [
             en: "Hydrating care for face and décolletage",
           },
           {
-            de: "Vorab abgestimmt auf deine Haut",
+            de: "Vorab abgestimmt auf Ihre Haut",
             en: "Matched to your skin beforehand",
           },
         ],
@@ -148,7 +148,7 @@ export const FOCUS_GROUPS: FocusGroup[] = [
         id: "sleep-glow",
         name: { de: "Sleep & Glow", en: "Sleep & Glow" },
         description: {
-          de: "Ein ruhiges Gesichtspflege-Ritual mit entspannenden Massageelementen. Zeit, die Augen zu schließen und dich verwöhnen zu lassen.",
+          de: "Ein ruhiges Gesichtspflege-Ritual mit entspannenden Massageelementen. Zeit, die Augen zu schließen und sich verwöhnen zu lassen.",
           en: "A restful facial ritual with relaxing massage. Time to close your eyes and enjoy being cared for.",
         },
         highlights: [
@@ -161,7 +161,7 @@ export const FOCUS_GROUPS: FocusGroup[] = [
             en: "Relaxing massage for face and neck",
           },
           {
-            de: "Ideal, wenn du einfach abschalten möchtest",
+            de: "Ideal, wenn Sie einfach abschalten möchten",
             en: "Ideal when you simply want to switch off",
           },
         ],
@@ -170,7 +170,7 @@ export const FOCUS_GROUPS: FocusGroup[] = [
         id: "gua-sha",
         name: { de: "Gua Sha", en: "Gua Sha" },
         description: {
-          de: "Langsame, sorgfältige Massage mit einem Gua-Sha-Stein. Druck und Ablauf stimmen wir mit dir ab.",
+          de: "Langsame, sorgfältige Massage mit einem Gua-Sha-Stein. Druck und Ablauf stimmen wir mit Ihnen ab.",
           en: "Slow, attentive massage using a gua sha stone. We tailor the pressure and treatment to you.",
         },
         highlights: [
@@ -194,11 +194,11 @@ export const FOCUS_GROUPS: FocusGroup[] = [
     id: "feet",
     word: { de: "Füße", en: "Feet" },
     title: {
-      de: "Eine Pause für deine Füße.",
+      de: "Eine Pause für Ihre Füße.",
       en: "A little care, from the ground up.",
     },
     blurb: {
-      de: "Sie tragen dich durch den Tag. Gönn deinen Füßen sorgfältige Pflege und eine wohltuende Massage.",
+      de: "Ihre Füße tragen Sie durch den Tag. Gönnen Sie ihnen sorgfältige Pflege und eine wohltuende Massage.",
       en: "They carry you through your day. Give your feet attentive care and a soothing massage.",
     },
     treatments: [
@@ -206,7 +206,7 @@ export const FOCUS_GROUPS: FocusGroup[] = [
         id: "foot-care",
         name: { de: "Wellness-Fußpflege", en: "Wellness foot care" },
         description: {
-          de: "Pflege für deine Füße, verbunden mit einem entspannenden Wellnessmoment. Für gepflegte Füße und ein angenehmes Gefühl.",
+          de: "Pflege für Ihre Füße, verbunden mit einem entspannenden Wellnessmoment. Für gepflegte Füße und ein angenehmes Gefühl.",
           en: "Attentive foot care combined with a relaxing wellness moment. For cared-for feet and a comfortable feeling.",
         },
         highlights: [
@@ -228,7 +228,7 @@ export const FOCUS_GROUPS: FocusGroup[] = [
         id: "foot-massage",
         name: { de: "Fußmassage", en: "Foot massage" },
         description: {
-          de: "Lehn dich im Relaxsessel zurück. Sanfte bis kräftige Massagegriffe schenken deinen Füßen eine wohlverdiente Pause.",
+          de: "Lehnen Sie sich im Relaxsessel zurück. Sanfte bis kräftige Massagegriffe schenken Ihren Füßen eine wohlverdiente Pause.",
           en: "Settle into a comfortable reclining chair. Gentle to firm massage gives your feet a well-deserved break.",
         },
         highlights: [
@@ -237,7 +237,7 @@ export const FOCUS_GROUPS: FocusGroup[] = [
             en: "In a comfortable reclining chair",
           },
           {
-            de: "Von sanft bis kräftig — du bestimmst",
+            de: "Von sanft bis kräftig — Sie bestimmen",
             en: "From gentle to firm — you decide",
           },
           {
@@ -256,7 +256,7 @@ export const FOCUS_GROUPS: FocusGroup[] = [
       en: "Warmth. Touch. A deeper breath.",
     },
     blurb: {
-      de: "Wohltuende Wellnessmassagen mit warmem Öl und ruhigen Bewegungen. Du bestimmst, was sich richtig anfühlt.",
+      de: "Wohltuende Wellnessmassagen mit warmem Öl und ruhigen Bewegungen. Sie bestimmen, was sich richtig anfühlt.",
       en: "Soothing wellness massage with warm oil and unhurried movements. You tell us what feels right.",
     },
     treatments: [
@@ -273,7 +273,7 @@ export const FOCUS_GROUPS: FocusGroup[] = [
           { minutes: 60, euros: 70 },
         ],
         description: {
-          de: "Wohltuende Entspannung für Kopf, Nacken, Schultern und Rücken — die ideale Auszeit, wenn du viel sitzt, mental gefordert bist oder Verspannungen im oberen Körper mit dir trägst. Sanfter Druck, rhythmische Thai-Massagebewegungen und achtsame Dehnungen lockern die Muskulatur. Das Highlight ist die Gua Sha Massage: Ein spezieller Stein wird mit gleichmäßigen Strichen über die Haut geführt und sorgt für ein leichtes, durchwärmtes Körpergefühl.",
+          de: "Wohltuende Entspannung für Kopf, Nacken, Schultern und Rücken — die ideale Auszeit, wenn Sie viel sitzen, mental gefordert sind oder Verspannungen im oberen Körper mit sich tragen. Sanfter Druck, rhythmische Thai-Massagebewegungen und achtsame Dehnungen lockern die Muskulatur. Das Highlight ist die Gua Sha Massage: Ein spezieller Stein wird mit gleichmäßigen Strichen über die Haut geführt und sorgt für ein leichtes, durchwärmtes Körpergefühl.",
           en: "Soothing relaxation for head, neck, shoulders and back — the ideal break if you sit a lot, are mentally stretched or carry tension in your upper body. Gentle pressure, rhythmic Thai massage movements and mindful stretches loosen the muscles. The highlight is gua sha: a special stone is drawn across the skin in even strokes, leaving a light, warm feeling throughout the body.",
         },
         highlights: [
@@ -308,7 +308,7 @@ export const FOCUS_GROUPS: FocusGroup[] = [
           { minutes: 60, euros: 70 },
         ],
         description: {
-          de: "Wenn dein Körper nach Entspannung ruft: Die Bellabambi-Behandlung ist eine wohltuende und intensive Methode, um verspannte Körperbereiche gezielt zu behandeln und das Gewebe zu stimulieren. Viele Gäste empfinden sie als besonders angenehm, wenn sich der Körper schwer, fest oder verspannt anfühlt — sanft, effektiv und ganzheitlich, von Kopf bis Fuß.",
+          de: "Wenn Ihr Körper nach Entspannung ruft: Die Bellabambi-Behandlung ist eine wohltuende und intensive Methode, um verspannte Körperbereiche gezielt zu behandeln und das Gewebe zu stimulieren. Viele Gäste empfinden sie als besonders angenehm, wenn sich der Körper schwer, fest oder verspannt anfühlt — sanft, effektiv und ganzheitlich, von Kopf bis Fuß.",
           en: "When your body is asking for rest: the Bellabambi treatment is a soothing, intense method for working on tense areas of the body and stimulating the tissue. Many guests find it especially pleasant when the body feels heavy, stiff or tense — gentle, effective and holistic, from head to toe.",
         },
         highlights: [
@@ -356,7 +356,7 @@ export const FOCUS_GROUPS: FocusGroup[] = [
             en: "Cupping technique combined with classic massage",
           },
           {
-            de: "Individuell an dein persönliches Empfinden anpassbar",
+            de: "Individuell an Ihr persönliches Empfinden anpassbar",
             en: "Adapted individually to how it feels for you",
           },
           {
@@ -395,7 +395,7 @@ export const FOCUS_GROUPS: FocusGroup[] = [
         id: "steam",
         name: { de: "Dampfmassage", en: "Steam massage" },
         description: {
-          de: "Wärmender Dampf begleitet dein Massageritual. Wir beraten dich gern zu Ablauf und Verfügbarkeit.",
+          de: "Wärmender Dampf begleitet Ihr Massageritual. Wir beraten Sie gern zu Ablauf und Verfügbarkeit.",
           en: "Warming steam accompanies your massage ritual. Ask us about the treatment and availability.",
         },
         highlights: [

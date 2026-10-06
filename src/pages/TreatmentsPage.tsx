@@ -21,7 +21,7 @@ const OVERVIEW_FAQS = [
       en: "Which treatment suits me on a first visit?",
     },
     a: {
-      de: "Für einen ruhigen Einstieg ohne Ausziehen ist das Japanese Head Spa oder die Fußmassage gut geeignet. Wenn du Verspannungen in Nacken, Schultern und Rücken lösen möchtest, ist die Anti-Stress Gua Sha Massage ein guter Einstieg — schon ab 30 Minuten. Schreib uns vorher, wenn du unsicher bist — wir beraten dich ohne Buchungsdruck.",
+      de: "Für einen ruhigen Einstieg ohne Ausziehen ist das Japanese Head Spa oder die Fußmassage gut geeignet. Wenn Sie Verspannungen in Nacken, Schultern und Rücken lösen möchten, ist die Anti-Stress Gua Sha Massage ein guter Einstieg — schon ab 30 Minuten. Schreiben Sie uns vorher, wenn Sie unsicher sind — wir beraten Sie ohne Buchungsdruck.",
       en: "For a calm start with no undressing, Japanese Head Spa or the foot massage work well. If you want to release tension in neck, shoulders and back, the anti-stress gua sha massage is a good way in — from just 30 minutes. Write to us beforehand if you are unsure — we advise with no pressure to book.",
     },
   },
@@ -41,7 +41,7 @@ const OVERVIEW_FAQS = [
       en: "Do I have to undress for every treatment?",
     },
     a: {
-      de: "Nein. Beim Head Spa bleibt die Kleidung an, bei den Gesichtsbehandlungen wird nur das Oberteil gelockert, bei den Fußritualen kommen Schuhe und Socken aus. Nur bei den Körpermassagen ziehst du dich bis auf die Unterwäsche aus und liegst dabei mit Leinen abgedeckt.",
+      de: "Nein. Beim Head Spa bleibt die Kleidung an, bei den Gesichtsbehandlungen wird nur das Oberteil gelockert, bei den Fußritualen kommen Schuhe und Socken aus. Nur bei den Körpermassagen ziehen Sie sich bis auf die Unterwäsche aus und liegen dabei mit Leinen abgedeckt.",
       en: "No. For head spa your clothing stays on; for facial treatments only the top is loosened; for foot rituals shoes and socks come off. Only for the body massages do you undress to your underwear, and you lie draped in linen throughout.",
     },
   },
@@ -61,7 +61,7 @@ const OVERVIEW_FAQS = [
       en: "Can I combine two treatments in one appointment?",
     },
     a: {
-      de: "Das hängt von der Terminlage ab. Frag uns vor der Buchung per E-Mail oder Telefon; wenn es zeitlich passt, planen wir beide Anwendungen hintereinander ein.",
+      de: "Das hängt von der Terminlage ab. Fragen Sie uns vor der Buchung per E-Mail oder Telefon; wenn es zeitlich passt, planen wir beide Anwendungen hintereinander ein.",
       en: "That depends on availability. Ask us by email or phone before booking; if the timing works, we schedule both treatments one after the other.",
     },
   },
@@ -76,7 +76,7 @@ export function TreatmentsPage() {
       en: "Treatments compared: head spa, face, feet, massage | satuuu99 Ahrensburg",
     }),
     t({
-      de: "Elf Wellnessbehandlungen in Ahrensburg bei Hamburg im direkten Vergleich: Fokus, Berührung, Wasser oder Wärme, Kleidung und Position. Finde die Anwendung, die zu dir passt.",
+      de: "Elf Wellnessbehandlungen in Ahrensburg bei Hamburg im direkten Vergleich: Fokus, Berührung, Wasser oder Wärme, Kleidung und Position. Finden Sie die Anwendung, die zu Ihnen passt.",
       en: "Eleven wellness treatments in Ahrensburg near Hamburg compared directly: focus, touch, water or heat, clothing and position. Find the treatment that suits you.",
     }),
   );
@@ -105,7 +105,7 @@ export function TreatmentsPage() {
         eyebrow={t({ de: "Behandlungen", en: "Treatments" })}
         title={
           <>
-            {t({ de: "Finde deine", en: "Find your" })}
+            {t({ de: "Finden Sie Ihre", en: "Find your" })}
             <br />
             <span className="soft-text">
               {t({ de: "Art von Pause.", en: "kind of pause." })}
@@ -113,7 +113,7 @@ export function TreatmentsPage() {
           </>
         }
         copy={t({
-          de: "Elf Rituale von Kopf bis Fuß, in einem kleinen privaten Studio in Ahrensburg bei Hamburg. Unten findest du alle Anwendungen im direkten Vergleich — damit du nicht nach Namen, sondern nach Gefühl entscheiden kannst.",
+          de: "Elf Rituale von Kopf bis Fuß, in einem kleinen privaten Studio in Ahrensburg bei Hamburg. Unten finden Sie alle Anwendungen im direkten Vergleich — damit Sie nicht nach Namen, sondern nach Gefühl entscheiden können.",
           en: "Eleven rituals from head to toe, in a small private studio in Ahrensburg near Hamburg. Below you will find every treatment compared directly — so you can choose by how you want to feel rather than by name.",
         })}
         photo={MEDIA.treatments.head}
@@ -139,13 +139,13 @@ export function TreatmentsPage() {
         <div>
           <p className="answer-lead">
             {t({
-              de: "satuuu99 bietet elf Wellnessbehandlungen in vier Bereichen an: Kopf, Gesicht, Füße und Körper. Alle Anwendungen sind Pflege- und Entspannungsrituale, keine medizinischen Behandlungen. Du wirst vor jedem Termin beraten, und Druck, Tempo und Wärme stimmen wir während der Anwendung mit dir ab.",
+              de: "satuuu99 bietet elf Wellnessbehandlungen in vier Bereichen an: Kopf, Gesicht, Füße und Körper. Alle Anwendungen sind Pflege- und Entspannungsrituale, keine medizinischen Behandlungen. Sie werden vor jedem Termin beraten, und Druck, Tempo und Wärme stimmen wir während der Anwendung mit Ihnen ab.",
               en: "satuuu99 offers eleven wellness treatments across four areas: head, face, feet and body. All of them are care and relaxation rituals rather than medical treatments. Every appointment begins with a consultation, and pressure, pace and warmth are agreed with you as we go.",
             })}
           </p>
           <p>
             {t({
-              de: "Die Unterschiede zwischen den Ritualen liegen weniger im Ergebnis als im Erlebnis: Manche arbeiten mit warmem Wasser, andere mit Öl, Wärme oder einem glatten Stein. Bei einigen bleibst du vollständig bekleidet, bei anderen liegst du mit Leinen abgedeckt auf der Massageliege. Genau diese Punkte kannst du in der Tabelle vergleichen, bevor du eine Detailseite öffnest.",
+              de: "Die Unterschiede zwischen den Ritualen liegen weniger im Ergebnis als im Erlebnis: Manche arbeiten mit warmem Wasser, andere mit Öl, Wärme oder einem glatten Stein. Bei einigen bleiben Sie vollständig bekleidet, bei anderen liegen Sie mit Leinen abgedeckt auf der Massageliege. Genau diese Punkte können Sie in der Tabelle vergleichen, bevor Sie eine Detailseite öffnen.",
               en: "The differences between the rituals lie less in the result than in the experience: some work with warm water, others with oil, heat or a smooth stone. In some you stay fully dressed; in others you lie draped in linen on the massage table. Those are exactly the points you can compare in the table before opening a detail page.",
             })}
           </p>
@@ -170,11 +170,11 @@ export function TreatmentsPage() {
       <section className="decision-guide section-shell">
         <div className="section-heading">
           <p className="eyebrow">
-            {t({ de: "Wenn du so ankommst", en: "If you arrive like this" })}
+            {t({ de: "Wenn Sie so ankommen", en: "If you arrive like this" })}
           </p>
           <h2>
             {t({
-              de: "Sag uns, wie es dir geht — nicht, wie das Ritual heißt.",
+              de: "Sagen Sie uns, wie es Ihnen geht — nicht, wie das Ritual heißt.",
               en: "Tell us how you feel — not what the ritual is called.",
             })}
           </h2>
@@ -286,7 +286,7 @@ export function TreatmentsPage() {
         </p>
         <h2>
           {t({
-            de: "Wir finden gemeinsam heraus, was gerade zu dir passt.",
+            de: "Wir finden gemeinsam heraus, was gerade zu Ihnen passt.",
             en: "We’ll work out together what feels right for you.",
           })}
         </h2>

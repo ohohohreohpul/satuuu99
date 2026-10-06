@@ -19,7 +19,7 @@ export const DECISION_ROUTES: DecisionRoute[] = [
     },
     treatmentId: "head-spa",
     why: {
-      de: "Kopf, Nacken und warmes Wasser — die Anwendung, bei der du am wenigsten selbst tun musst.",
+      de: "Kopf, Nacken und warmes Wasser — die Anwendung, bei der Sie am wenigsten selbst tun müssen.",
       en: "Head, neck and warm water — the treatment that asks the least of you.",
     },
   },
@@ -63,7 +63,7 @@ export const DECISION_ROUTES: DecisionRoute[] = [
     },
     treatmentId: "foot-massage",
     why: {
-      de: "Füße und Unterschenkel im Relaxsessel, ohne dass du dich ausziehen musst.",
+      de: "Füße und Unterschenkel im Relaxsessel, ohne dass Sie sich ausziehen müssen.",
       en: "Feet and lower legs in a reclining chair, with no need to undress.",
     },
   },

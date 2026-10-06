@@ -11,17 +11,17 @@ export function RitualFinder() {
     <section className="ritual-finder section-shell">
       <div>
         <p className="eyebrow">
-          {t({ de: "Dein Ritual finden", en: "Find your ritual" })}
+          {t({ de: "Ihr Ritual finden", en: "Find your ritual" })}
         </p>
         <h2>
           {t({
-            de: "Was braucht heute deine Aufmerksamkeit?",
+            de: "Was braucht heute Ihre Aufmerksamkeit?",
             en: "What needs your attention today?",
           })}
         </h2>
         <p>
           {t({
-            de: "Wähle deinen Schwerpunkt. Wir zeigen dir, wo deine Pause beginnen kann.",
+            de: "Wählen Sie Ihren Schwerpunkt. Wir zeigen Ihnen, wo Ihre Pause beginnen kann.",
             en: "Choose your focus. We’ll show you where your pause can begin.",
           })}
         </p>
@@ -51,7 +51,7 @@ export function RitualFinder() {
         </fieldset>
         <div className="finder-result" aria-live="polite">
           <p className="eyebrow">
-            {t({ de: "Deine Auswahl", en: "Your selection" })}
+            {t({ de: "Ihre Auswahl", en: "Your selection" })}
           </p>
           <h3>{t(group.title)}</h3>
           <p>{t(group.blurb)}</p>

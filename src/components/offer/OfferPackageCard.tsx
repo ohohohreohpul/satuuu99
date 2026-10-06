@@ -55,7 +55,7 @@ export function OfferPackageCard({
           </span>
         </p>
         <p className="offer-card-saving">
-          {t({ de: "Du sparst", en: "You save" })}{" "}
+          {t({ de: "Sie sparen", en: "You save" })}{" "}
           <b>{euro.format(packageSaving(item))}</b>
         </p>
       </header>
@@ -87,7 +87,7 @@ export function OfferPackageCard({
 
       {item.choice && (
         <div className="offer-card-contents">
-          <p className="eyebrow">{t({ de: "Du erhältst", en: "You get" })}</p>
+          <p className="eyebrow">{t({ de: "Sie erhalten", en: "You get" })}</p>
           <p className="offer-choice-count">
             {t({
               de: `${item.choice.count} Gutscheine à ${item.choice.minutes} Minuten`,
@@ -106,7 +106,7 @@ export function OfferPackageCard({
           <p className="offer-card-note">{t(item.choice.note)}</p>
           <p className="offer-card-note">
             {t({
-              de: `Ein Gutschein über 60 Minuten kostet regulär ${euro.format(SINGLE_VOUCHER_PRICE)} — für ${euro.format(item.price)} bekämst du sonst zehn. Mit dem Weihnachtspaket schenken wir dir den elften.`,
+              de: `Ein Gutschein über 60 Minuten kostet regulär ${euro.format(SINGLE_VOUCHER_PRICE)} — für ${euro.format(item.price)} bekämen Sie sonst zehn. Mit dem Weihnachtspaket schenken wir Ihnen den elften.`,
               en: `A 60-minute gift card normally costs ${euro.format(SINGLE_VOUCHER_PRICE)}, so ${euro.format(item.price)} would usually buy ten. With the Christmas pack the eleventh is our gift to you.`,
             })}
           </p>

@@ -12,11 +12,11 @@ export function FinalCTA() {
     >
       <GestureGraphic tone="taupe" className="gesture--invitation" />
       <p className="eyebrow">
-        {t({ de: "Dein nächster guter Moment", en: "Your next good moment" })}
+        {t({ de: "Ihr nächster guter Moment", en: "Your next good moment" })}
       </p>
       <div className="contact-top">
         <h2 id="contact-title">
-          {t({ de: "Wir halten dir", en: "A little space," })}
+          {t({ de: "Wir halten Ihnen", en: "A little space," })}
           <br />
           {t({ de: "eine Pause frei.", en: "just for you." })}
         </h2>
@@ -34,7 +34,7 @@ export function FinalCTA() {
       <div className="contact-bottom">
         <p>
           {t({
-            de: "Wähle deinen Termin. Wir freuen uns auf dich.",
+            de: "Wählen Sie Ihren Termin. Wir freuen uns auf Sie.",
             en: "Choose your time. We look forward to seeing you.",
           })}
         </p>

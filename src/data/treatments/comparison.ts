@@ -63,7 +63,7 @@ export const TREATMENT_FACTS: TreatmentFacts[] = [
     clothing: { de: "Oberteil gelockert", en: "Top loosened" },
     position: { de: "Rückenlage", en: "Lying on your back" },
     bestFor: {
-      de: "Wenn du einfach nur schlafen willst",
+      de: "Wenn Sie einfach nur schlafen wollen",
       en: "When you simply want to sleep",
     },
   },
@@ -141,7 +141,7 @@ export const TREATMENT_FACTS: TreatmentFacts[] = [
     clothing: { de: "Unterwäsche bleibt an", en: "Underwear stays on" },
     position: { de: "Massageliege", en: "Massage table" },
     bestFor: {
-      de: "Wenn klassisch dir zu bekannt ist",
+      de: "Wenn Ihnen klassisch zu bekannt ist",
       en: "When classic feels too familiar",
     },
   },

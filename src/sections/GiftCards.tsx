@@ -21,13 +21,13 @@ export function GiftCards() {
           {t({ de: "Für jemanden,", en: "For someone" })}
           <br />
           <span className="soft-text">
-            {t({ de: "der dir wichtig ist.", en: "who matters to you." })}
+            {t({ de: "der Ihnen wichtig ist.", en: "who matters to you." })}
           </span>
         </h2>
         <div>
           <p>
             {t({
-              de: "Verschenke eine Auszeit — oder löse deinen Satuuu-Gutschein ein. Wir helfen dir gern, die passende Behandlung und einen Termin zu finden.",
+              de: "Verschenken Sie eine Auszeit — oder lösen Sie Ihren Satuuu-Gutschein ein. Wir helfen Ihnen gern, die passende Behandlung und einen Termin zu finden.",
               en: "Give someone a little time out — or redeem your Satuuu gift card. We’ll help you find the right treatment and a time to visit.",
             })}
           </p>

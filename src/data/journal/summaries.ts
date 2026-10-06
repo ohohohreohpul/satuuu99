@@ -11,11 +11,11 @@ export const JOURNAL_SUMMARIES: JournalSummary[] = [
     slug: "head-spa-vorbereitung-haare",
     category: { de: "Head Spa", en: "Head spa" },
     title: {
-      de: "Head Spa und deine Haare: Vorbereitung, Ablauf und der Tag danach",
+      de: "Head Spa und Ihre Haare: Vorbereitung, Ablauf und der Tag danach",
       en: "Head spa and your hair: preparation, ritual and the day after",
     },
     intro: {
-      de: "Werden die Haare nass? Was ist mit Extensions, frischer Färbung und Styling? Die praktischen Antworten, bevor du buchst.",
+      de: "Werden die Haare nass? Was ist mit Extensions, frischer Färbung und Styling? Die praktischen Antworten, bevor Sie buchen.",
       en: "Does hair get wet? What about extensions, fresh colour and styling? The practical answers before you book.",
     },
     photo: "head-spa-water-rinse",
@@ -39,11 +39,11 @@ export const JOURNAL_SUMMARIES: JournalSummary[] = [
     slug: "welche-gesichtsbehandlung-passt",
     category: { de: "Gesicht", en: "Face" },
     title: {
-      de: "Aqua Facial, Sleep & Glow oder Gua Sha? So findest du die passende Gesichtsbehandlung",
+      de: "Aqua Facial, Sleep & Glow oder Gua Sha? So finden Sie die passende Gesichtsbehandlung",
       en: "Aqua Facial, Sleep & Glow or gua sha? Choosing the right facial",
     },
     intro: {
-      de: "Drei Gesichtsbehandlungen, drei völlig unterschiedliche Erlebnisse. Der praktische Vergleich, bevor du buchst.",
+      de: "Drei Gesichtsbehandlungen, drei völlig unterschiedliche Erlebnisse. Der praktische Vergleich, bevor Sie buchen.",
       en: "Three facial treatments, three completely different experiences. A practical comparison before you book.",
     },
     photo: "facial-massage-warm-light",
@@ -53,7 +53,7 @@ export const JOURNAL_SUMMARIES: JournalSummary[] = [
     slug: "erste-wellnessbehandlung-was-erwarten",
     category: { de: "Studio", en: "Studio" },
     title: {
-      de: "Zum ersten Mal in einem Wellnessstudio: was dich erwartet",
+      de: "Zum ersten Mal in einem Wellnessstudio: was Sie erwartet",
       en: "Your first time in a wellness studio: what to expect",
     },
     intro: {
@@ -67,11 +67,11 @@ export const JOURNAL_SUMMARIES: JournalSummary[] = [
     slug: "dein-erster-head-spa-besuch",
     category: { de: "Head Spa", en: "Head spa" },
     title: {
-      de: "Dein erster Head-Spa-Besuch",
+      de: "Ihr erster Head-Spa-Besuch",
       en: "Your first head spa visit",
     },
     intro: {
-      de: "Was dich bei einem Japanese Head Spa in Ahrensburg erwartet und wie du deine Auszeit planst.",
+      de: "Was Sie bei einem Japanese Head Spa in Ahrensburg erwartet und wie Sie Ihre Auszeit planen.",
       en: "What to expect from a Japanese head spa in Ahrensburg and how to plan your time with us.",
     },
     photo: "head-spa-forehead-hold",
@@ -81,7 +81,7 @@ export const JOURNAL_SUMMARIES: JournalSummary[] = [
     slug: "welches-ritual-passt-zu-dir",
     category: { de: "Rituale", en: "Rituals" },
     title: {
-      de: "Eine Pause, die zu dir passt",
+      de: "Eine Pause, die zu Ihnen passt",
       en: "A pause that feels like you",
     },
     intro: {
@@ -113,7 +113,7 @@ export const JOURNAL_SUMMARIES: JournalSummary[] = [
       en: "Gua sha: care at a slower pace",
     },
     intro: {
-      de: "Was hinter dem stillen Gesichtspflege-Ritual steckt und wie wir Druck, Tempo und Ablauf auf dich abstimmen.",
+      de: "Was hinter dem stillen Gesichtspflege-Ritual steckt und wie wir Druck, Tempo und Ablauf auf Sie abstimmen.",
       en: "What shapes this quiet facial ritual and how we adapt its pressure, pace and flow to you.",
     },
     photo: "facial-stone-detail",
@@ -121,13 +121,13 @@ export const JOURNAL_SUMMARIES: JournalSummary[] = [
   },
   {
     slug: "wellness-termin-richtig-planen",
-    category: { de: "Vor deinem Besuch", en: "Before your visit" },
+    category: { de: "Vor Ihrem Besuch", en: "Before your visit" },
     title: {
       de: "So wird aus einem Termin eine echte Pause",
       en: "How an appointment becomes a real pause",
     },
     intro: {
-      de: "Ein kleiner Leitfaden für Anreise, Wünsche und die Zeit nach deinem Wellness-Ritual in Ahrensburg.",
+      de: "Ein kleiner Leitfaden für Anreise, Wünsche und die Zeit nach Ihrem Wellness-Ritual in Ahrensburg.",
       en: "A simple guide to arrival, preferences and the time after your wellness ritual in Ahrensburg.",
     },
     photo: "resting-hand-cheek",

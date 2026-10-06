@@ -22,11 +22,11 @@ export function Hero() {
           <h1 id="hero-title">
             {t({ de: "Langsamer werden.", en: "Slower days." })}
             <br />
-            <span>{t({ de: "Bei dir ankommen.", en: "More of you." })}</span>
+            <span>{t({ de: "Bei sich ankommen.", en: "More of you." })}</span>
           </h1>
           <p className="hero-description">
             {t({
-              de: "Warmes Wasser. Aufmerksame Hände. Und für einen Moment nichts, das du tun musst.",
+              de: "Warmes Wasser. Aufmerksame Hände. Und für einen Moment nichts, das Sie tun müssen.",
               en: "Warm water. Attentive hands. And, for a moment, nothing you need to do.",
             })}
           </p>

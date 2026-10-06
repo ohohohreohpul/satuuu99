@@ -26,7 +26,7 @@ const DOCUMENTS: Record<LegalSlug, LegalDocument> = {
   datenschutz: {
     title: "Datenschutzerklärung",
     description:
-      "Datenschutzerklärung von satuuu99 in Ahrensburg: welche Daten wir verarbeiten und welche Rechte du hast.",
+      "Datenschutzerklärung von satuuu99 in Ahrensburg: welche Daten wir verarbeiten und welche Rechte Sie haben.",
     noIndex: true,
     html: DATENSCHUTZ_HTML,
   },

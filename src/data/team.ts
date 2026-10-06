@@ -43,7 +43,7 @@ export const TEAM: TeamMember[] = [
     name: "Tuk",
     role: { de: "Massage", en: "Massage" },
     bio: {
-      de: "Tuk ergänzt das Team mit langjähriger Erfahrung und einem ruhigen, gleichmäßigen Arbeitsstil. Wenn du eine Anwendung ohne Tempowechsel bevorzugst, sag es bei der Buchung — wir versuchen, das bei der Einteilung zu berücksichtigen.",
+      de: "Tuk ergänzt das Team mit langjähriger Erfahrung und einem ruhigen, gleichmäßigen Arbeitsstil. Wenn Sie eine Anwendung ohne Tempowechsel bevorzugen, sagen Sie es bei der Buchung — wir versuchen, das bei der Einteilung zu berücksichtigen.",
       en: "Tuk adds long-standing experience and a calm, even working style. If you prefer a treatment without changes of pace, mention it when booking — we try to take that into account when scheduling.",
     },
   },

@@ -13,7 +13,7 @@ export function BrandStory() {
         </p>
         <h2>
           {t({
-            de: "Mehr als ein Ort.\nEin Moment für dich.",
+            de: "Mehr als ein Ort.\nEin Moment für Sie.",
             en: "More than a place.\nA moment for you.",
           })}
         </h2>

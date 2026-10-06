@@ -35,11 +35,11 @@ const pagePreview: Record<
     image: "head",
     eyebrow: { de: "Rituale", en: "Rituals" },
     title: {
-      de: "Was braucht heute\ndeine Aufmerksamkeit?",
+      de: "Was braucht heute\nIhre Aufmerksamkeit?",
       en: "What needs your\nattention today?",
     },
     copy: {
-      de: "Head Spa, Gesicht, Füße und Körper – persönlich für dich gewählt.",
+      de: "Head Spa, Gesicht, Füße und Körper – persönlich für Sie gewählt.",
       en: "Head spa, face, feet and body – chosen personally with you.",
     },
   },
@@ -47,11 +47,11 @@ const pagePreview: Record<
     image: "studio",
     eyebrow: { de: "Ein privater Ort", en: "A private place" },
     title: {
-      de: "Klein. Ruhig.\nGanz bei dir.",
+      de: "Klein. Ruhig.\nGanz bei sich.",
       en: "Small. Quiet.\nEntirely yours.",
     },
     copy: {
-      de: "Lerne unser persönliches Studio mitten in Ahrensburg kennen.",
+      de: "Lernen Sie unser persönliches Studio mitten in Ahrensburg kennen.",
       en: "Meet our personal studio in the heart of Ahrensburg.",
     },
   },
@@ -68,7 +68,7 @@ const pagePreview: Record<
     image: "body",
     eyebrow: { de: "Planen", en: "Plan" },
     title: {
-      de: "Klarheit vor\ndeinem Besuch.",
+      de: "Klarheit vor\nIhrem Besuch.",
       en: "Clarity before\nyour visit.",
     },
     copy: {
@@ -84,7 +84,7 @@ const pagePreview: Record<
       en: "Rituals for\nquieter days.",
     },
     copy: {
-      de: "Wissen, Inspiration und kleine Pausen für deinen Alltag.",
+      de: "Wissen, Inspiration und kleine Pausen für Ihren Alltag.",
       en: "Knowledge, inspiration and small pauses for everyday life.",
     },
   },
@@ -102,13 +102,13 @@ const pagePreview: Record<
   },
   "/kontakt": {
     image: "studio",
-    eyebrow: { de: "Sprich mit uns", en: "Talk to us" },
+    eyebrow: { de: "Sprechen Sie mit uns", en: "Talk to us" },
     title: {
-      de: "Deine Auszeit\nbeginnt hier.",
+      de: "Ihre Auszeit\nbeginnt hier.",
       en: "Your time out\nstarts here.",
     },
     copy: {
-      de: "Fragen, Wünsche oder noch unsicher? Wir helfen dir persönlich weiter.",
+      de: "Fragen, Wünsche oder noch unsicher? Wir helfen Ihnen persönlich weiter.",
       en: "Questions, wishes or still unsure? We are happy to help personally.",
     },
   },
@@ -126,7 +126,7 @@ export function NavBar() {
         FOCUS_GROUPS.find((item) => item.id === preview) || FOCUS_GROUPS[0];
       return {
         image: group.id,
-        eyebrow: { de: "Dein Ritual", en: "Your ritual" },
+        eyebrow: { de: "Ihr Ritual", en: "Your ritual" },
         title: group.title,
         copy: group.blurb,
       };
@@ -298,7 +298,7 @@ export function NavBar() {
               aria-label={t({ de: "Termin buchen", en: "Book a visit" })}
             >
               <span className="reserve-label-desktop">
-                {t({ de: "Deine Auszeit", en: "Your time out" })}
+                {t({ de: "Ihre Auszeit", en: "Your time out" })}
               </span>
               <span className="reserve-label-mobile">
                 {t({ de: "Buchen", en: "Book" })}
@@ -392,7 +392,7 @@ export function NavBar() {
             </div>
             <div className="menu-rituals">
               <p className="eyebrow">
-                {t({ de: "Finde dein Ritual", en: "Find your ritual" })}
+                {t({ de: "Finden Sie Ihr Ritual", en: "Find your ritual" })}
               </p>
               {FOCUS_GROUPS.map((group) => (
                 <div
@@ -443,7 +443,7 @@ export function NavBar() {
             <a href={"mailto:" + CONTACT.email}>{CONTACT.email}</a>
             <span>
               {t({
-                de: "Langsamer werden. Bei dir ankommen.",
+                de: "Langsamer werden. Bei sich ankommen.",
                 en: "Slower days. More of you.",
               })}
             </span>
