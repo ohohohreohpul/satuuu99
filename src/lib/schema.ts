@@ -149,3 +149,41 @@ export function articleSchema({
     isAccessibleForFree: true,
   };
 }
+
+export interface SchemaOffer {
+  name: string;
+  price: number;
+}
+
+/** Time-limited offers sold by the studio, e.g. seasonal gift-card packs. */
+export function offerCatalogSchema({
+  name,
+  path,
+  offers,
+  validFrom,
+  validThrough,
+}: {
+  name: string;
+  path: string;
+  offers: SchemaOffer[];
+  validFrom: Date;
+  validThrough: Date;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "OfferCatalog",
+    name,
+    url: absolute(path),
+    itemListElement: offers.map((offer) => ({
+      "@type": "Offer",
+      name: offer.name,
+      price: offer.price.toFixed(2),
+      priceCurrency: "EUR",
+      validFrom: validFrom.toISOString(),
+      validThrough: validThrough.toISOString(),
+      availability: "https://schema.org/LimitedAvailability",
+      url: absolute(path),
+      seller: { "@id": BUSINESS_ID },
+    })),
+  };
+}

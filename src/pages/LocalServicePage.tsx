@@ -217,8 +217,8 @@ export const LOCAL_PAGES: Page[] = [
           en: "Can I give a Head Spa as a gift?",
         },
         a: {
-          de: "Der Verkauf neuer Gutscheine ist derzeit pausiert. Bereits vorhandene satuuu99 Gutscheine können nach Absprache eingelöst werden.",
-          en: "New gift card sales are currently paused. Existing satuuu99 gift cards can be redeemed by arrangement.",
+          de: "Ja. Einen Gutschein bekommst du online in unserem Buchungsportal, telefonisch, per WhatsApp oder per E-Mail. Bereits vorhandene satuuu99 Gutscheine löst du nach Absprache ein.",
+          en: "Yes. You can get a gift card online in our booking portal, by phone, on WhatsApp or by email. Existing satuuu99 gift cards are redeemed by arrangement.",
         },
       },
     ],

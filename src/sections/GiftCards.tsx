@@ -1,6 +1,7 @@
 import { useLang } from "../lib/i18n";
-import { CONTACT } from "../data/content";
-import { ArrowRightIcon } from "../components/ui/Icons";
+import { CONTACT, GIFT_CARD_PURCHASE } from "../data/content";
+import { isOfferPromoted, OFFER_PATH } from "../data/offer";
+import { ArrowRightIcon, ArrowUpRightIcon } from "../components/ui/Icons";
 import { Link } from "react-router-dom";
 import { PatternField } from "../components/brand/PatternField";
 export function GiftCards() {
@@ -26,10 +27,14 @@ export function GiftCards() {
         <div>
           <p>
             {t({
-              de: "Du hast bereits einen Satuuu-Gutschein? Wir helfen dir gern, die passende Behandlung und einen Termin zu finden.",
-              en: "Already have a Satuuu gift card? We’ll help you find the right treatment and a time to visit.",
+              de: "Verschenke eine Auszeit — oder löse deinen Satuuu-Gutschein ein. Wir helfen dir gern, die passende Behandlung und einen Termin zu finden.",
+              en: "Give someone a little time out — or redeem your Satuuu gift card. We’ll help you find the right treatment and a time to visit.",
             })}
           </p>
+          <a className="text-link" href={CONTACT.booking}>
+            {t({ de: "Gutschein online kaufen", en: "Buy a gift card online" })}
+            <ArrowUpRightIcon />
+          </a>
           <a
             className="text-link"
             href={`mailto:${CONTACT.email}?subject=${encodeURIComponent(t({ de: "Satuuu-Gutschein einlösen", en: "Redeem a Satuuu gift card" }))}`}
@@ -40,12 +45,16 @@ export function GiftCards() {
             })}
             <ArrowRightIcon />
           </a>
-          <p className="gift-note">
-            {t({
-              de: "Der Verkauf neuer Gutscheine ist derzeit pausiert.",
-              en: "Sales of new gift cards are currently paused.",
-            })}
-          </p>
+          <p className="gift-note">{t(GIFT_CARD_PURCHASE)}</p>
+          {isOfferPromoted() && (
+            <Link className="text-link" to={OFFER_PATH}>
+              {t({
+                de: "Weihnachts-Gutscheinpakete ansehen",
+                en: "See the Christmas gift-card packs",
+              })}
+              <ArrowRightIcon />
+            </Link>
+          )}
           <Link className="text-link" to="/gutscheine">
             {t({ de: "Mehr zu Gutscheinen", en: "More about gift cards" })}
             <ArrowRightIcon />

@@ -30,6 +30,12 @@ export const CONTACT = {
   maps: "https://www.google.com/maps/search/?api=1&query=Manhagener+Allee+45+22926+Ahrensburg",
 } as const;
 
+/** Where new gift cards can be bought, shown wherever gift cards come up. */
+export const GIFT_CARD_PURCHASE = {
+  de: "Gutscheine bekommst du online in unserem Buchungsportal, telefonisch, per WhatsApp oder per E-Mail.",
+  en: "Gift cards are available online in our booking portal, by phone, on WhatsApp or by email.",
+} as const satisfies Localized;
+
 export const NAV = [
   { label: { de: "Behandlungen", en: "Treatments" }, href: "/behandlungen" },
   { label: { de: "Das Studio", en: "The studio" }, href: "/studio" },

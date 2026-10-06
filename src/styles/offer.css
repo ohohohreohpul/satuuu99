@@ -1,0 +1,486 @@
+/*
+ * Christmas gift-card offer: the /angebot page and its homepage teaser.
+ * Stays inside the identity — earth, ivory and taupe, the gesture as the
+ * festive accent — rather than borrowing seasonal clichés.
+ */
+:root {
+  --offer-night: #29231e;
+  --offer-card-warm: #efe8de;
+  --offer-card-light: #fbf9f5;
+  --offer-ivory-soft: rgb(246 243 237 / 0.74);
+  --offer-ivory-faint: rgb(246 243 237 / 0.5);
+  --offer-lift: 0 22px 48px -28px rgb(41 35 30 / 0.45);
+  --offer-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Shared: light buttons and links on the dark surfaces. */
+.offer-hero .button,
+.offer-teaser .button {
+  background: var(--paper);
+  color: var(--ink);
+  border-color: var(--paper);
+}
+.offer-hero .button:hover,
+.offer-teaser .button:hover {
+  background: #e8dfd3;
+  color: var(--ink);
+}
+.offer-hero .text-link {
+  color: var(--paper);
+}
+.offer-hero .eyebrow,
+.offer-teaser .eyebrow {
+  color: var(--offer-ivory-faint);
+}
+
+/* Hero ------------------------------------------------------------------ */
+.offer-hero {
+  background: var(--offer-night);
+  color: var(--paper);
+  padding-block: clamp(96px, 11vw, 170px) clamp(80px, 9vw, 140px);
+}
+.offer-hero h1 {
+  margin-top: 26px;
+  font-size: clamp(54px, 8vw, 128px);
+  line-height: 0.98;
+}
+.offer-hero h1 span {
+  font-style: italic;
+  color: #cdbfae;
+}
+.offer-hero-lead {
+  max-width: 560px;
+  margin-top: 34px;
+  color: var(--offer-ivory-soft);
+  font-size: 15px;
+  line-height: 1.8;
+}
+.offer-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 30px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--offer-ivory-soft);
+}
+.offer-status::before {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: currentColor;
+}
+.offer-status--ended {
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 14px;
+}
+.offer-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 32px;
+  margin-top: 40px;
+}
+.gesture--offer {
+  top: 6%;
+  right: -16vw;
+  width: max(900px, 72vw);
+}
+
+/* Bonus ----------------------------------------------------------------- */
+.offer-bonus {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-block: 30px;
+  border-bottom: 1px solid var(--line);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.offer-bonus svg {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  color: var(--accent);
+}
+
+/* Package families ------------------------------------------------------ */
+.offer-family {
+  padding-block: clamp(80px, 9vw, 140px) 0;
+}
+.offer-family--sets {
+  padding-bottom: clamp(80px, 9vw, 140px);
+}
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(20px, 2.5vw, 40px);
+}
+
+/* Package card ---------------------------------------------------------- */
+.offer-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: clamp(28px, 3.2vw, 52px);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  transition:
+    transform 0.45s var(--offer-ease),
+    box-shadow 0.45s var(--offer-ease);
+}
+.offer-card--christmas {
+  background: var(--offer-card-warm);
+}
+.offer-card--set {
+  background: var(--offer-card-light);
+}
+.offer-card:hover,
+.offer-card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: var(--offer-lift);
+}
+.offer-card-head {
+  display: grid;
+  gap: 10px;
+  padding-right: 110px;
+}
+.offer-card-title {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+.offer-card-label {
+  display: block;
+  margin-top: 6px;
+  font-size: clamp(38px, 3.6vw, 56px);
+  font-style: italic;
+  letter-spacing: -0.03em;
+  color: var(--accent);
+}
+.offer-card-price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 18px;
+  margin-top: 8px;
+}
+.offer-card-price strong {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(56px, 6vw, 92px);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+.offer-card-price span {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.offer-card-saving {
+  position: absolute;
+  top: clamp(28px, 3.2vw, 52px);
+  right: clamp(28px, 3.2vw, 52px);
+  display: grid;
+  place-items: center;
+  width: 96px;
+  height: 96px;
+  padding: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--paper);
+  text-align: center;
+  font-size: 10px;
+  line-height: 1.3;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.offer-card-saving b {
+  display: block;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 400;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  text-transform: none;
+}
+
+.offer-card-contents .eyebrow {
+  margin-bottom: 14px;
+}
+.offer-card-contents > ul:not(.offer-choice-options) {
+  border-top: 1px solid var(--line);
+}
+.offer-card-contents > ul:not(.offer-choice-options) li {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  align-items: baseline;
+  padding-block: 13px;
+  border-bottom: 1px solid var(--line);
+}
+.offer-quantity {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 20px;
+  color: var(--muted);
+}
+.offer-card-contents li a {
+  font-size: 15px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+.offer-card-contents li a:hover,
+.offer-card-contents li a:focus-visible {
+  border-bottom-color: currentColor;
+}
+.offer-card-contents li small {
+  display: block;
+  margin-top: 3px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.offer-choice-count {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(24px, 2.2vw, 32px);
+  letter-spacing: -0.03em;
+}
+.offer-choice-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-block: 20px;
+}
+.offer-choice-options a {
+  display: inline-block;
+  padding: 9px 16px;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  font-size: 13px;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+.offer-choice-options a:hover,
+.offer-choice-options a:focus-visible {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+.offer-card-note {
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.offer-card-extras {
+  display: grid;
+  gap: 10px;
+}
+.offer-card-extras li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 2px;
+  background: rgb(102 87 71 / 0.08);
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+.offer-card-extras svg {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  color: var(--accent);
+}
+
+.offer-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 24px;
+  margin-top: auto;
+  padding-top: 6px;
+}
+.offer-icon-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding-block: 10px;
+  border-bottom: 1px solid currentColor;
+  font-size: 12px;
+  font-weight: 500;
+}
+.offer-icon-link svg {
+  width: 18px;
+  height: 18px;
+}
+.offer-icon-link:hover {
+  color: var(--muted);
+}
+
+/* Channels -------------------------------------------------------------- */
+.offer-channels {
+  padding-block: clamp(80px, 9vw, 140px);
+  border-top: 1px solid var(--line);
+}
+.offer-channel-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 3vw, 48px);
+  list-style: none;
+}
+.offer-channel-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 28px;
+  border-top: 1px solid var(--ink);
+}
+.offer-channel-list svg {
+  width: 28px;
+  height: 28px;
+  color: var(--accent);
+}
+.offer-channel-list h3 {
+  font-size: clamp(24px, 2.2vw, 32px);
+}
+.offer-channel-list p {
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+.offer-channel-list .text-link {
+  margin-top: auto;
+}
+
+/* Conditions ------------------------------------------------------------ */
+.offer-conditions {
+  display: grid;
+  grid-template-columns: 0.55fr 1.45fr;
+  gap: 60px;
+  padding-block: clamp(70px, 8vw, 110px);
+  background: #eee8df;
+}
+.offer-conditions h2 {
+  font-size: clamp(28px, 3vw, 44px);
+}
+.offer-conditions ul {
+  margin-block: 26px 30px;
+  border-top: 1px solid var(--line);
+}
+.offer-conditions li {
+  padding-block: 15px;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* Homepage teaser ------------------------------------------------------- */
+.offer-teaser {
+  background: var(--ink);
+  color: var(--paper);
+  padding-block: clamp(56px, 6vw, 92px);
+}
+.offer-teaser-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) auto auto;
+  align-items: center;
+  gap: clamp(28px, 4vw, 64px);
+}
+.offer-teaser h2 {
+  margin-top: 14px;
+  font-size: clamp(32px, 3.4vw, 54px);
+}
+.offer-teaser-copy > p:last-child {
+  max-width: 470px;
+  margin-top: 16px;
+  color: var(--offer-ivory-soft);
+  font-size: 13.5px;
+  line-height: 1.75;
+}
+.offer-teaser-prices {
+  display: flex;
+  gap: clamp(18px, 2vw, 32px);
+}
+.offer-teaser-prices li {
+  display: grid;
+  gap: 4px;
+}
+.offer-teaser-prices strong {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(28px, 2.6vw, 40px);
+  letter-spacing: -0.03em;
+}
+.offer-teaser-prices s {
+  font-size: 12px;
+  color: var(--offer-ivory-faint);
+}
+.gesture--offer-teaser {
+  top: -14%;
+  right: -6vw;
+  width: max(640px, 46vw);
+}
+
+/* Responsive ------------------------------------------------------------ */
+@media (max-width: 1100px) {
+  .offer-teaser-inner {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+}
+@media (max-width: 900px) {
+  .offer-grid,
+  .offer-channel-list,
+  .offer-conditions {
+    grid-template-columns: 1fr;
+  }
+  .offer-conditions {
+    gap: 18px;
+  }
+}
+@media (max-width: 760px) {
+  .gesture--offer {
+    top: 34%;
+    right: -70vw;
+    width: 170vw;
+  }
+  .gesture--offer-teaser {
+    top: 8%;
+    right: -80vw;
+    width: 170vw;
+  }
+  .offer-card-head {
+    padding-right: 0;
+  }
+  .offer-card-saving {
+    position: static;
+    width: auto;
+    height: auto;
+    justify-self: start;
+    padding: 8px 14px;
+    border-radius: 999px;
+    display: inline-flex;
+    gap: 8px;
+  }
+  .offer-card-saving b {
+    display: inline;
+    font-size: 16px;
+  }
+  .offer-teaser-prices {
+    flex-wrap: wrap;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .offer-card,
+  .offer-card:hover,
+  .offer-card:focus-within {
+    transform: none;
+    transition: none;
+  }
+}

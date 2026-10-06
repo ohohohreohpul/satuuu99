@@ -8,6 +8,7 @@ import { HomePage } from "./pages/HomePage";
 import { useLang } from "./lib/i18n";
 import { ArrowUpRightIcon } from "./components/ui/Icons";
 import { Preloader } from "./components/ui/Preloader";
+import { OFFER_PATH } from "./data/offer";
 
 // The homepage ships in the initial bundle; every other route, and the
 // editorial copy it carries, is fetched when a visitor navigates to it.
@@ -32,6 +33,9 @@ const StudioPage = lazy(() =>
 );
 const GiftCardsPage = lazy(() =>
   import("./pages/GiftCardsPage").then((m) => ({ default: m.GiftCardsPage })),
+);
+const OfferPage = lazy(() =>
+  import("./pages/OfferPage").then((m) => ({ default: m.OfferPage })),
 );
 const PricesPage = lazy(() =>
   import("./pages/PricesPage").then((m) => ({ default: m.PricesPage })),
@@ -72,6 +76,7 @@ export default function App() {
             <Route path="/studio" element={<StudioPage />} />
             <Route path="/gutscheine" element={<GiftCardsPage />} />
             <Route path="/preise" element={<PricesPage />} />
+            <Route path={OFFER_PATH} element={<OfferPage />} />
             <Route path="/kontakt" element={<ContactPage />} />
             <Route path="/head-spa-hamburg" element={<HeadSpaHamburgPage />} />
             <Route

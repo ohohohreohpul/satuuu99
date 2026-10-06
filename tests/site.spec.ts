@@ -293,6 +293,66 @@ test("contact details offer WhatsApp, Instagram and the current hours", async ({
   expect(business.sameAs).toContain("https://www.instagram.com/satuuu99_spa/");
 });
 
+test("christmas offer page lists every pack with prices and ways to buy", async ({
+  page,
+}) => {
+  await page.clock.setFixedTime(new Date("2026-11-01T12:00:00+01:00"));
+  await page.goto("/angebot");
+  await expect(page.locator("h1")).toContainText("Wertvolle Momente");
+  await expect(page.locator(".offer-status")).toContainText("Aktionszeitraum");
+  const cards = page.locator(".offer-card");
+  await expect(cards).toHaveCount(4);
+  for (const [price, regular, saving] of [
+    ["500 €", "558 €", "58 €"],
+    ["700 €", "770 €", "70 €"],
+    ["250 €", "269 €", "19 €"],
+    ["150 €", "169 €", "19 €"],
+  ]) {
+    const card = cards.filter({ hasText: `statt ${regular}` });
+    await expect(card.locator(".offer-card-price strong")).toHaveText(price);
+    await expect(card.locator(".offer-card-saving b")).toHaveText(saving);
+  }
+  // The 700 € pack offers exactly four treatments to choose from.
+  await expect(page.locator(".offer-choice-options li")).toHaveCount(4);
+  await expect(page.locator(".offer-choice-options")).not.toContainText(
+    "Dampfmassage",
+  );
+  await expect(page.locator(".offer-card-actions")).toHaveCount(4);
+  await expect(
+    page.locator('.offer-card a[href^="https://wa.me/4941022040410?text="]'),
+  ).toHaveCount(4);
+  const catalogue = await page
+    .locator('script[type="application/ld+json"]')
+    .evaluateAll((scripts) =>
+      scripts
+        .map((script) => JSON.parse(script.textContent || "{}"))
+        .find((graph) => graph["@type"] === "OfferCatalog"),
+    );
+  expect(catalogue.itemListElement).toHaveLength(4);
+  await page.goto("/");
+  await expect(page.locator(".offer-teaser")).toBeVisible();
+});
+
+test("christmas offer is announced before launch and retired after it ends", async ({
+  page,
+}) => {
+  await page.clock.setFixedTime(new Date("2026-10-06T12:00:00+02:00"));
+  await page.goto("/angebot");
+  await expect(page.locator(".offer-status")).toContainText("ab 7. Oktober");
+  await expect(page.locator(".offer-card")).toHaveCount(4);
+  await expect(page.locator(".offer-card-actions")).toHaveCount(0);
+  await page.goto("/");
+  await expect(page.locator(".offer-teaser")).toContainText("ab 7. Oktober");
+
+  await page.clock.setFixedTime(new Date("2026-12-24T09:00:00+01:00"));
+  await page.goto("/angebot");
+  await expect(page.locator(".offer-status")).toContainText("beendet");
+  await expect(page.locator(".offer-card")).toHaveCount(0);
+  await page.goto("/");
+  await expect(page.locator(".offer-teaser")).toHaveCount(0);
+  await expect(page.locator(".gift-section")).not.toContainText("pausiert");
+});
+
 test("local authority pages are substantial, linked and machine readable", async ({
   page,
 }) => {

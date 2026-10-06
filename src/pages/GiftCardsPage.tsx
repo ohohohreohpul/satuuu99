@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 import { PageHero } from "../components/layout/PageHero";
 import { StructuredData } from "../components/seo/StructuredData";
 import { Photo } from "../components/media/Photo";
-import { ArrowRightIcon } from "../components/ui/Icons";
-import { CONTACT } from "../data/content";
+import { ArrowRightIcon, ArrowUpRightIcon } from "../components/ui/Icons";
+import { CONTACT, GIFT_CARD_PURCHASE } from "../data/content";
+import { isOfferPromoted, OFFER_PATH } from "../data/offer";
 import { MEDIA } from "../data/media";
 import { useLang } from "../lib/i18n";
 import { usePageMeta } from "../lib/usePageMeta";
@@ -12,12 +13,12 @@ import { breadcrumbSchema, faqSchema } from "../lib/schema";
 const GIFT_FAQS = [
   {
     q: {
-      de: "Kann ich bei satuuu99 aktuell einen Gutschein kaufen?",
-      en: "Can I currently buy a satuuu99 gift card?",
+      de: "Wie kann ich bei satuuu99 einen Gutschein kaufen?",
+      en: "How can I buy a satuuu99 gift card?",
     },
     a: {
-      de: "Der Verkauf neuer Gutscheine ist derzeit pausiert. Bestehende Gutscheine kannst du weiterhin einlösen. Wenn du jemandem eine Behandlung schenken möchtest, schreib uns — wir sagen dir, welche Möglichkeit es gerade gibt, statt dich auf einen Kauf zu vertrösten, den wir nicht anbieten.",
-      en: "Sales of new gift cards are currently paused. Existing gift cards can still be redeemed. If you would like to give someone a treatment, write to us — we will tell you what is possible right now rather than pointing you to a purchase we do not offer.",
+      de: `Online in unserem Buchungsportal, telefonisch oder per WhatsApp unter ${CONTACT.phone} oder per E-Mail an ${CONTACT.email}. Sag uns, ob der Gutschein auf einen Betrag oder eine bestimmte Behandlung lauten soll — wir beraten dich gern, was zur beschenkten Person passt.`,
+      en: `Online in our booking portal, by phone or WhatsApp on ${CONTACT.phone}, or by email to ${CONTACT.email}. Tell us whether the card should be for an amount or a particular treatment — we are happy to suggest what suits the person you are giving it to.`,
     },
   },
   {
@@ -76,12 +77,12 @@ export function GiftCardsPage() {
   const { t } = useLang();
   usePageMeta(
     t({
-      de: "Gutschein einlösen | satuuu99 Ahrensburg bei Hamburg",
-      en: "Redeem a gift card | satuuu99 Ahrensburg near Hamburg",
+      de: "Gutscheine kaufen & einlösen | satuuu99 Ahrensburg bei Hamburg",
+      en: "Buy & redeem gift cards | satuuu99 Ahrensburg near Hamburg",
     }),
     t({
-      de: "So löst du deinen satuuu99 Gutschein in Ahrensburg bei Hamburg ein: Code senden, Behandlung wählen, Termin festlegen. Der Verkauf neuer Gutscheine ist derzeit pausiert.",
-      en: "How to redeem your satuuu99 gift card in Ahrensburg near Hamburg: send the code, choose a treatment, agree a time. Sales of new gift cards are currently paused.",
+      de: "Gutscheine von satuuu99 in Ahrensburg bei Hamburg: online, telefonisch, per WhatsApp oder E-Mail kaufen — und so einfach löst du deinen Gutschein ein.",
+      en: "Gift cards from satuuu99 in Ahrensburg near Hamburg: buy online, by phone, on WhatsApp or by email — and how easily you redeem yours.",
     }),
   );
   const subject = encodeURIComponent(
@@ -112,11 +113,25 @@ export function GiftCardsPage() {
           </>
         }
         copy={t({
-          de: "Ein Moment zum Ankommen, Durchatmen und Sich-kümmern-lassen. Bestehende Satuuu-Gutscheine kannst du jederzeit einlösen — der Verkauf neuer Gutscheine ist derzeit pausiert.",
-          en: "A moment to arrive, breathe and let someone take care of you. Existing Satuuu gift cards can be redeemed at any time — sales of new gift cards are currently paused.",
+          de: "Ein Moment zum Ankommen, Durchatmen und Sich-kümmern-lassen. Gutscheine bekommst du online, telefonisch, per WhatsApp oder E-Mail — und bestehende Satuuu-Gutscheine kannst du jederzeit einlösen.",
+          en: "A moment to arrive, breathe and let someone take care of you. Gift cards are available online, by phone, on WhatsApp or by email — and existing Satuuu gift cards can be redeemed at any time.",
         })}
         photo={MEDIA.editorial.gift}
-      />
+      >
+        <a className="button" href={CONTACT.booking}>
+          {t({ de: "Gutschein online kaufen", en: "Buy a gift card online" })}
+          <ArrowUpRightIcon />
+        </a>
+        {isOfferPromoted() && (
+          <Link className="text-link" to={OFFER_PATH}>
+            {t({
+              de: "Weihnachts-Gutscheinpakete",
+              en: "Christmas gift-card packs",
+            })}
+            <ArrowRightIcon />
+          </Link>
+        )}
+      </PageHero>
 
       <section className="gift-page-body section-shell">
         <p className="eyebrow">
@@ -142,12 +157,7 @@ export function GiftCardsPage() {
             {t({ de: "Gutschein einlösen", en: "Redeem your gift card" })}
             <ArrowRightIcon />
           </a>
-          <p className="status-note">
-            {t({
-              de: "Der Verkauf neuer Gutscheine ist derzeit pausiert.",
-              en: "Sales of new gift cards are currently paused.",
-            })}
-          </p>
+          <p className="status-note">{t(GIFT_CARD_PURCHASE)}</p>
         </div>
       </section>
 

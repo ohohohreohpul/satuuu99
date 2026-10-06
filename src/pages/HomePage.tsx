@@ -7,6 +7,7 @@ import { useLang } from "../lib/i18n";
 import { usePageMeta } from "../lib/usePageMeta";
 import { Hero } from "../sections/Hero";
 import { FocusExplorer } from "../sections/FocusExplorer";
+import { OfferTeaser } from "../sections/OfferTeaser";
 import { Studio } from "../sections/Studio";
 import { GiftCards } from "../sections/GiftCards";
 import { FinalCTA } from "../sections/FinalCTA";
@@ -76,6 +77,7 @@ export function HomePage() {
       <StructuredData data={faqSchema(HOME_FAQS, t)} />
       <Hero />
       <BrandStory />
+      <OfferTeaser />
       <FocusExplorer />
       <RitualFinder />
       <VisitJourney />

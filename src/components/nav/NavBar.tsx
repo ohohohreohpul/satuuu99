@@ -8,6 +8,7 @@ import {
 import { Link, NavLink, useLocation } from "react-router-dom";
 import gsap from "gsap";
 import { CONTACT, FOCUS_GROUPS, NAV } from "../../data/content";
+import { isOfferPromoted, OFFER_PATH } from "../../data/offer";
 import { MEDIA } from "../../data/media";
 import { useLang } from "../../lib/i18n";
 import { ArrowRightIcon } from "../ui/Icons";
@@ -85,6 +86,18 @@ const pagePreview: Record<
     copy: {
       de: "Wissen, Inspiration und kleine Pausen für deinen Alltag.",
       en: "Knowledge, inspiration and small pauses for everyday life.",
+    },
+  },
+  [OFFER_PATH]: {
+    image: "head",
+    eyebrow: { de: "Weihnachtsangebot", en: "Christmas offer" },
+    title: {
+      de: "Wertvolle Momente\nzum Verschenken.",
+      en: "Precious moments\nto give away.",
+    },
+    copy: {
+      de: "Exklusive Gutscheinpakete und -sets bis 23. Dezember.",
+      en: "Exclusive gift-card packs and sets until 23 December.",
     },
   },
   "/kontakt": {
@@ -342,6 +355,18 @@ export function NavBar() {
                 {[
                   ...NAV,
                   { href: "/kontakt", label: { de: "Kontakt", en: "Contact" } },
+                  // Seasonal entry last, so the permanent links keep their numbers.
+                  ...(isOfferPromoted()
+                    ? [
+                        {
+                          href: OFFER_PATH,
+                          label: {
+                            de: "Weihnachtsangebot",
+                            en: "Christmas offer",
+                          },
+                        },
+                      ]
+                    : []),
                 ].map((item, index) => (
                   <NavLink
                     key={item.href}
