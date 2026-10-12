@@ -32,19 +32,19 @@ export const TEAM: TeamMember[] = [
     },
   },
   {
-    name: "Pim",
+    name: "Nan",
     role: { de: "Massage", en: "Massage" },
     bio: {
-      de: "Pim bringt langjährige Massageerfahrung in das Team ein und arbeitet mit einem eigenen Schwerpunkt innerhalb unseres Körperprogramms. Gäste, die kräftiger massiert werden möchten, sind bei ihr gut aufgehoben.",
-      en: "Pim brings long-standing massage experience to the team and works with her own emphasis within our body programme. Guests who prefer firmer work are in good hands with her.",
+      de: "Nan bringt langjährige Massageerfahrung in das Team ein und arbeitet mit einem eigenen Schwerpunkt innerhalb unseres Körperprogramms. Gäste, die kräftiger massiert werden möchten, sind bei ihr gut aufgehoben.",
+      en: "Nan brings long-standing massage experience to the team and works with her own emphasis within our body programme. Guests who prefer firmer work are in good hands with her.",
     },
   },
   {
-    name: "Tuk",
+    name: "Joy",
     role: { de: "Massage", en: "Massage" },
     bio: {
-      de: "Tuk ergänzt das Team mit langjähriger Erfahrung und einem ruhigen, gleichmäßigen Arbeitsstil. Wenn Sie eine Anwendung ohne Tempowechsel bevorzugen, sagen Sie es bei der Buchung — wir versuchen, das bei der Einteilung zu berücksichtigen.",
-      en: "Tuk adds long-standing experience and a calm, even working style. If you prefer a treatment without changes of pace, mention it when booking — we try to take that into account when scheduling.",
+      de: "Joy ergänzt das Team mit langjähriger Erfahrung und einem ruhigen, gleichmäßigen Arbeitsstil. Wenn Sie eine Anwendung ohne Tempowechsel bevorzugen, sagen Sie es bei der Buchung — wir versuchen, das bei der Einteilung zu berücksichtigen.",
+      en: "Joy adds long-standing experience and a calm, even working style. If you prefer a treatment without changes of pace, mention it when booking — we try to take that into account when scheduling.",
     },
   },
 ];

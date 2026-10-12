@@ -10,5 +10,6 @@ export {
   Handbag as HandbagIcon,
   Pause as PauseIcon,
   Play as PlayIcon,
+  Storefront as StorefrontIcon,
   WhatsappLogo as WhatsAppIcon,
 } from "@phosphor-icons/react";

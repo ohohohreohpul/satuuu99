@@ -63,6 +63,8 @@ export interface VoucherPackage {
   items: PackageItem[];
   choice?: PackageChoice;
   extras: PackageExtra[];
+  /** Condition for receiving the extras, shown before the purchase buttons. */
+  extrasCondition?: Localized;
 }
 
 const HEAD_SPA_DELUXE: Omit<PackageItem, "quantity"> = {
@@ -139,6 +141,10 @@ export const VOUCHER_PACKAGES: VoucherPackage[] = [
       },
     ],
     extras: [HANDBAG],
+    extrasCondition: {
+      de: "Die Handtasche erhalten Sie, wenn Sie das Paket vor Ort in unserem Studio kaufen und bezahlen.",
+      en: "You receive the handbag when you buy and pay for the pack in person at our studio.",
+    },
   },
   {
     id: "weihnachtspaket-700",
@@ -189,6 +195,10 @@ export const VOUCHER_PACKAGES: VoucherPackage[] = [
         },
       },
     ],
+    extrasCondition: {
+      de: "Handtasche und Geschenkset erhalten Sie, wenn Sie das Paket vor Ort in unserem Studio kaufen und bezahlen.",
+      en: "You receive the handbag and gift set when you buy and pay for the pack in person at our studio.",
+    },
   },
   {
     id: "gutscheinset-premium",

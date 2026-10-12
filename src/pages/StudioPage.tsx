@@ -28,8 +28,8 @@ const STUDIO_FAQS = [
       en: "Who will treat me?",
     },
     a: {
-      de: "Eine von vier Personen: Inhaberin Nina, Sue, Pim oder Tuk. Wer Ihren Termin übernimmt, hängt von der Einteilung ab. Wenn Sie eine bestimmte Person oder einen bestimmten Arbeitsstil bevorzugen, sagen Sie es bei der Buchung — wir versuchen, es zu berücksichtigen, können es aber nicht garantieren.",
-      en: "One of four people: owner Nina, Sue, Pim or Tuk. Who takes your appointment depends on scheduling. If you prefer a particular person or working style, mention it when booking — we try to accommodate it but cannot guarantee it.",
+      de: "Eine von vier Personen: Inhaberin Nina, Sue, Nan oder Joy. Wer Ihren Termin übernimmt, hängt von der Einteilung ab. Wenn Sie eine bestimmte Person oder einen bestimmten Arbeitsstil bevorzugen, sagen Sie es bei der Buchung — wir versuchen, es zu berücksichtigen, können es aber nicht garantieren.",
+      en: "One of four people: owner Nina, Sue, Nan or Joy. Who takes your appointment depends on scheduling. If you prefer a particular person or working style, mention it when booking — we try to accommodate it but cannot guarantee it.",
     },
   },
   {

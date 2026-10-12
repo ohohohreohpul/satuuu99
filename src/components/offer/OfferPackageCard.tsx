@@ -12,6 +12,7 @@ import {
   GiftIcon,
   HandbagIcon,
   MailIcon,
+  StorefrontIcon,
   WhatsAppIcon,
 } from "../ui/Icons";
 import { emailEnquiry, whatsappEnquiry } from "./offerLinks";
@@ -125,6 +126,13 @@ export function OfferPackageCard({
           </li>
         ))}
       </ul>
+
+      {item.extrasCondition && (
+        <p className="offer-card-condition">
+          <StorefrontIcon aria-hidden="true" />
+          {t(item.extrasCondition)}
+        </p>
+      )}
 
       {isPurchasable && (
         <div className="offer-card-actions">

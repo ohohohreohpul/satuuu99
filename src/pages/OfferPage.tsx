@@ -58,6 +58,10 @@ const CONDITIONS: Localized[] = [
     en: "In the €700 pack you choose one of four treatments for each of the eleven cards — only before the appointment. Other treatments are possible for a surcharge.",
   },
   {
+    de: "Die Handtasche (Pakete für 500 € und 700 €) und das Geschenkset (Paket für 700 €) erhalten Sie beim Kauf und bei der Bezahlung vor Ort in unserem Studio.",
+    en: "The handbag (€500 and €700 packs) and the gift set (€700 pack) come with a purchase paid in person at our studio.",
+  },
+  {
     de: "Die Handtasche suchen Sie sich aus unserem aktuellen Sortiment aus.",
     en: "You choose the handbag from our current range.",
   },

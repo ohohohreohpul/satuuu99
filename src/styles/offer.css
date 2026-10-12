@@ -298,6 +298,24 @@
   color: var(--accent);
 }
 
+.offer-card-condition {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1px solid var(--accent);
+  border-radius: 2px;
+  font-size: 13.5px;
+  font-weight: 500;
+  line-height: 1.55;
+}
+.offer-card-condition svg {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  color: var(--accent);
+}
+
 .offer-card-actions {
   display: flex;
   flex-wrap: wrap;
