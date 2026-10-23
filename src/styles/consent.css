@@ -1,0 +1,114 @@
+/*
+ * Consent banner and the controls that reopen it. Both choices share one
+ * style on purpose: declining must be as easy and as visible as accepting.
+ */
+.consent-banner {
+  position: fixed;
+  /* Above the page and header, below the brand preloader. */
+  z-index: 900;
+  left: var(--gutter);
+  bottom: 24px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 18px 32px;
+  width: min(820px, calc(100vw - 2 * var(--gutter)));
+  padding: 24px 28px;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  box-shadow: 0 24px 60px -30px rgb(41 35 30 / 0.55);
+  animation: consent-in 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.consent-banner:focus {
+  outline: none;
+}
+.consent-banner:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+.consent-banner h2 {
+  font-size: 22px;
+}
+.consent-banner p {
+  margin-top: 8px;
+  font-size: 12.5px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+.consent-banner p a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.consent-banner-actions {
+  display: flex;
+  gap: 10px;
+}
+.consent-choice {
+  min-height: 46px;
+  padding: 12px 22px;
+  border: 1px solid var(--ink);
+  border-radius: 2px;
+  background: var(--ink);
+  color: var(--paper);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.consent-choice:hover {
+  background: var(--accent);
+}
+.consent-choice:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Text-style buttons that reopen the banner. */
+.footer-consent-link,
+.legal-consent-button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+.footer-consent-link:hover {
+  color: var(--ink);
+  text-decoration: underline;
+}
+.legal-consent-button {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@keyframes consent-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
+@media (max-width: 700px) {
+  .consent-banner {
+    left: 12px;
+    bottom: 12px;
+    grid-template-columns: 1fr;
+    width: calc(100vw - 24px);
+    padding: 20px;
+  }
+  .consent-banner-actions > * {
+    flex: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .consent-banner {
+    animation: none;
+  }
+}

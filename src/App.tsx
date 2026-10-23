@@ -8,6 +8,8 @@ import { HomePage } from "./pages/HomePage";
 import { useLang } from "./lib/i18n";
 import { ArrowUpRightIcon } from "./components/ui/Icons";
 import { Preloader } from "./components/ui/Preloader";
+import { ChatWidget } from "./components/consent/ChatWidget";
+import { ConsentBanner } from "./components/consent/ConsentBanner";
 import { OFFER_PATH } from "./data/offer";
 
 // The homepage ships in the initial bundle; every other route, and the
@@ -104,6 +106,8 @@ export default function App() {
         </Suspense>
       </main>
       <Footer />
+      <ConsentBanner />
+      <ChatWidget />
     </>
   );
 }

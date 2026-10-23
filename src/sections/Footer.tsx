@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpIcon } from "../components/ui/Icons";
 import { CONTACT, FOCUS_GROUPS } from "../data/content";
 import { useLang } from "../lib/i18n";
+import { openConsentSettings } from "../lib/consent";
 
 export function Footer() {
   const { t } = useLang();
@@ -86,6 +87,13 @@ export function Footer() {
             {t({ de: "Datenschutz", en: "Privacy" })}
           </Link>
           <Link to={CONTACT.terms}>{t({ de: "AGB", en: "Terms" })}</Link>
+          <button
+            type="button"
+            className="footer-consent-link"
+            onClick={openConsentSettings}
+          >
+            {t({ de: "Cookie-Einstellungen", en: "Cookie settings" })}
+          </button>
         </nav>
       </div>
     </footer>

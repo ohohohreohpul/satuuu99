@@ -2,6 +2,7 @@ import { AGB_HTML } from "../data/legal/agb";
 import { DATENSCHUTZ_HTML } from "../data/legal/datenschutz";
 import { IMPRESSUM_HTML } from "../data/legal/impressum";
 import { usePageMeta } from "../lib/usePageMeta";
+import { DatenschutzSupplement } from "../components/legal/DatenschutzSupplement";
 
 export type LegalSlug = "impressum" | "datenschutz" | "agbs";
 
@@ -48,11 +49,11 @@ export function LegalPage({ slug }: { slug: LegalSlug }) {
         <p className="eyebrow">satuuu99 · Rechtliches</p>
         <h1>{doc.title}</h1>
       </header>
-      {/* Sanitised to plain text markup by scripts/legal/import_legal.py. */}
-      <div
-        className="article-body legal-body"
-        dangerouslySetInnerHTML={{ __html: doc.html }}
-      />
+      <div className="article-body legal-body">
+        {/* Sanitised to plain text markup by scripts/legal/import_legal.py. */}
+        <div dangerouslySetInnerHTML={{ __html: doc.html }} />
+        {slug === "datenschutz" && <DatenschutzSupplement />}
+      </div>
     </article>
   );
 }

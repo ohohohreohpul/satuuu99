@@ -1,5 +1,16 @@
 import { test, expect } from "@playwright/test";
 test.beforeEach(async ({ page }, testInfo) => {
+  // The chat widget is a third-party service; keep tests independent of it.
+  await page.route("https://book.zennohq.com/**", (route) => route.abort());
+  // Outside the consent tests, act as a returning visitor who has decided,
+  // so the banner does not sit over the elements under test.
+  if (!testInfo.title.includes("consent"))
+    await page.addInitScript(() =>
+      localStorage.setItem(
+        "satuuu99-consent",
+        JSON.stringify({ version: 1, chat: false, decidedAt: "2026-10-23" }),
+      ),
+    );
   if (!testInfo.title.includes("brand preloader"))
     await page.addInitScript(() =>
       sessionStorage.setItem("satuuu99-intro-seen", "true"),
@@ -351,6 +362,55 @@ test("christmas offer is announced before launch and retired after it ends", asy
   await page.goto("/");
   await expect(page.locator(".offer-teaser")).toHaveCount(0);
   await expect(page.locator(".gift-section")).not.toContainText("pausiert");
+});
+
+test("consent banner keeps the chat widget off until the visitor allows it", async ({
+  page,
+}) => {
+  const widget = page.locator(
+    'script[src="https://book.zennohq.com/receptionist-widget.js"]',
+  );
+  await page.goto("/");
+  const banner = page.locator(".consent-banner");
+  await expect(banner).toBeVisible();
+  await expect(widget).toHaveCount(0);
+  // Declining is offered as plainly as accepting.
+  const decline = banner.getByRole("button", { name: "Ablehnen" });
+  const accept = banner.getByRole("button", { name: "Chat erlauben" });
+  expect(await decline.getAttribute("class")).toBe(
+    await accept.getAttribute("class"),
+  );
+
+  await decline.click();
+  await expect(banner).toHaveCount(0);
+  await expect(widget).toHaveCount(0);
+  await page.goto("/kontakt");
+  await expect(page.locator(".consent-banner")).toHaveCount(0);
+  await expect(widget).toHaveCount(0);
+
+  await page.getByRole("button", { name: "Cookie-Einstellungen" }).click();
+  await expect(banner).toBeVisible();
+  await banner.getByRole("button", { name: "Chat erlauben" }).click();
+  await expect(widget).toHaveCount(1);
+  await expect(widget).toHaveAttribute(
+    "data-key",
+    "wc_d310a3c5d8604736b38152be19a3d433",
+  );
+  await page.goto("/angebot");
+  await expect(widget).toHaveCount(1);
+  await expect(page.locator(".consent-banner")).toHaveCount(0);
+});
+
+test("privacy policy explains the chat assistant and consent storage", async ({
+  page,
+}) => {
+  await page.goto("/datenschutz");
+  await expect(page.locator("#chat-assistent")).toHaveText(
+    "Chat-Assistent (Zenno)",
+  );
+  await expect(page.locator(".legal-supplement")).toContainText(
+    "satuuu99-consent",
+  );
 });
 
 test("local authority pages are substantial, linked and machine readable", async ({

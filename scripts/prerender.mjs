@@ -14,6 +14,12 @@ try {
   headless: true,
  } : {channel:'chrome',headless:true});
  const context=await browser.newContext({reducedMotion:'reduce'});
+ // Keep third-party widgets out of the snapshots: their script tags stay in the
+ // HTML and run for real visitors, but a frozen copy of the widget must not.
+ await context.route('https://book.zennohq.com/**',route=>route.abort());
+ // Snapshot as a visitor who has already decided, so the consent banner is
+ // not baked into static HTML; the app shows it to visitors who still need to.
+ await context.addInitScript(()=>localStorage.setItem('satuuu99-consent',JSON.stringify({version:1,chat:false,decidedAt:'prerender'})));
  const page=await context.newPage();
  const routes=new Set(['/']);
  const indexable=[];
