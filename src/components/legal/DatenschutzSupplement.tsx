@@ -14,8 +14,8 @@ export function DatenschutzSupplement() {
         Fragen zu unseren Behandlungen stellen und Terminwünsche äußern können.
         Der Assistent wird vom Dienst Zenno (zennohq.com) bereitgestellt,
         betrieben von der WX Company Limited, Bangkok, Thailand (Kontakt:
-        support@zennohq.com). Er wird erst geladen, nachdem Sie über unser
-        Einwilligungs-Banner zugestimmt haben.
+        support@zennohq.com). Der Assistent wird beim Aufruf unserer Seiten
+        geladen; dabei wird Ihre IP-Adresse an den Anbieter übermittelt.
       </p>
       <p>
         <strong>Verarbeitete Daten: </strong>
@@ -32,10 +32,12 @@ export function DatenschutzSupplement() {
       </p>
       <p>
         <strong>Rechtsgrundlagen: </strong>
-        Einwilligung (Art. 6 Abs. 1 S. 1 lit. a DSGVO); für das Speichern und
-        Auslesen von Informationen auf Ihrem Endgerät § 25 Abs. 1 TDDDG. Soweit
+        Unser berechtigtes Interesse, Ihnen eine einfache und schnelle
+        Kontaktmöglichkeit zu bieten (Art. 6 Abs. 1 S. 1 lit. f DSGVO). Soweit
         Ihre Anfrage auf den Abschluss eines Vertrags gerichtet ist, zusätzlich
-        Art. 6 Abs. 1 S. 1 lit. b DSGVO.
+        Art. 6 Abs. 1 S. 1 lit. b DSGVO. Informationen auf Ihrem Endgerät
+        speichert der Assistent nur, soweit dies für den von Ihnen genutzten
+        Chat erforderlich ist (§ 25 Abs. 2 Nr. 2 TDDDG).
       </p>
       <p>
         <strong>Empfänger: </strong>
@@ -60,9 +62,24 @@ export function DatenschutzSupplement() {
         Aufbewahrungspflichten entgegenstehen.
       </p>
       <p>
-        <strong>Widerruf: </strong>
-        Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft
-        widerrufen.{" "}
+        <strong>Widerspruch: </strong>
+        Sie können der Verarbeitung aus Gründen, die sich aus Ihrer besonderen
+        Situation ergeben, jederzeit widersprechen (Art. 21 DSGVO). Schreiben
+        Sie uns dazu an info@satuuu99.de.
+      </p>
+
+      <h2 id="einwilligungsverwaltung">Cookie-Hinweis und Einstellungen</h2>
+      <p>
+        Ihre Auswahl im Cookie-Hinweis speichern wir im lokalen Speicher Ihres
+        Browsers (Eintrag „{CONSENT_STORAGE_KEY}“ mit Ihrer Auswahl und dem
+        Zeitpunkt), damit wir nicht bei jedem Besuch erneut fragen müssen. Diese
+        Speicherung ist technisch erforderlich, um Ihre Wahl umzusetzen und
+        nachweisen zu können (§ 25 Abs. 2 Nr. 2 TDDDG; Art. 6 Abs. 1 S. 1 lit. c
+        i. V. m. Art. 7 Abs. 1 DSGVO). Sie bleibt bestehen, bis Sie Ihre Auswahl
+        ändern oder die Websitedaten in Ihrem Browser löschen. Ebenfalls
+        technisch erforderlich speichern wir Ihre gewählte Sprache und ob die
+        Startanimation bereits gezeigt wurde. Ihre Auswahl können Sie jederzeit
+        ändern:{" "}
         <button
           type="button"
           className="legal-consent-button"
@@ -70,19 +87,6 @@ export function DatenschutzSupplement() {
         >
           Cookie-Einstellungen öffnen
         </button>
-      </p>
-
-      <h2 id="einwilligungsverwaltung">Einwilligungsverwaltung</h2>
-      <p>
-        Ihre Entscheidung im Einwilligungs-Banner speichern wir im lokalen
-        Speicher Ihres Browsers (Eintrag „{CONSENT_STORAGE_KEY}“ mit Ihrer
-        Auswahl und dem Zeitpunkt), damit wir nicht bei jedem Besuch erneut
-        fragen müssen. Diese Speicherung ist technisch erforderlich, um Ihre
-        Wahl umzusetzen und nachweisen zu können (§ 25 Abs. 2 Nr. 2 TDDDG; Art.
-        6 Abs. 1 S. 1 lit. c i. V. m. Art. 7 Abs. 1 DSGVO). Sie bleibt bestehen,
-        bis Sie Ihre Auswahl ändern oder die Websitedaten in Ihrem Browser
-        löschen. Ebenfalls technisch erforderlich speichern wir Ihre gewählte
-        Sprache und ob die Startanimation bereits gezeigt wurde.
       </p>
     </section>
   );

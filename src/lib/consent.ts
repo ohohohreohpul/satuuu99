@@ -1,19 +1,18 @@
 import { useSyncExternalStore } from "react";
 
 /**
- * Visitor consent for optional third-party services. Only the chat assistant
- * needs consent today; technically necessary storage (language, intro seen,
- * this decision itself) does not.
+ * The visitor's answer to the cookie banner. It records the choice only; the
+ * chat assistant loads for everyone regardless (see ChatWidget).
  */
 export const CONSENT_STORAGE_KEY = "satuuu99-consent";
 /** Bump when the services asking for consent change, to ask again. */
-const CONSENT_VERSION = 1;
+const CONSENT_VERSION = 2;
 const CHANGE_EVENT = "satuuu99:consent-change";
 const OPEN_EVENT = "satuuu99:consent-open";
 
 export interface ConsentDecision {
   version: number;
-  chat: boolean;
+  accepted: boolean;
   decidedAt: string;
 }
 
@@ -22,7 +21,7 @@ function isDecision(value: unknown): value is ConsentDecision {
   const candidate = value as Record<string, unknown>;
   return (
     candidate.version === CONSENT_VERSION &&
-    typeof candidate.chat === "boolean" &&
+    typeof candidate.accepted === "boolean" &&
     typeof candidate.decidedAt === "string"
   );
 }
@@ -40,10 +39,10 @@ export function readConsent(): ConsentDecision | null {
   }
 }
 
-export function saveConsent(chat: boolean): void {
+export function saveConsent(accepted: boolean): void {
   const decision: ConsentDecision = {
     version: CONSENT_VERSION,
-    chat,
+    accepted,
     decidedAt: new Date().toISOString(),
   };
   try {

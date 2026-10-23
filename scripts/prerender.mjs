@@ -19,7 +19,7 @@ try {
  await context.route('https://book.zennohq.com/**',route=>route.abort());
  // Snapshot as a visitor who has already decided, so the consent banner is
  // not baked into static HTML; the app shows it to visitors who still need to.
- await context.addInitScript(()=>localStorage.setItem('satuuu99-consent',JSON.stringify({version:1,chat:false,decidedAt:'prerender'})));
+ await context.addInitScript(()=>localStorage.setItem('satuuu99-consent',JSON.stringify({version:2,accepted:false,decidedAt:'prerender'})));
  const page=await context.newPage();
  const routes=new Set(['/']);
  const indexable=[];
