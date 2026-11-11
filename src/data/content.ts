@@ -1,4 +1,5 @@
 import type { Localized } from "../lib/i18n";
+import { DEEP_BODYWORK } from "./treatments/upcoming";
 
 // Business destinations checked against satuuu99.de on 10 September 2026.
 export const CONTACT = {
@@ -58,6 +59,8 @@ export interface Treatment {
   highlights?: Localized[];
   /** Marks a recently added programme so it can be flagged in the interface. */
   isNew?: boolean;
+  /** Shown as a teaser but not bookable yet; booking buttons are replaced. */
+  isComingSoon?: boolean;
   /** Confirmed durations and prices, shown only where the studio supplied them. */
   prices?: PriceOption[];
 }
@@ -413,6 +416,7 @@ export const FOCUS_GROUPS: FocusGroup[] = [
           },
         ],
       },
+      { ...DEEP_BODYWORK, isNew: false, isComingSoon: true },
     ],
   },
 ];

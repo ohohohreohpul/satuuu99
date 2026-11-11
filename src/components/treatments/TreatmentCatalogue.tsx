@@ -28,6 +28,9 @@ export function TreatmentCatalogue({ groups }: { groups: FocusGroup[] }) {
                 <span>
                   {t(item.name)}
                   {item.isNew && <small>{t({ de: "Neu", en: "New" })}</small>}
+                  {item.isComingSoon && (
+                    <small>{t({ de: "Demnächst", en: "Coming soon" })}</small>
+                  )}
                   {hasWinterHotStone(item.id) && (
                     <small>{t({ de: "+ Hot Stone", en: "+ Hot stone" })}</small>
                   )}

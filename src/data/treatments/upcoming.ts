@@ -3,15 +3,14 @@ import type { TreatmentFacts } from "./comparison";
 import type { TreatmentCopy } from "./types";
 
 /**
- * Deep Bodywork — the studio's new signature programme, written and priced
- * but NOT yet on the site: the studio is waiting for a new treatment table.
- * Nothing imports this file. To launch:
- *   1. add DEEP_BODYWORK to the body group in FOCUS_GROUPS (data/content.ts),
- *   2. add DEEP_BODYWORK_COPY to BODY_COPY (data/treatments/body.ts),
- *   3. add DEEP_BODYWORK_FACTS to TREATMENT_FACTS (data/treatments/comparison.ts),
- *   4. give it a programme photo in MEDIA.programmes (data/media.ts),
- *   5. update the treatment counts ("elf" → "zwölf") and llms.txt,
- *   6. add "deep-bodywork" to the detail-page test list.
+ * Deep Bodywork — the studio's new signature programme. It is on the site as
+ * "Demnächst" (isComingSoon in data/content.ts): listed with its copy and
+ * price, but booking buttons are replaced until the new treatment table
+ * arrives. To open bookings:
+ *   1. remove isComingSoon (and set isNew) in the body group in data/content.ts,
+ *   2. add DEEP_BODYWORK_FACTS to TREATMENT_FACTS (data/treatments/comparison.ts),
+ *   3. update the treatment counts ("elf" → "zwölf") and llms.txt,
+ *   4. add "deep-bodywork" to the detail-page test list.
  * The studio deliberately avoids calling it Thai massage.
  */
 export const DEEP_BODYWORK: Treatment = {

@@ -71,8 +71,8 @@ export const BLACK_FRIDAY: Promotion = {
 export const WINTER_HOT_STONE: Promotion = {
   id: "winter-hot-stone",
   startsAt: new Date("2026-11-11T00:00:00+01:00"),
-  // The studio named "the winter season"; the end date is our assumption.
-  endsAt: new Date("2027-02-28T23:59:59+01:00"),
+  // Runs until New Year, as the studio decided.
+  endsAt: new Date("2026-12-31T23:59:59+01:00"),
   eyebrow: { de: "Winterzeit", en: "Winter season" },
   title: {
     de: "Hot Stone zu jeder Massage – ohne Aufpreis.",

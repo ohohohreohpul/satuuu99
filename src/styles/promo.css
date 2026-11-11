@@ -273,3 +273,19 @@ html.has-promo-bar {
     animation: none;
   }
 }
+
+/* Treatments announced but not yet bookable. */
+.treatment-coming-soon {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+}
+.treatment-coming-soon-note {
+  max-width: 420px;
+  margin-top: 18px;
+  padding: 12px 16px;
+  border-left: 2px solid var(--ink);
+  background: rgb(58 51 43 / 0.06);
+  font-size: 13px;
+  line-height: 1.6;
+}

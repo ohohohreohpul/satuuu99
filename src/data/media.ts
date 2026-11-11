@@ -34,6 +34,7 @@ export const MEDIA = {
     "foot-care": "foot-care-towel",
     "foot-massage": "foot-massage-candlelight",
     "cupping-massage": "body-cupping-glasses",
+    "deep-bodywork": "body-massage-shoulders",
     "anti-stress-gua-sha": "body-massage-shoulders",
     bellabambi: "hands-light-study",
     candle: "studio-candlelight-mood",

@@ -85,15 +85,33 @@ export function TreatmentDetailPage() {
               })}
             </p>
           )}
+          {treatment.isComingSoon && (
+            <p className="treatment-coming-soon-note">
+              {t({
+                de: "Demnächst bei uns: Diese Behandlung ist bald buchbar. Fragen Sie uns gern schon jetzt danach.",
+                en: "Coming soon: this treatment will be bookable shortly. Feel free to ask us about it already.",
+              })}
+            </p>
+          )}
           <div className="treatment-page-actions">
-            <a className="button" href={CONTACT.booking}>
-              {t({ de: "Termin buchen", en: "Book a visit" })}
-              <ArrowRightIcon />
-            </a>
-            <a className="text-link" href={CONTACT.prices}>
-              {t({ de: "Preis & Dauer", en: "Price & duration" })}
-              <ArrowUpRightIcon />
-            </a>
+            {treatment.isComingSoon ? (
+              <Link className="button" to="/kontakt">
+                {t({ de: "Jetzt anfragen", en: "Ask us now" })}
+                <ArrowRightIcon />
+              </Link>
+            ) : (
+              <a className="button" href={CONTACT.booking}>
+                {t({ de: "Termin buchen", en: "Book a visit" })}
+                <ArrowRightIcon />
+              </a>
+            )}
+            {/* The price list is the booking portal, where this is not yet bookable. */}
+            {!treatment.isComingSoon && (
+              <a className="text-link" href={CONTACT.prices}>
+                {t({ de: "Preis & Dauer", en: "Price & duration" })}
+                <ArrowUpRightIcon />
+              </a>
+            )}
           </div>
         </div>
         <figure className="treatment-page-image">

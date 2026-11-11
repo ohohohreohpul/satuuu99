@@ -1,6 +1,8 @@
 import type { TreatmentCopyMap } from "./types";
+import { DEEP_BODYWORK_COPY } from "./upcoming";
 
 export const BODY_COPY: TreatmentCopyMap = {
+  "deep-bodywork": DEEP_BODYWORK_COPY,
   "anti-stress-gua-sha": {
     answer: {
       de: "Die Anti-Stress Gua Sha Massage bei satuuu99 in Ahrensburg konzentriert sich vollständig auf Kopf, Nacken, Schultern und Rücken — die Bereiche, in denen sich Stress am häufigsten zeigt. Sanfter Druck, rhythmische Thai-Massagebewegungen und achtsame Dehnungen werden mit einer Gua Sha Massage kombiniert. Buchbar sind 30, 45 oder 60 Minuten. Es ist eine Wellnessanwendung, keine Physiotherapie.",

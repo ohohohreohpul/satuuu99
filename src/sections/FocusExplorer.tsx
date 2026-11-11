@@ -128,6 +128,11 @@ export function FocusExplorer() {
                           {t({ de: "Neu", en: "New" })}
                         </span>
                       )}
+                      {item.isComingSoon && (
+                        <span className="treatment-new treatment-coming-soon">
+                          {t({ de: "Demnächst", en: "Coming soon" })}
+                        </span>
+                      )}
                       {hasWinterHotStone(item.id) && (
                         <span className="treatment-new treatment-hot-stone">
                           {t({ de: "+ Hot Stone", en: "+ Hot stone" })}
