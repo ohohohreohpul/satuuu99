@@ -11,6 +11,7 @@ import { TreatmentPrices } from "../components/treatments/TreatmentPrices";
 import { StructuredData } from "../components/seo/StructuredData";
 import { treatmentCopy } from "../data/treatments";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "../lib/schema";
+import { hasWinterHotStone } from "../data/promotions";
 
 export function TreatmentDetailPage() {
   const { treatmentId = "" } = useParams();
@@ -76,6 +77,14 @@ export function TreatmentDetailPage() {
             prices={treatment.prices}
             className="treatment-prices--page"
           />
+          {hasWinterHotStone(treatment.id) && (
+            <p className="treatment-hot-stone-note">
+              {t({
+                de: "Winterzeit: Zu dieser Massage gibt es warme Hot Stones ohne Aufpreis dazu.",
+                en: "Winter season: this massage comes with warm hot stones at no extra cost.",
+              })}
+            </p>
+          )}
           <div className="treatment-page-actions">
             <a className="button" href={CONTACT.booking}>
               {t({ de: "Termin buchen", en: "Book a visit" })}

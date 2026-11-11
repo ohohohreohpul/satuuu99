@@ -2,6 +2,10 @@ import { test, expect } from "@playwright/test";
 test.beforeEach(async ({ page }, testInfo) => {
   // The chat widget is a third-party service; keep tests independent of it.
   await page.route("https://book.zennohq.com/**", (route) => route.abort());
+  // Keep test runs out of the analytics data.
+  await page.route("https://c.reporting.ohitsoh.com/**", (route) =>
+    route.abort(),
+  );
   // Outside the consent tests, act as a returning visitor who has decided,
   // so the banner does not sit over the elements under test.
   if (!testInfo.title.includes("consent"))
@@ -413,6 +417,91 @@ test("privacy policy explains the chat assistant and consent storage", async ({
   await expect(page.locator(".legal-supplement")).toContainText(
     "satuuu99-consent",
   );
+});
+
+test("seasonal promotions appear and retire with their dates", async ({
+  page,
+}) => {
+  // Black Friday week: both promotions run.
+  await page.clock.setFixedTime(new Date("2026-11-15T12:00:00+01:00"));
+  await page.goto("/");
+  await expect(page.locator(".seasonal-promos #black-friday")).toContainText(
+    "Zu jedem Gutschein ein Geschenk",
+  );
+  await expect(
+    page.locator(".seasonal-promos #winter-hot-stone"),
+  ).toBeVisible();
+  await page.goto("/behandlungen/candle");
+  await expect(page.locator(".treatment-hot-stone-note")).toBeVisible();
+  await page.goto("/behandlungen/bellabambi");
+  await expect(page.locator(".treatment-hot-stone-note")).toHaveCount(0);
+
+  // December: Black Friday is over, the winter hot stone continues.
+  await page.clock.setFixedTime(new Date("2026-12-05T12:00:00+01:00"));
+  await page.goto("/angebot");
+  await expect(page.locator("#black-friday")).toHaveCount(0);
+  await expect(page.locator(".offer-promos #winter-hot-stone")).toBeVisible();
+
+  // Spring: nothing seasonal remains.
+  await page.clock.setFixedTime(new Date("2027-03-15T12:00:00+01:00"));
+  await page.goto("/");
+  await expect(page.locator(".seasonal-promos")).toHaveCount(0);
+  await page.goto("/behandlungen/candle");
+  await expect(page.locator(".treatment-hot-stone-note")).toHaveCount(0);
+});
+
+test("promo bar and slide-in push the running offers without getting in the way", async ({
+  page,
+}) => {
+  await page.clock.setFixedTime(new Date("2026-11-15T12:00:00+01:00"));
+  await page.goto("/studio");
+  const bar = page.locator(".promo-bar");
+  await expect(bar).toBeVisible();
+  // One live list plus a hidden copy for the seamless marquee loop.
+  const liveItems = bar.locator(".promo-bar-items:not([aria-hidden]) li");
+  await expect(liveItems).toHaveCount(3);
+  await expect(liveItems.first()).toContainText("Black Friday");
+  // The header moves down below the bar.
+  const barBox = await bar.boundingBox();
+  const headerBox = await page.locator(".immersive-header").boundingBox();
+  expect(headerBox!.y).toBeGreaterThanOrEqual(barBox!.y + barBox!.height - 1);
+
+  // The slide-in waits for scrolling, then appears once.
+  const slideIn = page.locator(".promo-slide-in");
+  await expect(slideIn).toHaveCount(0);
+  await page.mouse.wheel(0, 1600);
+  await expect(slideIn).toContainText("Zu jedem Gutschein ein Geschenk");
+  await page.keyboard.press("Escape");
+  await expect(slideIn).toHaveCount(0);
+  await page.goto("/behandlungen");
+  await page.mouse.wheel(0, 1600);
+  await page.waitForTimeout(500);
+  await expect(slideIn).toHaveCount(0);
+
+  // Closing the bar keeps it closed for the visit.
+  await bar.getByRole("button", { name: "Angebotsleiste schließen" }).click();
+  await expect(bar).toHaveCount(0);
+  await page.goto("/kontakt");
+  await expect(page.locator(".promo-bar")).toHaveCount(0);
+});
+
+test("promo slide-in waits for the consent choice and skips the offer page", async ({
+  page,
+}) => {
+  await page.clock.setFixedTime(new Date("2026-11-15T12:00:00+01:00"));
+  await page.goto("/studio");
+  await expect(page.locator(".consent-banner")).toBeVisible();
+  await page.mouse.wheel(0, 1600);
+  await page.waitForTimeout(500);
+  await expect(page.locator(".promo-slide-in")).toHaveCount(0);
+  await page
+    .locator(".consent-banner")
+    .getByRole("button", { name: "Ablehnen" })
+    .click();
+  await page.goto("/angebot");
+  await page.mouse.wheel(0, 1600);
+  await page.waitForTimeout(500);
+  await expect(page.locator(".promo-slide-in")).toHaveCount(0);
 });
 
 test("local authority pages are substantial, linked and machine readable", async ({

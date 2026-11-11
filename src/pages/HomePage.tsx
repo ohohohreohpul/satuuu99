@@ -16,6 +16,7 @@ import { LocalOrientation } from "../sections/LocalOrientation";
 import { TeamProof } from "../sections/TeamProof";
 import { StructuredData } from "../components/seo/StructuredData";
 import { faqSchema } from "../lib/schema";
+import { SeasonalPromos } from "../sections/SeasonalPromos";
 
 const HOME_FAQS = [
   {
@@ -77,6 +78,7 @@ export function HomePage() {
       <StructuredData data={faqSchema(HOME_FAQS, t)} />
       <Hero />
       <BrandStory />
+      <SeasonalPromos />
       <OfferTeaser />
       <FocusExplorer />
       <RitualFinder />

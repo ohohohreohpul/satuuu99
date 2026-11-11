@@ -28,6 +28,7 @@ import { useLang } from "../lib/i18n";
 import { breadcrumbSchema, offerCatalogSchema } from "../lib/schema";
 import { usePageMeta } from "../lib/usePageMeta";
 import { FinalCTA } from "../sections/FinalCTA";
+import { PromoCards } from "../components/promo/PromoCards";
 
 const STATUS_LINE: Record<OfferStatus, Localized> = {
   upcoming: {
@@ -162,6 +163,8 @@ export function OfferPage() {
           </div>
         </div>
       </section>
+
+      <PromoCards className="offer-promos section-shell" />
 
       {status !== "ended" && (
         <>

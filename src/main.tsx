@@ -10,6 +10,7 @@ import "./styles/home-sections.css";
 import "./styles/supergraphics.css";
 import "./styles/offer.css";
 import "./styles/consent.css";
+import "./styles/promo.css";
 import App from "./App";
 import { LanguageProvider } from "./lib/i18n";
 

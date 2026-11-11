@@ -7,6 +7,7 @@ import { Photo } from "../components/media/Photo";
 import { ArrowRightIcon } from "../components/ui/Icons";
 import { Link } from "react-router-dom";
 import { TreatmentPrices } from "../components/treatments/TreatmentPrices";
+import { hasWinterHotStone } from "../data/promotions";
 
 export function FocusExplorer() {
   const { t } = useLang();
@@ -125,6 +126,11 @@ export function FocusExplorer() {
                       {item.isNew && (
                         <span className="treatment-new">
                           {t({ de: "Neu", en: "New" })}
+                        </span>
+                      )}
+                      {hasWinterHotStone(item.id) && (
+                        <span className="treatment-new treatment-hot-stone">
+                          {t({ de: "+ Hot Stone", en: "+ Hot stone" })}
                         </span>
                       )}
                       <span className="expand-mark" aria-hidden>

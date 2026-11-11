@@ -9,6 +9,8 @@ import { useLang } from "./lib/i18n";
 import { ArrowUpRightIcon } from "./components/ui/Icons";
 import { Preloader } from "./components/ui/Preloader";
 import { ChatWidget } from "./components/consent/ChatWidget";
+import { PromoBar } from "./components/promo/PromoBar";
+import { PromoSlideIn } from "./components/promo/PromoSlideIn";
 import { ConsentBanner } from "./components/consent/ConsentBanner";
 import { OFFER_PATH } from "./data/offer";
 
@@ -62,6 +64,7 @@ export default function App() {
   return (
     <>
       <Preloader />
+      <PromoBar />
       <ScrollToTop />
       <NavBar />
       <main id="main" tabIndex={-1}>
@@ -107,6 +110,7 @@ export default function App() {
       </main>
       <Footer />
       <ConsentBanner />
+      <PromoSlideIn />
       <ChatWidget />
     </>
   );

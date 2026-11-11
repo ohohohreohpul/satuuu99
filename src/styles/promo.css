@@ -1,0 +1,272 @@
+/* Seasonal promotions (src/data/promotions.ts): homepage band and /angebot. */
+.seasonal-promos {
+  padding-block: clamp(56px, 6vw, 96px);
+}
+.offer-promos {
+  padding-block: clamp(48px, 5vw, 80px) 0;
+}
+.promo-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+  gap: clamp(16px, 2vw, 28px);
+}
+.promo-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: clamp(28px, 3.4vw, 52px);
+  border-radius: 4px;
+  scroll-margin-top: 120px;
+}
+.promo-card h3 {
+  font-size: clamp(30px, 3vw, 46px);
+  line-height: 1.08;
+}
+.promo-card-copy {
+  max-width: 560px;
+  font-size: 14px;
+  line-height: 1.75;
+}
+.promo-card-note {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.promo-card .text-link {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+/* Black Friday: the dark card, in the brand's own earth. */
+.promo-card--black-friday {
+  background: #29231e;
+  color: var(--paper);
+}
+.promo-card--black-friday .eyebrow,
+.promo-card--black-friday .promo-card-note {
+  color: rgb(246 243 237 / 0.6);
+}
+.promo-card--black-friday .promo-card-copy {
+  color: rgb(246 243 237 / 0.8);
+}
+.promo-card--black-friday .text-link {
+  color: var(--paper);
+}
+
+/* Winter hot stone: warm stone tones. */
+.promo-card--winter-hot-stone {
+  background: linear-gradient(140deg, #e9ddd0 0%, #d9c6b2 100%);
+}
+.promo-card--winter-hot-stone .promo-card-copy,
+.promo-card--winter-hot-stone .promo-card-note {
+  color: var(--accent);
+}
+
+/* "+ Hot Stone" badge beside a massage name, and the detail-page note. */
+.treatment-hot-stone {
+  border-color: #b9926f;
+  color: #8a5f3d;
+}
+.treatment-hot-stone-note {
+  max-width: 420px;
+  margin-top: 18px;
+  padding: 12px 16px;
+  border-left: 2px solid #b9926f;
+  background: rgb(185 146 111 / 0.1);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Top bar ----------------------------------------------------------------- */
+:root {
+  --promo-bar-h: 34px;
+}
+.promo-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* Above the floating header, below the menu, banners and preloader. */
+  z-index: 35;
+  display: flex;
+  align-items: center;
+  height: var(--promo-bar-h);
+  overflow: hidden;
+  background: #1d1915;
+  color: var(--paper);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.promo-bar-track {
+  display: flex;
+  width: max-content;
+  animation: promo-marquee 45s linear infinite;
+}
+.promo-bar:hover .promo-bar-track,
+.promo-bar:focus-within .promo-bar-track {
+  animation-play-state: paused;
+}
+.promo-bar-items {
+  display: flex;
+  flex: none;
+}
+.promo-bar-items li {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+.promo-bar-items a {
+  padding-inline: 28px;
+  transition: color 0.2s ease;
+}
+.promo-bar-items a:hover,
+.promo-bar-items a:focus-visible {
+  color: #d9c6b2;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.promo-bar-mark {
+  font-size: 8px;
+  color: #b9926f;
+}
+.promo-bar-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 56px;
+  padding-left: 16px;
+  border: 0;
+  background: linear-gradient(90deg, transparent, #1d1915 40%);
+  color: var(--paper);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+}
+.promo-bar-close:hover {
+  color: #d9c6b2;
+}
+html.has-promo-bar {
+  scroll-padding-top: calc(105px + var(--promo-bar-h));
+}
+.has-promo-bar .immersive-header {
+  top: var(--promo-bar-h);
+}
+.has-promo-bar .header-spacer {
+  height: calc(125px + var(--promo-bar-h));
+}
+@keyframes promo-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Slide-in card ------------------------------------------------------------ */
+.promo-slide-in {
+  position: fixed;
+  /* Below the consent banner, which it never shares the screen with. */
+  z-index: 880;
+  left: var(--gutter);
+  bottom: 24px;
+  display: grid;
+  gap: 10px;
+  width: min(360px, calc(100vw - 2 * var(--gutter)));
+  padding: 24px 26px 26px;
+  border-radius: 4px;
+  box-shadow: 0 24px 60px -24px rgb(41 35 30 / 0.6);
+  animation: promo-slide-in 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.promo-slide-in-image {
+  display: block;
+  margin: -24px -26px 8px;
+  overflow: hidden;
+  border-radius: 4px 4px 0 0;
+}
+.promo-slide-in-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 720 / 440;
+  object-fit: cover;
+}
+.promo-slide-in h2 {
+  padding-right: 24px;
+  font-size: 26px;
+  line-height: 1.1;
+}
+.promo-slide-in-note {
+  font-size: 12px;
+  line-height: 1.6;
+}
+.promo-slide-in .button {
+  margin-top: 6px;
+}
+.promo-slide-in-close {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 50%;
+  /* Sits on the photo, so it gets its own backdrop to stay legible. */
+  background: rgb(29 25 21 / 0.55);
+  color: var(--paper);
+  font-size: 20px;
+  cursor: pointer;
+}
+.promo-slide-in--black-friday {
+  background: #29231e;
+  color: var(--paper);
+}
+.promo-slide-in--black-friday .eyebrow,
+.promo-slide-in--black-friday .promo-slide-in-note {
+  color: rgb(246 243 237 / 0.7);
+}
+.promo-slide-in--black-friday .button {
+  background: var(--paper);
+  color: var(--ink);
+  border-color: var(--paper);
+}
+.promo-slide-in--winter-hot-stone {
+  background: linear-gradient(140deg, #e9ddd0 0%, #d9c6b2 100%);
+  color: var(--ink);
+}
+@keyframes promo-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+}
+
+@media (max-width: 700px) {
+  .promo-bar {
+    font-size: 10px;
+  }
+  .promo-slide-in {
+    left: 12px;
+    bottom: 12px;
+    /* Leave the bottom-right corner to the chat bubble. */
+    width: calc(100vw - 96px);
+    padding: 20px;
+  }
+  .promo-slide-in h2 {
+    font-size: 22px;
+  }
+  .promo-slide-in-image {
+    margin: -20px -20px 6px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .promo-bar-track {
+    animation: none;
+  }
+  .promo-bar-items[aria-hidden="true"] {
+    display: none;
+  }
+  .promo-slide-in {
+    animation: none;
+  }
+}

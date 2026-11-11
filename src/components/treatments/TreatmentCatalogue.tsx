@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import type { FocusGroup } from "../../data/content";
 import { useLang } from "../../lib/i18n";
 import { ArrowRightIcon } from "../ui/Icons";
+import { hasWinterHotStone } from "../../data/promotions";
 
 export function TreatmentCatalogue({ groups }: { groups: FocusGroup[] }) {
   const { t } = useLang();
@@ -27,6 +28,9 @@ export function TreatmentCatalogue({ groups }: { groups: FocusGroup[] }) {
                 <span>
                   {t(item.name)}
                   {item.isNew && <small>{t({ de: "Neu", en: "New" })}</small>}
+                  {hasWinterHotStone(item.id) && (
+                    <small>{t({ de: "+ Hot Stone", en: "+ Hot stone" })}</small>
+                  )}
                 </span>
                 <ArrowRightIcon />
               </Link>

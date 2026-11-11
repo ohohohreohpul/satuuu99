@@ -17,6 +17,8 @@ try {
  // Keep third-party widgets out of the snapshots: their script tags stay in the
  // HTML and run for real visitors, but a frozen copy of the widget must not.
  await context.route('https://book.zennohq.com/**',route=>route.abort());
+ // Analytics must not count the build's own page visits.
+ await context.route('https://c.reporting.ohitsoh.com/**',route=>route.abort());
  // Snapshot as a visitor who has already decided, so the consent banner is
  // not baked into static HTML; the app shows it to visitors who still need to.
  await context.addInitScript(()=>localStorage.setItem('satuuu99-consent',JSON.stringify({version:2,accepted:false,decidedAt:'prerender'})));
