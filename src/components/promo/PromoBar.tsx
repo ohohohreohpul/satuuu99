@@ -6,6 +6,13 @@ import {
   VOUCHER_PACKAGES,
 } from "../../data/offer";
 import { activePromotions } from "../../data/promotions";
+import {
+  MARK_BLADE_LEFT,
+  MARK_BLADE_RIGHT,
+  MARK_DIAMOND,
+  MARK_HEIGHT,
+  MARK_WIDTH,
+} from "../brand/markGeometry";
 import type { Localized } from "../../lib/i18n";
 import { useLang } from "../../lib/i18n";
 
@@ -84,9 +91,16 @@ export function PromoBar() {
           <Link to={item.href} tabIndex={isCopy ? -1 : undefined}>
             {t(item.text)}
           </Link>
-          <span className="promo-bar-mark" aria-hidden="true">
-            ◆
-          </span>
+          <svg
+            className="promo-bar-mark"
+            viewBox={`0 0 ${MARK_WIDTH} ${MARK_HEIGHT}`}
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d={MARK_DIAMOND} />
+            <path d={MARK_BLADE_LEFT} />
+            <path d={MARK_BLADE_RIGHT} />
+          </svg>
         </li>
       ))}
     </ul>

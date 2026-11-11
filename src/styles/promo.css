@@ -127,8 +127,11 @@
   text-underline-offset: 3px;
 }
 .promo-bar-mark {
-  font-size: 8px;
-  color: #b9926f;
+  flex: none;
+  /* The satuuu99 mark as the separator, at cap height. */
+  width: 22px;
+  height: auto;
+  fill: #b9926f;
 }
 .promo-bar-close {
   position: absolute;
