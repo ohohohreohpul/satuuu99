@@ -10,7 +10,8 @@ import {
 /**
  * Cookie banner. Declining is as easy and as prominent as accepting, and the
  * choice can be changed at any time from "Cookie-Einstellungen" in the
- * footer. It does not switch the chat assistant on or off.
+ * footer. Accepting loads Google Tag Manager; it does not switch the chat
+ * assistant on or off.
  */
 export function ConsentBanner() {
   const { t } = useLang();
@@ -49,10 +50,10 @@ export function ConsentBanner() {
         </h2>
         <p>
           {t({
-            de: "Wir verwenden Cookies und vergleichbare Technologien wie den lokalen Speicher Ihres Browsers. Notwendige Speicherungen, etwa Ihre Spracheinstellung und Ihre Auswahl in diesem Hinweis, nutzen wir immer. Für Fragen und Terminwünsche steht Ihnen unser Chat-Assistent des Anbieters Zenno (WX Company Limited) zur Verfügung; er speichert dafür Informationen in Ihrem Browser. Ihre Auswahl können Sie jederzeit unter „Cookie-Einstellungen“ ändern.",
-            en: "We use cookies and similar technologies such as your browser's local storage. Necessary storage, such as your language setting and your choice in this notice, is always used. For questions and appointment requests our chat assistant from the provider Zenno (WX Company Limited) is available to you; it stores information in your browser to do so. You can change your choice at any time under “Cookie settings”.",
+            de: "Wir verwenden Cookies und vergleichbare Technologien wie den lokalen Speicher Ihres Browsers. Notwendige Speicherungen, etwa Ihre Spracheinstellung und Ihre Auswahl in diesem Hinweis, nutzen wir immer. Für Fragen und Terminwünsche steht Ihnen unser Chat-Assistent des Anbieters Zenno (WX Company Limited) zur Verfügung; er speichert dafür Informationen in Ihrem Browser. Mit „Akzeptieren“ erlauben Sie uns zusätzlich, über den Google Tag Manager Dienste von Google zur Reichweitenmessung und für Marketing (z. B. Google Analytics) zu laden; dabei können Daten auch in die USA übermittelt werden. Mit „Ablehnen“ wird nichts davon geladen. Ihre Auswahl können Sie jederzeit unter „Cookie-Einstellungen“ ändern.",
+            en: "We use cookies and similar technologies such as your browser's local storage. Necessary storage, such as your language setting and your choice in this notice, is always used. For questions and appointment requests our chat assistant from the provider Zenno (WX Company Limited) is available to you; it stores information in your browser to do so. By choosing “Accept” you also allow us to load Google services for audience measurement and marketing (e.g. Google Analytics) via Google Tag Manager; data may be transferred to the USA in the process. “Decline” loads none of this. You can change your choice at any time under “Cookie settings”.",
           })}{" "}
-          <Link to="/datenschutz#chat-assistent">
+          <Link to="/datenschutz#google-tag-manager">
             {t({ de: "Datenschutzerklärung", en: "Privacy policy" })}
           </Link>
         </p>

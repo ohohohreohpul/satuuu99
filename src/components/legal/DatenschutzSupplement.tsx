@@ -68,6 +68,40 @@ export function DatenschutzSupplement() {
         Sie uns dazu an info@satuuu99.de.
       </p>
 
+      <h2 id="google-tag-manager">Google Tag Manager</h2>
+      <p>
+        Wenn Sie im Cookie-Hinweis auf „Akzeptieren“ klicken, laden wir den
+        Google Tag Manager der Google Ireland Limited, Gordon House, Barrow
+        Street, Dublin 4, Irland. Der Tag Manager selbst wertet keine Daten aus;
+        er steuert, welche weiteren Dienste von Google (z. B. Google Analytics
+        für die Reichweitenmessung oder Google Ads für Marketing, siehe
+        „Webanalyse, Monitoring und Optimierung“ und „Onlinemarketing“) auf
+        unserer Website geladen werden. Beim Laden wird Ihre IP-Adresse an
+        Google übermittelt.
+      </p>
+      <p>
+        <strong>Rechtsgrundlage: </strong>
+        Ihre Einwilligung (Art. 6 Abs. 1 S. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG).
+        Ohne Ihre Einwilligung wird der Tag Manager nicht geladen.
+      </p>
+      <p>
+        <strong>Übermittlung in Drittländer: </strong>
+        Google kann Daten in die USA übermitteln. Google ist unter dem EU-US
+        Data Privacy Framework zertifiziert (Angemessenheitsbeschluss, Art. 45
+        DSGVO).
+      </p>
+      <p>
+        <strong>Widerruf: </strong>
+        Sie können Ihre Einwilligung jederzeit über die Cookie-Einstellungen
+        widerrufen. Google-Dienste speichern danach keine Cookies oder Kennungen
+        mehr; vollständig entladen wird der Tag Manager beim nächsten
+        Seitenaufruf. Weitere Informationen:{" "}
+        <a href="https://policies.google.com/privacy">
+          https://policies.google.com/privacy
+        </a>
+        .
+      </p>
+
       <h2 id="einwilligungsverwaltung">Cookie-Hinweis und Einstellungen</h2>
       <p>
         Ihre Auswahl im Cookie-Hinweis speichern wir im lokalen Speicher Ihres

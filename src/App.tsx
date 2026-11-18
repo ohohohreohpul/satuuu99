@@ -12,6 +12,7 @@ import { ChatWidget } from "./components/consent/ChatWidget";
 import { PromoBar } from "./components/promo/PromoBar";
 import { PromoSlideIn } from "./components/promo/PromoSlideIn";
 import { ConsentBanner } from "./components/consent/ConsentBanner";
+import { TagManager } from "./components/consent/TagManager";
 import { OFFER_PATH } from "./data/offer";
 
 // The homepage ships in the initial bundle; every other route, and the
@@ -112,6 +113,7 @@ export default function App() {
       <ConsentBanner />
       <PromoSlideIn />
       <ChatWidget />
+      <TagManager />
     </>
   );
 }

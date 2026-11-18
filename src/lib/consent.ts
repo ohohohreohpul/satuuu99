@@ -1,12 +1,13 @@
 import { useSyncExternalStore } from "react";
 
 /**
- * The visitor's answer to the cookie banner. It records the choice only; the
- * chat assistant loads for everyone regardless (see ChatWidget).
+ * The visitor's answer to the cookie banner. Accepting loads Google Tag
+ * Manager (see TagManager); the chat assistant loads for everyone regardless
+ * (see ChatWidget).
  */
 export const CONSENT_STORAGE_KEY = "satuuu99-consent";
 /** Bump when the services asking for consent change, to ask again. */
-const CONSENT_VERSION = 2;
+const CONSENT_VERSION = 3;
 const CHANGE_EVENT = "satuuu99:consent-change";
 const OPEN_EVENT = "satuuu99:consent-open";
 

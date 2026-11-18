@@ -13,7 +13,7 @@ test.beforeEach(async ({ page }, testInfo) => {
       localStorage.setItem(
         "satuuu99-consent",
         JSON.stringify({
-          version: 2,
+          version: 3,
           accepted: false,
           decidedAt: "2026-10-23",
         }),
@@ -623,4 +623,51 @@ test("legal pages are reachable from the footer with the real studio contact", a
     page.locator('.legal-body a[href="mailto:info@satuuu99.de"]'),
   ).toBeVisible();
   await expect(page.locator(".legal-body")).toContainText("Kochakorn Todee");
+});
+
+test("tag manager loads only after consent and reports route changes", async ({
+  page,
+}) => {
+  const gtmRequests: string[] = [];
+  // Answer locally so the test never depends on Google being reachable.
+  await page.route("https://www.googletagmanager.com/**", (route) => {
+    gtmRequests.push(route.request().url());
+    return route.fulfill({ contentType: "text/javascript", body: "" });
+  });
+  await page.goto("/studio");
+  await expect(page.locator(".consent-banner")).toBeVisible();
+  expect(gtmRequests).toHaveLength(0);
+
+  await page
+    .locator(".consent-banner")
+    .getByRole("button", { name: "Akzeptieren" })
+    .click();
+  await expect
+    .poll(() => gtmRequests)
+    .toEqual(["https://www.googletagmanager.com/gtm.js?id=GTM-KCV4L4LR"]);
+
+  await page.locator('.site-footer a[href="/preise"]').click();
+  await expect
+    .poll(() =>
+      page.evaluate(() =>
+        (window.dataLayer ?? [])
+          .filter(
+            (entry) =>
+              (entry as { event?: string }).event === "virtual_page_view",
+          )
+          .map((entry) => (entry as { page_path: string }).page_path),
+      ),
+    )
+    .toEqual(["/preise"]);
+
+  // Declining afterwards keeps Google off on the next page load.
+  await page.locator(".footer-consent-link").click();
+  await page
+    .locator(".consent-banner")
+    .getByRole("button", { name: "Ablehnen" })
+    .click();
+  gtmRequests.length = 0;
+  await page.reload();
+  await expect(page.locator("h1")).toBeVisible();
+  expect(gtmRequests).toHaveLength(0);
 });
